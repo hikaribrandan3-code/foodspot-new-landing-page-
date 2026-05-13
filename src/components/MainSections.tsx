@@ -4,7 +4,7 @@ import { CanvasBackground } from './CanvasBackground';
 
 export function Navbar() {
   return (
-    <nav className="bg-surface/90 border-b border-outline-variant shadow-sm sticky top-0 backdrop-blur-md z-50">
+    <nav className="hidden md:block bg-surface/90 border-b border-outline-variant shadow-sm sticky top-0 backdrop-blur-md z-50">
       <div className="flex justify-between items-center w-full px-6 max-w-7xl mx-auto h-20">
         <div className="text-2xl font-display font-bold text-primary">FoodSpot</div>
         <ul className="hidden md:flex space-x-8">

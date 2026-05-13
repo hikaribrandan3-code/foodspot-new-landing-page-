@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Bot, LayoutGrid } from "lucide-react";
+import { Bot, LayoutGrid, ArrowDown } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
 // Helper Icons (Standardized for the app)
 const Icons = {
@@ -43,11 +43,18 @@ export function HowItWorks() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-4">Cómo funciona</h2>
-          <p className="text-lg text-on-surface-variant max-w-2xl mx-auto">
+          <p className="text-lg text-on-surface-variant max-w-2xl mx-auto mb-6">
             Tres simples pasos para digitalizar tu restaurante.
           </p>
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="flex justify-center"
+          >
+            <ArrowDown className="w-8 h-8 text-primary/50" />
+          </motion.div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
           {steps.map((step, idx) => (
             <motion.div
               key={idx}
@@ -70,6 +77,11 @@ export function HowItWorks() {
               </div>
               <h3 className="text-2xl font-display font-semibold text-on-surface mb-3">{step.title}</h3>
               <p className="text-on-surface-variant max-w-[250px]">{step.desc}</p>
+              {idx < steps.length - 1 && (
+                <div className="md:hidden mt-8 text-primary/30">
+                  <ArrowDown className="w-6 h-6 mx-auto animate-bounce" />
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
