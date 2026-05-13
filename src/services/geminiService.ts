@@ -31,13 +31,26 @@ Instructions:
 export class GeminiService {
   private ai: any;
 
-  constructor() {
-    this.ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+  private getAI() {
+    if (!this.ai) {
+      const apiKey = process.env.GEMINI_API_KEY;
+      if (!apiKey || apiKey === 'undefined' || apiKey === '') {
+        console.warn("GEMINI_API_KEY is not set. Chatbot will not function correctly. Please set it in your environment variables.");
+        return null;
+      }
+      this.ai = new GoogleGenAI({ apiKey: apiKey });
+    }
+    return this.ai;
   }
 
   async getChatResponse(userMessage: string, history: { role: string; parts: string }[] = []) {
     try {
-      const chat = this.ai.chats.create({
+      const ai = this.getAI();
+      if (!ai) {
+        return "Lo siento, el asistente de IA no está configurado correctamente (falta la clave API en el servidor). / I'm sorry, the AI assistant is not configured correctly (missing API key).";
+      }
+
+      const chat = ai.chats.create({
         model: "gemini-3-flash-preview",
         config: {
           systemInstruction: SYSTEM_INSTRUCTION,
@@ -53,7 +66,7 @@ export class GeminiService {
       return result.text;
     } catch (error) {
       console.error("Gemini API Error:", error);
-      return "Lo siento, hubo un error al procesar tu solicitud. Por favor, intenta de nuevo más tarde.";
+      return "Lo siento, hubo un error al procesar tu solicitud. Por favor, intenta de nuevo más tarde. / Sorry, there was an error processing your request. Please try again later.";
     }
   }
 }
