@@ -33,7 +33,7 @@ export function Navbar() {
           <button className="hidden md:flex text-on-surface-variant hover:text-primary transition-colors">
             <Globe className="w-5 h-5" />
           </button>
-          <a href="https://foodspotapp.vercel.app/" className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full text-sm font-medium transition-all active:scale-95 shadow-sm inline-block">
+          <a href="https://foodspotapp.vercel.app/start-trial" className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full text-sm font-medium transition-all active:scale-95 shadow-sm inline-block">
             Comenzar Gratis
           </a>
         </div>
@@ -75,7 +75,7 @@ export function Hero() {
           14 días gratis. Sin tarjeta requerida.
         </motion.p>
         <motion.a
-          href="https://foodspotapp.vercel.app/"
+          href="https://foodspotapp.vercel.app/start-trial"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4, delay: 0.4 }}
@@ -130,7 +130,7 @@ export function MiddleCTA() {
             ¿Listo para transformar tu negocio?
           </h2>
           <motion.a
-            href="https://foodspotapp.vercel.app/"
+            href="https://foodspotapp.vercel.app/start-trial"
             whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)" }}
             whileTap={{ scale: 0.95 }}
             className="bg-white text-primary px-10 py-5 rounded-full text-xl font-bold shadow-xl flex items-center gap-3 mx-auto transition-shadow inline-flex"
