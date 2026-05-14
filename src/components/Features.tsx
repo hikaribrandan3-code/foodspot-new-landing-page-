@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Bot, LayoutGrid, ArrowDown, Camera, CreditCard } from "lucide-react";
+import { Bot, LayoutGrid, ArrowDown, Camera, CreditCard, Rocket } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
 
 export function HowItWorks() {
@@ -20,10 +20,9 @@ export function HowItWorks() {
       offset: "md:mt-12",
     },
     {
-      title: "Conecta Mercado Pago y listo",
-      desc: "Empeza a cobrar al instante con las comisiones mas bajas del mercado. Directo a tu cuenta, sin vueltas.",
-      img: "/3pago.png",
-      imgWebp: "/3pago.webp",
+      title: "Lanza y vende",
+      desc: "Comparti tu link, gestiona pedidos y deja que el sistema automatice el marketing por vos.",
+      custom: true,
       rotation: "rotate-2",
       offset: "md:mt-24",
     },
@@ -57,17 +56,25 @@ export function HowItWorks() {
             >
               <div className="relative w-64 h-[500px] mb-8">
                 <div className={`absolute inset-0 bg-gray-200 rounded-[2.5rem] shadow-xl transform ${step.rotation}`}></div>
-                <picture>
-                  <source srcSet={step.imgWebp} type="image/webp" />
-                  <img
-                    src={step.img}
-                    alt={step.title}
-                    loading="lazy"
-                    width="256"
-                    height="500"
-                    className="absolute inset-0 w-full h-full object-cover rounded-[2.5rem] shadow-md border-4 border-white"
-                  />
-                </picture>
+                {step.custom ? (
+                  <div className="absolute inset-0 w-full h-full rounded-[2.5rem] shadow-md border-4 border-white bg-gradient-to-br from-primary to-orange-600 flex flex-col items-center justify-center text-white p-6">
+                    <Rocket className="w-16 h-16 mb-4 opacity-90" />
+                    <span className="font-display text-2xl font-bold text-center">A VENDER</span>
+                    <span className="text-sm opacity-80 mt-2 text-center">Tu app en todos lados</span>
+                  </div>
+                ) : (
+                  <picture>
+                    <source srcSet={step.imgWebp} type="image/webp" />
+                    <img
+                      src={step.img}
+                      alt={step.title}
+                      loading="lazy"
+                      width="256"
+                      height="500"
+                      className="absolute inset-0 w-full h-full object-cover rounded-[2.5rem] shadow-md border-4 border-white"
+                    />
+                  </picture>
+                )}
                 <div className="absolute -left-4 top-10 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-display text-xl font-bold shadow-lg z-10">
                   {idx + 1}
                 </div>
@@ -106,7 +113,26 @@ export function HowItWorks() {
               </p>
             </div>
           </motion.div>
-
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="order-1 md:order-2 flex justify-center"
+          >
+            <div className="relative w-72 h-[550px]">
+              <picture>
+                <source srcSet="/3pago.webp" type="image/webp" />
+                <img
+                  src="/3pago.png"
+                  alt="Mercado Pago Integrado"
+                  loading="lazy"
+                  width="288"
+                  height="550"
+                  className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl border-8 border-gray-100"
+                />
+              </picture>
+            </div>
+          </motion.div>
         </div>
       </div>
 
