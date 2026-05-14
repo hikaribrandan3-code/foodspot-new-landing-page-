@@ -33,9 +33,9 @@ export function Navbar() {
           <button className="hidden md:flex text-on-surface-variant hover:text-primary transition-colors">
             <Globe className="w-5 h-5" />
           </button>
-          <button className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full text-sm font-medium transition-all active:scale-95 shadow-sm">
+          <a href="https://foodspotapp.vercel.app/" className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full text-sm font-medium transition-all active:scale-95 shadow-sm inline-block">
             Comenzar Gratis
-          </button>
+          </a>
         </div>
       </div>
     </nav>
@@ -74,15 +74,16 @@ export function Hero() {
         >
           14 días gratis. Sin tarjeta requerida.
         </motion.p>
-        <motion.button
+        <motion.a
+          href="https://foodspotapp.vercel.app/"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4, delay: 0.4 }}
-          className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all active:scale-95 shadow-lg flex items-center gap-2"
+          className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all active:scale-95 shadow-lg flex items-center gap-2 inline-flex"
         >
           Comenzar Gratis
           <ArrowRight className="w-5 h-5" />
-        </motion.button>
+        </motion.a>
       </div>
     </section>
   );
@@ -128,14 +129,15 @@ export function MiddleCTA() {
           <h2 className="font-display text-4xl md:text-5xl text-white mb-8 drop-shadow-md">
             ¿Listo para transformar tu negocio?
           </h2>
-          <motion.button
+          <motion.a
+            href="https://foodspotapp.vercel.app/"
             whileHover={{ scale: 1.05, boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)" }}
             whileTap={{ scale: 0.95 }}
-            className="bg-white text-primary px-10 py-5 rounded-full text-xl font-bold shadow-xl flex items-center gap-3 mx-auto transition-shadow"
+            className="bg-white text-primary px-10 py-5 rounded-full text-xl font-bold shadow-xl flex items-center gap-3 mx-auto transition-shadow inline-flex"
           >
             Proba gratis 14 dias !
             <Rocket className="w-6 h-6" />
-          </motion.button>
+          </motion.a>
           <p className="text-white/80 mt-6 font-medium">Sin tarjeta de crédito. Sin vueltas.</p>
         </motion.div>
       </div>

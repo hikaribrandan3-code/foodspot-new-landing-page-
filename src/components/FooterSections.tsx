@@ -97,9 +97,9 @@ export function Pricing() {
               </li>
             ))}
           </ul>
-            <button className="w-full py-4 rounded-full border-2 border-secondary text-secondary font-semibold hover:bg-secondary/5 transition-colors group-hover:scale-[1.02] active:scale-[0.98]">
+            <a href="https://foodspotapp.vercel.app/" className="w-full py-4 rounded-full border-2 border-secondary text-secondary font-semibold hover:bg-secondary/5 transition-colors group-hover:scale-[1.02] active:scale-[0.98] block text-center">
               Empezar Prueba Gratis
-            </button>
+            </a>
           </div>
         </motion.div>
 
@@ -146,9 +146,9 @@ export function Pricing() {
               </li>
             ))}
           </ul>
-          <button className="w-full py-4 rounded-full bg-primary text-white font-semibold hover:bg-primary/90 transition-all shadow-md active:scale-[0.98] group-hover:scale-[1.02]">
+          <a href="https://foodspotapp.vercel.app/" className="w-full py-4 rounded-full bg-primary text-white font-semibold hover:bg-primary/90 transition-all shadow-md active:scale-[0.98] group-hover:scale-[1.02] block text-center">
             Suscribirse Ahora
-          </button>
+          </a>
         </div>
       </motion.div>
       </div>
