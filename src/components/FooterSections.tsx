@@ -120,28 +120,176 @@ export function Pricing() {
             </div>
             <h3 className="text-2xl font-display font-semibold text-on-surface mb-2">Pro</h3>
           <div className="mb-6 flex items-baseline gap-1">
-            <span className="text-4xl font-display font-bold text-on-surface">$25.99</span>
+            <span className="text-4xl font-display font-bold text-on-surface">$25</span>
             <span className="text-on-surface-variant text-sm">/mes</span>
           </div>
-          <p className="text-on-surface-variant mb-8 min-h-[48px]">Todas las herramientas profesionales para escalar tu negocio.</p>
-          <ul className="space-y-4 mb-8 flex-grow">
-            {[
-              "5 Videojuegos para clientes",
-              "Camara de marketing UGC",
-              "Sistema de eventos y promociones IA",
-              "Gestion de inventario y control de gastos",
-              "Soporte premium 24/7"
-            ].map((item, i) => (
-              <li key={i} className="flex items-center text-sm text-on-surface font-medium">
-                <div className="w-4 h-4 text-primary mr-3 shrink-0">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4">
-                    <path d="M20 6L9 17l-5-5" />
-                  </svg>
-                </div>
-                {item}
-              </li>
-            ))}
-          </ul>
+          <p className="text-on-surface-variant mb-6 min-h-[48px]">Todas las herramientas profesionales para escalar tu negocio.</p>
+
+          <div className="space-y-4 mb-8 flex-grow overflow-y-auto max-h-[500px]">
+            <div>
+              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Pedidos y Operaciones</p>
+              <ul className="space-y-2">
+                {[
+                  "Pedidos ilimitados (sin limite mensual)",
+                  "Panel de pedidos en tiempo real",
+                  "Flujo de cocina con seguimiento de inventario",
+                  "Pantalla de estado de pre-pedidos (con ETA y seguimiento)",
+                  "Sistema de asignacion de personal",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center text-sm text-on-surface font-medium">
+                    <div className="w-4 h-4 text-primary mr-3 shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><path d="M20 6L9 17l-5-5" /></svg></div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Delivery</p>
+              <ul className="space-y-2">
+                {[
+                  "Radio de delivery inteligente (validado en servidor)",
+                  "Umbral de envio gratis (lo definis vos)",
+                  "Asignacion y seguimiento de repartidores",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center text-sm text-on-surface font-medium">
+                    <div className="w-4 h-4 text-primary mr-3 shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><path d="M20 6L9 17l-5-5" /></svg></div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Pagos</p>
+              <ul className="space-y-2">
+                {[
+                  "Integracion directa con Mercado Pago",
+                  "0% de comision para FoodSpot — te quedas con el 100%",
+                  "Seguridad de webhooks nivel produccion",
+                  "Pagos instantaneos",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center text-sm text-on-surface font-medium">
+                    <div className="w-4 h-4 text-primary mr-3 shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><path d="M20 6L9 17l-5-5" /></svg></div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Tienda</p>
+              <ul className="space-y-2">
+                {[
+                  "Menu digital limpio (editas en minutos)",
+                  "Colores y branding personalizables",
+                  "Soporte bilingue (Espanol / Ingles)",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center text-sm text-on-surface font-medium">
+                    <div className="w-4 h-4 text-primary mr-3 shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><path d="M20 6L9 17l-5-5" /></svg></div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Propiedad del Cliente</p>
+              <ul className="space-y-2">
+                {[
+                  "Vos sos dueno de la relacion con el cliente",
+                  "Conexion directa — sin intermediarios",
+                  "Datos e historial completos del cliente",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center text-sm text-on-surface font-medium">
+                    <div className="w-4 h-4 text-primary mr-3 shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><path d="M20 6L9 17l-5-5" /></svg></div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">El Ciclo UGC</p>
+              <ul className="space-y-2">
+                {[
+                  "Los clientes capturan y comparten fotos en el punto de compra",
+                  "El contenido se vincula automaticamente a tu Instagram y TikTok",
+                  "Convierte cada pedido en prueba social y marketing",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center text-sm text-on-surface font-medium">
+                    <div className="w-4 h-4 text-primary mr-3 shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><path d="M20 6L9 17l-5-5" /></svg></div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Juegos y Fidelizacion</p>
+              <ul className="space-y-2">
+                {[
+                  "Gamificacion in-app (puntos, medallas, recompensas)",
+                  "Construi una base de clientes recurrentes",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center text-sm text-on-surface font-medium">
+                    <div className="w-4 h-4 text-primary mr-3 shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><path d="M20 6L9 17l-5-5" /></svg></div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Eventos</p>
+              <ul className="space-y-2">
+                {[
+                  "Crea y promociona eventos especiales dentro de la app",
+                  "Genera trafico en horas valle",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center text-sm text-on-surface font-medium">
+                    <div className="w-4 h-4 text-primary mr-3 shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><path d="M20 6L9 17l-5-5" /></svg></div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Resenas</p>
+              <ul className="space-y-2">
+                {[
+                  "Mostra y sincroniza resenas de Google en tu tienda",
+                  "Genera confianza con prueba social",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center text-sm text-on-surface font-medium">
+                    <div className="w-4 h-4 text-primary mr-3 shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><path d="M20 6L9 17l-5-5" /></svg></div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Analiticas</p>
+              <ul className="space-y-2">
+                {[
+                  "Analiticas completas en dashboard",
+                  "Insights de clientes y seguimiento de comportamiento",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center text-sm text-on-surface font-medium">
+                    <div className="w-4 h-4 text-primary mr-3 shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><path d="M20 6L9 17l-5-5" /></svg></div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Soporte</p>
+              <ul className="space-y-2">
+                {[
+                  "Soporte prioritario por email y chat",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center text-sm text-on-surface font-medium">
+                    <div className="w-4 h-4 text-primary mr-3 shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><path d="M20 6L9 17l-5-5" /></svg></div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
           <a href="https://foodspotapp.vercel.app/" className="w-full py-4 rounded-full bg-primary text-white font-semibold hover:bg-primary/90 transition-all shadow-md active:scale-[0.98] group-hover:scale-[1.02] block text-center">
             Suscribirse Ahora
           </a>
