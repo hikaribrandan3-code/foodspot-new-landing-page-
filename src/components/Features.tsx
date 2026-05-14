@@ -19,20 +19,20 @@ export function HowItWorks() {
     {
       title: "Poder de marca",
       desc: "Personaliza tu tienda con tus colores, logo e identidad en segundos.",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAnNiTAVauHYdHsU5pg5nArVzOaNU_LFfVjbB5isNemoILnfsAlOHcNe-05Dnt9-5dySCVeG5ClLkFH3z3OJhcCPD9VoQxEk3ux7YUGnKZW6NKvzRip_GVyI2DJbsGTDliBzvGXaB6sgpcmhkAngYDC3rlEeFXUV2KQ2aQ0_VuGwtHDcAFp-IWj1CmJOhlMF5-BCxBOiJWcE_UF8OkcoHL3zPCc4tzT0SW-KfOW3g08g7Ip-NN7Nb5ThLLITHGgVN6YmXm4RVTi82Ir", 
+      img: "/1menu.png", 
       rotation: "rotate-2",
     },
     {
       title: "Experiencia Social",
       desc: "Tus clientes comparten su experiencia automáticamente en redes sociales.",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBoQWBxnicmKsce0-dlXuEc_4rbUbq9P8p-RI70_STRc_c3YLLR2NeTEJHLTkK_fn03l65XnTOqLIbBYAreZmQJMUWjed2qFmrCJj2fzdu_DBnCcNFYsXszc3WFYhmp_zxtn6MhhcwQrZ6pTZPWFG-bFw-_Bi3Neby4bWqKKXF7GwkqMdIvdcXH2oeB7y5ux4W6Bs22Pv5bMLASgYaaWzU5ExreZdThaAL35XBf9JaK5BqXgtd3LBBl1xVv43je3MGZ75HYQAWEnZBE",
+      img: "/2brand.png",
       rotation: "-rotate-2",
       offset: "md:mt-12",
     },
     {
       title: "Control Absoluto",
       desc: "Métricas en tiempo real de tus ventas, pedidos y medios de pago preferidos.",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDhrAVZH_u-L4P71QjBoM_7lkvoHhx75edDnmfwH0cE4vEJBqTJW18Li9b6G0zy9SDj_ZKq7qEMvJLt7xlIOjsMH13CS1QbHb4rWMJaqaSQDBurreOio_8yhd27ODSJoG0fjX6Ef5KyS8ATbBSd4XMX3s8aLXYTAhn_Olt6M2z4YjmP7gkSvwNVkomYJUrZT6-0K-8BFplensVfE8RvmNi07FSrz_pNiRMa_ppvGLwOL2hq1V01B4ecszOfTevkzRlOPHE2E-4cEylY",
+      img: "/3pago.png",
       rotation: "rotate-2",
       offset: "md:mt-24",
     },
