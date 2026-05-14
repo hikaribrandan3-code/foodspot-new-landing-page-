@@ -213,10 +213,10 @@ export function Pricing() {
               </ul>
             </div>
             <div>
-              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Juegos</p>
+              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Analiticas</p>
               <ul className="space-y-2">
                 {[
-                  "5 juegos integrados para entretener a tus clientes",
+                  "Dashboard completo con metricas en tiempo real",
                 ].map((item, i) => (
                   <li key={i} className="flex items-center text-sm text-on-surface font-medium">
                     <div className="w-4 h-4 text-primary mr-3 shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><path d="M20 6L9 17l-5-5" /></svg></div>
@@ -226,11 +226,10 @@ export function Pricing() {
               </ul>
             </div>
             <div>
-              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Analiticas</p>
+              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">IA</p>
               <ul className="space-y-2">
                 {[
-                  "Analiticas completas en dashboard",
-                  "Insights de clientes y seguimiento de comportamiento",
+                  "Chatbot con IA integrado a tu negocio",
                 ].map((item, i) => (
                   <li key={i} className="flex items-center text-sm text-on-surface font-medium">
                     <div className="w-4 h-4 text-primary mr-3 shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><path d="M20 6L9 17l-5-5" /></svg></div>
