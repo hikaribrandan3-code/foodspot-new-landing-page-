@@ -44,7 +44,7 @@ export function Navbar() {
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full min-h-[65vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <CanvasBackground color="#ff3d00" variant="blobs" />
         <div className="absolute inset-0 opacity-40">

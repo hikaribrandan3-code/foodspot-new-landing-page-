@@ -6,7 +6,7 @@ export function HowItWorks() {
   const steps = [
     {
       title: "Crea tu menu en minutos",
-      desc: "Subi fotos, precios y categorias. Tu tienda lista al instante. 100% NO-CODE",
+      desc: "Subi fotos, precios y categorias. Incluso podes agregar calorias, advertencias de salud y etiquetas personalizadas para casos especiales. Tu tienda lista al instante. 100% NO-CODE",
       img: "/1menu.png",
       imgWebp: "/1menu.webp",
       rotation: "rotate-2",
@@ -20,8 +20,8 @@ export function HowItWorks() {
       offset: "md:mt-12",
     },
     {
-      title: "Lanza y vende",
-      desc: "Comparti tu link y deja que el sistema gestione los pedidos, el envio y el marketing por vos.",
+      title: "Conecta Mercado Pago y listo",
+      desc: "Empeza a cobrar al instante con las comisiones mas bajas del mercado. Directo a tu cuenta, sin vueltas.",
       img: "/3pago.png",
       imgWebp: "/3pago.webp",
       rotation: "rotate-2",
@@ -106,16 +106,7 @@ export function HowItWorks() {
               </p>
             </div>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="order-1 md:order-2 flex justify-center"
-          >
-            <div className="relative w-72 h-[550px] bg-gray-100 rounded-[2.5rem] shadow-2xl border-8 border-gray-100 flex items-center justify-center">
-              <span className="text-gray-400 text-sm font-medium">Frenchie Messi placeholder</span>
-            </div>
-          </motion.div>
+
         </div>
       </div>
 
