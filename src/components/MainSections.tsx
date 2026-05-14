@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Globe, ArrowRight, Rocket, Camera, Smartphone, CreditCard } from "lucide-react";
+import { Globe, ArrowRight, Rocket } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
 
 export function Navbar() {
@@ -97,49 +97,13 @@ export function Benefits() {
           Herramientas poderosas diseñadas para la gastronomía moderna.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-white rounded-2xl p-8 ambient-shadow hover-lift">
-          <div className="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center mb-6">
-            <Camera className="w-6 h-6 text-secondary" />
-          </div>
-          <h3 className="text-2xl font-display font-semibold text-on-surface mb-3">Menú Visual</h3>
-          <p className="text-on-surface-variant mb-6">Sube fotos de alta calidad y deja que tu comida hable por sí sola.</p>
-          <div className="relative h-40 bg-gray-100 rounded-xl overflow-hidden">
-            <img
-              src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1000&auto=format&fit=crop"
-              alt="Pizza Delicious"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-        <div className="bg-[#009EE3]/5 border-2 border-[#009EE3]/20 rounded-2xl p-8 ambient-shadow hover-lift flex flex-col justify-between relative overflow-hidden">
-          <div className="absolute inset-0 pointer-events-none opacity-20">
-            <CanvasBackground color="#009EE3" />
-          </div>
-          <div className="relative z-10">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-12 h-12 rounded-full bg-[#009EE3] flex items-center justify-center">
-                <CreditCard className="w-6 h-6 text-white" />
-              </div>
-              <div className="h-8 w-px bg-gray-200 mx-2"></div>
-              <span className="text-[#009EE3] font-bold text-xl tracking-tight">Mercado Pago</span>
-            </div>
-            <h3 className="text-2xl font-display font-semibold text-on-surface mb-3">Cobros al instante</h3>
-            <p className="text-on-surface-variant mb-6">Integración nativa con Mercado Pago. Recibe tu dinero en el acto con las comisiones más bajas del mercado.</p>
-          </div>
-          <div className="bg-white rounded-xl p-4 shadow-sm border border-[#009EE3]/10">
-            <div className="flex justify-between items-center mb-3">
-              <span className="text-xs font-semibold text-gray-400">Última transacción</span>
-              <span className="text-[10px] bg-green-100 text-green-600 px-2 py-0.5 rounded-full font-bold">EXITOSA</span>
-            </div>
-            <div className="flex justify-between items-end">
-              <div className="text-2xl font-bold text-on-surface">$ 4.500,00</div>
-              <div className="flex gap-1">
-                <div className="w-6 h-4 bg-blue-600 rounded-sm"></div>
-                <div className="w-6 h-4 bg-yellow-400 rounded-sm"></div>
-              </div>
-            </div>
-          </div>
+      <div className="max-w-4xl mx-auto">
+        <div className="bg-white rounded-2xl p-4 ambient-shadow hover-lift overflow-hidden">
+          <img
+            src="/beforeafter.jpeg"
+            alt="Before and After"
+            className="w-full h-auto rounded-xl object-cover"
+          />
         </div>
       </div>
     </section>

@@ -152,7 +152,7 @@ export function Features() {
         >
           <div className="relative w-72 h-[550px]">
             <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2g9MumO-ho-t-gWGHXPo1_DUM1u0uLWqIg8CZLc3pu-Ht1ClRaK7C_asW73giKSOHRgIf_p4d7vTvVh2PAmhbLOdKPizLHfqwFrPzgIyKQzEke9Q2PoUX4ghGFKt0HAjdrwOAMwnGw0GVWzj3689m1mzbcRyBkbyqsCqt0lvQtkv1vlUkCBED2FBt4hlqcXteJ8RmH-7QtWu0Oj1IJtvh9ELXE_acDcG9GtJ8s_xf6mU-JrkeYg72XVjiaBgWLPOlEpQbv7ZgtOak"
+              src="/finance.png"
               alt="Financial Tracker"
               className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl border-8 border-gray-100"
             />
