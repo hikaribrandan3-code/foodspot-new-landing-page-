@@ -122,12 +122,18 @@ export function HowItWorks() {
           viewport={{ once: true }}
           className="order-1 md:order-2 flex justify-center"
         >
-          <div className="relative w-72 h-[550px] bg-gray-100 rounded-[2.5rem] shadow-2xl border-8 border-gray-100 flex items-center justify-center">
-            <div className="text-center p-8">
-              <Camera className="w-16 h-16 text-primary mx-auto mb-4" />
-              <p className="text-lg font-display font-semibold text-on-surface">UGC Marketing</p>
-              <p className="text-sm text-on-surface-variant mt-2">Placeholder — image coming soon</p>
-            </div>
+          <div className="relative w-72 h-[550px]">
+            <picture>
+              <source srcSet="/ugc.webp" type="image/webp" />
+              <img
+                src="/ugc.png"
+                alt="UGC Marketing"
+                loading="lazy"
+                width="288"
+                height="550"
+                className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl border-8 border-gray-100"
+              />
+            </picture>
           </div>
         </motion.div>
       </div>
