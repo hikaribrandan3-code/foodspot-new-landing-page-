@@ -70,9 +70,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl drop-shadow-md"
+          className="text-xl md:text-[22px] text-white font-bold mb-6 max-w-2xl drop-shadow-lg"
         >
-          14 días gratis. Sin tarjeta requerida.
+          ✅ 14 días gratis. Sin tarjeta requerida.
         </motion.p>
         <motion.button
           initial={{ opacity: 0, scale: 0.9 }}
