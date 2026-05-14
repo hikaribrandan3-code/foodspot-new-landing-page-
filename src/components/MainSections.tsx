@@ -64,7 +64,7 @@ export function Hero() {
           transition={{ duration: 0.6 }}
           className="font-display text-4xl md:text-6xl text-white mb-6 drop-shadow-lg"
         >
-          Foodspot: The Shopify of Food
+          FoodSpot Mobile : The Shopify of the Food Industry
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
