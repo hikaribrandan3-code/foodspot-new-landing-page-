@@ -30,7 +30,7 @@ export function Navbar() {
           </li>
         </ul>
         <div className="flex items-center space-x-4">
-          <button className="hidden md:flex text-on-surface-variant hover:text-primary transition-colors">
+          <button aria-label="Change language" className="hidden md:flex text-on-surface-variant hover:text-primary transition-colors">
             <Globe className="w-5 h-5" />
           </button>
           <a href="https://foodspotapp.vercel.app/start-trial" className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full text-sm font-medium transition-all active:scale-95 shadow-sm inline-block">

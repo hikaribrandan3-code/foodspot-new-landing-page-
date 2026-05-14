@@ -47,7 +47,7 @@ export function Testimonials() {
               <div className="flex items-center gap-4">
                 <img src={row.avatar} alt={row.name} loading="lazy" width="48" height="48" className="w-12 h-12 rounded-full object-cover" />
                 <div>
-                  <h4 className="font-semibold text-on-surface text-sm">{row.name}</h4>
+                  <div className="font-semibold text-on-surface text-sm">{row.name}</div>
                   <p className="text-xs text-on-surface-variant font-medium">{row.role}</p>
                 </div>
               </div>
@@ -181,7 +181,7 @@ export function Footer() {
         </div>
         {sections.map((sec, i) => (
           <div key={i}>
-            <h4 className="font-bold text-on-surface mb-6 uppercase text-[10px] tracking-widest">{sec.title}</h4>
+            <h3 className="font-bold text-on-surface mb-6 uppercase text-[10px] tracking-widest">{sec.title}</h3>
             <ul className="space-y-3">
               {sec.items.map((item, j) => (
                 <li key={j}>

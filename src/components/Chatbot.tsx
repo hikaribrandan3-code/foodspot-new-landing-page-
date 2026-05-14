@@ -69,6 +69,7 @@ export function Chatbot() {
               </div>
               <button
                 onClick={() => setIsOpen(false)}
+                aria-label="Close chat"
                 className="p-1 hover:bg-white/20 rounded-full transition-colors"
                 id="close-chat"
               >
@@ -118,6 +119,7 @@ export function Chatbot() {
                 <button
                   type="submit"
                   disabled={!input.trim() || isLoading}
+                  aria-label="Send message"
                   className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-primary hover:bg-primary/10 rounded-full transition-all disabled:opacity-30"
                   id="send-message"
                 >
@@ -133,6 +135,7 @@ export function Chatbot() {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}
+        aria-label={isOpen ? "Close chat" : "Open chat"}
         className="w-14 h-14 bg-primary text-white rounded-full shadow-lg flex items-center justify-center hover:bg-primary/90 transition-shadow"
         id="toggle-chat"
       >

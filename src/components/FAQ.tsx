@@ -74,6 +74,8 @@ export function FAQ() {
             <div key={idx} className="py-5">
               <button
                 onClick={() => toggle(idx)}
+                aria-expanded={openIndex === idx}
+                aria-controls={`faq-answer-${idx}`}
                 className="w-full flex items-start justify-between text-left group"
               >
                 <span className="text-lg md:text-xl font-semibold text-on-surface pr-4 group-hover:text-primary transition-colors">
@@ -91,11 +93,13 @@ export function FAQ() {
               <AnimatePresence initial={false}>
                 {openIndex === idx && (
                   <motion.div
+                    id={`faq-answer-${idx}`}
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.25, ease: "easeInOut" }}
                     className="overflow-hidden"
+                    role="region"
                   >
                     <p className="pt-4 text-base text-gray-500 leading-relaxed">
                       {faq.answer}
