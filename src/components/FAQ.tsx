@@ -21,7 +21,7 @@ const faqs = [
   {
     question: "¿Me cobran comisión en FoodSpot Mobile?",
     answer:
-      "Cero comisión. No nos quedamos con nada. Solo pagás el 3% de Mercado Pago—lo mismo que pagarías en cualquier plataforma de pago. Otros ofrecen solo un menú digital. FoodSpot Mobile es un sistema completo de gestión para restaurantes.",
+      "Cero comisión. No nos quedamos con nada. Solo pagás el 3% de Mercado Pago (ya integrado, sin pasos extra)—lo mismo que pagarías en cualquier plataforma de pago. Otros ofrecen solo un menú digital. FoodSpot Mobile es un sistema completo de gestión para restaurantes.",
   },
   {
     question: "¿Cómo integro mi menú actual en FoodSpot Mobile?",
@@ -42,6 +42,11 @@ const faqs = [
     question: "¿Es seguro mi información en FoodSpot Mobile?",
     answer:
       "Sí. Todos los datos de clientes y negocio están protegidos por políticas RLS estrictas. Cumplimos con regulaciones de protección de datos. Tus datos son tuyos.",
+  },
+  {
+    question: "¿Funciona en toda LATAM?",
+    answer:
+      "Sí. FoodSpot Mobile funciona en Argentina, Brasil, México, Chile, Colombia, Perú y toda LATAM. Integración nativa con Mercado Pago (ARS, BRL, MXN, etc.). Soporte en español, portugués e inglés.",
   },
   {
     question: "¿Cómo funciona la IA de FoodSpot Mobile?",

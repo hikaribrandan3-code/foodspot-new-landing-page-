@@ -71,9 +71,17 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xl md:text-[22px] text-white font-bold mb-6 max-w-2xl drop-shadow-lg"
+          className="text-xl md:text-[22px] text-white font-bold mb-2 max-w-2xl drop-shadow-lg"
         >
           14 días gratis. Sin tarjeta requerida.
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-sm md:text-base text-white/80 mb-6 max-w-2xl drop-shadow-md"
+        >
+          Built in Córdoba, Argentina. Trusted by restaurants across LATAM. Integrated with Mercado Pago.
         </motion.p>
         <motion.a
           href="https://foodspotapp.vercel.app/start-trial"
