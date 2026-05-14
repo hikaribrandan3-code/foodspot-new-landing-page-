@@ -4,54 +4,39 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "¿Cuánto cuesta FoodSpot Mobile?",
+    question: "¿Necesito saber programar?",
     answer:
-      "FoodSpot Mobile, el software de restaurante líder, cuesta $25.99 USD mensuales (aproximadamente 35.000 ARS). Sin cargos ocultos. Cancelá cuando quieras. Incluye: menú digital completo, sistema operativo integrado para gestión de restaurantes, gestión de personal, inventario y gastos, finance tracker, integración Mercado Pago, herramientas de marketing UGC, asistente IA, 5 juegos integrados, módulo completo de eventos, branding personalizado e integración WhatsApp. Todo disponible en prueba gratuita.",
+      "Absolutamente NO. FoodSpot Mobile es una plataforma No-Code disenada para que cualquier dueno de restaurante pueda lanzar su app profesional sin tocar una sola linea de codigo.",
   },
   {
-    question: "¿Cuánto tarda la configuración de FoodSpot Mobile?",
+    question: "¿Cuanto tardo en configurar mi tienda?",
     answer:
-      "Entre 30 minutos y 1 hora. Ten listos: fotos del menú (PNG/JPEG), logo en 16:9 fondo blanco, y credenciales de Mercado Pago. La capacitación del personal para nuestro sistema de gestión de cocina toma ~3 horas con seguimientos diarios para dominar el flujo de cocina.",
+      "El record son 5 minutos. Solo necesitas tus fotos, tus precios y ganas de vender mas.",
   },
   {
-    question: "¿Funciona FoodSpot Mobile en mi teléfono?",
+    question: "¿Cuanto cuesta FoodSpot Mobile?",
     answer:
-      "Sí. iOS, Android y web. FoodSpot Mobile está disponible en ambas plataformas. Elegimos no estar en App Store ni Google Play para enviar actualizaciones semanales al instante—sin retrasos. Tu app se actualiza automáticamente.",
+      "FoodSpot Mobile cuesta $25.99 USD mensuales. Sin cargos ocultos. Cancela cuando quieras. Incluye: menu digital completo, sistema operativo integrado para gestion de restaurantes, gestion de personal, inventario y gastos, finance tracker, integracion Mercado Pago, herramientas de marketing UGC, asistente IA, 5 juegos integrados, modulo completo de eventos, branding personalizado e integracion WhatsApp. Todo disponible en prueba gratuita.",
   },
   {
-    question: "¿Me cobran comisión en FoodSpot Mobile?",
+    question: "¿Funciona FoodSpot Mobile en mi telefono?",
     answer:
-      "Cero comisión. No nos quedamos con nada. Solo pagás el 3% de Mercado Pago (ya integrado, sin pasos extra)—lo mismo que pagarías en cualquier plataforma de pago. Otros ofrecen solo un menú digital. FoodSpot Mobile es un sistema completo de gestión para restaurantes.",
+      "Si. iOS, Android y web. FoodSpot Mobile esta disponible en ambas plataformas. Elegimos no estar en App Store ni Google Play para enviar actualizaciones semanales al instante sin retrasos. Tu app se actualiza automaticamente.",
   },
   {
-    question: "¿Cómo integro mi menú actual en FoodSpot Mobile?",
+    question: "¿Me cobran comision en FoodSpot Mobile?",
     answer:
-      "Sube fotos de tu menú en PNG/JPEG (optimizadas cargan más rápido). Incluí tu logo en 16:9 fondo blanco. Nuestro sistema de gestión de pedidos y flujo de cocina se integra en ~3 horas. El kitchen display system elimina mensajes constantes—mantiene felices a tu equipo y clientes.",
+      "Cero comision. No nos quedamos con nada. Solo pagas el 3% de Mercado Pago ya integrado, sin pasos extra. Lo mismo que pagarias en cualquier plataforma de pago.",
   },
   {
-    question: "¿Para qué tipo de restaurante sirve FoodSpot Mobile?",
+    question: "¿Para que tipo de restaurante sirve FoodSpot Mobile?",
     answer:
-      "Todos. Restaurantes tradicionales, vendedores callejeros, ghost kitchens, food trucks, pizzerías, cafeterías—cualquier negocio gastronómico. FoodSpot Mobile crece con tu empresa.",
-  },
-  {
-    question: "¿Qué soporte ofrece FoodSpot Mobile?",
-    answer:
-      "Capacitación y soporte completo incluido. FoodSpot Mobile incluye actualizaciones semanales, línea telefónica de negocios para ayuda urgente, y tutoriales próximamente. Siempre bienvenidos los comentarios.",
-  },
-  {
-    question: "¿Es seguro mi información en FoodSpot Mobile?",
-    answer:
-      "Sí. Todos los datos de clientes y negocio están protegidos por políticas RLS estrictas. Cumplimos con regulaciones de protección de datos. Tus datos son tuyos.",
+      "Todos. Restaurantes tradicionales, vendedores callejeros, ghost kitchens, food trucks, pizzerias, cafeterias. Cualquier negocio gastronomico. FoodSpot Mobile crece con tu empresa.",
   },
   {
     question: "¿Funciona en toda LATAM?",
     answer:
-      "Sí. FoodSpot Mobile funciona en Argentina, Brasil, México, Chile, Colombia, Perú y toda LATAM. Integración nativa con Mercado Pago (ARS, BRL, MXN, etc.). Soporte en español, portugués e inglés.",
-  },
-  {
-    question: "¿Cómo funciona la IA de FoodSpot Mobile?",
-    answer:
-      "El asistente IA analiza tus datos de ventas, operaciones y patrones de clientes en tiempo real. Te deja hacer preguntas como \"¿Qué promos deberíamos hacer?\" y te da insights personalizados. Se adapta a tu negocio. Estamos construyendo IA agentica donde cada empleado tiene su propia IA que aprende de su trabajo. Primero de su tipo en el mercado de software para restaurantes.",
+      "Si. FoodSpot Mobile funciona en Argentina, Brasil, Mexico, Chile, Colombia, Peru y toda LATAM. Integracion nativa con Mercado Pago. Soporte en espanol, portugues e ingles.",
   },
 ];
 
@@ -70,7 +55,7 @@ export function FAQ() {
             Preguntas frecuentes
           </h2>
           <p className="text-lg text-on-surface-variant max-w-2xl mx-auto">
-            Todo lo que necesitás saber sobre FoodSpot Mobile.
+            Todo lo que necesitas saber sobre FoodSpot Mobile.
           </p>
         </div>
 

@@ -5,14 +5,14 @@ import { CanvasBackground } from './CanvasBackground';
 export function Testimonials() {
   const reviews = [
     {
-      name: "Martín Gómez",
-      role: "Dueño, Burger Station",
-      quote: "Desde que usamos FoodSpot, nuestras ventas directas aumentaron un 40%. La interfaz es tan intuitiva que nuestro equipo aprendió a usarla en un día.",
+      name: "Martin Gomez",
+      role: "Dueno, Burger Station",
+      quote: "Desde que usamos FoodSpot, nuestras ventas directas aumentaron un 40%. La interfaz es tan intuitiva que nuestro equipo aprendio a usarla en un dia.",
       avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuAkvYIARZavcH4JACEszHpL5_jqSjXfbsXp5RlGI9QH2YljWq5EdLCWXOJSgoZ0zlOtWLJJaXh6v7J7UU8EpZaN1nWYs5A1EXdL3JdQECl3J12jh-7FDwyPWhSCLt4Or1IlayQ6RKHL2i4INhb3wo0Ku-Kj4Dp0bMheZcCNlcf-GcaiwpUivImdtm6QUyzWz23its8Rggr47Pqf9ZEuG0AY2-HN4Hcg8cjEa0b-anB0RfF9QM9GQGObaCo-ZKq5dlLjQv_cWt_7qzsn",
       rating: 5,
     },
     {
-      name: "Sofía Reyes",
+      name: "Sofia Reyes",
       role: "Directora, Green Bowl",
       quote: "Las herramientas de IA para inventario y promociones nos ahorran horas cada semana. Es literalmente como tener un gerente extra trabajando 24/7.",
       avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuDGcybAYVHqJNMmwISRAYhpLrymKa7EgQyOMRINv8BVx8Yr2EoZ-xEldWS28HM85pOZJYg_ufD7SL9yIn1hCm_MfQtCVYgr0cb9liTb7NXePW7Z1UDVMD-503h9cIrU1KfPfTpB_2UwUpk1bMZeBOqE5rXlm4lVsvqixqnNIU0syeto1f7SxdGbuD3ehHGs8IV31xVNQkRKz9H4yEMj4t5e_ssG5V0ziP5hkxcBUwu9fQzjlsWzdIvvYDIJGAWv4vX8ANJ_LOb-r5qO",
@@ -21,7 +21,7 @@ export function Testimonials() {
     {
       name: "Carlos Mendoza",
       role: "Fundador, La Masa",
-      quote: "Dejamos de pagar comisiones abusivas a las apps de delivery. FoodSpot nos dio la independencia que necesitábamos para crecer nuestro propio canal.",
+      quote: "Dejamos de pagar comisiones abusivas a las apps de delivery. FoodSpot nos dio la independencia que necesitabamos para crecer nuestro propio canal.",
       avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuDIvfupqrNB2CpVZfh9pV_wo498HNQCUy9zw6OKqR8LmD3ibJE3_o1eCfmQruWDyRHI5UifB_FY5a54aldfei48bIeCiqtjHGRM9-71t-tuqTNj1b7gjjoz1kHcRL4_abPjk1j_4CKleded3ksLGKbGwoncQ0c_e8CrshG53EvWfdITrhmu7auVAEdxp5b2txFJgBX9jwW_hDtKNrxq-54So42HebU6gD-vwKyD43Mx7iOVGushrKqe7Zbz7GIdLYClMBo1VMRxQ1mw",
       rating: 4.5,
     },
@@ -65,7 +65,7 @@ export function Pricing() {
       <div className="text-center mb-16">
         <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-4">Planes simples, sin sorpresas</h2>
         <p className="text-lg text-on-surface-variant max-w-2xl mx-auto">
-          Elige el plan que mejor se adapte al tamaño de tu negocio.
+          Elige el plan que mejor se adapte al tamano de tu negocio.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
@@ -82,11 +82,11 @@ export function Pricing() {
             <h3 className="text-2xl font-display font-semibold text-on-surface mb-2">Prueba Gratis</h3>
           <div className="mb-6 flex items-baseline gap-1">
             <span className="text-4xl font-display font-bold text-on-surface">$0</span>
-            <span className="text-on-surface-variant text-sm">/14 días</span>
+            <span className="text-on-surface-variant text-sm">/14 dias</span>
           </div>
-          <p className="text-on-surface-variant mb-8 min-h-[48px]">Prueba la versión completa con todas las funcionalidades por 14 días.</p>
+          <p className="text-on-surface-variant mb-8 min-h-[48px]">Prueba la version completa con todas las funcionalidades por 14 dias.</p>
           <ul className="space-y-4 mb-8 flex-grow">
-            {["Acceso total 14 días", "Setup inicial guiado", "Sin tarjeta requerida"].map((item, i) => (
+            {["Acceso total 14 dias", "Setup inicial guiado", "Sin tarjeta requerida"].map((item, i) => (
               <li key={i} className="flex items-center text-sm text-on-surface font-medium">
                 <div className="w-4 h-4 text-primary mr-3 shrink-0">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4">
@@ -116,7 +116,7 @@ export function Pricing() {
           </div>
           <div className="relative z-10 flex flex-col h-full">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider shadow-lg shadow-primary/20">
-              Más Popular
+              Mas Popular
             </div>
             <h3 className="text-2xl font-display font-semibold text-on-surface mb-2">Pro</h3>
           <div className="mb-6 flex items-baseline gap-1">
@@ -126,15 +126,11 @@ export function Pricing() {
           <p className="text-on-surface-variant mb-8 min-h-[48px]">Todas las herramientas profesionales para escalar tu negocio.</p>
           <ul className="space-y-4 mb-8 flex-grow">
             {[
-              "5 video juegos para clientes",
-              "UGC marketing camera funcion",
-              "Sistema de eventos",
-              "Menú digital profesional",
-              "Sistema de envíos integrado",
-              "Gestión de Inventario",
-              "Control de Expensas",
-              "Staff backend (Personal)",
-              "Mercado Pago integrado"
+              "5 Videojuegos para clientes",
+              "Camara de marketing UGC",
+              "Sistema de eventos y promociones IA",
+              "Gestion de inventario y control de gastos",
+              "Soporte premium 24/7"
             ].map((item, i) => (
               <li key={i} className="flex items-center text-sm text-on-surface font-medium">
                 <div className="w-4 h-4 text-primary mr-3 shrink-0">
@@ -150,7 +146,7 @@ export function Pricing() {
             Suscribirse Ahora
           </a>
         </div>
-      </motion.div>
+        </motion.div>
       </div>
     </section>
   );
@@ -158,9 +154,9 @@ export function Pricing() {
 
 export function Footer() {
   const sections = [
-    { title: "Producto", items: [{ name: "Características", href: "#beneficios" }, { name: "Precios", href: "#precios" }, { name: "Plantillas", href: "#" }] },
-    { title: "Compañía", items: [{ name: "Nosotros", href: "#" }, { name: "Contacto", href: "https://wa.me/543512122600" }, { name: "Ubicación", href: "#" }, { name: "WhatsApp", href: "https://wa.me/543512122600" }] },
-    { title: "Legal", items: [{ name: "Privacidad", href: "#" }, { name: "Términos", href: "#" }, { name: "Cookies", href: "#" }] },
+    { title: "Producto", items: [{ name: "Caracteristicas", href: "#beneficios" }, { name: "Precios", href: "#precios" }, { name: "Plantillas", href: "#" }] },
+    { title: "Compania", items: [{ name: "Nosotros", href: "#" }, { name: "Contacto", href: "https://wa.me/543512122600" }, { name: "Ubicacion", href: "#" }, { name: "WhatsApp", href: "https://wa.me/543512122600" }] },
+    { title: "Legal", items: [{ name: "Privacidad", href: "#" }, { name: "Terminos", href: "#" }, { name: "Cookies", href: "#" }] },
   ];
 
   return (
@@ -168,16 +164,16 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12">
         <div className="col-span-2 md:col-span-1">
           <div className="text-2xl font-display font-bold text-primary mb-4">Foodspot</div>
-          <p className="text-on-surface-variant text-sm mb-2 max-w-xs transition-all">
-            El sistema operativo para restaurantes modernos. Lanza, gestiona y escala tu negocio gastronómico.
+          <p className="text-on-surface-variant text-sm mb-4 max-w-xs transition-all">
+            FoodSpot OS: El 1er Sistema Operativo No-Code que convierte pedidos en contenido viral.
           </p>
           <p className="text-xs text-on-surface-variant mb-2 font-medium">
-            Córdoba Capital, Argentina
+            Hecho con amor en Cordoba Capital, Argentina para el mundo.
           </p>
           <p className="text-xs text-on-surface-variant mb-6 font-medium">
             WhatsApp: +54 351 212 2600
           </p>
-          <p className="text-xs text-on-surface-variant font-medium">© 2025 FoodSpot Mobile. All rights reserved.</p>
+          <p className="text-xs text-on-surface-variant font-medium">2025 FoodSpot Mobile. All rights reserved.</p>
         </div>
         {sections.map((sec, i) => (
           <div key={i}>

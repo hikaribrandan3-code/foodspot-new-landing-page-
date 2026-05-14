@@ -2,7 +2,6 @@ import { Navbar, Hero, Benefits, MiddleCTA } from "./components/MainSections";
 import { FAQ } from "./components/FAQ";
 import { HowItWorks, Features } from "./components/Features";
 import { Testimonials, Pricing, Footer } from "./components/FooterSections";
-import { Chatbot } from "./components/Chatbot";
 
 export default function App() {
   return (
@@ -18,7 +17,6 @@ export default function App() {
         <Testimonials />
         <Pricing />
       </main>
-      <Chatbot />
       <Footer />
     </div>
   );

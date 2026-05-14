@@ -63,25 +63,33 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="font-display text-4xl md:text-6xl text-white mb-6 drop-shadow-lg"
+          className="font-display text-4xl md:text-6xl text-white mb-4 drop-shadow-lg"
         >
-          FoodSpot Mobile : The Shopify of the Food Industry
+          FoodSpot Mobile
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xl md:text-[22px] text-white font-bold mb-2 max-w-2xl drop-shadow-lg"
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="text-xl md:text-[22px] text-white font-bold mb-4 max-w-2xl drop-shadow-lg"
         >
-          14 días gratis. Sin tarjeta requerida.
+          El 1er sistema No-Code para gastronomia
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.25 }}
+          className="text-base md:text-lg text-white/90 mb-2 max-w-2xl drop-shadow-md"
+        >
+          Crea, lanza y escala tu propia app de delivery en minutos. Sin programadores, sin complicaciones.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-sm md:text-base text-white/80 mb-6 max-w-2xl drop-shadow-md"
+          className="text-sm md:text-base text-white/70 mb-8 max-w-2xl drop-shadow-md"
         >
-          Lanzá tu app de delivery en minutos. Sin código.
+          Como Shopify, pero construido para la industria de la comida.
         </motion.p>
         <motion.a
           href="https://foodspotapp.vercel.app/start-trial"
@@ -90,9 +98,17 @@ export function Hero() {
           transition={{ duration: 0.4, delay: 0.4 }}
           className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all active:scale-95 shadow-lg flex items-center gap-2 inline-flex"
         >
-          Comenzar Gratis
+          Crear mi app sin codigo
           <ArrowRight className="w-5 h-5" />
         </motion.a>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.4, delay: 0.5 }}
+          className="text-xs text-white/60 mt-4 font-medium"
+        >
+          14 dias gratis. Sin tarjeta de credito.
+        </motion.p>
       </div>
     </section>
   );
@@ -104,7 +120,7 @@ export function Benefits() {
       <div className="text-center mb-16">
         <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-4">Todo lo que necesitas para crecer</h2>
         <p className="text-lg text-on-surface-variant max-w-2xl mx-auto">
-          Herramientas poderosas diseñadas para la gastronomía moderna.
+          Herramientas poderosas disenadas para la gastronomia moderna.
         </p>
       </div>
       <div className="max-w-4xl mx-auto">
@@ -142,7 +158,7 @@ export function MiddleCTA() {
            viewport={{ once: true }}
         >
           <h2 className="font-display text-4xl md:text-5xl text-white mb-8 drop-shadow-md">
-            ¿Listo para transformar tu negocio?
+            Listo para transformar tu negocio?
           </h2>
           <motion.a
             href="https://foodspotapp.vercel.app/start-trial"
@@ -153,7 +169,7 @@ export function MiddleCTA() {
             Proba gratis 14 dias !
             <Rocket className="w-6 h-6" />
           </motion.a>
-          <p className="text-white/80 mt-6 font-medium">Sin tarjeta de crédito. Sin vueltas.</p>
+          <p className="text-white/80 mt-6 font-medium">Sin tarjeta de credito. Sin vueltas.</p>
         </motion.div>
       </div>
     </section>
