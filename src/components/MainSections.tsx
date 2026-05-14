@@ -72,7 +72,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-xl md:text-[22px] text-white font-bold mb-6 max-w-2xl drop-shadow-lg"
         >
-          ✅ 14 días gratis. Sin tarjeta requerida.
+          14 días gratis. Sin tarjeta requerida.
         </motion.p>
         <motion.button
           initial={{ opacity: 0, scale: 0.9 }}
