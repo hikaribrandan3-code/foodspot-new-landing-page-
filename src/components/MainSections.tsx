@@ -81,7 +81,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-sm md:text-base text-white/80 mb-6 max-w-2xl drop-shadow-md"
         >
-          Launch your delivery app in minutes. No coding required.
+          Lanzá tu app de delivery en minutos. Sin código.
         </motion.p>
         <motion.a
           href="https://foodspotapp.vercel.app/start-trial"
