@@ -1,5 +1,3 @@
-import Groq from "groq-sdk";
-
 const SYSTEM_INSTRUCTION = `
 You are the FoodSpot Customer Support Assistant. FoodSpot is "The Shopify of Food," a platform that helps restaurant owners digitize their business quickly.
 
@@ -29,48 +27,45 @@ Instructions:
 `;
 
 export class GeminiService {
-  private client: Groq | null = null;
-
-  private getClient(): Groq | null {
-    if (!this.client) {
-      const apiKey = import.meta.env.VITE_GROQ_API_KEY;
-      if (!apiKey || apiKey === 'undefined' || apiKey === '') {
-        console.warn("VITE_GROQ_API_KEY is not set. Chatbot will not function correctly. Please set it in your environment variables.");
-        return null;
-      }
-      this.client = new Groq({ apiKey, dangerouslyAllowBrowser: true });
-    }
-    return this.client;
-  }
-
   async getChatResponse(userMessage: string, history: { role: string; parts: string }[] = []) {
     try {
-      const client = this.getClient();
-      if (!client) {
+      const apiKey = import.meta.env.VITE_GROQ_API_KEY;
+      if (!apiKey || apiKey === 'undefined' || apiKey === '') {
+        console.warn("VITE_GROQ_API_KEY is not set.");
         return "Lo siento, el asistente de IA no está configurado correctamente (falta la clave API). / I'm sorry, the AI assistant is not configured correctly (missing API key).";
       }
 
-      const messages: Groq.Chat.ChatCompletionMessageParam[] = [
+      const messages = [
         { role: "system", content: SYSTEM_INSTRUCTION },
-      ];
-
-      for (const h of history) {
-        messages.push({
+        ...history.map(h => ({
           role: h.role === "model" ? "assistant" : "user",
           content: h.parts,
-        });
-      }
+        })),
+        { role: "user", content: userMessage },
+      ];
 
-      messages.push({ role: "user", content: userMessage });
-
-      const completion = await client.chat.completions.create({
-        messages,
-        model: "llama-3.3-70b-versatile",
-        temperature: 0.7,
-        max_tokens: 1024,
+      const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${apiKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: "llama-3.3-70b-versatile",
+          messages,
+          temperature: 0.7,
+          max_tokens: 1024,
+        }),
       });
 
-      return completion.choices[0]?.message?.content || "No response received";
+      if (!res.ok) {
+        const errText = await res.text();
+        console.error("Groq API HTTP error:", res.status, errText);
+        return "Lo siento, hubo un error al procesar tu solicitud. / Sorry, there was an error processing your request.";
+      }
+
+      const data = await res.json();
+      return data.choices?.[0]?.message?.content || "No response received";
     } catch (error) {
       console.error("Groq API Error:", error);
       return "Lo siento, hubo un error al procesar tu solicitud. Por favor, intenta de nuevo más tarde. / Sorry, there was an error processing your request. Please try again later.";
