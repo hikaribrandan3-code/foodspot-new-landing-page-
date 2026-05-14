@@ -84,58 +84,67 @@ export function HowItWorks() {
         </div>
       </div>
       {/* UGC Marketing */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div className="mt-20">
         <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="order-2 md:order-1 relative overflow-hidden p-8 rounded-3xl bg-primary-container/5 border border-primary/10"
+          className="text-center mb-12"
         >
-          <div className="absolute inset-0 pointer-events-none opacity-20">
-            <CanvasBackground color="#ff3d00" variant="blobs" />
-          </div>
-          <div className="relative z-10">
-            <div className="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mb-6">
-              <Camera className="w-8 h-8 text-primary" />
+          <h2 className="font-display text-3xl md:text-4xl text-on-surface">Tu Ticket, Tu Personaje: El único marketing animado del mercado</h2>
+        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="order-2 md:order-1 relative overflow-hidden p-8 rounded-3xl bg-primary-container/5 border border-primary/10"
+          >
+            <div className="absolute inset-0 pointer-events-none opacity-20">
+              <CanvasBackground color="#ff3d00" variant="blobs" />
             </div>
-            <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-6">Tu Ticket, Tu Personaje: El único marketing animado del mercado</h2>
-            <p className="text-lg text-on-surface-variant mb-6">
-              Herramientas de UGC marketing integradas. Tus clientes sacan fotos → generan prueba social instantánea. El primer software para restaurantes con marketing de contenido generado por usuarios incluido.
-            </p>
-            <ul className="space-y-4 mb-8">
-              {["Cámara UGC para clientes", "Publicación automática en redes", "Prueba social sin costo extra"].map((item, i) => (
-                <li key={i} className="flex items-center text-on-surface-variant">
-                  <div className="w-5 h-5 text-primary mr-3">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                  </div>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className="order-1 md:order-2 flex justify-center"
-        >
-          <div className="relative w-72 h-[550px]">
-            <picture>
-              <source srcSet="/ugc.webp" type="image/webp" />
-              <img
-                src="/ugc.png"
-                alt="UGC Marketing"
-                loading="lazy"
-                width="288"
-                height="550"
+            <div className="relative z-10">
+              <div className="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mb-6">
+                <Camera className="w-8 h-8 text-primary" />
+              </div>
+              <p className="text-lg text-on-surface-variant mb-6">
+                Herramientas de UGC marketing integradas. Tus clientes sacan fotos → generan prueba social instantánea. El primer software para restaurantes con marketing de contenido generado por usuarios incluido.
+              </p>
+              <ul className="space-y-4 mb-8">
+                {["Cámara UGC para clientes", "Publicación automática en redes", "Prueba social sin costo extra"].map((item, i) => (
+                  <li key={i} className="flex items-center text-on-surface-variant">
+                    <div className="w-5 h-5 text-primary mr-3">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
+                    </div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="order-1 md:order-2 flex justify-center"
+          >
+            <div className="relative w-72 h-[550px]">
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
                 className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl border-8 border-gray-100"
-              />
-            </picture>
-          </div>
-        </motion.div>
+              >
+                <source src="/ugc.webm" type="video/webm" />
+                <source src="/ugc.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

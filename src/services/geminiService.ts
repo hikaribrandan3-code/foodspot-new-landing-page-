@@ -1,4 +1,4 @@
-import { GoogleGenAI } from "@google/genai";
+import Groq from "groq-sdk";
 
 const SYSTEM_INSTRUCTION = `
 You are the FoodSpot Customer Support Assistant. FoodSpot is "The Shopify of Food," a platform that helps restaurant owners digitize their business quickly.
@@ -29,43 +29,50 @@ Instructions:
 `;
 
 export class GeminiService {
-  private ai: any;
+  private client: Groq | null = null;
 
-  private getAI() {
-    if (!this.ai) {
-      const apiKey = process.env.GEMINI_API_KEY;
+  private getClient(): Groq | null {
+    if (!this.client) {
+      const apiKey = import.meta.env.VITE_GROQ_API_KEY;
       if (!apiKey || apiKey === 'undefined' || apiKey === '') {
-        console.warn("GEMINI_API_KEY is not set. Chatbot will not function correctly. Please set it in your environment variables.");
+        console.warn("VITE_GROQ_API_KEY is not set. Chatbot will not function correctly. Please set it in your environment variables.");
         return null;
       }
-      this.ai = new GoogleGenAI({ apiKey: apiKey });
+      this.client = new Groq({ apiKey, dangerouslyAllowBrowser: true });
     }
-    return this.ai;
+    return this.client;
   }
 
   async getChatResponse(userMessage: string, history: { role: string; parts: string }[] = []) {
     try {
-      const ai = this.getAI();
-      if (!ai) {
-        return "Lo siento, el asistente de IA no está configurado correctamente (falta la clave API en el servidor). / I'm sorry, the AI assistant is not configured correctly (missing API key).";
+      const client = this.getClient();
+      if (!client) {
+        return "Lo siento, el asistente de IA no está configurado correctamente (falta la clave API). / I'm sorry, the AI assistant is not configured correctly (missing API key).";
       }
 
-      const chat = ai.chats.create({
-        model: "gemini-3-flash-preview",
-        config: {
-          systemInstruction: SYSTEM_INSTRUCTION,
-          temperature: 0.7,
-        },
-        history: history.map(h => ({
-          role: h.role,
-          parts: [{ text: h.parts }]
-        }))
+      const messages: Groq.Chat.ChatCompletionMessageParam[] = [
+        { role: "system", content: SYSTEM_INSTRUCTION },
+      ];
+
+      for (const h of history) {
+        messages.push({
+          role: h.role === "model" ? "assistant" : "user",
+          content: h.parts,
+        });
+      }
+
+      messages.push({ role: "user", content: userMessage });
+
+      const completion = await client.chat.completions.create({
+        messages,
+        model: "llama-3.3-70b-versatile",
+        temperature: 0.7,
+        max_tokens: 1024,
       });
 
-      const result = await chat.sendMessage({ message: userMessage });
-      return result.text;
+      return completion.choices[0]?.message?.content || "No response received";
     } catch (error) {
-      console.error("Gemini API Error:", error);
+      console.error("Groq API Error:", error);
       return "Lo siento, hubo un error al procesar tu solicitud. Por favor, intenta de nuevo más tarde. / Sorry, there was an error processing your request. Please try again later.";
     }
   }
