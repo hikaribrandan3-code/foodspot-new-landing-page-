@@ -1,3 +1,5 @@
+import { GoogleGenAI } from "@google/genai";
+
 const SYSTEM_INSTRUCTION = `
 You are the FoodSpot Customer Support Assistant. FoodSpot is "The Shopify of Food," a platform that helps restaurant owners digitize their business quickly.
 
@@ -27,47 +29,43 @@ Instructions:
 `;
 
 export class GeminiService {
+  private ai: any;
+
+  private getAI() {
+    if (!this.ai) {
+      const apiKey = process.env.GEMINI_API_KEY;
+      if (!apiKey || apiKey === 'undefined' || apiKey === '') {
+        console.warn("GEMINI_API_KEY is not set. Chatbot will not function correctly.");
+        return null;
+      }
+      this.ai = new GoogleGenAI({ apiKey });
+    }
+    return this.ai;
+  }
+
   async getChatResponse(userMessage: string, history: { role: string; parts: string }[] = []) {
     try {
-      const apiKey = import.meta.env.VITE_GROQ_API_KEY;
-      if (!apiKey || apiKey === 'undefined' || apiKey === '') {
-        console.warn("VITE_GROQ_API_KEY is not set.");
+      const ai = this.getAI();
+      if (!ai) {
         return "Lo siento, el asistente de IA no está configurado correctamente (falta la clave API). / I'm sorry, the AI assistant is not configured correctly (missing API key).";
       }
 
-      const messages = [
-        { role: "system", content: SYSTEM_INSTRUCTION },
-        ...history.map(h => ({
-          role: h.role === "model" ? "assistant" : "user",
-          content: h.parts,
-        })),
-        { role: "user", content: userMessage },
-      ];
-
-      const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${apiKey}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          model: "llama-3.3-70b-versatile",
-          messages,
+      const chat = ai.chats.create({
+        model: "gemini-2.0-flash",
+        config: {
+          systemInstruction: SYSTEM_INSTRUCTION,
           temperature: 0.7,
-          max_tokens: 1024,
-        }),
+        },
+        history: history.map(h => ({
+          role: h.role,
+          parts: [{ text: h.parts }]
+        }))
       });
 
-      if (!res.ok) {
-        const errText = await res.text();
-        console.error("Groq API HTTP error:", res.status, errText);
-        return "Lo siento, hubo un error al procesar tu solicitud. / Sorry, there was an error processing your request.";
-      }
-
-      const data = await res.json();
-      return data.choices?.[0]?.message?.content || "No response received";
+      const result = await chat.sendMessage({ message: userMessage });
+      return result.text;
     } catch (error) {
-      console.error("Groq API Error:", error);
+      console.error("Gemini API Error:", error);
       return "Lo siento, hubo un error al procesar tu solicitud. Por favor, intenta de nuevo más tarde. / Sorry, there was an error processing your request. Please try again later.";
     }
   }
