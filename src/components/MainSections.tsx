@@ -71,25 +71,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="text-xl md:text-[22px] text-white font-bold mb-4 max-w-2xl drop-shadow-lg"
+          className="text-xl md:text-[22px] text-white font-bold mb-8 max-w-2xl drop-shadow-lg"
         >
-          El 1er sistema No-Code para gastronomia
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.25 }}
-          className="text-base md:text-lg text-white/90 mb-2 max-w-2xl drop-shadow-md"
-        >
-          Crea, lanza y escala tu propia app de delivery en minutos. Sin programadores, sin complicaciones.
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-sm md:text-base text-white/70 mb-8 max-w-2xl drop-shadow-md"
-        >
-          Como Shopify, pero construido para la industria de la comida.
+          Crear tu propia app para tu negocio de gastronomia sin codigo!
         </motion.p>
         <motion.a
           href="https://foodspotapp.vercel.app/start-trial"
