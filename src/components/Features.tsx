@@ -98,7 +98,7 @@ export function HowItWorks() {
             <div className="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mb-6">
               <Camera className="w-8 h-8 text-primary" />
             </div>
-            <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-6">Marketing UGC Integrado</h2>
+            <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-6">Tu Ticket, Tu Personaje: El único marketing animado del mercado</h2>
             <p className="text-lg text-on-surface-variant mb-6">
               Herramientas de UGC marketing integradas. Tus clientes sacan fotos → generan prueba social instantánea. El primer software para restaurantes con marketing de contenido generado por usuarios incluido.
             </p>
