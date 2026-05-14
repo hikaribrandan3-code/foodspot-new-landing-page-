@@ -1,4 +1,5 @@
 import { Navbar, Hero, Benefits, MiddleCTA } from "./components/MainSections";
+import { FAQ } from "./components/FAQ";
 import { HowItWorks, Features } from "./components/Features";
 import { Testimonials, Pricing, Footer } from "./components/FooterSections";
 import { Chatbot } from "./components/Chatbot";
@@ -12,6 +13,7 @@ export default function App() {
         <Benefits />
         <HowItWorks />
         <Features />
+        <FAQ />
         <MiddleCTA />
         <Testimonials />
         <Pricing />
