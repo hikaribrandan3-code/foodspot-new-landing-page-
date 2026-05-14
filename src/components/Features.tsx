@@ -17,21 +17,21 @@ const Icons = {
 export function HowItWorks() {
   const steps = [
     {
-      title: "Poder de marca",
-      desc: "Personaliza tu tienda con tus colores, logo e identidad en segundos.",
+      title: "Crea tu menú en minutos",
+      desc: "Subí fotos, precios y categorías. Tu tienda lista al instante.",
       img: "/1menu.png", 
       rotation: "rotate-2",
     },
     {
-      title: "Experiencia Social",
-      desc: "Tus clientes comparten su experiencia automáticamente en redes sociales.",
+      title: "Personalizá tu marca",
+      desc: "Colores, logo e identidad. Que se vea tuya desde el primer día.",
       img: "/2brand.png",
       rotation: "-rotate-2",
       offset: "md:mt-12",
     },
     {
-      title: "Control Absoluto",
-      desc: "Métricas en tiempo real de tus ventas, pedidos y medios de pago preferidos.",
+      title: "Conectá Mercado Pago y listo",
+      desc: "Empezá a cobrar al instante con las comisiones más bajas del mercado.",
       img: "/3pago.png",
       rotation: "rotate-2",
       offset: "md:mt-24",
