@@ -132,9 +132,6 @@ export function Pricing() {
                 {[
                   "Pedidos ilimitados (sin limite mensual)",
                   "Panel de pedidos en tiempo real",
-                  "Flujo de cocina con seguimiento de inventario",
-                  "Pantalla de estado de pre-pedidos (con ETA y seguimiento)",
-                  "Sistema de asignacion de personal",
                 ].map((item, i) => (
                   <li key={i} className="flex items-center text-sm text-on-surface font-medium">
                     <div className="w-4 h-4 text-primary mr-3 shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><path d="M20 6L9 17l-5-5" /></svg></div>
@@ -149,7 +146,6 @@ export function Pricing() {
                 {[
                   "Radio de delivery inteligente (validado en servidor)",
                   "Umbral de envio gratis (lo definis vos)",
-                  "Asignacion y seguimiento de repartidores",
                 ].map((item, i) => (
                   <li key={i} className="flex items-center text-sm text-on-surface font-medium">
                     <div className="w-4 h-4 text-primary mr-3 shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><path d="M20 6L9 17l-5-5" /></svg></div>
@@ -164,7 +160,6 @@ export function Pricing() {
                 {[
                   "Integracion directa con Mercado Pago",
                   "0% de comision para FoodSpot — te quedas con el 100%",
-                  "Seguridad de webhooks nivel produccion",
                   "Pagos instantaneos",
                 ].map((item, i) => (
                   <li key={i} className="flex items-center text-sm text-on-surface font-medium">
@@ -205,35 +200,6 @@ export function Pricing() {
               </ul>
             </div>
             <div>
-              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">El Ciclo UGC</p>
-              <ul className="space-y-2">
-                {[
-                  "Los clientes capturan y comparten fotos en el punto de compra",
-                  "El contenido se vincula automaticamente a tu Instagram y TikTok",
-                  "Convierte cada pedido en prueba social y marketing",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center text-sm text-on-surface font-medium">
-                    <div className="w-4 h-4 text-primary mr-3 shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><path d="M20 6L9 17l-5-5" /></svg></div>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Juegos y Fidelizacion</p>
-              <ul className="space-y-2">
-                {[
-                  "Gamificacion in-app (puntos, medallas, recompensas)",
-                  "Construi una base de clientes recurrentes",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center text-sm text-on-surface font-medium">
-                    <div className="w-4 h-4 text-primary mr-3 shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><path d="M20 6L9 17l-5-5" /></svg></div>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
               <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Eventos</p>
               <ul className="space-y-2">
                 {[
@@ -248,11 +214,25 @@ export function Pricing() {
               </ul>
             </div>
             <div>
-              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Resenas</p>
+              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Marketing</p>
               <ul className="space-y-2">
                 {[
-                  "Mostra y sincroniza resenas de Google en tu tienda",
-                  "Genera confianza con prueba social",
+                  "Los clientes capturan y comparten fotos en el punto de compra",
+                  "El contenido se vincula automaticamente a tu Instagram y TikTok",
+                  "Convierte cada pedido en prueba social y marketing",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center text-sm text-on-surface font-medium">
+                    <div className="w-4 h-4 text-primary mr-3 shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><path d="M20 6L9 17l-5-5" /></svg></div>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">Juegos</p>
+              <ul className="space-y-2">
+                {[
+                  "5 juegos integrados para entretener a tus clientes",
                 ].map((item, i) => (
                   <li key={i} className="flex items-center text-sm text-on-surface font-medium">
                     <div className="w-4 h-4 text-primary mr-3 shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><path d="M20 6L9 17l-5-5" /></svg></div>
