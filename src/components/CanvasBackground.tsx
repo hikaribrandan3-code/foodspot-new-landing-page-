@@ -1,16 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
-interface Particle {
-  x: number;
-  y: number;
-  size: number;
-  speedX: number;
-  speedY: number;
-  color: string;
-  opacity: number;
-}
-
-export const CanvasBackground: React.FC<{ color?: string, variant?: 'dots' | 'blobs' }> = ({ color = '#ff3d00', variant = 'dots' }) => {
+export const CanvasBackground = ({ color = '#ff3d00', variant = 'dots' }: { color?: string, variant?: 'dots' | 'blobs' }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {

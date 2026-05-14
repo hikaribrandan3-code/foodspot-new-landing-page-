@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, type FormEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { MessageCircle, X, Send, User, Bot, Loader2 } from 'lucide-react';
+import { MessageCircle, X, Send, Bot, Loader2 } from 'lucide-react';
 import { geminiService } from '../services/geminiService';
 
 interface Message {
@@ -27,7 +27,7 @@ export function Chatbot() {
     }
   }, [messages, isOpen]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
 

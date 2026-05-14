@@ -45,7 +45,7 @@ export function Testimonials() {
               </div>
               <p className="text-on-surface-variant mb-8 italic flex-grow">"{row.quote}"</p>
               <div className="flex items-center gap-4">
-                <img src={row.avatar} alt={row.name} className="w-12 h-12 rounded-full object-cover" />
+                <img src={row.avatar} alt={row.name} loading="lazy" width="48" height="48" className="w-12 h-12 rounded-full object-cover" />
                 <div>
                   <h4 className="font-semibold text-on-surface text-sm">{row.name}</h4>
                   <p className="text-xs text-on-surface-variant font-medium">{row.role}</p>

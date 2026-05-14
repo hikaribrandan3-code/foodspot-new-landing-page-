@@ -1,31 +1,21 @@
 import { motion } from "motion/react";
 import { Bot, LayoutGrid, ArrowDown } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
-// Helper Icons (Standardized for the app)
-const Icons = {
-  AutoAwesome: () => <span className="material-symbols-outlined">auto_awesome</span>,
-  ViewQuilt: () => <span className="material-symbols-outlined">view_quilt</span>,
-  Check: () => (
-    <div className="w-5 h-5 text-primary mr-3">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-        <path d="M20 6L9 17l-5-5" />
-      </svg>
-    </div>
-  ),
-};
 
 export function HowItWorks() {
   const steps = [
     {
       title: "Crea tu menú en minutos",
       desc: "Subí fotos, precios y categorías. Tu tienda lista al instante.",
-      img: "/1menu.png", 
+      img: "/1menu.png",
+      imgWebp: "/1menu.webp",
       rotation: "rotate-2",
     },
     {
       title: "Personalizá tu marca",
       desc: "Colores, logo e identidad. Que se vea tuya desde el primer día.",
       img: "/2brand.png",
+      imgWebp: "/2brand.webp",
       rotation: "-rotate-2",
       offset: "md:mt-12",
     },
@@ -33,6 +23,7 @@ export function HowItWorks() {
       title: "Conectá Mercado Pago y listo",
       desc: "Empezá a cobrar al instante con las comisiones más bajas del mercado.",
       img: "/3pago.png",
+      imgWebp: "/3pago.webp",
       rotation: "rotate-2",
       offset: "md:mt-24",
     },
@@ -66,11 +57,17 @@ export function HowItWorks() {
             >
               <div className="relative w-64 h-[500px] mb-8">
                 <div className={`absolute inset-0 bg-gray-200 rounded-[2.5rem] shadow-xl transform ${step.rotation}`}></div>
-                <img
-                  src={step.img}
-                  alt={step.title}
-                  className="absolute inset-0 w-full h-full object-cover rounded-[2.5rem] shadow-md border-4 border-white"
-                />
+                <picture>
+                  <source srcSet={step.imgWebp} type="image/webp" />
+                  <img
+                    src={step.img}
+                    alt={step.title}
+                    loading="lazy"
+                    width="256"
+                    height="500"
+                    className="absolute inset-0 w-full h-full object-cover rounded-[2.5rem] shadow-md border-4 border-white"
+                  />
+                </picture>
                 <div className="absolute -left-4 top-10 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-display text-xl font-bold shadow-lg z-10">
                   {idx + 1}
                 </div>
@@ -136,6 +133,9 @@ export function Features() {
             <img
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy9P5dWBZ0cOuC_KN51YotmNltwsh_oGwSqe-LMNyGTukaFC5XP_yw0uzuFXhOePhqCUsZBGvbmL_V36yQj9_mLo8rN-VFq8A0BH0jHqA_MJ9sGwWTzOkQLkRA3EqWGIvUvOGY_vc8bTNnQ9iNWmW54pPnwrQl6VlD1WIHeKJxOGCt-Oxl76BlgV7tLfaMg2uj0xsY88G1TpCIsewgCBc0NXIFAFwlJeQgQkp0KYKWmMNX0KweRUhlhPcuj4svm-SkgJh-4tmMp8Q_"
               alt="AI Mockup"
+              loading="lazy"
+              width="288"
+              height="550"
               className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl border-8 border-gray-100"
             />
           </div>
@@ -151,11 +151,17 @@ export function Features() {
           className="flex justify-center"
         >
           <div className="relative w-72 h-[550px]">
-            <img
-              src="/finance.png"
-              alt="Financial Tracker"
-              className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl border-8 border-gray-100"
-            />
+            <picture>
+              <source srcSet="/finance.webp" type="image/webp" />
+              <img
+                src="/finance.png"
+                alt="Financial Tracker"
+                loading="lazy"
+                width="288"
+                height="550"
+                className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl border-8 border-gray-100"
+              />
+            </picture>
           </div>
         </motion.div>
         <motion.div

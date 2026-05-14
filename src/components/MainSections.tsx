@@ -54,6 +54,7 @@ export function Hero() {
         <img
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtl8ruMFCExYnS-qKzMz2L464gUvthxKCJsQ8w-CK3_2xFLtehDsGimH4eDNBkdXz1K1H5BS1AbqltEexwumJusx8B8R0xLtQFrYU_rSrROounwskDUZRYt4MAwx-cOx3W0TIJnkp_MhiuWADww6kyxzVIyCCVgs1SE-h_kRcus8MLzxGMqzst8EDdfVUArAcdHmxSsMgrbJq_zFRyjXewemByNGophKnpyjNvFVJeUzvLgBU2vhk20iYlAbVos3pCGuIiBV5Wfe3I"
           alt="Restaurant Kitchen"
+          loading="eager"
           className="w-full h-full object-cover"
         />
       </div>
@@ -100,11 +101,17 @@ export function Benefits() {
       </div>
       <div className="max-w-4xl mx-auto">
         <div className="bg-white rounded-2xl p-4 ambient-shadow hover-lift overflow-hidden">
-          <img
-            src="/beforeafter.jpeg"
-            alt="Before and After"
-            className="w-full h-auto rounded-xl object-cover"
-          />
+          <picture>
+            <source srcSet="/beforeafter.webp" type="image/webp" />
+            <img
+              src="/beforeafter.jpeg"
+              alt="Before and After"
+              loading="lazy"
+              width="800"
+              height="600"
+              className="w-full h-auto rounded-xl object-cover"
+            />
+          </picture>
         </div>
       </div>
     </section>
