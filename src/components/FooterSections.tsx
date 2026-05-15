@@ -295,8 +295,13 @@ export function Footer() {
           <p className="text-xs text-on-surface-variant mb-2 font-medium">
             Hecho con amor en Cordoba Capital, Argentina para el mundo.
           </p>
-          <p className="text-xs text-on-surface-variant mb-6 font-medium">
+          <p className="text-xs text-on-surface-variant mb-2 font-medium">
             WhatsApp: +54 351 212 2600
+          </p>
+          <p className="text-xs text-on-surface-variant mb-6 font-medium">
+            <a href="mailto:info@foodspotmobile.com" className="hover:text-primary transition-colors">
+              Email: info@foodspotmobile.com
+            </a>
           </p>
           <p className="text-xs text-on-surface-variant font-medium">2025 FoodSpot Mobile. All rights reserved.</p>
         </div>
