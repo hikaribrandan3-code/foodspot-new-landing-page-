@@ -159,3 +159,33 @@ export function MiddleCTA() {
     </section>
   );
 }
+
+export function UGCMarketingCTA() {
+  return (
+    <section className="py-16 px-6 bg-secondary overflow-hidden relative">
+      <div className="absolute inset-0 opacity-20">
+        <CanvasBackground color="#ffffff" variant="blobs" />
+      </div>
+      <div className="max-w-4xl mx-auto text-center relative z-10">
+        <motion.div
+           initial={{ opacity: 0, scale: 0.9 }}
+           whileInView={{ opacity: 1, scale: 1 }}
+           viewport={{ once: true }}
+        >
+          <h2 className="font-display text-3xl md:text-4xl text-white mb-6 drop-shadow-md">
+            Convierte cada pedido en contenido viral
+          </h2>
+          <motion.a
+            href="https://foodspotapp.vercel.app/start-trial"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="bg-white text-secondary px-9 py-4 rounded-full text-lg font-bold shadow-lg inline-flex items-center gap-2 transition-all active:scale-95"
+          >
+            Empieza ahora
+            <ArrowRight className="w-5 h-5" />
+          </motion.a>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
