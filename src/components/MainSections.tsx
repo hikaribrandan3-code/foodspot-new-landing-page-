@@ -52,9 +52,11 @@ export function Hero() {
         </div>
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <img
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtl8ruMFCExYnS-qKzMz2L464gUvthxKCJsQ8w-CK3_2xFLtehDsGimH4eDNBkdXz1K1H5BS1AbqltEexwumJusx8B8R0xLtQFrYU_rSrROounwskDUZRYt4MAwx-cOx3W0TIJnkp_MhiuWADww6kyxzVIyCCVgs1SE-h_kRcus8MLzxGMqzst8EDdfVUArAcdHmxSsMgrbJq_zFRyjXewemByNGophKnpyjNvFVJeUzvLgBU2vhk20iYlAbVos3pCGuIiBV5Wfe3I"
+          src="/hero.webp"
           alt="Restaurant Kitchen"
-          loading="eager"
+          loading="lazy"
+          width={1920}
+          height={1080}
           className="w-full h-full object-cover"
         />
       </div>

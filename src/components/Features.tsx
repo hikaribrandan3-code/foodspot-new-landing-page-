@@ -212,11 +212,11 @@ export function Features() {
         >
           <div className="relative w-72 h-[550px]">
             <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy9P5dWBZ0cOuC_KN51YotmNltwsh_oGwSqe-LMNyGTukaFC5XP_yw0uzuFXhOePhqCUsZBGvbmL_V36yQj9_mLo8rN-VFq8A0BH0jHqA_MJ9sGwWTzOkQLkRA3EqWGIvUvOGY_vc8bTNnQ9iNWmW54pPnwrQl6VlD1WIHeKJxOGCt-Oxl76BlgV7tLfaMg2uj0xsY88G1TpCIsewgCBc0NXIFAFwlJeQgQkp0KYKWmMNX0KweRUhlhPcuj4svm-SkgJh-4tmMp8Q_"
+              src="/ai-mockup.webp"
               alt="AI Mockup"
               loading="lazy"
-              width="288"
-              height="550"
+              width={288}
+              height={550}
               className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl border-8 border-gray-100"
             />
           </div>
