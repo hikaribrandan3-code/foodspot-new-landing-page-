@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { Bot, LayoutGrid, ArrowDown, Camera, CreditCard, Rocket } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
 
@@ -47,13 +46,10 @@ export function HowItWorks() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
           {steps.map((step, idx) => (
-            <motion.div
+            <div
               key={idx}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.2 }}
-              className={`flex flex-col items-center text-center ${step.offset || ""}`}
+              className={`flex flex-col items-center text-center fade-in-up ${step.offset || ""}`}
+              style={{ animationDelay: `${idx * 0.2}s` }}
             >
               <div className="relative w-64 h-[500px] mb-8">
                 <div className={`absolute inset-0 bg-gray-200 rounded-[2.5rem] shadow-xl transform ${step.rotation}`}></div>
@@ -79,7 +75,7 @@ export function HowItWorks() {
                   <ArrowDown className="w-6 h-6 mx-auto animate-bounce" />
                 </div>
               )}
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

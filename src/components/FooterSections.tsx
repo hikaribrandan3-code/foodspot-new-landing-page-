@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { Star } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
 
@@ -33,10 +32,9 @@ export function Testimonials() {
         <h2 className="font-display text-3xl md:text-4xl text-center text-on-surface mb-16">Lo que dicen nuestros clientes</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {reviews.map((row, i) => (
-            <motion.div
+            <div
               key={i}
-              whileHover={{ y: -5 }}
-              className="bg-white rounded-2xl p-8 ambient-shadow flex flex-col"
+              className="bg-white rounded-2xl p-8 ambient-shadow flex flex-col transition-transform hover:-translate-y-1"
             >
               <div className="flex items-center gap-1 mb-6 text-yellow-500">
                 {[...Array(5)].map((_, idx) => (
@@ -51,7 +49,7 @@ export function Testimonials() {
                   <p className="text-xs text-on-surface-variant font-medium">{row.role}</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
@@ -63,22 +61,19 @@ export function Comparison() {
   return (
     <section className="py-20 px-6 bg-white">
       <div className="max-w-4xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="fade-in-up">
           <picture>
             <source srcSet="/comparison.webp" type="image/webp" />
             <img
               src="/comparison.png"
               alt="Comparativa de Plataformas para Restaurantes - FoodSpot vs Pedix"
               loading="lazy"
+              width="704"
+              height="1527"
               className="w-full h-auto rounded-2xl shadow-lg"
             />
           </picture>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
@@ -95,10 +90,8 @@ export function Pricing() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
         {/* Tier 1 */}
-        <motion.div 
-          whileHover={{ y: -5, scale: 1.01 }}
-          transition={{ duration: 0.3 }}
-          className="bg-white border border-gray-200 rounded-2xl p-8 flex flex-col h-full relative overflow-hidden group shadow-sm hover:shadow-md"
+        <div
+          className="bg-white border border-gray-200 rounded-2xl p-8 flex flex-col h-full relative overflow-hidden group shadow-sm hover:shadow-md transition-all hover:-translate-y-1 hover:scale-[1.01]"
         >
           <div className="absolute inset-0 pointer-events-none opacity-5 group-hover:opacity-10 transition-opacity">
             <CanvasBackground color="#757575" variant="blobs" />
@@ -126,15 +119,11 @@ export function Pricing() {
               Empezar Prueba Gratis
             </a>
           </div>
-        </motion.div>
+        </div>
 
         {/* Tier 2 */}
-        <motion.div 
-          initial={{ y: 0 }}
-          animate={{ y: [0, -4, 0] }}
-          transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-          whileHover={{ scale: 1.03, y: -12, transition: { duration: 0.2 } }}
-          className="bg-white border-2 border-primary rounded-2xl p-8 flex flex-col h-full relative shadow-xl transform md:-translate-y-4 overflow-hidden group ring-primary/20 hover:ring-8 transition-all"
+        <div
+          className="bg-white border-2 border-primary rounded-2xl p-8 flex flex-col h-full relative shadow-xl transform md:-translate-y-4 overflow-hidden group ring-primary/20 hover:ring-8 transition-all hover:scale-[1.03] hover:-translate-y-12"
         >
           <div className="absolute inset-0 pointer-events-none opacity-10 group-hover:opacity-20 transition-opacity">
             <CanvasBackground color="#ff3d00" variant="blobs" />
@@ -282,7 +271,7 @@ export function Pricing() {
             Suscribirse Ahora
           </a>
         </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
