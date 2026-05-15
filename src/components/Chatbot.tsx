@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect, type FormEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { MessageCircle, X, Send, Bot, Loader2 } from 'lucide-react';
-import { geminiService } from '../services/geminiService';
 
 interface Message {
   role: 'user' | 'model';
@@ -15,11 +14,20 @@ export function Chatbot() {
     { role: 'model', parts: '¡Hola! Soy el asistente de FoodSpot. ¿En qué puedo ayudarte hoy? / Hello! I am the FoodSpot assistant. How can I help you today?' }
   ]);
   const [isLoading, setIsLoading] = useState(false);
+  const [geminiService, setGeminiService] = useState<any>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  useEffect(() => {
+    if (isOpen && !geminiService) {
+      import('../services/geminiService').then(module => {
+        setGeminiService(module.geminiService);
+      }).catch(err => console.error('Failed to load Gemini service:', err));
+    }
+  }, [isOpen, geminiService]);
 
   useEffect(() => {
     if (isOpen) {
@@ -29,7 +37,7 @@ export function Chatbot() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (!input.trim() || isLoading) return;
+    if (!input.trim() || isLoading || !geminiService) return;
 
     const userMessage = input.trim();
     setInput('');
