@@ -107,12 +107,12 @@ export function Pricing() {
             <h3 className="text-2xl font-display font-semibold text-on-surface mb-2">Prueba Gratis</h3>
           <div className="mb-6 flex items-baseline gap-1">
             <span className="text-4xl font-display font-bold text-on-surface">$0</span>
-            <span className="text-on-surface-variant text-sm">/14 dias</span>
+            <span className="text-on-surface font-semibold text-base">/14 dias</span>
           </div>
-          <p className="text-on-surface-variant mb-8 min-h-[48px]">Prueba la version completa con todas las funcionalidades por 14 dias.</p>
+          <p className="text-on-surface font-semibold mb-8 min-h-[48px] text-lg">Prueba la version completa con todas las funcionalidades por 14 dias sin tarjeta de credito.</p>
           <ul className="space-y-4 mb-8 flex-grow">
             {["Acceso total 14 dias", "Setup inicial guiado", "Sin tarjeta requerida"].map((item, i) => (
-              <li key={i} className="flex items-center text-sm text-on-surface font-medium">
+              <li key={i} className="flex items-center text-base text-on-surface font-semibold">
                 <div className="w-4 h-4 text-primary mr-3 shrink-0">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4">
                     <path d="M20 6L9 17l-5-5" />
