@@ -6,7 +6,7 @@ export function Navbar() {
   return (
     <nav className="hidden md:block bg-surface/90 border-b border-outline-variant shadow-sm sticky top-0 backdrop-blur-md z-50">
       <div className="flex justify-between items-center w-full px-6 max-w-7xl mx-auto h-20">
-        <div className="text-2xl font-display font-bold text-primary">FoodSpot</div>
+        <div className="text-2xl font-display font-bold text-primary">FoodSpot <span className="text-lg font-semibold text-on-surface">Mobile</span></div>
         <ul className="hidden md:flex space-x-8">
           <li>
             <a href="#beneficios" className="text-on-surface-variant font-medium hover:text-primary transition-colors text-sm">

@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import { Bot, LayoutGrid, ArrowDown, Camera, CreditCard, Rocket } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
 
