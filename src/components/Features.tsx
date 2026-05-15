@@ -85,84 +85,104 @@ export function HowItWorks() {
       </div>
 
       {/* Mercado Pago */}
-      <div className="mt-24 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="order-2 md:order-1 relative overflow-hidden p-8 rounded-3xl bg-primary-container/5 border border-primary/10"
-          >
-            <div className="absolute inset-0 pointer-events-none opacity-20">
-              <CanvasBackground color="#ff3d00" variant="blobs" />
+      <div className="mt-20 max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-8">Pagos rapidos. Negocio ganador.</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto text-left">
+            <div className="flex gap-4">
+              <div className="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold flex-shrink-0 mt-1">✓</div>
+              <p className="text-on-surface-variant">Integracion nativa con Mercado Pago</p>
             </div>
-            <div className="relative z-10">
-              <div className="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mb-6">
-                <CreditCard className="w-8 h-8 text-primary" />
-              </div>
-              <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-6">Pagos rapidos. Negocio ganador.</h2>
-              <p className="text-lg text-on-surface-variant mb-6">
-                Integracion nativa con Mercado Pago. Recibi tu dinero al instante con las comisiones mas bajas del mercado. Cobra como un grande desde el primer dia.
-              </p>
+            <div className="flex gap-4">
+              <div className="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold flex-shrink-0 mt-1">✓</div>
+              <p className="text-on-surface-variant">Recibí dinero al instante</p>
             </div>
-          </motion.div>
-
-        </div>
+            <div className="flex gap-4">
+              <div className="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold flex-shrink-0 mt-1">✓</div>
+              <p className="text-on-surface-variant">Comisiones mas bajas del mercado</p>
+            </div>
+            <div className="flex gap-4">
+              <div className="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold flex-shrink-0 mt-1">✓</div>
+              <p className="text-on-surface-variant">Cobra como un grande desde el dia 1</p>
+            </div>
+          </div>
+        </motion.div>
       </div>
 
       {/* UGC Marketing */}
-      <div className="mt-24 max-w-7xl mx-auto">
+      <div className="mt-20 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="font-display text-3xl md:text-4xl text-on-surface">Tu Ticket, Tu Personaje: El unico marketing animado del mercado</h2>
+          <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-8">Tu Ticket, Tu Personaje: El unico marketing animado del mercado</h2>
+          <div className="flex justify-center mb-12">
+            <svg className="w-64 h-24" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+              {/* Circle 1 */}
+              <circle cx="30" cy="50" r="20" fill="#ff3d00" opacity="0.2" stroke="#ff3d00" strokeWidth="2"/>
+              <text x="30" y="55" textAnchor="middle" className="font-bold text-sm" fill="#ff3d00">Pide</text>
+
+              {/* Arrow 1 */}
+              <line x1="50" y1="50" x2="90" y2="50" stroke="#ff3d00" strokeWidth="2"/>
+              <polygon points="95,50 88,46 88,54" fill="#ff3d00"/>
+
+              {/* Circle 2 */}
+              <circle cx="120" cy="50" r="20" fill="#ff3d00" opacity="0.2" stroke="#ff3d00" strokeWidth="2"/>
+              <text x="120" y="55" textAnchor="middle" className="font-bold text-sm" fill="#ff3d00">Captura</text>
+
+              {/* Arrow 2 */}
+              <line x1="140" y1="50" x2="180" y2="50" stroke="#ff3d00" strokeWidth="2"/>
+              <polygon points="185,50 178,46 178,54" fill="#ff3d00"/>
+
+              {/* Circle 3 */}
+              <circle cx="210" cy="50" r="20" fill="#ff3d00" opacity="0.2" stroke="#ff3d00" strokeWidth="2"/>
+              <text x="210" y="55" textAnchor="middle" className="font-bold text-sm" fill="#ff3d00">Comparte</text>
+            </svg>
+          </div>
         </motion.div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="order-2 md:order-1 relative overflow-hidden p-8 rounded-3xl bg-primary-container/5 border border-primary/10"
-          >
-            <div className="absolute inset-0 pointer-events-none opacity-20">
-              <CanvasBackground color="#ff3d00" variant="blobs" />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-col md:flex-row gap-12 items-start"
+        >
+          <div className="flex-1 space-y-4">
+            <div className="flex gap-4">
+              <div className="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold flex-shrink-0">✓</div>
+              <p className="text-on-surface-variant">No es solo una orden, es contenido</p>
             </div>
-            <div className="relative z-10">
-              <div className="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mb-6">
-                <Camera className="w-8 h-8 text-primary" />
-              </div>
-              <p className="text-lg text-on-surface-variant mb-6">
-                No es solo una orden, es contenido. Nuestras mascotas invitan a tus clientes a sacarse una foto y compartirla en redes sociales.
-              </p>
-              <p className="text-lg text-on-surface-variant mb-6 font-semibold">
-                Pide → Captura → Comparte. Tu marca se vuelve viral de forma organica.
-              </p>
+            <div className="flex gap-4">
+              <div className="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold flex-shrink-0">✓</div>
+              <p className="text-on-surface-variant">Nuestras mascotas invitan a tus clientes a sacarse fotos</p>
             </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="order-1 md:order-2 flex justify-center"
-          >
-            <div className="relative w-72 h-[550px]">
+            <div className="flex gap-4">
+              <div className="w-6 h-6 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold flex-shrink-0">✓</div>
+              <p className="text-on-surface-variant">Tu marca se vuelve viral de forma organica</p>
+            </div>
+          </div>
+          <div className="flex-1 flex justify-center md:justify-end">
+            <div className="relative w-64 h-[420px]">
               <video
                 autoPlay
                 muted
                 loop
                 playsInline
                 preload="metadata"
-                className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl border-8 border-gray-100"
+                className="w-full h-full object-cover rounded-2xl shadow-lg"
               >
                 <source src="/ugc.webm" type="video/webm" />
                 <source src="/ugc.mp4" type="video/mp4" />
               </video>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
