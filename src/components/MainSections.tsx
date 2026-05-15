@@ -82,14 +82,14 @@ export function Hero() {
           transition={{ duration: 0.4, delay: 0.4 }}
           className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all active:scale-95 shadow-lg flex items-center gap-2 inline-flex"
         >
-          Crear mi app sin codigo
+          Crear mi app ahora!
           <ArrowRight className="w-5 h-5" />
         </motion.a>
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.5 }}
-          className="text-xs text-white/60 mt-4 font-medium"
+          className="text-base text-white font-semibold mt-4"
         >
           14 dias gratis. Sin tarjeta de credito.
         </motion.p>
