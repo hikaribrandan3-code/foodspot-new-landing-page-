@@ -59,6 +59,31 @@ export function Testimonials() {
   );
 }
 
+export function Comparison() {
+  return (
+    <section className="py-20 px-6 bg-white">
+      <div className="max-w-4xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <picture>
+            <source srcSet="/comparison.webp" type="image/webp" />
+            <img
+              src="/comparison.png"
+              alt="Comparativa de Plataformas para Restaurantes - FoodSpot vs Pedix"
+              loading="lazy"
+              className="w-full h-auto rounded-2xl shadow-lg"
+            />
+          </picture>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
 export function Pricing() {
   return (
     <section id="precios" className="py-20 px-6 max-w-7xl mx-auto">
