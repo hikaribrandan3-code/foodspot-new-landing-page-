@@ -1,8 +1,22 @@
 export function AboutUs() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Founder Image Hero */}
-      <section className="pt-20 pb-12 px-6 max-w-4xl mx-auto">
+      {/* Hero Section */}
+      <section className="pt-32 pb-8 px-6 max-w-4xl mx-auto">
+        <h1 className="font-display text-4xl md:text-5xl text-on-surface mb-8">
+          Sobre Nosotros — La Historia del Fundador
+        </h1>
+      </section>
+
+      {/* Intro Text */}
+      <section className="px-6 max-w-4xl mx-auto pb-12">
+        <p className="text-lg text-on-surface-variant leading-relaxed">
+          Conocé la historia detrás de FoodSpot. Un emprendedor que entendió el dolor real de los dueños gastronómicos.
+        </p>
+      </section>
+
+      {/* Founder Image */}
+      <section className="pb-12 px-6 max-w-4xl mx-auto">
         <div className="rounded-3xl overflow-hidden shadow-lg mb-12">
           <picture>
             <source srcSet="/founder-home-office.webp" type="image/webp" />
@@ -13,13 +27,6 @@ export function AboutUs() {
             />
           </picture>
         </div>
-      </section>
-
-      {/* Hero Section */}
-      <section className="pb-16 px-6 max-w-4xl mx-auto">
-        <h1 className="font-display text-4xl md:text-5xl text-on-surface mb-8">
-          Sobre Nosotros — La Historia del Fundador
-        </h1>
       </section>
 
       {/* Main Content */}
