@@ -1,8 +1,22 @@
 export function AboutUs() {
   return (
     <div className="min-h-screen bg-white">
+      {/* Founder Image Hero */}
+      <section className="pt-20 pb-12 px-6 max-w-4xl mx-auto">
+        <div className="rounded-3xl overflow-hidden shadow-lg mb-12">
+          <picture>
+            <source srcSet="/founder-home-office.webp" type="image/webp" />
+            <img
+              src="/founder-home-office.jpg"
+              alt="Fundador en su home office"
+              className="w-full h-auto object-cover"
+            />
+          </picture>
+        </div>
+      </section>
+
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-6 max-w-4xl mx-auto">
+      <section className="pb-16 px-6 max-w-4xl mx-auto">
         <h1 className="font-display text-4xl md:text-5xl text-on-surface mb-8">
           Sobre Nosotros — La Historia del Fundador
         </h1>
