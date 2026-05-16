@@ -280,7 +280,7 @@ export function Pricing() {
 export function Footer() {
   const sections = [
     { title: "Producto", items: [{ name: "Caracteristicas", href: "#beneficios" }, { name: "Precios", href: "#precios" }, { name: "Plantillas", href: "#" }] },
-    { title: "Compania", items: [{ name: "Nosotros", href: "#" }, { name: "Contacto", href: "https://wa.me/543512122600" }, { name: "Ubicacion", href: "#" }, { name: "WhatsApp", href: "https://wa.me/543512122600" }] },
+    { title: "Compania", items: [{ name: "Sobre Nosotros", href: "#sobre-nosotros" }, { name: "Contacto", href: "https://wa.me/543512122600" }, { name: "Ubicacion", href: "#" }, { name: "WhatsApp", href: "https://wa.me/543512122600" }] },
     { title: "Legal", items: [{ name: "Privacidad", href: "#" }, { name: "Terminos", href: "#" }, { name: "Cookies", href: "#" }] },
   ];
 
