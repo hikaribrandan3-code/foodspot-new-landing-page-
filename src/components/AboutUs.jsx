@@ -33,7 +33,7 @@ export function AboutUs() {
       <section className="px-6 max-w-4xl mx-auto pb-20">
         <div className="prose prose-lg max-w-none space-y-6 text-on-surface-variant leading-relaxed">
           <p>
-            Antes de crear FoodSpot, manejaba el taller de detailing automotriz número uno en Seattle, Washington. Si sabés algo de esa industria, sabés que la perfección está en los detalles, la ejecución lo es todo y la velocidad es lo que te hace ganar.
+            Antes de crear FoodSpot, era dueño del taller de detailing automotriz número uno en Seattle, Washington. Si sabés algo de esa industria, sabés que la perfección está en los detalles, la ejecución lo es todo y la velocidad es lo que te hace ganar.
           </p>
 
           <p>
