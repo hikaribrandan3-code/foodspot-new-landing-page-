@@ -67,7 +67,7 @@ export function Hero() {
 
         <div className="my-6"></div>
 
-        <p className="text-2xl md:text-3xl text-primary font-black mb-10 max-w-2xl drop-shadow-lg">
+        <p className="text-2xl md:text-3xl text-white font-black mb-10 max-w-2xl drop-shadow-lg">
           La única App en LATAM <br className="hidden md:block" />
           con Cámara de Contenido, eventos y checkout integrado.
         </p>
