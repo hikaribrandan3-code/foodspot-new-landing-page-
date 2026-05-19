@@ -96,12 +96,16 @@ export function Benefits() {
         <h2 className="font-display text-3xl md:text-4xl text-white">Todo lo que necesitas para crecer</h2>
       </div>
       <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-6">
+          <p className="text-white font-semibold text-lg">Sin FoodSpot vs Con FoodSpot</p>
+          <p className="text-white/80 text-sm">Mira cómo simplificamos tu gestión</p>
+        </div>
         <div className="bg-white rounded-2xl p-4 ambient-shadow hover-lift overflow-hidden">
           <picture>
             <source srcSet="/beforeafter.webp" type="image/webp" />
             <img
               src="/beforeafter.jpeg"
-              alt="Before and After"
+              alt="Sin FoodSpot vs Con FoodSpot - Gestión simplificada"
               loading="lazy"
               width="800"
               height="600"
