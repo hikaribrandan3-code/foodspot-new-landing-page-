@@ -33,6 +33,7 @@ export function Navbar() {
     { label: 'Cómo Funciona', href: '#como-funciona', id: 'como-funciona' },
     { label: 'Precios', href: '#precios', id: 'precios' },
     { label: 'Testimonios', href: '#testimonios', id: 'testimonios' },
+    { label: 'Contactos', href: '#contactos', id: 'contactos' },
   ];
 
   const isActive = (id) => activeSection === id;
@@ -70,9 +71,6 @@ export function Navbar() {
           <button aria-label="Change language" className="hidden md:flex text-on-surface-variant hover:text-primary transition-colors">
             <Globe className="w-5 h-5" />
           </button>
-          <a href="https://foodspotapp.vercel.app/start-trial" className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full text-sm font-medium transition-all active:scale-95 shadow-sm inline-block">
-            Comenzar Gratis
-          </a>
 
           {/* Mobile Hamburger */}
           <button
@@ -94,14 +92,26 @@ export function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Backdrop */}
+      {mobileMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.2 }}
+          className="fixed inset-0 bg-black/20 md:hidden z-40"
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
+
+      {/* Mobile Menu Slide from Right */}
       <motion.div
-        initial={{ opacity: 0, height: 0 }}
-        animate={{ opacity: mobileMenuOpen ? 1 : 0, height: mobileMenuOpen ? 'auto' : 0 }}
-        transition={{ duration: 0.3 }}
-        className="md:hidden overflow-hidden bg-surface/95 border-t border-outline-variant"
+        initial={{ x: '100%' }}
+        animate={{ x: mobileMenuOpen ? 0 : '100%' }}
+        transition={{ duration: 0.3, ease: 'easeInOut' }}
+        className="fixed top-20 right-0 h-screen w-64 bg-surface/95 backdrop-blur-md md:hidden z-40 border-l border-outline-variant overflow-y-auto"
       >
-        <div className="px-6 py-4 space-y-3">
+        <div className="px-6 py-6 space-y-3">
           {navLinks.map((link) => (
             <a
               key={link.id}
@@ -111,7 +121,7 @@ export function Navbar() {
                 document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' });
                 setMobileMenuOpen(false);
               }}
-              className={`block py-2 px-3 rounded-lg transition-colors ${
+              className={`block py-3 px-4 rounded-lg transition-colors ${
                 isActive(link.id)
                   ? 'bg-primary/10 text-primary font-medium'
                   : 'text-on-surface-variant hover:bg-surface'
@@ -151,11 +161,11 @@ export function Hero() {
         </p>
       </div>
 
-      <div className="relative z-20 w-full max-w-2xl">
-        <div className="flex flex-col gap-6">
+      <div className="relative z-20 w-full max-w-2xl mx-auto flex justify-center">
+        <div className="flex flex-col gap-6 items-center text-center">
           <a
             href="https://foodspotapp.vercel.app/start-trial"
-            className="bg-[#16a34a] hover:bg-[#15803d] text-white px-10 py-3 rounded-full text-base md:text-lg font-bold shadow-xl flex items-center gap-2 inline-flex transition-all w-fit active:scale-95"
+            className="bg-[#16a34a] hover:bg-[#15803d] text-white px-10 py-3 rounded-full text-base md:text-lg font-bold shadow-xl flex items-center gap-2 inline-flex transition-all active:scale-95"
           >
             Crear mi cuenta gratis
             <ArrowRight className="w-5 h-5" />
