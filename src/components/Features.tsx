@@ -122,8 +122,7 @@ export function Features() {
 
 export function UGCMarketing() {
   return (
-    <section className="py-16 px-6 max-w-7xl mx-auto relative">
-      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#16a34a]/20 to-transparent pointer-events-none z-10"></div>
+    <section className="py-16 px-6 max-w-7xl mx-auto"
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

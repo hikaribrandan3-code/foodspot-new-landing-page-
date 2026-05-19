@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { Globe, ArrowRight, Rocket, ArrowDown, Menu, X } from "lucide-react";
+import { Globe, ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
 
 export function Navbar() {
@@ -30,10 +30,10 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: 'Cómo Funciona', href: '#como-funciona', id: 'como-funciona' },
-    { label: 'Precios', href: '#precios', id: 'precios' },
-    { label: 'Testimonios', href: '#testimonios', id: 'testimonios' },
-    { label: 'Contactos', href: '#contactos', id: 'contactos' },
+    { label: 'Cómo Funciona', href: '#como-funciona', id: 'como-funciona', icon: ListChecks },
+    { label: 'Precios', href: '#precios', id: 'precios', icon: Tag },
+    { label: 'Testimonios', href: '#testimonios', id: 'testimonios', icon: Star },
+    { label: 'Contactos', href: '#contactos', id: 'contactos', icon: Mail },
   ];
 
   const isActive = (id) => activeSection === id;
@@ -109,27 +109,32 @@ export function Navbar() {
         initial={{ x: '100%' }}
         animate={{ x: mobileMenuOpen ? 0 : '100%' }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
-        className="fixed top-20 right-0 h-screen w-64 bg-surface/95 backdrop-blur-md md:hidden z-40 border-l border-outline-variant overflow-y-auto"
+        className="fixed top-20 right-0 h-screen w-72 bg-gradient-to-b from-[#1a1a1a] to-[#0f0f0f] md:hidden z-40 border-l border-white/5 overflow-y-auto"
       >
-        <div className="px-6 py-6 space-y-3">
-          {navLinks.map((link) => (
-            <a
-              key={link.id}
-              href={link.href}
-              onClick={(e) => {
-                e.preventDefault();
-                document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' });
-                setMobileMenuOpen(false);
-              }}
-              className={`block py-3 px-4 rounded-lg transition-colors ${
-                isActive(link.id)
-                  ? 'bg-primary/10 text-primary font-medium'
-                  : 'text-on-surface-variant hover:bg-surface'
-              }`}
-            >
-              {link.label}
-            </a>
-          ))}
+        <div className="px-6 py-8 space-y-2">
+          {navLinks.map((link) => {
+            const IconComponent = link.icon;
+            return (
+              <motion.a
+                key={link.id}
+                href={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' });
+                  setMobileMenuOpen(false);
+                }}
+                whileHover={{ x: 4 }}
+                className={`flex items-center gap-3 py-4 px-5 rounded-xl transition-all ${
+                  isActive(link.id)
+                    ? 'bg-primary text-white font-semibold shadow-lg shadow-primary/30'
+                    : 'text-white/70 hover:text-white hover:bg-white/5'
+                }`}
+              >
+                <IconComponent className="w-5 h-5 flex-shrink-0" />
+                <span>{link.label}</span>
+              </motion.a>
+            );
+          })}
         </div>
       </motion.div>
     </nav>
