@@ -144,17 +144,17 @@ export function Navbar() {
 export function Hero() {
   return (
     <section className="relative w-full min-h-[85vh] flex flex-col justify-between overflow-hidden px-6 py-16 pb-24">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-black/50 z-10"></div>
-        <img
-          src="/hero.webp"
-          alt="Fresh food and ingredients"
-          loading="eager"
-          fetchPriority="high"
-          width={1920}
-          height={1080}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
           className="w-full h-full object-cover"
-        />
+        >
+          <source src="/foodspotherovideo.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/50 z-10"></div>
       </div>
 
       <div className="relative z-20 flex-1 flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
