@@ -58,12 +58,12 @@ export function Hero() {
         />
       </div>
       <div className="relative z-20 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
-        <p className="text-xl md:text-2xl text-white font-semibold mb-2 drop-shadow-lg">FoodSpot Mobile</p>
+        <p className="text-2xl md:text-4xl text-white font-bold mb-4 drop-shadow-lg">FoodSpot Mobile</p>
         <h1 className="font-display text-4xl md:text-6xl text-white mb-4 drop-shadow-lg">
           Mucho más que un menú digital
         </h1>
         <p className="text-xl md:text-[22px] text-white font-bold mb-8 max-w-2xl drop-shadow-lg">
-          La única App en LATAM con cámara UGC, eventos y checkout integrado. Diseño simple, fácil de aprender y listo para usar.
+          La única App en LATAM con cámara UGC, eventos y checkout integrado.
         </p>
         <a
           href="https://foodspotapp.vercel.app/start-trial"
@@ -73,7 +73,7 @@ export function Hero() {
           <ArrowRight className="w-5 h-5" />
         </a>
         <p className="text-base text-white font-semibold mt-4">
-          ✅ 14 días gratis. ✅ Sin tarjeta de crédito. ✅ 0% comisión en ventas.
+          14 días gratis. Sin tarjeta de crédito. 0% comisión en ventas.
         </p>
       </div>
     </section>
