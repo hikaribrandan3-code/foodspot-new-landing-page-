@@ -61,14 +61,15 @@ export function Hero() {
         <h1 className="font-display text-5xl md:text-7xl text-white font-black mb-3 drop-shadow-lg">
           FoodSpot Mobile
         </h1>
-        <p className="text-2xl md:text-4xl text-white font-bold drop-shadow-lg" style={{ transform: 'skewY(-2deg)' }}>
+        <p className="text-2xl md:text-4xl text-white font-bold mb-8 drop-shadow-lg italic">
           Mucho más que un menú digital
         </p>
 
-        <div className="my-10"></div>
+        <div className="my-6"></div>
 
-        <p className="text-xl md:text-[22px] text-white font-bold mb-10 max-w-2xl drop-shadow-lg">
-          La única App en LATAM con cámara UGC, eventos y checkout integrado.
+        <p className="text-2xl md:text-3xl text-primary font-black mb-10 max-w-2xl drop-shadow-lg">
+          La única App en LATAM <br className="hidden md:block" />
+          con Cámara de Contenido, eventos y checkout integrado.
         </p>
 
         <a
