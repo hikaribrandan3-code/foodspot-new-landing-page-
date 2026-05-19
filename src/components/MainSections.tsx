@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Globe, ArrowRight, Rocket } from "lucide-react";
+import { Globe, ArrowRight, Rocket, ArrowDown } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
 
 export function Navbar() {
