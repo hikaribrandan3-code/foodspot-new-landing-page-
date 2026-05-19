@@ -44,42 +44,36 @@ export function Navbar() {
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-[65vh] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <CanvasBackground color="#ff3d00" variant="blobs" />
-        <div className="absolute inset-0 bg-black/60 z-10"></div>
+        <div className="absolute inset-0 bg-black/50 z-10"></div>
         <img
           src="/hero.webp"
-          alt="Restaurant Kitchen"
+          alt="Fresh food and ingredients"
           loading="eager"
           width={1920}
           height={1080}
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="relative z-20 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
-        <h1 className="font-display text-5xl md:text-7xl text-white font-black mb-3 drop-shadow-lg">
+      <div className="relative z-20 text-center px-6 max-w-2xl mx-auto flex flex-col items-center">
+        <h1 className="font-display text-5xl md:text-7xl text-white font-black mb-6 drop-shadow-2xl">
           FoodSpot Mobile
         </h1>
-        <p className="text-2xl md:text-4xl text-white font-bold mb-8 drop-shadow-lg italic">
-          Mucho más que un menú digital
-        </p>
 
-        <div className="my-6"></div>
-
-        <p className="text-2xl md:text-3xl text-white font-black mb-10 max-w-2xl drop-shadow-lg">
-          La única App en LATAM <br className="hidden md:block" />
-          con Cámara de Contenido, eventos y checkout integrado.
+        <p className="text-lg md:text-2xl text-white/95 mb-10 max-w-2xl leading-relaxed font-semibold italic drop-shadow-xl">
+          La única App en LATAM con Cámara de Contenido, eventos y checkout integrado.
         </p>
 
         <a
           href="https://foodspotapp.vercel.app/start-trial"
-          className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all active:scale-95 shadow-lg flex items-center gap-2 inline-flex"
+          className="bg-[#16a34a] hover:bg-[#15803d] text-white px-8 py-3.5 rounded-full text-base md:text-lg font-bold shadow-xl flex items-center gap-2 inline-flex transition-all"
         >
           Crear mi cuenta gratis
           <ArrowRight className="w-5 h-5" />
         </a>
-        <p className="text-base text-white font-semibold mt-4">
+
+        <p className="text-xs md:text-sm text-white font-bold tracking-widest uppercase mt-6 drop-shadow-md">
           14 días gratis. Sin tarjeta de crédito.
         </p>
       </div>
