@@ -88,13 +88,13 @@ export function Hero() {
 
 export function Benefits() {
   return (
-    <section id="beneficios" className="py-20 px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-16">
-        <p className="text-lg text-on-surface-variant mb-6 max-w-2xl mx-auto">
+    <section id="beneficios" className="py-16 px-6 bg-[#16a34a]">
+      <div className="max-w-7xl mx-auto text-center mb-12">
+        <p className="text-lg text-white/90 mb-4 max-w-2xl mx-auto">
           Creada para restaurantes y negocios gastronómicos que quieren mejorar su gestión sin depender de 5 apps distintas.
         </p>
-        <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-4">Todo lo que necesitas para crecer</h2>
-        <p className="text-lg text-on-surface-variant max-w-2xl mx-auto">
+        <h2 className="font-display text-3xl md:text-4xl text-white mb-4">Todo lo que necesitas para crecer</h2>
+        <p className="text-lg text-white/90 max-w-2xl mx-auto">
           Herramientas poderosas disenadas para la gastronomia moderna.
         </p>
       </div>

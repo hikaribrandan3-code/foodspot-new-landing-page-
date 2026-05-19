@@ -230,42 +230,21 @@ export function UGCMarketing() {
       >
         <h2 className="font-display text-2xl md:text-3xl text-on-surface leading-tight">El 71% de las personas te visita porque un amigo subió una foto. Convertí a cada cliente en publicidad 100% gratis</h2>
       </motion.div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="order-2 md:order-1 relative overflow-hidden p-8 rounded-3xl bg-primary-container/5 border border-primary/10"
+          className="order-2 md:order-1 flex justify-center"
         >
-          <div className="absolute inset-0 pointer-events-none opacity-20">
-            <CanvasBackground color="#ff3d00" variant="blobs" />
-          </div>
-          <div className="relative z-10 space-y-6">
-            <div className="flex gap-4 items-start">
-              <div className="text-2xl">👥</div>
-              <div>
-                <p className="text-lg text-on-surface-variant font-semibold">
-                  Clientes = Influencers. Cada foto se sube con tu logo y marca de agua automáticamente
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-4 items-start">
-              <div className="text-2xl">💸</div>
-              <div>
-                <p className="text-lg text-on-surface-variant font-semibold">
-                  Chau Community Manager. Generá cientos de fotos reales de tu comida sin pagar agencias ni anuncios
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-4 items-start">
-              <div className="text-2xl">🚀</div>
-              <div>
-                <p className="text-lg text-on-surface-variant font-semibold">
-                  Piloto Automático. Dejá de rogar por etiquetas en Instagram. El marketing funciona solo al entregar cada pedido
-                </p>
-              </div>
-            </div>
-          </div>
+          <img
+            src="/ugc-benefits.webp"
+            alt="UGC Benefits"
+            loading="lazy"
+            width={572}
+            height={1024}
+            className="w-full max-w-xs rounded-3xl shadow-2xl"
+          />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: 30 }}
