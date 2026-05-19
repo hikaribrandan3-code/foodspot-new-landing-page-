@@ -1,34 +1,71 @@
+import { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { Globe, ArrowRight, Rocket, ArrowDown } from "lucide-react";
+import { Globe, ArrowRight, Rocket, ArrowDown, Menu, X } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
 
 export function Navbar() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['como-funciona', 'precios', 'testimonios'];
+      const scrollPos = window.scrollY + 100;
+
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPos >= offsetTop && scrollPos < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            return;
+          }
+        }
+      }
+      setActiveSection('home');
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { label: 'Cómo Funciona', href: '#como-funciona', id: 'como-funciona' },
+    { label: 'Precios', href: '#precios', id: 'precios' },
+    { label: 'Testimonios', href: '#testimonios', id: 'testimonios' },
+  ];
+
+  const isActive = (id) => activeSection === id;
+
   return (
-    <nav className="hidden md:block bg-surface/90 border-b border-outline-variant shadow-sm sticky top-0 backdrop-blur-md z-50">
+    <nav className="bg-surface/90 border-b border-outline-variant shadow-sm sticky top-0 backdrop-blur-md z-50">
       <div className="flex justify-between items-center w-full px-6 max-w-7xl mx-auto h-20">
-        <div className="text-2xl font-display font-bold text-primary">FoodSpot <span className="text-lg font-semibold text-on-surface">Mobile</span></div>
+        <div className="text-2xl font-display font-bold text-primary">
+          FoodSpot <span className="text-lg font-semibold text-on-surface">Mobile</span>
+        </div>
+
+        {/* Desktop Nav */}
         <ul className="hidden md:flex space-x-8">
-          <li>
-            <a href="#beneficios" className="text-on-surface-variant font-medium hover:text-primary transition-colors text-sm">
-              Beneficios
-            </a>
-          </li>
-          <li>
-            <a href="#como-funciona" className="text-on-surface-variant font-medium hover:text-primary transition-colors text-sm">
-              Cómo Funciona
-            </a>
-          </li>
-          <li>
-            <a href="#precios" className="text-on-surface-variant font-medium hover:text-primary transition-colors text-sm">
-              Precios
-            </a>
-          </li>
-          <li>
-            <a href="#testimonios" className="text-on-surface-variant font-medium hover:text-primary transition-colors text-sm">
-              Testimonios
-            </a>
-          </li>
+          {navLinks.map((link) => (
+            <li key={link.id}>
+              <a
+                href={link.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className={`font-medium transition-colors text-sm ${
+                  isActive(link.id)
+                    ? 'text-primary'
+                    : 'text-on-surface-variant hover:text-primary'
+                }`}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
         </ul>
+
         <div className="flex items-center space-x-4">
           <button aria-label="Change language" className="hidden md:flex text-on-surface-variant hover:text-primary transition-colors">
             <Globe className="w-5 h-5" />
@@ -36,8 +73,55 @@ export function Navbar() {
           <a href="https://foodspotapp.vercel.app/start-trial" className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full text-sm font-medium transition-all active:scale-95 shadow-sm inline-block">
             Comenzar Gratis
           </a>
+
+          {/* Mobile Hamburger */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg hover:bg-surface transition-colors"
+            aria-label="Toggle menu"
+          >
+            <motion.div
+              animate={{ rotate: mobileMenuOpen ? 90 : 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6 text-on-surface" />
+              ) : (
+                <Menu className="w-6 h-6 text-on-surface" />
+              )}
+            </motion.div>
+          </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      <motion.div
+        initial={{ opacity: 0, height: 0 }}
+        animate={{ opacity: mobileMenuOpen ? 1 : 0, height: mobileMenuOpen ? 'auto' : 0 }}
+        transition={{ duration: 0.3 }}
+        className="md:hidden overflow-hidden bg-surface/95 border-t border-outline-variant"
+      >
+        <div className="px-6 py-4 space-y-3">
+          {navLinks.map((link) => (
+            <a
+              key={link.id}
+              href={link.href}
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' });
+                setMobileMenuOpen(false);
+              }}
+              className={`block py-2 px-3 rounded-lg transition-colors ${
+                isActive(link.id)
+                  ? 'bg-primary/10 text-primary font-medium'
+                  : 'text-on-surface-variant hover:bg-surface'
+              }`}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </motion.div>
     </nav>
   );
 }
