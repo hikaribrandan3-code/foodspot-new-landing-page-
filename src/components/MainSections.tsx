@@ -44,7 +44,7 @@ export function Navbar() {
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full min-h-[70vh] flex flex-col items-end justify-between overflow-hidden px-6 py-16">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         <img
@@ -56,26 +56,31 @@ export function Hero() {
           className="w-full h-full object-cover"
         />
       </div>
-      <div className="relative z-20 text-center px-6 max-w-2xl mx-auto flex flex-col items-center">
-        <h1 className="font-display text-5xl md:text-7xl text-white font-black mb-6 drop-shadow-2xl">
+
+      <div className="relative z-20 w-full text-center">
+        <h1 className="font-display text-5xl md:text-7xl text-white font-black drop-shadow-2xl">
           FoodSpot Mobile
         </h1>
+      </div>
 
-        <p className="text-lg md:text-2xl text-white/95 mb-10 max-w-2xl leading-relaxed font-semibold italic drop-shadow-xl">
+      <div className="relative z-20 w-full max-w-2xl">
+        <p className="text-lg md:text-2xl text-white/95 mb-12 leading-relaxed font-semibold italic drop-shadow-xl text-left">
           La única App en LATAM con Cámara de Contenido, eventos y checkout integrado.
         </p>
 
-        <a
-          href="https://foodspotapp.vercel.app/start-trial"
-          className="bg-[#16a34a] hover:bg-[#15803d] text-white px-8 py-3.5 rounded-full text-base md:text-lg font-bold shadow-xl flex items-center gap-2 inline-flex transition-all"
-        >
-          Crear mi cuenta gratis
-          <ArrowRight className="w-5 h-5" />
-        </a>
+        <div className="flex flex-col gap-4">
+          <a
+            href="https://foodspotapp.vercel.app/start-trial"
+            className="bg-[#16a34a] hover:bg-[#15803d] text-white px-8 py-3.5 rounded-full text-base md:text-lg font-bold shadow-xl flex items-center gap-2 inline-flex transition-all w-fit"
+          >
+            Crear mi cuenta gratis
+            <ArrowRight className="w-5 h-5" />
+          </a>
 
-        <p className="text-xs md:text-sm text-white font-bold tracking-widest uppercase mt-6 drop-shadow-md">
-          14 días gratis. Sin tarjeta de crédito.
-        </p>
+          <p className="text-xs md:text-sm text-white font-bold tracking-widest uppercase drop-shadow-md">
+            14 días gratis. Sin tarjeta de crédito.
+          </p>
+        </div>
       </div>
     </section>
   );
