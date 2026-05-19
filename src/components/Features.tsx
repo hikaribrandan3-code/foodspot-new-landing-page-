@@ -228,7 +228,7 @@ export function UGCMarketing() {
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <h2 className="font-display text-3xl md:text-4xl text-on-surface">Tu Ticket, Tu Personaje: El unico marketing animado del mercado</h2>
+        <h2 className="font-display text-2xl md:text-3xl text-on-surface leading-tight">El 71% de las personas te visita porque un amigo subió una foto. Convertí a cada cliente en publicidad 100% gratis</h2>
       </motion.div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
         <motion.div
@@ -240,16 +240,31 @@ export function UGCMarketing() {
           <div className="absolute inset-0 pointer-events-none opacity-20">
             <CanvasBackground color="#ff3d00" variant="blobs" />
           </div>
-          <div className="relative z-10">
-            <div className="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mb-6">
-              <Camera className="w-8 h-8 text-primary" />
+          <div className="relative z-10 space-y-6">
+            <div className="flex gap-4 items-start">
+              <div className="text-2xl">👥</div>
+              <div>
+                <p className="text-lg text-on-surface-variant font-semibold">
+                  Clientes = Influencers. Cada foto se sube con tu logo y marca de agua automáticamente
+                </p>
+              </div>
             </div>
-            <p className="text-lg text-on-surface-variant mb-6">
-              No es solo una orden, es contenido. Nuestras mascotas invitan a tus clientes a sacarse una foto y compartirla en redes sociales.
-            </p>
-            <p className="text-lg text-on-surface-variant mb-6 font-semibold">
-              Pide → Captura → Comparte. Tu marca se vuelve viral de forma organica.
-            </p>
+            <div className="flex gap-4 items-start">
+              <div className="text-2xl">💸</div>
+              <div>
+                <p className="text-lg text-on-surface-variant font-semibold">
+                  Chau Community Manager. Generá cientos de fotos reales de tu comida sin pagar agencias ni anuncios
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-4 items-start">
+              <div className="text-2xl">🚀</div>
+              <div>
+                <p className="text-lg text-on-surface-variant font-semibold">
+                  Piloto Automático. Dejá de rogar por etiquetas en Instagram. El marketing funciona solo al entregar cada pedido
+                </p>
+              </div>
+            </div>
           </div>
         </motion.div>
         <motion.div
