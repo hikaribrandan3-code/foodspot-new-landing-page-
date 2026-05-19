@@ -44,7 +44,7 @@ export function Navbar() {
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-[70vh] flex flex-col items-end justify-between overflow-hidden px-6 py-16">
+    <section className="relative w-full min-h-[70vh] flex flex-col justify-between overflow-hidden px-6 py-16">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         <img
@@ -57,17 +57,17 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative z-20 w-full text-center">
-        <h1 className="font-display text-5xl md:text-7xl text-white font-black drop-shadow-2xl">
+      <div className="relative z-20 flex-1 flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
+        <h1 className="font-display text-5xl md:text-7xl text-white font-black mb-6 drop-shadow-2xl">
           FoodSpot Mobile
         </h1>
+
+        <p className="text-lg md:text-2xl text-white/95 leading-relaxed font-semibold italic drop-shadow-xl">
+          La única App en LATAM con Cámara de Contenido, eventos y checkout integrado.
+        </p>
       </div>
 
       <div className="relative z-20 w-full max-w-2xl">
-        <p className="text-lg md:text-2xl text-white/95 mb-12 leading-relaxed font-semibold italic drop-shadow-xl text-left">
-          La única App en LATAM con Cámara de Contenido, eventos y checkout integrado.
-        </p>
-
         <div className="flex flex-col gap-4">
           <a
             href="https://foodspotapp.vercel.app/start-trial"
