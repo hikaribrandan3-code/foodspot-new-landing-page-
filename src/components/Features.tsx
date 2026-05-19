@@ -226,31 +226,18 @@ export function UGCMarketing() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-16"
+        className="text-center mb-12"
       >
-        <h2 className="font-display text-2xl md:text-3xl text-on-surface leading-tight">El 71% de las personas te visita porque un amigo subió una foto. Convertí a cada cliente en publicidad 100% gratis</h2>
+        <h2 className="font-display text-3xl md:text-4xl text-on-surface font-black">Convertí a cada cliente en publicidad 100% gratis</h2>
       </motion.div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+      <div className="flex flex-col items-center gap-12">
+        {/* Video */}
         <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="order-2 md:order-1 flex justify-center"
-        >
-          <img
-            src="/ugc-benefits.webp"
-            alt="UGC Benefits"
-            loading="lazy"
-            width={572}
-            height={1024}
-            className="w-full max-w-xs rounded-3xl shadow-2xl"
-          />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className="order-1 md:order-2 flex justify-center"
+          className="flex justify-center"
         >
           <div className="relative w-72 h-[550px]">
             <video
@@ -265,6 +252,51 @@ export function UGCMarketing() {
               <source src="/ugc.mp4" type="video/mp4" />
             </video>
           </div>
+        </motion.div>
+
+        {/* Stat */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <p className="text-xl md:text-2xl text-on-surface font-semibold max-w-2xl">
+            El 71% de las personas te visita porque un amigo subió una foto.
+          </p>
+        </motion.div>
+
+        {/* Flow */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <p className="text-lg md:text-xl text-on-surface-variant font-semibold flex items-center justify-center gap-3">
+            <span>Foto</span>
+            <span className="text-2xl">→</span>
+            <span>Compartir</span>
+            <span className="text-2xl">→</span>
+            <span>Nueva Cliente</span>
+          </p>
+        </motion.div>
+
+        {/* Benefits Image */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex justify-center"
+        >
+          <img
+            src="/ugc-benefits.webp"
+            alt="UGC Benefits"
+            loading="lazy"
+            width={572}
+            height={1024}
+            className="w-full max-w-xs rounded-3xl shadow-2xl"
+          />
         </motion.div>
       </div>
     </section>
