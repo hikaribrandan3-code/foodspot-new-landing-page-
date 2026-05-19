@@ -268,18 +268,52 @@ export function UGCMarketing() {
 
         {/* Flow */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
           className="text-center"
         >
-          <p className="text-lg md:text-xl text-on-surface-variant font-semibold flex items-center justify-center gap-3">
-            <span>Foto</span>
-            <span className="text-2xl">→</span>
-            <span>Compartir</span>
-            <span className="text-2xl">→</span>
-            <span>Nueva Cliente</span>
-          </p>
+          <div className="text-lg md:text-xl text-on-surface-variant font-semibold flex items-center justify-center gap-3 flex-wrap">
+            <motion.span
+              initial={{ opacity: 0, x: -10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              Foto
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-2xl"
+            >
+              →
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, x: -10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              Compartir
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="text-2xl"
+            >
+              →
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, x: -10 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.8 }}
+            >
+              Nueva Cliente
+            </motion.span>
+          </div>
         </motion.div>
 
         {/* Benefits Image */}
