@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { Star, Mail, Phone, Instagram, TrendingUp } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
 
 export function Testimonials() {
@@ -285,23 +285,45 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-white border-t py-16 md:py-24">
+    <footer id="contactos" className="bg-white border-t py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12">
         <div className="col-span-2 md:col-span-1">
           <div className="text-2xl font-display font-bold text-primary mb-4">FoodSpot Mobile</div>
-          <p className="text-on-surface-variant text-sm mb-4 max-w-xs transition-all">
+          <p className="text-on-surface-variant text-sm mb-8 max-w-xs transition-all">
             La única App en LATAM con cámara de contenido para tu negocio gastronómico.
           </p>
+          <div className="mb-8">
+            <h4 className="font-bold text-on-surface mb-4 uppercase text-[10px] tracking-widest">Contactos</h4>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-primary flex-shrink-0" />
+                <a href="https://wa.me/543512122600" className="text-xs text-on-surface-variant hover:text-primary transition-colors">
+                  +54 351 212 2600
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-primary flex-shrink-0" />
+                <a href="mailto:info@foodspotmobile.com" className="text-xs text-on-surface-variant hover:text-primary transition-colors">
+                  info@foodspotmobile.com
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="mb-6">
+            <h4 className="font-bold text-on-surface mb-4 uppercase text-[10px] tracking-widest">Síguenos</h4>
+            <div className="flex gap-4">
+              <a href="https://instagram.com/foodspotmobile" className="flex items-center gap-2 text-xs text-on-surface-variant hover:text-primary transition-colors">
+                <Instagram className="w-4 h-4" />
+                <span>Instagram</span>
+              </a>
+              <a href="https://tiktok.com/@foodspotmobile" className="flex items-center gap-2 text-xs text-on-surface-variant hover:text-primary transition-colors">
+                <TrendingUp className="w-4 h-4" />
+                <span>TikTok</span>
+              </a>
+            </div>
+          </div>
           <p className="text-xs text-on-surface-variant mb-2 font-medium">
             Hecho con amor en Cordoba Capital, Argentina para el mundo.
-          </p>
-          <p className="text-xs text-on-surface-variant mb-2 font-medium">
-            WhatsApp: +54 351 212 2600
-          </p>
-          <p className="text-xs text-on-surface-variant mb-6 font-medium">
-            <a href="mailto:info@foodspotmobile.com" className="hover:text-primary transition-colors">
-              Email: info@foodspotmobile.com
-            </a>
           </p>
           <p className="text-xs text-on-surface-variant font-medium">2025 FoodSpot Mobile. All rights reserved.</p>
         </div>
