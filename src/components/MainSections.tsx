@@ -59,10 +59,10 @@ export function Hero() {
       </div>
       <div className="relative z-20 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
         <h1 className="font-display text-4xl md:text-6xl text-white mb-4 drop-shadow-lg">
-          Mucho más que un menú digital. Tu propia App con marketing automático y gestión de eventos.
+          Mucho más que un menú digital
         </h1>
         <p className="text-xl md:text-[22px] text-white font-bold mb-8 max-w-2xl drop-shadow-lg">
-          La única App en LATAM con cámara UGC, eventos y checkout integrado. Creada para restaurantes y negocios gastronómicos que quieren mejorar su gestión sin depender de 5 apps distintas. Diseño simple, fácil de aprender y listo para usar.
+          La única App en LATAM con cámara UGC, eventos y checkout integrado. Diseño simple, fácil de aprender y listo para usar.
         </p>
         <a
           href="https://foodspotapp.vercel.app/start-trial"
@@ -83,6 +83,9 @@ export function Benefits() {
   return (
     <section id="beneficios" className="py-20 px-6 max-w-7xl mx-auto">
       <div className="text-center mb-16">
+        <p className="text-lg text-on-surface-variant mb-6 max-w-2xl mx-auto">
+          Creada para restaurantes y negocios gastronómicos que quieren mejorar su gestión sin depender de 5 apps distintas.
+        </p>
         <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-4">Todo lo que necesitas para crecer</h2>
         <p className="text-lg text-on-surface-variant max-w-2xl mx-auto">
           Herramientas poderosas disenadas para la gastronomia moderna.
