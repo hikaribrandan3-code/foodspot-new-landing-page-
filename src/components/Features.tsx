@@ -141,54 +141,6 @@ export function Features() {
         </motion.div>
       </div>
 
-      {/* Templates */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className="flex justify-center"
-        >
-          <div className="relative w-72 h-[550px]">
-            <picture>
-              <source srcSet="/finance.webp" type="image/webp" />
-              <img
-                src="/finance.png"
-                alt="Financial Tracker"
-                loading="lazy"
-                width="288"
-                height="550"
-                className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl border-8 border-gray-100"
-              />
-            </picture>
-          </div>
-        </motion.div>
-        <motion.div
-           initial={{ opacity: 0, x: 30 }}
-           whileInView={{ opacity: 1, x: 0 }}
-           viewport={{ once: true }}
-        >
-          <div className="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mb-6">
-             <LayoutGrid className="w-8 h-8 text-primary" />
-          </div>
-          <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-6">Control Financiero Total</h2>
-          <p className="text-lg text-on-surface-variant mb-6">
-            Seguimiento detallado de ingresos, egresos y proyecciones. Todo lo que necesitas para que tu negocio sea rentable.
-          </p>
-          <ul className="space-y-4 mb-8">
-            {["Disenos optimizados para moviles", "Personalizacion completa de marca"].map((item, i) => (
-              <li key={i} className="flex items-center text-on-surface-variant">
-                <div className="w-5 h-5 text-primary mr-3">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                    <path d="M20 6L9 17l-5-5" />
-                  </svg>
-                </div>
-                {item}
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-      </div>
 
     </section>
   );
