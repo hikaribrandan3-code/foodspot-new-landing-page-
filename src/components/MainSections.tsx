@@ -162,7 +162,7 @@ export function Hero() {
         </h1>
 
         <p className="text-lg md:text-2xl text-white/95 leading-relaxed font-semibold italic drop-shadow-xl">
-          La única App en LATAM — cámara de contenido para tu negocio gastronómico.
+          La única App en LATAM con cámara de contenido para tu negocio gastronómico.
         </p>
       </div>
 
