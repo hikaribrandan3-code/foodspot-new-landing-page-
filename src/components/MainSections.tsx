@@ -58,6 +58,7 @@ export function Hero() {
         />
       </div>
       <div className="relative z-20 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
+        <p className="text-xl md:text-2xl text-white font-semibold mb-2 drop-shadow-lg">FoodSpot Mobile</p>
         <h1 className="font-display text-4xl md:text-6xl text-white mb-4 drop-shadow-lg">
           Mucho más que un menú digital
         </h1>
