@@ -55,7 +55,7 @@ export function Hero() {
           height={1080}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent via-transparent to-[#16a34a]/10 z-10"></div>
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#16a34a]/20 z-10 pointer-events-none"></div>
       </div>
 
       <div className="relative z-20 flex-1 flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
