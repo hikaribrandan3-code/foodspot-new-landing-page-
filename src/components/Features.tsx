@@ -21,7 +21,7 @@ export function HowItWorks() {
     },
     {
       title: "Lanza y vende",
-      desc: "Comparti tu link, gestiona pedidos y deja que el sistema automatice el marketing por vos.",
+      desc: "Sin hardware. Sin papelería. Sin drama. Conecta Mercado Pago con token + user ID. Cobra al instante. Todo ocurre en el app.",
       img: "/3pago.png",
       imgWebp: "/3pago.webp",
       rotation: "rotate-2",
@@ -81,31 +81,6 @@ export function HowItWorks() {
         </div>
       </div>
 
-      {/* Mercado Pago */}
-      <div className="mt-24 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="order-2 md:order-1 relative overflow-hidden p-8 rounded-3xl bg-primary-container/5 border border-primary/10"
-          >
-            <div className="absolute inset-0 pointer-events-none opacity-20">
-              <CanvasBackground color="#ff3d00" variant="blobs" />
-            </div>
-            <div className="relative z-10">
-              <div className="w-16 h-16 rounded-full bg-primary-container/20 flex items-center justify-center mb-6">
-                <CreditCard className="w-8 h-8 text-primary" />
-              </div>
-              <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-6">Pagos rapidos. Negocio ganador.</h2>
-              <p className="text-lg text-on-surface-variant mb-6">
-                Integracion nativa con Mercado Pago. Recibi tu dinero al instante con las comisiones mas bajas del mercado. Cobra como un grande desde el primer dia.
-              </p>
-            </div>
-          </motion.div>
-
-        </div>
-      </div>
 
     </section>
   );
@@ -221,17 +196,17 @@ export function Features() {
 
 export function UGCMarketing() {
   return (
-    <section className="py-24 px-6 max-w-7xl mx-auto">
+    <section className="py-16 px-6 max-w-7xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-center mb-12"
+        className="text-center mb-8"
       >
-        <h2 className="font-display text-4xl md:text-5xl text-on-surface font-black">Convertí a cada cliente en publicidad 100% gratis</h2>
+        <h2 className="font-display text-4xl md:text-5xl text-on-surface font-black">Convertí a cada cliente en contenido</h2>
       </motion.div>
 
-      <div className="flex flex-col items-center gap-12">
+      <div className="flex flex-col items-center gap-8">
         {/* Video */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
