@@ -228,7 +228,7 @@ export function UGCMarketing() {
         viewport={{ once: true }}
         className="text-center mb-12"
       >
-        <h2 className="font-display text-3xl md:text-4xl text-on-surface font-black">Convertí a cada cliente en publicidad 100% gratis</h2>
+        <h2 className="font-display text-5xl md:text-6xl text-on-surface font-black">Convertí a cada cliente en publicidad 100% gratis</h2>
       </motion.div>
 
       <div className="flex flex-col items-center gap-12">
