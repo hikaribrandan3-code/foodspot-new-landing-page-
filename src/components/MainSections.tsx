@@ -58,15 +58,19 @@ export function Hero() {
         />
       </div>
       <div className="relative z-20 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
-        <h1 className="font-display text-5xl md:text-7xl text-white font-black mb-2 drop-shadow-lg">
+        <h1 className="font-display text-5xl md:text-7xl text-white font-black mb-3 drop-shadow-lg">
           FoodSpot Mobile
         </h1>
-        <p className="text-2xl md:text-4xl text-white font-bold mb-8 drop-shadow-lg">
+        <p className="text-2xl md:text-4xl text-white font-bold drop-shadow-lg" style={{ transform: 'skewY(-2deg)' }}>
           Mucho más que un menú digital
         </p>
-        <p className="text-xl md:text-[22px] text-white font-bold mb-8 max-w-2xl drop-shadow-lg">
+
+        <div className="my-10"></div>
+
+        <p className="text-xl md:text-[22px] text-white font-bold mb-10 max-w-2xl drop-shadow-lg">
           La única App en LATAM con cámara UGC, eventos y checkout integrado.
         </p>
+
         <a
           href="https://foodspotapp.vercel.app/start-trial"
           className="bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all active:scale-95 shadow-lg flex items-center gap-2 inline-flex"
@@ -75,7 +79,7 @@ export function Hero() {
           <ArrowRight className="w-5 h-5" />
         </a>
         <p className="text-base text-white font-semibold mt-4">
-          14 días gratis. Sin tarjeta de crédito. 0% comisión en ventas.
+          14 días gratis. Sin tarjeta de crédito.
         </p>
       </div>
     </section>
