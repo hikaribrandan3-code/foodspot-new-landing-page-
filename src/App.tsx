@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Navbar, Hero, Benefits, MiddleCTA, UGCMarketingCTA } from "./components/MainSections";
 import { FAQ } from "./components/FAQ";
 import { HowItWorks, Features, UGCMarketing } from "./components/Features";
-import { Testimonials, Comparison, Pricing, Footer } from "./components/FooterSections";
+import { Testimonials, Pricing, Footer } from "./components/FooterSections";
 import { AboutUs } from "./components/AboutUs";
 
 export default function App() {
@@ -44,7 +44,6 @@ export default function App() {
         <FAQ />
         <MiddleCTA />
         <Testimonials />
-        <Comparison />
         <Pricing />
       </main>
       <Footer />
