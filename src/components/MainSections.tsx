@@ -150,6 +150,7 @@ export function Hero() {
           src="/hero.webp"
           alt="Fresh food and ingredients"
           loading="eager"
+          fetchPriority="high"
           width={1920}
           height={1080}
           className="w-full h-full object-cover"
@@ -170,7 +171,7 @@ export function Hero() {
         <div className="flex flex-col gap-6 items-center text-center">
           <a
             href="https://foodspotapp.vercel.app/start-trial"
-            className="bg-[#16a34a] hover:bg-[#15803d] text-white px-10 py-3 rounded-full text-base md:text-lg font-bold shadow-xl flex items-center gap-2 inline-flex transition-all active:scale-95"
+            className="bg-[#15803d] hover:bg-[#166534] text-white px-10 py-3 rounded-full text-base md:text-lg font-bold shadow-xl flex items-center gap-2 inline-flex transition-all active:scale-95"
           >
             Crear mi cuenta gratis
             <ArrowRight className="w-5 h-5" />
@@ -197,7 +198,7 @@ export function Hero() {
 
 export function Benefits() {
   return (
-    <section id="beneficios" className="py-16 px-6 bg-[#16a34a]">
+    <section id="beneficios" className="py-16 px-6 bg-[#166534]">
       <div className="max-w-7xl mx-auto text-center mb-12">
         <p className="text-lg text-white/90 mb-4 max-w-2xl mx-auto">
           Creada para restaurantes y negocios gastronómicos que quieren mejorar su gestión sin depender de 5 apps distintas.
