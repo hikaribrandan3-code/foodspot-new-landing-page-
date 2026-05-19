@@ -81,7 +81,7 @@ export function Comparison() {
 
 export function Pricing() {
   return (
-    <section id="precios" className="py-20 px-6 max-w-7xl mx-auto">
+    <section id="precios" className="py-12 px-6 max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-4">Planes simples, sin sorpresas</h2>
         <p className="text-lg text-on-surface-variant max-w-2xl mx-auto">
