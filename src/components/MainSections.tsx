@@ -44,7 +44,7 @@ export function Navbar() {
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-[70vh] flex flex-col justify-between overflow-hidden px-6 py-16">
+    <section className="relative w-full min-h-[85vh] flex flex-col justify-between overflow-hidden px-6 py-16 pb-24">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-black/50 z-10"></div>
         <img
@@ -68,19 +68,29 @@ export function Hero() {
       </div>
 
       <div className="relative z-20 w-full max-w-2xl">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-6">
           <a
             href="https://foodspotapp.vercel.app/start-trial"
-            className="bg-[#16a34a] hover:bg-[#15803d] text-white px-8 py-3.5 rounded-full text-base md:text-lg font-bold shadow-xl flex items-center gap-2 inline-flex transition-all w-fit"
+            className="bg-[#16a34a] hover:bg-[#15803d] text-white px-10 py-3 rounded-full text-base md:text-lg font-bold shadow-xl flex items-center gap-2 inline-flex transition-all w-fit active:scale-95"
           >
             Crear mi cuenta gratis
             <ArrowRight className="w-5 h-5" />
           </a>
 
-          <p className="text-xs md:text-sm text-white font-bold tracking-widest uppercase drop-shadow-md">
+          <p className="text-sm md:text-base text-white font-bold tracking-wider uppercase drop-shadow-md">
             14 días gratis. Sin tarjeta de crédito.
           </p>
         </div>
+      </div>
+
+      <div className="relative z-20 flex justify-center pt-8">
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="text-white/60 hover:text-white transition-colors"
+        >
+          <ArrowDown className="w-6 h-6" />
+        </motion.div>
       </div>
     </section>
   );
