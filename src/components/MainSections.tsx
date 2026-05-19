@@ -93,10 +93,7 @@ export function Benefits() {
         <p className="text-lg text-white/90 mb-4 max-w-2xl mx-auto">
           Creada para restaurantes y negocios gastronómicos que quieren mejorar su gestión sin depender de 5 apps distintas.
         </p>
-        <h2 className="font-display text-3xl md:text-4xl text-white mb-4">Todo lo que necesitas para crecer</h2>
-        <p className="text-lg text-white/90 max-w-2xl mx-auto">
-          Herramientas poderosas disenadas para la gastronomia moderna.
-        </p>
+        <h2 className="font-display text-3xl md:text-4xl text-white">Todo lo que necesitas para crecer</h2>
       </div>
       <div className="max-w-4xl mx-auto">
         <div className="bg-white rounded-2xl p-4 ambient-shadow hover-lift overflow-hidden">

@@ -288,9 +288,9 @@ export function Footer() {
     <footer className="bg-white border-t py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12">
         <div className="col-span-2 md:col-span-1">
-          <div className="text-2xl font-display font-bold text-primary mb-4">Foodspot</div>
+          <div className="text-2xl font-display font-bold text-primary mb-4">FoodSpot Mobile</div>
           <p className="text-on-surface-variant text-sm mb-4 max-w-xs transition-all">
-            FoodSpot OS: El 1er Sistema Operativo No-Code que convierte pedidos en contenido viral.
+            La única App en LATAM con cámara de contenido para tu negocio gastronómico.
           </p>
           <p className="text-xs text-on-surface-variant mb-2 font-medium">
             Hecho con amor en Cordoba Capital, Argentina para el mundo.
