@@ -122,7 +122,7 @@ export function Features() {
 
 export function UGCMarketing() {
   return (
-    <section className="py-16 px-6 max-w-7xl mx-auto"
+    <section className="py-16 px-6 max-w-7xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
