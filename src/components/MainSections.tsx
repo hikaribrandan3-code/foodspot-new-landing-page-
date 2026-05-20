@@ -143,23 +143,34 @@ export function Navbar() {
 
 export function Hero() {
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-  const videoWebm = isMobile ? '/foodspotherovideo-mobile.webm' : '/foodspotherovideo.webm';
-  const videoMp4 = isMobile ? '/foodspotherovideo-mobile.mp4' : '/foodspotherovideo.mp4';
 
   return (
     <section className="relative w-full min-h-[85vh] flex flex-col justify-between overflow-hidden px-6 py-16 pb-24">
       <div className="absolute inset-0 overflow-hidden">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src={videoWebm} type="video/webm" />
-          <source src={videoMp4} type="video/mp4" />
-        </video>
+        {isMobile ? (
+          // Mobile: Static image
+          <picture>
+            <source srcSet="/hero.webp" type="image/webp" />
+            <img
+              src="/hero.jpg"
+              alt="FoodSpot Hero"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </picture>
+        ) : (
+          // Desktop: Video
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/foodspotherovideo.webm" type="video/webm" />
+            <source src="/foodspotherovideo.mp4" type="video/mp4" />
+          </video>
+        )}
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/50 pointer-events-none"></div>
