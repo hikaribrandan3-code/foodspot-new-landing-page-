@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Globe, ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
@@ -142,29 +142,12 @@ export function Navbar() {
 }
 
 export function Hero() {
-  const mobileVideoRef = useRef(null);
-  const desktopVideoRef = useRef(null);
-
-  useEffect(() => {
-    const playVideo = (ref) => {
-      if (ref.current) {
-        ref.current.play().catch(err => {
-          console.log('Autoplay blocked:', err);
-        });
-      }
-    };
-
-    // Force both videos to play
-    playVideo(mobileVideoRef);
-    playVideo(desktopVideoRef);
-  }, []);
 
   return (
     <section className="relative w-full min-h-[85vh] flex flex-col justify-between overflow-hidden px-6 py-16 pb-24">
       <div className="absolute inset-0 overflow-hidden">
         {/* Mobile: 5s version */}
         <video
-          ref={mobileVideoRef}
           autoPlay
           muted
           loop
@@ -176,7 +159,6 @@ export function Hero() {
 
         {/* Desktop: Full 10s version */}
         <video
-          ref={desktopVideoRef}
           autoPlay
           muted
           loop
