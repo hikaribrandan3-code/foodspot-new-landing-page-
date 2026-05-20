@@ -146,14 +146,16 @@ export function Hero() {
   return (
     <section className="relative w-full min-h-[85vh] flex flex-col justify-between overflow-hidden px-6 py-16 pb-24">
       <div className="absolute inset-0 overflow-hidden">
-        {/* Mobile: 5s version */}
+        {/* Mobile: 5s lightweight version */}
         <video
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover md:hidden"
         >
+          <source src="/foodspotherovideo-mobile.webm" type="video/webm" />
           <source src="/foodspotherovideo-mobile.mp4" type="video/mp4" />
         </video>
 
@@ -163,12 +165,14 @@ export function Hero() {
           muted
           loop
           playsInline
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover hidden md:block"
         >
+          <source src="/foodspotherovideo.webm" type="video/webm" />
           <source src="/foodspotherovideo.mp4" type="video/mp4" />
         </video>
 
-        {/* Overlay on top */}
+        {/* Overlay */}
         <div className="absolute inset-0 bg-black/50 pointer-events-none"></div>
       </div>
 
