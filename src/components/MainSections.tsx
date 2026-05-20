@@ -164,6 +164,7 @@ export function Hero() {
           className="w-full h-full object-cover"
         >
           <source src="/foodspotherovideo.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-black/50 z-10"></div>
       </div>
 
