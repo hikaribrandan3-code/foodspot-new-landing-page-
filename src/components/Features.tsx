@@ -107,14 +107,17 @@ export function Features() {
         viewport={{ once: true }}
         className="flex justify-center"
       >
-        <img
-          src="/foodspotaiimage.png"
-          alt="FoodSpot AI Features"
-          loading="lazy"
-          width={1200}
-          height={800}
-          className="w-full max-w-4xl h-auto rounded-2xl shadow-2xl"
-        />
+        <picture>
+          <source srcSet="/foodspotaiimage.webp" type="image/webp" />
+          <img
+            src="/foodspotaiimage.png"
+            alt="FoodSpot AI Features"
+            loading="lazy"
+            width={1200}
+            height={800}
+            className="w-full max-w-4xl h-auto rounded-2xl shadow-2xl"
+          />
+        </picture>
       </motion.div>
     </section>
   );
