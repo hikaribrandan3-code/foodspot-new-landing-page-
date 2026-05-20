@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import { Globe, ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
@@ -142,10 +142,21 @@ export function Navbar() {
 }
 
 export function Hero() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(err => {
+        console.log('Autoplay blocked:', err);
+      });
+    }
+  }, []);
+
   return (
     <section className="relative w-full min-h-[85vh] flex flex-col justify-between overflow-hidden px-6 py-16 pb-24">
       <div className="absolute inset-0 z-0 overflow-hidden">
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
@@ -153,7 +164,6 @@ export function Hero() {
           className="w-full h-full object-cover"
         >
           <source src="/foodspotherovideo.mp4" type="video/mp4" />
-        </video>
         <div className="absolute inset-0 bg-black/50 z-10"></div>
       </div>
 
