@@ -108,8 +108,8 @@ export function Features() {
         className="flex justify-center"
       >
         <img
-          src="/ai-features.png"
-          alt="FoodSpot AI Features - Promos, Sales Prediction, Chatbot"
+          src="/foodspotaiimage.png"
+          alt="FoodSpot AI Features"
           loading="lazy"
           width={1200}
           height={800}
