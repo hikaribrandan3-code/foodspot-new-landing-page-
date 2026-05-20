@@ -142,14 +142,21 @@ export function Navbar() {
 }
 
 export function Hero() {
-  const videoRef = useRef(null);
+  const mobileVideoRef = useRef(null);
+  const desktopVideoRef = useRef(null);
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(err => {
-        console.log('Autoplay blocked:', err);
-      });
-    }
+    const playVideo = (ref) => {
+      if (ref.current) {
+        ref.current.play().catch(err => {
+          console.log('Autoplay blocked:', err);
+        });
+      }
+    };
+
+    // Force both videos to play
+    playVideo(mobileVideoRef);
+    playVideo(desktopVideoRef);
   }, []);
 
   return (
@@ -157,7 +164,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0 overflow-hidden">
         {/* Mobile: 5s version */}
         <video
-          ref={videoRef}
+          ref={mobileVideoRef}
           autoPlay
           muted
           loop
@@ -169,6 +176,7 @@ export function Hero() {
 
         {/* Desktop: Full 10s version */}
         <video
+          ref={desktopVideoRef}
           autoPlay
           muted
           loop
