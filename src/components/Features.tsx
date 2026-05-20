@@ -149,7 +149,7 @@ export function UGCMarketing() {
               muted
               loop
               playsInline
-              preload="metadata"
+              preload="none"
               className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl border-8 border-gray-100"
             >
               <source src="/ugc.webm" type="video/webm" />
