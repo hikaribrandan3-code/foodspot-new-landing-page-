@@ -40,7 +40,6 @@ export default function App() {
         <UGCMarketing />
         <HowItWorks />
         <SignupForm />
-        <UGCMarketingCTA />
         <Features />
         <FAQ />
         <MiddleCTA />

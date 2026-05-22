@@ -76,19 +76,19 @@ export function SignupForm() {
   };
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-primary to-primary/90 overflow-hidden relative">
+    <section className="py-8 px-6 bg-gradient-to-b from-primary to-primary/90 overflow-hidden relative">
       <div className="max-w-2xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="font-display text-4xl md:text-5xl text-white mb-4 drop-shadow-md">
+        <div className="text-center mb-6">
+          <h2 className="font-display text-2xl md:text-3xl text-white mb-2 drop-shadow-md">
             Solicita tu demo gratuita
           </h2>
-          <p className="text-white/80 text-lg">
-            Recibe acceso instantáneo a la plataforma + tu email de bienvenida con todo lo que necesitas saber.
+          <p className="text-white/80 text-sm md:text-base">
+            Acceso instantáneo + email de bienvenida con todo lo que necesitas.
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-2xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <form onSubmit={handleSubmit} className="bg-white rounded-lg p-6 shadow-2xl max-w-lg mx-auto">
+          <div className="space-y-2 mb-4">
             <input
               type="email"
               name="email"
@@ -96,43 +96,34 @@ export function SignupForm() {
               required
               value={formData.email}
               onChange={handleChange}
-              className="px-4 py-3 border border-outline-variant rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-on-surface"
+              className="w-full px-3 py-2 border border-outline-variant rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary text-on-surface"
             />
-            <input
-              type="text"
-              name="first_name"
-              placeholder="Nombre *"
-              required
-              value={formData.first_name}
-              onChange={handleChange}
-              className="px-4 py-3 border border-outline-variant rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-on-surface"
-            />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-            <input
-              type="text"
-              name="last_name"
-              placeholder="Apellido *"
-              required
-              value={formData.last_name}
-              onChange={handleChange}
-              className="px-4 py-3 border border-outline-variant rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-on-surface"
-            />
-            <input
-              type="text"
-              name="company"
-              placeholder="Empresa (opcional)"
-              value={formData.company}
-              onChange={handleChange}
-              className="px-4 py-3 border border-outline-variant rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-on-surface"
-            />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+              <input
+                type="text"
+                name="first_name"
+                placeholder="Nombre *"
+                required
+                value={formData.first_name}
+                onChange={handleChange}
+                className="px-3 py-2 border border-outline-variant rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary text-on-surface"
+              />
+              <input
+                type="text"
+                name="last_name"
+                placeholder="Apellido *"
+                required
+                value={formData.last_name}
+                onChange={handleChange}
+                className="px-3 py-2 border border-outline-variant rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary text-on-surface"
+              />
+            </div>
           </div>
 
           <button
             type="submit"
             disabled={status === 'loading'}
-            className="w-full bg-primary text-white px-6 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl active:scale-95 transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+            className="w-full bg-primary text-white px-4 py-2.5 rounded font-semibold text-sm shadow-lg hover:shadow-xl active:scale-95 transition-all disabled:opacity-50 flex items-center justify-center gap-2"
           >
             {status === 'loading' && <span className="animate-spin">⏳</span>}
             {status === 'success' && <Check className="w-5 h-5" />}
@@ -140,28 +131,24 @@ export function SignupForm() {
           </button>
 
           {status === 'success' && (
-            <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg flex gap-3">
-              <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+            <div className="mt-3 p-3 bg-green-50 border border-green-200 rounded flex gap-2 text-sm">
+              <Check className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
               <div>
                 <p className="font-semibold text-green-900">¡Gracias!</p>
-                <p className="text-sm text-green-800">Revisa tu email en los próximos minutos para tu guía de bienvenida.</p>
+                <p className="text-xs text-green-800">Revisa tu email en los próximos minutos.</p>
               </div>
             </div>
           )}
 
           {status === 'error' && (
-            <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg flex gap-3">
-              <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+            <div className="mt-3 p-3 bg-red-50 border border-red-200 rounded flex gap-2 text-sm">
+              <AlertCircle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
               <div>
                 <p className="font-semibold text-red-900">Error</p>
-                <p className="text-sm text-red-800">{errorMsg}</p>
+                <p className="text-xs text-red-800">{errorMsg}</p>
               </div>
             </div>
           )}
-
-          <p className="text-xs text-on-surface-variant text-center mt-4">
-            Nunca compartimos tu información. Mira nuestra <a href="#" className="underline hover:text-primary">política de privacidad</a>.
-          </p>
         </form>
       </div>
     </section>
