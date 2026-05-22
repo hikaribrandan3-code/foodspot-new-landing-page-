@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Navbar, Hero, MiddleCTA, UGCMarketingCTA } from "./components/MainSections";
+import { SignupForm } from "./components/SignupForm";
 import { FAQ } from "./components/FAQ";
 import { HowItWorks, Features, UGCMarketing } from "./components/Features";
 import { Testimonials, Pricing, Footer } from "./components/FooterSections";
@@ -38,6 +39,7 @@ export default function App() {
         <Hero />
         <UGCMarketing />
         <HowItWorks />
+        <SignupForm />
         <UGCMarketingCTA />
         <Features />
         <FAQ />
