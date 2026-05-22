@@ -5,12 +5,26 @@ const SUPABASE_URL = 'https://buendqgmwpxdixwvlkhd.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ1ZW5kcWdtd3B4ZGl4d3Zsa2hkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNjEzNzUsImV4cCI6MjA4MjkzNzM3NX0.oKSivOi-JhHZhM9Cp8W-uofbK_-I7slOPgTWtWLpysI';
 const SUPABASE_FUNCTION_URL = `${SUPABASE_URL}/functions/v1/send-welcome-email`;
 
+const BUSINESS_TYPES = [
+  'Restaurant',
+  'Bar',
+  'Café/Cafetería',
+  'Takeout',
+  'Food Truck',
+  'Comida Rápida',
+  'Pizzería',
+  'Panadería',
+  'Pastelería',
+  'Otro'
+];
+
 export function SignupForm() {
   const [formData, setFormData] = useState({
     email: '',
     first_name: '',
     last_name: '',
-    company: ''
+    company: '',
+    business_type: ''
   });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [errorMsg, setErrorMsg] = useState('');
@@ -26,6 +40,12 @@ export function SignupForm() {
     setErrorMsg('');
 
     try {
+      if (!formData.business_type) {
+        setStatus('error');
+        setErrorMsg('Por favor selecciona un tipo de negocio');
+        return;
+      }
+
       // Insert into Supabase
       const insertResponse = await fetch(`${SUPABASE_URL}/rest/v1/landing_signups`, {
         method: 'POST',
@@ -38,7 +58,8 @@ export function SignupForm() {
           email: formData.email,
           first_name: formData.first_name,
           last_name: formData.last_name,
-          company: formData.company
+          company: formData.company,
+          business_type: formData.business_type
         })
       });
 
@@ -65,7 +86,7 @@ export function SignupForm() {
       }
 
       setStatus('success');
-      setFormData({ email: '', first_name: '', last_name: '', company: '' });
+      setFormData({ email: '', first_name: '', last_name: '', company: '', business_type: '' });
 
       // Reset after 5 seconds
       setTimeout(() => setStatus('idle'), 5000);
@@ -118,6 +139,17 @@ export function SignupForm() {
                 className="px-3 py-2 border border-outline-variant rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary text-on-surface"
               />
             </div>
+            <select
+              name="business_type"
+              value={formData.business_type}
+              onChange={handleChange}
+              className="w-full px-3 py-2 border border-outline-variant rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary text-on-surface bg-white"
+            >
+              <option value="">Tipo de negocio *</option>
+              {BUSINESS_TYPES.map(type => (
+                <option key={type} value={type}>{type}</option>
+              ))}
+            </select>
           </div>
 
           <button
