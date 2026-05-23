@@ -28,8 +28,8 @@ export function FishDemo() {
   return (
     <section
       ref={sectionRef}
-      className="py-8 bg-gradient-to-b from-sky-50 to-blue-100 overflow-hidden relative"
-      style={{ minHeight: "160px" }}
+      className="py-16 bg-gradient-to-b from-sky-50 to-blue-100 overflow-hidden relative"
+      style={{ minHeight: "240px" }}
     >
       {/* Ocean wave top */}
       <div className="absolute top-0 left-0 right-0 h-4 overflow-hidden">
@@ -64,7 +64,7 @@ export function FishDemo() {
         rel="noopener noreferrer"
         className="absolute"
         style={{
-          bottom: "28px",
+          bottom: "50px",
           left: "-180px",
           animation: "swimAcross 10s linear infinite",
           animationPlayState: "paused",
@@ -86,75 +86,94 @@ export function FishDemo() {
             </div>
           </div>
 
-          {/* Fish SVG — anime/cartoon style */}
+          {/* Fish SVG — enhanced anime/cartoon style */}
           <svg
-            width="160"
-            height="100"
-            viewBox="0 0 160 100"
+            width="180"
+            height="110"
+            viewBox="0 0 180 110"
             xmlns="http://www.w3.org/2000/svg"
-            style={{ filter: "drop-shadow(0px 4px 8px rgba(0,0,0,0.15))" }}
+            style={{ filter: "drop-shadow(0px 6px 12px rgba(0,0,0,0.2))" }}
           >
             {/* Tail — animates separately */}
-            <g style={{ animation: "tailWag 0.4s ease-in-out infinite alternate", transformOrigin: "30px 50px" }}>
-              <path d="M30,50 L5,25 L18,50 L5,75 Z" fill="#FF6B35" />
-              <path d="M30,50 L8,28 L20,50 L8,72 Z" fill="#FF8C42" opacity="0.6" />
+            <g style={{ animation: "tailWag 0.4s ease-in-out infinite alternate", transformOrigin: "30px 55px" }}>
+              <path d="M30,55 L0,25 L20,55 L0,85 Z" fill="#FF5722" />
+              <path d="M30,55 L5,30 L22,55 L5,80 Z" fill="#FF7043" opacity="0.8" />
+              <path d="M30,55 L8,32 L24,55 L8,78 Z" fill="#FFAB91" opacity="0.5" />
             </g>
 
-            {/* Body */}
-            <ellipse cx="85" cy="50" rx="55" ry="32" fill="url(#bodyGrad)" />
+            {/* Body shadow/depth */}
+            <ellipse cx="95" cy="58" rx="55" ry="32" fill="rgba(0,0,0,0.1)" />
+
+            {/* Main Body */}
+            <ellipse cx="95" cy="55" rx="55" ry="32" fill="url(#bodyGrad)" />
+
+            {/* Body highlight */}
+            <ellipse cx="92" cy="35" rx="35" ry="18" fill="url(#highlightGrad)" opacity="0.6" />
 
             {/* Belly */}
-            <ellipse cx="90" cy="58" rx="40" ry="18" fill="#FFF4E6" opacity="0.8" />
+            <ellipse cx="100" cy="65" rx="42" ry="20" fill="#FFFACD" opacity="0.7" />
 
-            {/* Dorsal fin (top) */}
-            <path d="M65,20 Q80,5 100,18" stroke="#E84855" strokeWidth="10" strokeLinecap="round" fill="none" />
-            <path d="M65,20 Q80,5 100,18" stroke="#FF6B6B" strokeWidth="5" strokeLinecap="round" fill="none" />
+            {/* Dorsal fin (top) — more vibrant */}
+            <path d="M70,20 Q85,2 105,16" stroke="#FF5252" strokeWidth="12" strokeLinecap="round" fill="none" />
+            <path d="M70,20 Q85,2 105,16" stroke="#FF7070" strokeWidth="6" strokeLinecap="round" fill="none" />
+            <path d="M72,22 Q87,8 103,18" stroke="#FFB74D" strokeWidth="2" fill="none" opacity="0.4" />
 
-            {/* Pectoral fin (side) */}
-            <ellipse cx="100" cy="62" rx="18" ry="9" fill="#FF6B35" opacity="0.8" transform="rotate(-20 100 62)" />
+            {/* Pectoral fin (side) — more detailed */}
+            <ellipse cx="110" cy="70" rx="22" ry="11" fill="#FF7043" opacity="0.9" transform="rotate(-25 110 70)" />
+            <ellipse cx="110" cy="70" rx="16" ry="8" fill="#FFAB91" opacity="0.5" transform="rotate(-25 110 70)" />
 
             {/* Ventral fin (bottom) */}
-            <path d="M80,78 Q85,90 95,80" stroke="#E84855" strokeWidth="8" strokeLinecap="round" fill="none" />
+            <path d="M85,85 Q92,98 105,86" stroke="#FF5252" strokeWidth="9" strokeLinecap="round" fill="none" />
+            <path d="M86,87 Q92,96 104,87" stroke="#FFB74D" strokeWidth="3" strokeLinecap="round" fill="none" opacity="0.6" />
 
-            {/* Stripe 1 */}
-            <path d="M75,20 Q78,50 75,80" stroke="#FF4444" strokeWidth="3" fill="none" opacity="0.4" />
-            {/* Stripe 2 */}
-            <path d="M57,24 Q60,50 57,76" stroke="#FF4444" strokeWidth="3" fill="none" opacity="0.4" />
+            {/* Scale patterns — more visible */}
+            <circle cx="75" cy="35" r="3" fill="#E64A19" opacity="0.4" />
+            <circle cx="80" cy="42" r="2.5" fill="#E64A19" opacity="0.4" />
+            <circle cx="85" cy="48" r="2.5" fill="#E64A19" opacity="0.4" />
+            <circle cx="90" cy="55" r="2.5" fill="#E64A19" opacity="0.4" />
+            <circle cx="85" cy="62" r="2.5" fill="#E64A19" opacity="0.3" />
+            <circle cx="75" cy="68" r="2.5" fill="#E64A19" opacity="0.3" />
 
             {/* Eye white (big anime eye) */}
-            <circle cx="122" cy="42" r="14" fill="white" />
-            {/* Eye iris — gradient */}
-            <circle cx="124" cy="43" r="9" fill="url(#eyeGrad)" />
+            <ellipse cx="140" cy="48" rx="16" ry="18" fill="white" />
+            {/* Eye iris — vibrant gradient */}
+            <circle cx="143" cy="50" r="11" fill="url(#eyeGrad)" />
             {/* Eye pupil */}
-            <circle cx="125" cy="44" r="5" fill="#1a1a2e" />
+            <circle cx="144" cy="52" r="6" fill="#000000" />
             {/* Eye sparkle large */}
-            <circle cx="128" cy="40" r="3" fill="white" />
+            <circle cx="148" cy="47" r="4" fill="white" />
             {/* Eye sparkle small */}
-            <circle cx="122" cy="42" r="1.5" fill="white" opacity="0.8" />
-
+            <circle cx="140" cy="50" r="2" fill="white" opacity="0.9" />
             {/* Eyelash top */}
-            <path d="M112,32 Q117,28 123,30" stroke="#1a1a2e" strokeWidth="1.5" fill="none" strokeLinecap="round" />
+            <path d="M126,35 Q133,30 140,32 Q147,30 155,35" stroke="#000" strokeWidth="2" fill="none" strokeLinecap="round" />
+            {/* Eyelash bottom */}
+            <path d="M126,65 Q133,70 140,68 Q147,70 155,65" stroke="#000" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity="0.6" />
 
             {/* Cute smile */}
-            <path d="M135,52 Q140,58 136,63" stroke="#1a1a2e" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+            <path d="M155,60 Q162,67 158,75" stroke="#1a1a2e" strokeWidth="3" strokeLinecap="round" fill="none" />
 
-            {/* Blush cheeks */}
-            <ellipse cx="118" cy="55" rx="8" ry="4" fill="#FFB3C1" opacity="0.5" />
+            {/* Blush cheeks — more prominent */}
+            <ellipse cx="125" cy="62" rx="10" ry="6" fill="#FFB3D9" opacity="0.7" />
+            <ellipse cx="125" cy="62" rx="6" ry="4" fill="#FF69B4" opacity="0.4" />
 
             {/* Mini bubbles from mouth */}
-            <circle cx="142" cy="48" r="2.5" fill="none" stroke="#87CEEB" strokeWidth="1.5" style={{ animation: "miniPop 1.2s ease-in-out infinite" }} />
-            <circle cx="148" cy="42" r="2" fill="none" stroke="#87CEEB" strokeWidth="1.5" style={{ animation: "miniPop 1.2s ease-in-out infinite", animationDelay: "0.4s" }} />
-            <circle cx="152" cy="36" r="1.5" fill="none" stroke="#87CEEB" strokeWidth="1.5" style={{ animation: "miniPop 1.2s ease-in-out infinite", animationDelay: "0.8s" }} />
+            <circle cx="165" cy="55" r="3.5" fill="none" stroke="#64B5F6" strokeWidth="2" style={{ animation: "miniPop 1.2s ease-in-out infinite" }} />
+            <circle cx="174" cy="47" r="2.8" fill="none" stroke="#64B5F6" strokeWidth="2" style={{ animation: "miniPop 1.2s ease-in-out infinite", animationDelay: "0.4s" }} />
+            <circle cx="180" cy="38" r="2" fill="none" stroke="#64B5F6" strokeWidth="1.5" style={{ animation: "miniPop 1.2s ease-in-out infinite", animationDelay: "0.8s" }} />
 
             <defs>
-              <radialGradient id="bodyGrad" cx="60%" cy="40%" r="60%">
-                <stop offset="0%" stopColor="#FF9F43" />
-                <stop offset="50%" stopColor="#FF6B35" />
-                <stop offset="100%" stopColor="#E84855" />
+              <radialGradient id="bodyGrad" cx="55%" cy="35%" r="70%">
+                <stop offset="0%" stopColor="#FFAB91" />
+                <stop offset="40%" stopColor="#FF7043" />
+                <stop offset="100%" stopColor="#E64A19" />
               </radialGradient>
-              <radialGradient id="eyeGrad" cx="40%" cy="40%" r="60%">
-                <stop offset="0%" stopColor="#74B9FF" />
-                <stop offset="100%" stopColor="#0984E3" />
+              <radialGradient id="highlightGrad" cx="50%" cy="30%" r="50%">
+                <stop offset="0%" stopColor="#FFFFFF" />
+                <stop offset="100%" stopColor="#FFAB91" opacity="0" />
+              </radialGradient>
+              <radialGradient id="eyeGrad" cx="35%" cy="35%" r="70%">
+                <stop offset="0%" stopColor="#90CAF9" />
+                <stop offset="100%" stopColor="#1565C0" />
               </radialGradient>
             </defs>
           </svg>

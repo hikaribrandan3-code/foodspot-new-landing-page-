@@ -44,10 +44,10 @@ export default function App() {
         <SignupForm />
         <Features />
         <FAQ />
+        <FishDemo />
         <MiddleCTA />
         <Testimonials />
         <Pricing />
-        <FishDemo />
       </main>
       <Footer />
     </div>
