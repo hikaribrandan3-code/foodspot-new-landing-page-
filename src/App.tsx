@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Navbar, Hero, MiddleCTA, UGCMarketingCTA } from "./components/MainSections";
+import { Navbar, Hero, MiddleCTA, UGCMarketingCTA, DemoSection } from "./components/MainSections";
 import { SignupForm } from "./components/SignupForm";
 import { FAQ } from "./components/FAQ";
 import { HowItWorks, Features, UGCMarketing } from "./components/Features";
@@ -38,6 +38,7 @@ export default function App() {
       <main>
         <Hero />
         <UGCMarketing />
+        <DemoSection />
         <HowItWorks />
         <SignupForm />
         <Features />
