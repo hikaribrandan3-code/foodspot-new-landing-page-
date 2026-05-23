@@ -257,13 +257,23 @@ export function MiddleCTA() {
         <h2 className="font-display text-4xl md:text-5xl text-white mb-8 drop-shadow-md">
           Listo para transformar tu negocio?
         </h2>
-        <a
-          href="https://foodspotapp.vercel.app/start-trial"
-          className="bg-white text-primary px-10 py-5 rounded-full text-xl font-bold shadow-xl flex items-center gap-3 mx-auto transition-all hover:shadow-2xl active:scale-95 inline-flex"
-        >
-          Proba gratis 14 dias !
-          <Rocket className="w-6 h-6" />
-        </a>
+        <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+          <a
+            href="https://foodspotapp.vercel.app/start-trial"
+            className="bg-white text-primary px-10 py-5 rounded-full text-xl font-bold shadow-xl flex items-center gap-3 mx-auto transition-all hover:shadow-2xl active:scale-95 inline-flex"
+          >
+            Proba gratis 14 dias !
+            <Rocket className="w-6 h-6" />
+          </a>
+          <a
+            href="https://foodspotapp.vercel.app/foodspot"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white/20 text-white px-10 py-5 rounded-full text-xl font-bold shadow-xl backdrop-blur-sm border border-white/30 transition-all hover:bg-white/30 active:scale-95 inline-flex"
+          >
+            Ver Demo
+          </a>
+        </div>
         <p className="text-white/80 mt-6 font-medium">Sin tarjeta de credito. Sin vueltas.</p>
       </div>
     </section>
