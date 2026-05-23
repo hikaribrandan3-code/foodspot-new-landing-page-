@@ -39,15 +39,15 @@ export default function App() {
       <main>
         <Hero />
         <UGCMarketing />
-        <DemoSection />
+        <FishDemo />
         <HowItWorks />
         <SignupForm />
         <Features />
         <FAQ />
-        <FishDemo />
         <MiddleCTA />
         <Testimonials />
         <Pricing />
+        <DemoSection />
       </main>
       <Footer />
     </div>
