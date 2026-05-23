@@ -281,7 +281,7 @@ export function Pricing() {
           href="https://foodspotapp.vercel.app/foodspot"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-12 py-5 rounded-full bg-emerald-600 text-white font-bold text-lg shadow-xl hover:bg-emerald-700 transition-all active:scale-95 hover:shadow-2xl"
+          className="inline-block px-12 py-5 rounded-full bg-white text-emerald-700 font-bold text-lg border-3 border-emerald-600 shadow-xl hover:bg-emerald-50 transition-all active:scale-95 hover:shadow-2xl hover:border-emerald-700"
         >
           Ver Demo
         </a>
