@@ -13,7 +13,7 @@ export function FishDemo() {
           boxShadow: "0 0 20px rgba(16, 185, 129, 0.35), 0 4px 12px rgba(0,0,0,0.12)",
         }}
       >
-        Probarlo por 90 segundos
+        DEMO · Probarlo por 90 segundos
       </a>
     </section>
   );
