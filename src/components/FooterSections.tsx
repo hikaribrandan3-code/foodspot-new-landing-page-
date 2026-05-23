@@ -273,6 +273,19 @@ export function Pricing() {
         </div>
         </div>
       </div>
+
+      {/* Demo CTA */}
+      <div className="mt-16 text-center">
+        <p className="text-on-surface-variant mb-4 font-medium">¿Queres ver como funciona antes de comprometerte?</p>
+        <a
+          href="https://foodspotapp.vercel.app/foodspot"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-8 py-3 rounded-full border-2 border-primary text-primary font-semibold hover:bg-primary/5 transition-colors active:scale-95"
+        >
+          Ver Demo Gratis
+        </a>
+      </div>
     </section>
   );
 }
