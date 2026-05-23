@@ -274,6 +274,33 @@ export function Pricing() {
         </div>
       </div>
 
+      {/* 3 Steps Section */}
+      <div className="mt-24 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
+              <span className="text-2xl font-bold text-primary">1</span>
+            </div>
+            <h3 className="font-semibold text-on-surface mb-2">Crea tu tienda</h3>
+            <p className="text-sm text-on-surface-variant">Setup en minutos. Sin código, sin complicaciones.</p>
+          </div>
+          <div className="text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
+              <span className="text-2xl font-bold text-primary">2</span>
+            </div>
+            <h3 className="font-semibold text-on-surface mb-2">Clientes capturan fotos</h3>
+            <p className="text-sm text-on-surface-variant">Cada pedido genera contenido viral automáticamente.</p>
+          </div>
+          <div className="text-center">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
+              <span className="text-2xl font-bold text-primary">3</span>
+            </div>
+            <h3 className="font-semibold text-on-surface mb-2">Crece sin límites</h3>
+            <p className="text-sm text-on-surface-variant">Marketing gratis. Ingresos crecen. Tú controlas todo.</p>
+          </div>
+        </div>
+      </div>
+
       {/* Demo CTA */}
       <div className="mt-20 text-center">
         <p className="text-on-surface-variant mb-8 font-medium text-lg">¿Queres ver como funciona antes de comprometerte?</p>
