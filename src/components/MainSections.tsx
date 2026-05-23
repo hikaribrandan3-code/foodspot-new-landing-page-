@@ -293,9 +293,9 @@ export function DemoSection() {
   return (
     <section className="py-16 px-6 bg-white">
       <div className="max-w-4xl mx-auto text-center">
-        <p className="text-on-surface-variant mb-8 font-medium text-lg">¿Queres verlo en acción?</p>
+        <p className="text-on-surface-variant mb-8 font-medium text-lg">Mira cómo automatizan su marketing</p>
         <a
-          href="https://foodspotapp.vercel.app/foodspot"
+          href="https://foodspotapp.vercel.app/foodspot?camera=true"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-12 py-5 rounded-full bg-white text-emerald-700 font-bold text-lg border-3 border-emerald-600 shadow-xl hover:bg-emerald-50 transition-all active:scale-95 hover:shadow-2xl hover:border-emerald-700"
