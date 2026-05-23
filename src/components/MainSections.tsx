@@ -300,7 +300,7 @@ export function DemoSection() {
           rel="noopener noreferrer"
           className="inline-block px-12 py-5 rounded-full bg-white text-emerald-700 font-bold text-lg border-3 border-emerald-600 shadow-xl hover:bg-emerald-50 transition-all active:scale-95 hover:shadow-2xl hover:border-emerald-700"
         >
-          Probarlo por 90 segundos
+          Te lo paso de nuevo... es una señal jaja
         </a>
       </div>
     </section>

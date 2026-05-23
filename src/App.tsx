@@ -5,6 +5,7 @@ import { FAQ } from "./components/FAQ";
 import { HowItWorks, Features, UGCMarketing } from "./components/Features";
 import { Testimonials, Pricing, Footer } from "./components/FooterSections";
 import { AboutUs } from "./components/AboutUs";
+import { FishDemo } from "./components/FishDemo";
 
 export default function App() {
   const [page, setPage] = useState('home');
@@ -46,6 +47,7 @@ export default function App() {
         <MiddleCTA />
         <Testimonials />
         <Pricing />
+        <FishDemo />
       </main>
       <Footer />
     </div>
