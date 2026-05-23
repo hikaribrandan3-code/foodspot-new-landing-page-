@@ -298,9 +298,15 @@ export function DemoSection() {
           href="https://foodspotapp.vercel.app/foodspot"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-12 py-5 rounded-full bg-white text-emerald-700 font-bold text-lg border-3 border-emerald-600 shadow-xl hover:bg-emerald-50 transition-all active:scale-95 hover:shadow-2xl hover:border-emerald-700"
+          className="inline-block px-20 py-6 rounded-full font-black text-3xl shadow-2xl transition-all active:scale-95 hover:shadow-2xl"
+          style={{
+            background: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+            color: "white",
+            border: "3px solid #059669",
+            boxShadow: "0 0 30px rgba(16, 185, 129, 0.4), 0 8px 24px rgba(0,0,0,0.15)",
+          }}
         >
-          Te lo paso de nuevo... es una señal jaja
+          Demo
         </a>
       </div>
     </section>
