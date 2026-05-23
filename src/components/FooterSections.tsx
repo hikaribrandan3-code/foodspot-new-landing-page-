@@ -276,7 +276,7 @@ export function Pricing() {
 
       {/* Demo CTA - FIRST */}
       <div className="mt-20 text-center">
-        <p className="text-on-surface-variant mb-8 font-medium text-lg">¿Queres ver como funciona antes de comprometerte?</p>
+        <p className="text-on-surface-variant mb-8 font-medium text-lg">Algo que todos hablan pero no saben cómo funciona</p>
         <a
           href="https://foodspotapp.vercel.app/foodspot"
           target="_blank"

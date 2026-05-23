@@ -293,7 +293,7 @@ export function DemoSection() {
   return (
     <section className="py-16 px-6 bg-white">
       <div className="max-w-4xl mx-auto text-center">
-        <p className="text-on-surface-variant mb-8 font-medium text-lg">Mira cómo automatizan su marketing</p>
+        <p className="text-on-surface-variant mb-8 font-medium text-lg">Te lo paso de nuevo... es una señal jaja</p>
         <a
           href="https://foodspotapp.vercel.app/foodspot"
           target="_blank"
