@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Mail, Check, AlertCircle } from 'lucide-react';
+import { trackFormSubmit } from '../services/ga4Events';
 
 const SUPABASE_URL = 'https://buendqgmwpxdixwvlkhd.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ1ZW5kcWdtd3B4ZGl4d3Zsa2hkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNjEzNzUsImV4cCI6MjA4MjkzNzM3NX0.oKSivOi-JhHZhM9Cp8W-uofbK_-I7slOPgTWtWLpysI';
@@ -86,6 +87,7 @@ export function SignupForm() {
       }
 
       setStatus('success');
+      trackFormSubmit('demo_request_form');
       setFormData({ email: '', first_name: '', last_name: '', company: '', business_type: '' });
 
       // Reset after 5 seconds

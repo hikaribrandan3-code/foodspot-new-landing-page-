@@ -1,5 +1,6 @@
 import { Star, Mail, Phone, Instagram, TrendingUp } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
+import { trackPricingSelection } from '../services/ga4Events';
 
 export function Testimonials() {
   const reviews = [
@@ -115,7 +116,7 @@ export function Pricing() {
               </li>
             ))}
           </ul>
-            <a href="https://foodspotapp.vercel.app/" className="w-full py-4 rounded-full border-2 border-secondary text-secondary font-semibold hover:bg-secondary/5 transition-colors group-hover:scale-[1.02] active:scale-[0.98] block text-center">
+            <a href="https://foodspotapp.vercel.app/" onClick={() => trackPricingSelection('free_plan')} className="w-full py-4 rounded-full border-2 border-secondary text-secondary font-semibold hover:bg-secondary/5 transition-colors group-hover:scale-[1.02] active:scale-[0.98] block text-center">
               Empezar Prueba Gratis
             </a>
           </div>
@@ -267,7 +268,7 @@ export function Pricing() {
             </div>
           </div>
 
-          <a href="https://foodspotapp.vercel.app/" className="w-full py-4 rounded-full bg-primary text-white font-semibold hover:bg-primary/90 transition-all shadow-md active:scale-[0.98] group-hover:scale-[1.02] block text-center">
+          <a href="https://foodspotapp.vercel.app/" onClick={() => trackPricingSelection('pro_plan')} className="w-full py-4 rounded-full bg-primary text-white font-semibold hover:bg-primary/90 transition-all shadow-md active:scale-[0.98] group-hover:scale-[1.02] block text-center">
             Suscribirse Ahora
           </a>
         </div>

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Globe, ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
+import { trackCtaClick } from '../services/ga4Events';
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -190,6 +191,7 @@ export function Hero() {
         <div className="flex flex-col gap-6 items-center text-center">
           <a
             href="https://foodspotapp.vercel.app/start-trial"
+            onClick={() => trackCtaClick('hero_create_account')}
             className="bg-[#15803d] hover:bg-[#166534] text-white px-10 py-3 rounded-full text-base md:text-lg font-bold shadow-xl flex items-center gap-2 inline-flex transition-all active:scale-95"
           >
             Crear mi cuenta gratis
@@ -259,6 +261,7 @@ export function MiddleCTA() {
         </h2>
         <a
           href="https://foodspotapp.vercel.app/start-trial"
+          onClick={() => trackCtaClick('middle_free_trial')}
           className="bg-white text-primary px-10 py-5 rounded-full text-xl font-bold shadow-xl flex items-center gap-3 mx-auto transition-all hover:shadow-2xl active:scale-95 inline-flex"
         >
           Proba gratis 14 dias !
@@ -279,6 +282,7 @@ export function UGCMarketingCTA() {
         </h2>
         <a
           href="https://foodspotapp.vercel.app/start-trial"
+          onClick={() => trackCtaClick('ugc_marketing_cta')}
           className="bg-white text-secondary px-9 py-4 rounded-full text-lg font-bold shadow-lg inline-flex items-center gap-2 transition-all hover:shadow-xl active:scale-95"
         >
           Empieza ahora
@@ -296,6 +300,7 @@ export function DemoSection() {
         <p className="text-on-surface-variant mb-8 font-medium text-lg">¿Qué esperas?</p>
         <a
           href="https://foodspotapp.vercel.app/foodspot"
+          onClick={() => trackCtaClick('demo_button')}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-20 py-6 rounded-full font-black text-3xl shadow-2xl transition-all active:scale-95 hover:shadow-2xl"
