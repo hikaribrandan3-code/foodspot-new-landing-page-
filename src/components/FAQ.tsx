@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown } from "lucide-react";
+import { trackFaqClick } from "../services/ga4Events";
 
 const faqs = [
   {
@@ -44,6 +45,9 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggle = (idx: number) => {
+    if (openIndex !== idx) {
+      trackFaqClick(faqs[idx].question);
+    }
     setOpenIndex(openIndex === idx ? null : idx);
   };
 
