@@ -6,9 +6,22 @@
     <meta name="description" content="FoodSpot Mobile — The Shopify alternative for restaurants in Argentina & LATAM. All-in-one POS, Mercado Pago payments, UGC marketing, kitchen management. Try free.">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preload" as="image" href="/hero.webp">
+    <!-- Fonts: Preconnect + optional display for non-blocking load -->
+    <!-- DNS prefetch for tracking & analytics -->
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+    <!-- Preconnect for fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Preload with optional to avoid render-blocking -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet"></noscript>
+    <!-- Font fallback CSS for immediate rendering -->
+    <style>
+      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      h1, h2, h3, h4, h5, h6 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    </style>
     <title>FoodSpot Mobile — The Shopify of the Food Industry</title>
     <script type="application/ld+json">
     {
@@ -48,8 +61,8 @@
       gtag('config', 'G-1K80RTFP9G');
     </script>
 
-    <!-- Meta Pixel Code -->
-    <script>
+    <!-- Meta Pixel Code (Deferred for Performance) -->
+    <script defer>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { Navbar, Hero, MiddleCTA, UGCMarketingCTA, DemoSection } from "./components/MainSections";
 import { SignupForm } from "./components/SignupForm";
 import { FAQ } from "./components/FAQ";
@@ -6,6 +6,9 @@ import { HowItWorks, Features, UGCMarketing } from "./components/Features";
 import { Testimonials, Pricing, Footer } from "./components/FooterSections";
 import { AboutUs } from "./components/AboutUs";
 import { FishDemo } from "./components/FishDemo";
+
+// Lazy load Chatbot since it's optional and heavy with AI library
+const Chatbot = lazy(() => import('./components/Chatbot').then(m => ({ default: m.Chatbot })));
 
 export default function App() {
   const [page, setPage] = useState('home');
@@ -50,6 +53,10 @@ export default function App() {
         <DemoSection />
       </main>
       <Footer />
+      {/* Lazy load Chatbot - only loads when component mounts */}
+      <Suspense fallback={null}>
+        <Chatbot />
+      </Suspense>
     </div>
   );
 }

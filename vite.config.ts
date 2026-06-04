@@ -15,11 +15,25 @@ export default defineConfig(({mode}) => {
         '@': path.resolve(__dirname, '.'),
       },
     },
+    build: {
+      // Code splitting strategy to reduce main bundle
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            // Split heavy libraries into separate chunks
+            'vendor-ai': ['@google/genai'],
+            'vendor-motion': ['motion/react'],
+            'vendor-icons': ['lucide-react'],
+          },
+        },
+      },
+      // Target modern browsers to reduce polyfills
+      target: 'ES2020',
+      // Minify aggressively
+      minify: 'terser',
+    },
     server: {
-      // HMR is disabled in AI Studio via DISABLE_HMR env var.
-      // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
       hmr: process.env.DISABLE_HMR !== 'true',
-      // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
     },
   };
