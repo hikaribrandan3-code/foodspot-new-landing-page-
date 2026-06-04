@@ -158,6 +158,8 @@ export function Hero() {
               src="/hero.jpg"
               alt="FoodSpot Hero"
               className="absolute inset-0 w-full h-full object-cover"
+              fetchPriority="high"
+              decoding="async"
             />
           </picture>
         ) : (

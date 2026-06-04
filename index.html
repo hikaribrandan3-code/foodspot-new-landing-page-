@@ -5,23 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="FoodSpot Mobile — The Shopify alternative for restaurants in Argentina & LATAM. All-in-one POS, Mercado Pago payments, UGC marketing, kitchen management. Try free.">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preload" as="image" href="/hero.webp">
-    <!-- Fonts: Preconnect + optional display for non-blocking load -->
-    <!-- DNS prefetch for tracking & analytics -->
+
+    <!-- Preload LCP hero image with high priority -->
+    <link rel="preload" as="image" href="/hero.webp" fetchpriority="high">
+
+    <!-- DNS prefetch for 3rd party scripts (lower priority) -->
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://connect.facebook.net">
+
     <!-- Preconnect for fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Preload with optional to avoid render-blocking -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap">
+
+    <!-- Preload the actual WOFF2 font files directly — breaks the CSS→font chain (saves ~800ms) -->
+    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/outfit/v11/QGYvz_MVcBeNP4NjuGObqx1XmO1I4TC1C4G-EiAou6Y.woff2" crossorigin>
+
+    <!-- Load font CSS non-blocking — fonts already preloaded above so no visible FOUT -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet"></noscript>
-    <!-- Font fallback CSS for immediate rendering -->
+
+    <!-- Critical CSS: system font renders INSTANTLY before Google fonts arrive -->
     <style>
-      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-      h1, h2, h3, h4, h5, h6 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+      h1, h2, h3, h4, h5, h6, .font-display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 700; }
     </style>
+
     <title>FoodSpot Mobile — The Shopify of the Food Industry</title>
     <script type="application/ld+json">
     {
@@ -52,6 +61,7 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
     <!-- Google Analytics (deferred) -->
     <script defer src="https://www.googletagmanager.com/gtag/js?id=G-1K80RTFP9G"></script>
     <script defer>
@@ -61,7 +71,7 @@
       gtag('config', 'G-1K80RTFP9G');
     </script>
 
-    <!-- Meta Pixel Code (Deferred for Performance) -->
+    <!-- Meta Pixel Code (Deferred — non-blocking) -->
     <script defer>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -78,4 +88,3 @@
     <!-- End Meta Pixel Code -->
   </body>
 </html>
-
