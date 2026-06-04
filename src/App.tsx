@@ -1,4 +1,5 @@
 import { useState, useEffect, lazy, Suspense } from 'react';
+import { CookieConsent } from './components/CookieConsent';
 import { Navbar, Hero, MiddleCTA, UGCMarketingCTA, DemoSection } from "./components/MainSections";
 import { SignupForm } from "./components/SignupForm";
 import { FAQ } from "./components/FAQ";
@@ -57,6 +58,8 @@ export default function App() {
       <Suspense fallback={null}>
         <Chatbot />
       </Suspense>
+      {/* Cookie consent — loads FB + GTM only after user accepts */}
+      <CookieConsent />
     </div>
   );
 }

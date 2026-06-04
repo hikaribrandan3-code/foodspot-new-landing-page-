@@ -141,7 +141,9 @@ export function SignupForm() {
                 className="px-3 py-2 border border-outline-variant rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary text-on-surface"
               />
             </div>
+            <label htmlFor="business_type" className="sr-only">Tipo de negocio</label>
             <select
+              id="business_type"
               name="business_type"
               value={formData.business_type}
               onChange={handleChange}

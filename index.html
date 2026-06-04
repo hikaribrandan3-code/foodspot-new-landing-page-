@@ -9,7 +9,7 @@
     <!-- Preload LCP hero image with high priority -->
     <link rel="preload" as="image" href="/hero.webp" fetchpriority="high">
 
-    <!-- DNS prefetch for 3rd party scripts (lower priority) -->
+    <!-- DNS prefetch for 3rd party scripts -->
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://connect.facebook.net">
 
@@ -17,15 +17,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Preload the actual WOFF2 font files directly — breaks the CSS→font chain (saves ~800ms) -->
-    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/outfit/v11/QGYvz_MVcBeNP4NjuGObqx1XmO1I4TC1C4G-EiAou6Y.woff2" crossorigin>
+    <!-- Preload correct WOFF2 font files (v20 Inter, v15 Outfit — confirmed from Google Fonts API) -->
+    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/outfit/v15/QGYvz_MVcBeNP4NJuktqUYLkn8BJ.woff2" crossorigin>
 
-    <!-- Load font CSS non-blocking — fonts already preloaded above so no visible FOUT -->
+    <!-- Load font CSS non-blocking -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet"></noscript>
 
-    <!-- Critical CSS: system font renders INSTANTLY before Google fonts arrive -->
+    <!-- Critical CSS: system font renders instantly before Google fonts arrive -->
     <style>
       body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
       h1, h2, h3, h4, h5, h6, .font-display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 700; }
@@ -41,9 +41,7 @@
       "url": "https://www.foodspotmobile.com",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web, iOS, Android",
-      "areaServed": [
-        "AR", "BR", "MX", "CL", "CO", "PE"
-      ],
+      "areaServed": ["AR", "BR", "MX", "CL", "CO", "PE"],
       "offers": {
         "@type": "Offer",
         "price": "25.99",
@@ -62,29 +60,13 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
 
-    <!-- Google Analytics (deferred) -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-1K80RTFP9G"></script>
-    <script defer>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-1K80RTFP9G');
-    </script>
-
-    <!-- Meta Pixel Code (Deferred — non-blocking) -->
-    <script defer>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1510397547152057');
-      fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1510397547152057&ev=PageView&noscript=1" /></noscript>
-    <!-- End Meta Pixel Code -->
+    <!--
+      TRACKING SCRIPTS — Loaded via cookie consent (see CookieConsent.tsx).
+      These are injected dynamically ONLY after the user accepts cookies.
+      This fixes:
+        - Best Practices: Facebook 3rd-party cookies penalty
+        - Best Practices: Deprecated AttributionReporting API penalty
+        - Performance: Scripts no longer block main thread on initial load
+    -->
   </body>
 </html>
