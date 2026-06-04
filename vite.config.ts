@@ -27,10 +27,10 @@ export default defineConfig(({mode}) => {
           },
         },
       },
-      // Target modern browsers to reduce polyfills
+      // Target modern browsers to reduce polyfills (drops legacy transforms)
       target: 'ES2020',
-      // Minify aggressively
-      minify: 'terser',
+      // esbuild is bundled with Vite — terser is optional and not installed
+      minify: 'esbuild',
     },
     server: {
       hmr: process.env.DISABLE_HMR !== 'true',
