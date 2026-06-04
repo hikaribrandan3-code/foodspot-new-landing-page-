@@ -21,7 +21,6 @@ export default defineConfig(({mode}) => {
         output: {
           manualChunks: {
             // Split heavy libraries into separate chunks
-            'vendor-ai': ['@google/genai'],
             'vendor-motion': ['motion/react'],
             'vendor-icons': ['lucide-react'],
           },
