@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { Globe, ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail } from "lucide-react";
+import { Globe, ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail, DollarSign } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
 import { trackCtaClick, trackNavigation } from '../services/ga4Events';
 
@@ -220,12 +220,11 @@ export function Hero() {
 export function HeroSubtitle() {
   return (
     <section className="py-16 px-6 bg-gradient-to-b from-surface to-surface/50">
-      <div className="max-w-2xl mx-auto">
-        <div className="bg-emerald-50 rounded-2xl px-8 py-6 border border-emerald-100">
-          <p className="text-lg md:text-xl text-primary font-bold leading-relaxed">
-            <span className="block">Crea tu tienda.</span>
-            <span className="block">Personalízala.</span>
-            <span className="block text-emerald-600">Adapta para crecer.</span>
+      <div className="max-w-2xl mx-auto text-center">
+        <div className="flex items-center justify-center gap-3 mb-4">
+          <DollarSign className="w-6 h-6 text-primary" />
+          <p className="text-lg md:text-xl text-on-surface font-bold">
+            25% de pedidos es online
           </p>
         </div>
       </div>
