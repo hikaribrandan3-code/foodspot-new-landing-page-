@@ -187,7 +187,7 @@ export function Hero() {
         </h1>
 
         <p className="text-lg md:text-2xl text-white/95 leading-relaxed font-bold drop-shadow-xl">
-          La única tienda online que convierte a cada cliente en tu vendedor
+          Moderniza tu restaurante con una tienda online
         </p>
       </div>
 
@@ -226,7 +226,7 @@ export function HeroSubtitle() {
     <section className="py-12 px-6 bg-gradient-to-b from-surface to-surface/50">
       <div className="max-w-3xl mx-auto text-center">
         <p className="text-base md:text-lg text-on-surface-variant leading-relaxed font-medium">
-          Los creadores de los UGC Receipts. Tus clientes comparten. Nuevos pedidos llegan solos.
+          Simple. Económica. Donde tus clientes te ayudan a crecer.
         </p>
       </div>
     </section>
