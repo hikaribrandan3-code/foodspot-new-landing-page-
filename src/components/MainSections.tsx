@@ -220,13 +220,46 @@ export function Hero() {
 export function HeroSubtitle() {
   return (
     <section className="py-16 px-6 bg-gradient-to-b from-surface to-surface/50">
-      <div className="max-w-2xl mx-auto text-center">
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <DollarSign className="w-6 h-6 text-primary" />
-          <p className="text-lg md:text-xl text-on-surface font-bold">
-            25% de pedidos es online
-          </p>
+      <div className="max-w-4xl mx-auto">
+        <h2 className="font-display text-3xl md:text-4xl text-on-surface text-center mb-12">
+          ¿Qué es una tienda online?
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="text-center">
+            <p className="text-lg text-on-surface font-semibold mb-3">Venta directa, sin comisiones</p>
+            <p className="text-sm text-on-surface-variant">Tu plataforma, tus ganancias</p>
+          </div>
+          <div className="text-center">
+            <p className="text-lg text-on-surface font-semibold mb-3">Base de datos de clientes</p>
+            <p className="text-sm text-on-surface-variant">Conoce quién compra, qué le gusta, cuándo ordena</p>
+          </div>
+          <div className="text-center">
+            <p className="text-lg text-on-surface font-semibold mb-3">Tu presencia online unificada</p>
+            <p className="text-sm text-on-surface-variant">Instagram + TikTok + tu tienda = todo conectado</p>
+          </div>
         </div>
+      </div>
+    </section>
+  );
+}
+
+export function TheIdea() {
+  return (
+    <section className="py-20 px-6 bg-white">
+      <div className="max-w-3xl mx-auto text-center">
+        <h2 className="font-display text-4xl md:text-5xl text-on-surface font-black mb-12">
+          La gran idea
+        </h2>
+        <p className="text-lg md:text-xl text-on-surface-variant leading-relaxed font-medium mb-8">
+          Así empezó. Faltaba algo: una cámara en los apps de comida. Creamos FoodSpot, donde tu tienda + cámara funcionan juntas.
+        </p>
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="text-primary/60 hover:text-primary transition-colors"
+        >
+          <ArrowDown className="w-6 h-6 mx-auto" />
+        </motion.div>
       </div>
     </section>
   );
