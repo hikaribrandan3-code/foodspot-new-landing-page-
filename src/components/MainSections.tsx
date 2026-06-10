@@ -221,6 +221,18 @@ export function Hero() {
   );
 }
 
+export function HeroSubtitle() {
+  return (
+    <section className="py-12 px-6 bg-gradient-to-b from-surface to-surface/50">
+      <div className="max-w-3xl mx-auto text-center">
+        <p className="text-base md:text-lg text-on-surface-variant leading-relaxed font-medium">
+          Usa nuestra cámara de contenido integrada para que tus comensales compartan sus fotos y atraigan nuevos pedidos de forma automática.
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export function Benefits() {
   return (
     <section id="beneficios" className="py-16 px-6 bg-[#166534]">

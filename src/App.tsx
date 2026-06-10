@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { CookieConsent } from './components/CookieConsent';
-import { Navbar, Hero, MiddleCTA, UGCMarketingCTA, DemoSection } from "./components/MainSections";
+import { Navbar, Hero, HeroSubtitle, MiddleCTA, UGCMarketingCTA, DemoSection } from "./components/MainSections";
 import { SignupForm } from "./components/SignupForm";
 import { FAQ } from "./components/FAQ";
 import { HowItWorks, Features, UGCMarketing } from "./components/Features";
@@ -40,6 +40,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <HeroSubtitle />
         <UGCMarketing />
         <FishDemo />
         <HowItWorks />
