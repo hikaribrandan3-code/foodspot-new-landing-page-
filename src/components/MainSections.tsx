@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail, DollarSign, Database, Share2, Instagram, Music, Lightbulb } from "lucide-react";
+import { ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail, DollarSign, Database, Link as LinkIcon, ShoppingCart, Lightbulb } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
 import { trackCtaClick, trackNavigation } from '../services/ga4Events';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -238,9 +238,9 @@ export function HeroSubtitle() {
           </div>
           <div className="text-center">
             <div className="flex justify-center items-center gap-4 mb-4">
-              <Instagram className="w-10 h-10 text-primary" />
-              <Music className="w-10 h-10 text-primary" />
-              <Share2 className="w-10 h-10 text-primary" />
+              <LinkIcon className="w-10 h-10 text-primary" />
+              <ShoppingCart className="w-10 h-10 text-primary" />
+              <Star className="w-10 h-10 text-primary" />
             </div>
             <p className="text-2xl md:text-3xl text-on-surface font-black mb-3">{t(lang, 'subtitle_3_title')}</p>
             <p className="text-base text-on-surface-variant">{t(lang, 'subtitle_3_desc')}</p>

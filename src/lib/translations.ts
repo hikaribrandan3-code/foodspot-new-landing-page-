@@ -20,8 +20,8 @@ const translations = {
     subtitle_1_desc: 'Tu plataforma, tus ganancias',
     subtitle_2_title: 'Base de datos de clientes',
     subtitle_2_desc: 'Conoce quién compra, qué le gusta, cuándo ordena',
-    subtitle_3_title: 'Tu presencia online unificada',
-    subtitle_3_desc: 'Todo conectado en un lugar',
+    subtitle_3_title: 'Un link, todos tus canales',
+    subtitle_3_desc: 'Menú, pedidos, lealtad, reseñas, reservas — todo bajo tu marca. Sin fragmentación.',
 
     // TheIdea
     idea_title: 'La gran idea',
@@ -218,8 +218,8 @@ const translations = {
     subtitle_1_desc: 'Your platform, your profits',
     subtitle_2_title: 'Customer database',
     subtitle_2_desc: 'Know who buys, what they like, when they order',
-    subtitle_3_title: 'Your unified online presence',
-    subtitle_3_desc: 'Everything connected in one place',
+    subtitle_3_title: 'One Link, Every Order Channel',
+    subtitle_3_desc: 'Menu, ordering, loyalty, reviews, reservations — all under your brand. No fragmentation.',
 
     // TheIdea
     idea_title: 'The big idea',
@@ -416,8 +416,8 @@ const translations = {
     subtitle_1_desc: 'Sua plataforma, seus ganhos',
     subtitle_2_title: 'Base de dados de clientes',
     subtitle_2_desc: 'Saiba quem compra, o que gosta, quando pede',
-    subtitle_3_title: 'Sua presença online unificada',
-    subtitle_3_desc: 'Tudo conectado em um único lugar',
+    subtitle_3_title: 'Um link, todos os seus canais',
+    subtitle_3_desc: 'Cardápio, pedidos, lealdade, avaliações, reservas — tudo em sua marca. Sem fragmentação.',
 
     // TheIdea
     idea_title: 'A grande ideia',
