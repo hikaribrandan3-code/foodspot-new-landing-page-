@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { Globe, ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail, DollarSign, Database, Link2 } from "lucide-react";
+import { Globe, ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail, DollarSign, Database, Link2, Instagram, Music, Lightbulb } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
 import { trackCtaClick, trackNavigation } from '../services/ga4Events';
 
@@ -236,9 +236,13 @@ export function HeroSubtitle() {
             <p className="text-base text-on-surface-variant">Conoce quién compra, qué le gusta, cuándo ordena</p>
           </div>
           <div className="text-center">
-            <Link2 className="w-12 h-12 text-primary mx-auto mb-4" />
+            <div className="flex justify-center items-center gap-3 mb-4">
+              <Instagram className="w-8 h-8 text-primary" />
+              <Music className="w-8 h-8 text-primary" />
+              <Link2 className="w-8 h-8 text-primary" />
+            </div>
             <p className="text-2xl md:text-3xl text-on-surface font-black mb-3">Tu presencia online unificada</p>
-            <p className="text-base text-on-surface-variant">Instagram + TikTok + tu tienda = todo conectado</p>
+            <p className="text-base text-on-surface-variant">Todo conectado en un lugar</p>
           </div>
         </div>
       </div>
@@ -248,20 +252,21 @@ export function HeroSubtitle() {
 
 export function TheIdea() {
   return (
-    <section className="py-24 px-6 bg-primary">
+    <section className="py-12 px-6 bg-primary">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="font-display text-5xl md:text-6xl text-white font-black mb-8">
+        <Lightbulb className="w-8 h-8 text-white/80 mx-auto mb-4" />
+        <h2 className="font-display text-4xl md:text-5xl text-white font-black mb-6">
           La gran idea
         </h2>
-        <p className="text-lg md:text-xl text-white/95 leading-relaxed font-semibold mb-12">
+        <p className="text-base md:text-lg text-white/95 leading-relaxed font-semibold mb-8">
           Así empezó. Faltaba algo: una cámara en los apps de comida. Creamos FoodSpot, donde tu tienda + cámara funcionan juntas.
         </p>
         <motion.div
-          animate={{ y: [0, 10, 0] }}
+          animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           className="text-white/60 hover:text-white transition-colors"
         >
-          <ArrowDown className="w-6 h-6 mx-auto" />
+          <ArrowDown className="w-5 h-5 mx-auto" />
         </motion.div>
       </div>
     </section>
