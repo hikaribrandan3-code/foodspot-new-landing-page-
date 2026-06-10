@@ -226,7 +226,7 @@ export function HeroSubtitle() {
     <section className="py-12 px-6 bg-gradient-to-b from-surface to-surface/50">
       <div className="max-w-3xl mx-auto text-center">
         <p className="text-base md:text-lg text-on-surface-variant leading-relaxed font-medium">
-          Simple. Económica. Donde tus clientes te ayudan a crecer.
+          Crea tu tienda. Personalízala. Adapta para crecer.
         </p>
       </div>
     </section>
