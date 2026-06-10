@@ -187,7 +187,7 @@ export function Hero() {
         </h1>
 
         <p className="text-lg md:text-2xl text-white/95 leading-relaxed font-bold drop-shadow-xl">
-          La única tienda online en LATAM que convierte a cada cliente en tu vendedor
+          La única tienda online que convierte a cada cliente en tu vendedor
         </p>
       </div>
 
