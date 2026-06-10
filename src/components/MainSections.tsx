@@ -226,7 +226,7 @@ export function HeroSubtitle() {
     <section className="py-12 px-6 bg-gradient-to-b from-surface to-surface/50">
       <div className="max-w-3xl mx-auto text-center">
         <p className="text-base md:text-lg text-on-surface-variant leading-relaxed font-medium">
-          Usa nuestra cámara de contenido integrada para que tus comensales compartan sus fotos y atraigan nuevos pedidos de forma automática.
+          Los creadores de los UGC Receipts. Tus clientes comparten. Nuevos pedidos llegan solos.
         </p>
       </div>
     </section>
