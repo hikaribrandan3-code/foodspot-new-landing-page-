@@ -236,10 +236,10 @@ export function HeroSubtitle() {
             <p className="text-base text-on-surface-variant">Conoce quién compra, qué le gusta, cuándo ordena</p>
           </div>
           <div className="text-center">
-            <div className="flex justify-center items-center gap-3 mb-4">
-              <Instagram className="w-8 h-8 text-primary" />
-              <Music className="w-8 h-8 text-primary" />
-              <Link2 className="w-8 h-8 text-primary" />
+            <div className="flex justify-center items-center gap-4 mb-4">
+              <Instagram className="w-10 h-10 text-primary" />
+              <Music className="w-10 h-10 text-primary" />
+              <Link2 className="w-10 h-10 text-primary" />
             </div>
             <p className="text-2xl md:text-3xl text-on-surface font-black mb-3">Tu presencia online unificada</p>
             <p className="text-base text-on-surface-variant">Todo conectado en un lugar</p>
@@ -259,7 +259,7 @@ export function TheIdea() {
           La gran idea
         </h2>
         <p className="text-base md:text-lg text-white/95 leading-relaxed font-semibold mb-8">
-          Así empezó. Faltaba algo: una cámara en los apps de comida. Creamos FoodSpot, donde tu tienda + cámara funcionan juntas.
+          Así empezó. Vimos que faltaba: una <span className="font-black">tienda online + cámara</span> integradas. Creamos FoodSpot Mobile, donde ambas funcionan juntas.
         </p>
         <motion.div
           animate={{ y: [0, 8, 0] }}
