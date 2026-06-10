@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { Globe, ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail, DollarSign, Database, Link2, Instagram, Music, Lightbulb } from "lucide-react";
+import { Globe, ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail, DollarSign, Database, Share2, Instagram, Music, Lightbulb } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
 import { trackCtaClick, trackNavigation } from '../services/ga4Events';
 
@@ -239,7 +239,7 @@ export function HeroSubtitle() {
             <div className="flex justify-center items-center gap-4 mb-4">
               <Instagram className="w-10 h-10 text-primary" />
               <Music className="w-10 h-10 text-primary" />
-              <Link2 className="w-10 h-10 text-primary" />
+              <Share2 className="w-10 h-10 text-primary" />
             </div>
             <p className="text-2xl md:text-3xl text-on-surface font-black mb-3">Tu presencia online unificada</p>
             <p className="text-base text-on-surface-variant">Todo conectado en un lugar</p>
@@ -259,7 +259,7 @@ export function TheIdea() {
           La gran idea
         </h2>
         <p className="text-base md:text-lg text-white/95 leading-relaxed font-semibold mb-8">
-          Así empezó. Vimos que faltaba: una <span className="font-black">tienda online + cámara</span> integradas. Creamos FoodSpot Mobile, donde ambas funcionan juntas.
+          Así empezó. Vimos que faltaba: una <span className="font-black">tienda online + cámara</span> integradas. Creamos <span className="font-black">FoodSpot Mobile</span>, donde ambas funcionan juntas.
         </p>
         <motion.div
           animate={{ y: [0, 8, 0] }}
