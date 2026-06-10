@@ -182,13 +182,9 @@ export function Hero() {
       </div>
 
       <div className="relative z-20 flex-1 flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
-        <h1 className="font-display text-5xl md:text-7xl text-white font-black mb-6 drop-shadow-2xl">
-          FoodSpot Mobile
-        </h1>
-
-        <p className="text-lg md:text-2xl text-white/95 leading-relaxed font-bold drop-shadow-xl">
+        <h1 className="font-display text-4xl md:text-6xl text-white font-black mb-6 drop-shadow-2xl leading-tight">
           Moderniza tu restaurante con una tienda online
-        </p>
+        </h1>
       </div>
 
       <div className="relative z-20 w-full max-w-2xl mx-auto flex justify-center">
