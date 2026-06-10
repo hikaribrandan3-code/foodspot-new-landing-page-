@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { Globe, ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail, DollarSign } from "lucide-react";
+import { Globe, ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail, DollarSign, Database, Link2 } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
 import { trackCtaClick, trackNavigation } from '../services/ga4Events';
 
@@ -219,23 +219,26 @@ export function Hero() {
 
 export function HeroSubtitle() {
   return (
-    <section className="py-16 px-6 bg-gradient-to-b from-surface to-surface/50">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="font-display text-3xl md:text-4xl text-on-surface text-center mb-12">
+    <section className="py-20 px-6 bg-gradient-to-b from-surface to-surface/50">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="font-display text-4xl md:text-5xl text-on-surface text-center mb-16 font-black">
           ¿Qué es una tienda online?
         </h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-12">
           <div className="text-center">
-            <p className="text-lg text-on-surface font-semibold mb-3">Venta directa, sin comisiones</p>
-            <p className="text-sm text-on-surface-variant">Tu plataforma, tus ganancias</p>
+            <DollarSign className="w-12 h-12 text-primary mx-auto mb-4" />
+            <p className="text-2xl md:text-3xl text-on-surface font-black mb-3">Venta directa, sin comisiones</p>
+            <p className="text-base text-on-surface-variant">Tu plataforma, tus ganancias</p>
           </div>
           <div className="text-center">
-            <p className="text-lg text-on-surface font-semibold mb-3">Base de datos de clientes</p>
-            <p className="text-sm text-on-surface-variant">Conoce quién compra, qué le gusta, cuándo ordena</p>
+            <Database className="w-12 h-12 text-primary mx-auto mb-4" />
+            <p className="text-2xl md:text-3xl text-on-surface font-black mb-3">Base de datos de clientes</p>
+            <p className="text-base text-on-surface-variant">Conoce quién compra, qué le gusta, cuándo ordena</p>
           </div>
           <div className="text-center">
-            <p className="text-lg text-on-surface font-semibold mb-3">Tu presencia online unificada</p>
-            <p className="text-sm text-on-surface-variant">Instagram + TikTok + tu tienda = todo conectado</p>
+            <Link2 className="w-12 h-12 text-primary mx-auto mb-4" />
+            <p className="text-2xl md:text-3xl text-on-surface font-black mb-3">Tu presencia online unificada</p>
+            <p className="text-base text-on-surface-variant">Instagram + TikTok + tu tienda = todo conectado</p>
           </div>
         </div>
       </div>
@@ -245,18 +248,18 @@ export function HeroSubtitle() {
 
 export function TheIdea() {
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-24 px-6 bg-primary">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="font-display text-4xl md:text-5xl text-on-surface font-black mb-12">
+        <h2 className="font-display text-5xl md:text-6xl text-white font-black mb-8">
           La gran idea
         </h2>
-        <p className="text-lg md:text-xl text-on-surface-variant leading-relaxed font-medium mb-8">
+        <p className="text-lg md:text-xl text-white/95 leading-relaxed font-semibold mb-12">
           Así empezó. Faltaba algo: una cámara en los apps de comida. Creamos FoodSpot, donde tu tienda + cámara funcionan juntas.
         </p>
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="text-primary/60 hover:text-primary transition-colors"
+          className="text-white/60 hover:text-white transition-colors"
         >
           <ArrowDown className="w-6 h-6 mx-auto" />
         </motion.div>
