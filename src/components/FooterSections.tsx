@@ -293,7 +293,7 @@ export function Footer() {
         <div className="col-span-2 md:col-span-1">
           <div className="text-2xl font-display font-bold text-primary mb-4">FoodSpot Mobile</div>
           <p className="text-on-surface-variant text-sm mb-8 max-w-xs transition-all">
-            La única App en LATAM con cámara de contenido para tu negocio gastronómico.
+            Tu tienda online completa — con clientes que venden por ti
           </p>
           <div className="mb-8">
             <h4 className="font-bold text-on-surface mb-4 uppercase text-[10px] tracking-widest">Contactos</h4>
