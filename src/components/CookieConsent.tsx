@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../lib/translations';
 
 const CONSENT_KEY = 'fs_cookie_consent';
 
@@ -38,6 +40,7 @@ function loadTrackingScripts() {
 }
 
 export function CookieConsent() {
+  const { lang } = useLanguage();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -87,9 +90,9 @@ export function CookieConsent() {
     >
       <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', flexWrap: 'wrap' }}>
         <p style={{ margin: 0, fontSize: '14px', lineHeight: '1.5', flex: 1, minWidth: '200px', color: '#e5e5e5' }}>
-          Usamos cookies para analítica y personalización.{' '}
+          {t(lang, 'cookie_text')}{' '}
           <span style={{ color: '#aaa' }}>
-            Al aceptar, Google Analytics y Meta Pixel se activarán para mejorar tu experiencia.
+            {t(lang, 'cookie_sub')}
           </span>
         </p>
         <div style={{ display: 'flex', gap: '8px', flexShrink: 0, alignItems: 'center' }}>
@@ -106,7 +109,7 @@ export function CookieConsent() {
               fontFamily: 'inherit',
             }}
           >
-            Rechazar
+            {t(lang, 'cookie_decline')}
           </button>
           <button
             onClick={handleAccept}
@@ -122,7 +125,7 @@ export function CookieConsent() {
               fontFamily: 'inherit',
             }}
           >
-            Aceptar
+            {t(lang, 'cookie_accept')}
           </button>
         </div>
       </div>

@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { Globe, ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail, DollarSign, Database, Share2, Instagram, Music, Lightbulb } from "lucide-react";
+import { ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail, DollarSign, Database, Share2, Instagram, Music, Lightbulb } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
 import { trackCtaClick, trackNavigation } from '../services/ga4Events';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../lib/translations';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 export function Navbar() {
+  const { lang } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
 
@@ -31,10 +35,10 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: 'Cómo Funciona', href: '#como-funciona', id: 'como-funciona', icon: ListChecks },
-    { label: 'Precios', href: '#precios', id: 'precios', icon: Tag },
-    { label: 'Testimonios', href: '#testimonios', id: 'testimonios', icon: Star },
-    { label: 'Contactos', href: '#contactos', id: 'contactos', icon: Mail },
+    { label: t(lang, 'nav_how'), href: '#como-funciona', id: 'como-funciona', icon: ListChecks },
+    { label: t(lang, 'nav_pricing'), href: '#precios', id: 'precios', icon: Tag },
+    { label: t(lang, 'nav_testimonials'), href: '#testimonios', id: 'testimonios', icon: Star },
+    { label: t(lang, 'nav_contact'), href: '#contactos', id: 'contactos', icon: Mail },
   ];
 
   const isActive = (id) => activeSection === id;
@@ -70,9 +74,7 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center space-x-4">
-          <button aria-label="Change language" className="hidden md:flex text-on-surface-variant hover:text-primary transition-colors">
-            <Globe className="w-5 h-5" />
-          </button>
+          <LanguageSwitcher variant="navbar" />
 
           {/* Mobile Hamburger */}
           <button
@@ -145,13 +147,13 @@ export function Navbar() {
 }
 
 export function Hero() {
+  const { lang } = useLanguage();
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
   return (
     <section className="relative w-full min-h-[85vh] flex flex-col justify-between overflow-hidden px-6 py-16 pb-24">
       <div className="absolute inset-0 overflow-hidden">
         {isMobile ? (
-          // Mobile: Static image
           <picture>
             <source srcSet="/hero.webp" type="image/webp" />
             <img
@@ -163,7 +165,6 @@ export function Hero() {
             />
           </picture>
         ) : (
-          // Desktop: Video
           <video
             autoPlay
             muted
@@ -176,14 +177,12 @@ export function Hero() {
             <source src="/foodspotherovideo.mp4" type="video/mp4" />
           </video>
         )}
-
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black/50 pointer-events-none"></div>
       </div>
 
       <div className="relative z-20 flex-1 flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
         <h1 className="font-display text-5xl md:text-7xl text-white font-black mb-6 drop-shadow-2xl leading-tight">
-          Moderniza tu restaurante con una <span className="text-emerald-400">tienda online</span>
+          {t(lang, 'hero_headline')} <span className="text-emerald-400">{t(lang, 'hero_accent')}</span>
         </h1>
       </div>
 
@@ -194,12 +193,12 @@ export function Hero() {
             onClick={() => trackCtaClick('hero_create_account', 'hero')}
             className="bg-[#15803d] hover:bg-[#166534] text-white px-10 py-3 rounded-full text-base md:text-lg font-bold shadow-xl flex items-center gap-2 inline-flex transition-all active:scale-95"
           >
-            Crear mi cuenta gratis
+            {t(lang, 'hero_cta')}
             <ArrowRight className="w-5 h-5" />
           </a>
 
           <p className="text-sm md:text-base text-white font-bold tracking-wider uppercase drop-shadow-md">
-            14 días gratis. Sin tarjeta de crédito.
+            {t(lang, 'hero_trial')}
           </p>
         </div>
       </div>
@@ -218,22 +217,24 @@ export function Hero() {
 }
 
 export function HeroSubtitle() {
+  const { lang } = useLanguage();
+
   return (
     <section className="py-20 px-6 bg-gradient-to-b from-surface to-surface/50">
       <div className="max-w-5xl mx-auto">
         <h2 className="font-display text-4xl md:text-5xl text-on-surface text-center mb-16 font-black">
-          ¿Qué es una tienda online?
+          {t(lang, 'subtitle_heading')}
         </h2>
         <div className="grid md:grid-cols-3 gap-12">
           <div className="text-center">
             <DollarSign className="w-12 h-12 text-primary mx-auto mb-4" />
-            <p className="text-2xl md:text-3xl text-on-surface font-black mb-3">Venta directa, sin comisiones</p>
-            <p className="text-base text-on-surface-variant">Tu plataforma, tus ganancias</p>
+            <p className="text-2xl md:text-3xl text-on-surface font-black mb-3">{t(lang, 'subtitle_1_title')}</p>
+            <p className="text-base text-on-surface-variant">{t(lang, 'subtitle_1_desc')}</p>
           </div>
           <div className="text-center">
             <Database className="w-12 h-12 text-primary mx-auto mb-4" />
-            <p className="text-2xl md:text-3xl text-on-surface font-black mb-3">Base de datos de clientes</p>
-            <p className="text-base text-on-surface-variant">Conoce quién compra, qué le gusta, cuándo ordena</p>
+            <p className="text-2xl md:text-3xl text-on-surface font-black mb-3">{t(lang, 'subtitle_2_title')}</p>
+            <p className="text-base text-on-surface-variant">{t(lang, 'subtitle_2_desc')}</p>
           </div>
           <div className="text-center">
             <div className="flex justify-center items-center gap-4 mb-4">
@@ -241,8 +242,8 @@ export function HeroSubtitle() {
               <Music className="w-10 h-10 text-primary" />
               <Share2 className="w-10 h-10 text-primary" />
             </div>
-            <p className="text-2xl md:text-3xl text-on-surface font-black mb-3">Tu presencia online unificada</p>
-            <p className="text-base text-on-surface-variant">Todo conectado en un lugar</p>
+            <p className="text-2xl md:text-3xl text-on-surface font-black mb-3">{t(lang, 'subtitle_3_title')}</p>
+            <p className="text-base text-on-surface-variant">{t(lang, 'subtitle_3_desc')}</p>
           </div>
         </div>
       </div>
@@ -251,15 +252,17 @@ export function HeroSubtitle() {
 }
 
 export function TheIdea() {
+  const { lang } = useLanguage();
+
   return (
     <section className="py-12 px-6 bg-primary">
       <div className="max-w-3xl mx-auto text-center">
         <Lightbulb className="w-8 h-8 text-white/80 mx-auto mb-4" />
         <h2 className="font-display text-4xl md:text-5xl text-white font-black mb-6">
-          La gran idea
+          {t(lang, 'idea_title')}
         </h2>
         <p className="text-base md:text-lg text-white/95 leading-relaxed font-semibold mb-8">
-          Así empezó. Vimos que faltaba: una <span className="font-black">tienda online + cámara</span> integradas. Creamos <span className="font-black">FoodSpot Mobile</span>, donde ambas funcionan juntas.
+          {t(lang, 'idea_body_1')} <span className="font-black">{t(lang, 'idea_body_accent')}</span> {t(lang, 'idea_body_2')} <span className="font-black">{t(lang, 'idea_body_brand')}</span>{t(lang, 'idea_body_3')}
         </p>
         <motion.div
           animate={{ y: [0, 8, 0] }}
@@ -306,6 +309,8 @@ export function Benefits() {
 }
 
 export function MiddleCTA() {
+  const { lang } = useLanguage();
+
   return (
     <section className="py-20 px-6 bg-primary overflow-hidden relative">
       <div className="absolute inset-0 opacity-20">
@@ -313,35 +318,37 @@ export function MiddleCTA() {
       </div>
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <h2 className="font-display text-4xl md:text-5xl text-white mb-8 drop-shadow-md">
-          Listo para transformar tu negocio?
+          {t(lang, 'mid_cta_heading')}
         </h2>
         <a
           href="https://foodspotapp.vercel.app/start-trial"
           onClick={() => trackCtaClick('middle_free_trial', 'middle_cta')}
           className="bg-white text-primary px-10 py-5 rounded-full text-xl font-bold shadow-xl flex items-center gap-3 mx-auto transition-all hover:shadow-2xl active:scale-95 inline-flex"
         >
-          Proba gratis 14 dias !
+          {t(lang, 'mid_cta_button')}
           <Rocket className="w-6 h-6" />
         </a>
-        <p className="text-white/80 mt-6 font-medium">Sin tarjeta de credito. Sin vueltas.</p>
+        <p className="text-white/80 mt-6 font-medium">{t(lang, 'mid_cta_sub')}</p>
       </div>
     </section>
   );
 }
 
 export function UGCMarketingCTA() {
+  const { lang } = useLanguage();
+
   return (
     <section className="py-16 px-6 bg-secondary overflow-hidden relative">
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <h2 className="font-display text-3xl md:text-4xl text-white mb-6 drop-shadow-md">
-          Convierte cada pedido en contenido viral
+          {t(lang, 'ugc_cta_heading')}
         </h2>
         <a
           href="https://foodspotapp.vercel.app/start-trial"
           onClick={() => trackCtaClick('ugc_marketing_cta', 'ugc_section')}
           className="bg-white text-secondary px-9 py-4 rounded-full text-lg font-bold shadow-lg inline-flex items-center gap-2 transition-all hover:shadow-xl active:scale-95"
         >
-          Empieza ahora
+          {t(lang, 'ugc_cta_button')}
           <ArrowRight className="w-5 h-5" />
         </a>
       </div>
@@ -350,10 +357,12 @@ export function UGCMarketingCTA() {
 }
 
 export function DemoSection() {
+  const { lang } = useLanguage();
+
   return (
     <section className="py-16 px-6 bg-white">
       <div className="max-w-4xl mx-auto text-center">
-        <p className="text-on-surface-variant mb-8 font-medium text-lg">¿Qué esperas?</p>
+        <p className="text-on-surface-variant mb-8 font-medium text-lg">{t(lang, 'demo_waiting')}</p>
         <a
           href="https://foodspotapp.vercel.app/foodspot"
           onClick={() => trackCtaClick('demo_button', 'demo_section')}
@@ -367,7 +376,7 @@ export function DemoSection() {
             boxShadow: "0 0 30px rgba(16, 185, 129, 0.4), 0 8px 24px rgba(0,0,0,0.15)",
           }}
         >
-          Demo
+          {t(lang, 'demo_button')}
         </a>
       </div>
     </section>

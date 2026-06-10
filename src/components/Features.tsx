@@ -1,27 +1,30 @@
 import { motion } from "motion/react";
-import { Bot, LayoutGrid, ArrowDown, Camera, CreditCard, Rocket } from "lucide-react";
-import { CanvasBackground } from './CanvasBackground';
+import { ArrowDown } from "lucide-react";
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../lib/translations';
 
 export function HowItWorks() {
+  const { lang } = useLanguage();
+
   const steps = [
     {
-      title: "Crea tu menu en minutos",
-      desc: "Subi fotos, precios y categorias. Incluso podes agregar calorias, advertencias de salud y etiquetas personalizadas para casos especiales. Tu tienda lista al instante. 100% NO-CODE",
+      title: t(lang, 'step1_title'),
+      desc: t(lang, 'step1_desc'),
       img: "/1menu.png",
       imgWebp: "/1menu.webp",
       rotation: "rotate-2",
     },
     {
-      title: "Personaliza tu marca",
-      desc: "Colores, logos e identidad. Dale vida a tu app con nuestras mascotas animadas.",
+      title: t(lang, 'step2_title'),
+      desc: t(lang, 'step2_desc'),
       img: "/2brand.png",
       imgWebp: "/2brand.webp",
       rotation: "-rotate-2",
       offset: "md:mt-12",
     },
     {
-      title: "Lanza y vende",
-      desc: "Sin hardware. Sin papelería. Sin drama. Conecta Mercado Pago con token + user ID. Cobra al instante. Todo ocurre en el app.",
+      title: t(lang, 'step3_title'),
+      desc: t(lang, 'step3_desc'),
       img: "/3pago.png",
       imgWebp: "/3pago.webp",
       rotation: "rotate-2",
@@ -33,9 +36,9 @@ export function HowItWorks() {
     <section id="como-funciona" className="py-20 px-6 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-4">De tu cocina al mundo en 3 pasos</h2>
+          <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-4">{t(lang, 'how_heading')}</h2>
           <p className="text-lg text-on-surface-variant max-w-2xl mx-auto mb-6">
-            Tres simples pasos para digitalizar tu restaurante.
+            {t(lang, 'how_sub')}
           </p>
           <motion.div
             animate={{ y: [0, 10, 0] }}
@@ -80,13 +83,13 @@ export function HowItWorks() {
           ))}
         </div>
       </div>
-
-
     </section>
   );
 }
 
 export function Features() {
+  const { lang } = useLanguage();
+
   return (
     <section className="py-20 px-6 max-w-7xl mx-auto">
       <motion.div
@@ -95,9 +98,9 @@ export function Features() {
         viewport={{ once: true }}
         className="mb-12"
       >
-        <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-6">Foodspot AI</h2>
+        <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-6">{t(lang, 'ai_heading')}</h2>
         <p className="text-lg text-on-surface-variant max-w-2xl">
-          Tu asistente personal de estrategia gastronomica. Genera promociones inteligentes y optimiza tus costos analizando tus datos en tiempo real.
+          {t(lang, 'ai_desc')}
         </p>
       </motion.div>
 
@@ -124,6 +127,8 @@ export function Features() {
 }
 
 export function UGCMarketing() {
+  const { lang } = useLanguage();
+
   return (
     <section className="py-16 px-6 max-w-7xl mx-auto">
       <motion.div
@@ -132,11 +137,10 @@ export function UGCMarketing() {
         viewport={{ once: true }}
         className="text-center mb-8"
       >
-        <h2 className="font-display text-4xl md:text-5xl text-on-surface font-black">Convertí a cada cliente en contenido</h2>
+        <h2 className="font-display text-4xl md:text-5xl text-on-surface font-black">{t(lang, 'ugc_heading')}</h2>
       </motion.div>
 
       <div className="flex flex-col items-center gap-8">
-        {/* Video */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -158,7 +162,6 @@ export function UGCMarketing() {
           </div>
         </motion.div>
 
-        {/* Stat */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -166,14 +169,11 @@ export function UGCMarketing() {
           className="text-center"
         >
           <p className="text-xl md:text-2xl text-on-surface font-semibold max-w-2xl">
-            El 71% de las personas te visita porque un amigo subió una foto.
+            {t(lang, 'ugc_stat')}
           </p>
         </motion.div>
 
-        {/* Flow */}
-        <motion.div
-          className="text-center"
-        >
+        <motion.div className="text-center">
           <div className="text-lg md:text-xl text-on-surface-variant font-semibold flex items-center justify-center gap-3 flex-wrap">
             <motion.span
               initial={{ opacity: 0, x: -10 }}
@@ -181,7 +181,7 @@ export function UGCMarketing() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              Foto
+              {t(lang, 'ugc_flow_photo')}
             </motion.span>
             <motion.span
               initial={{ opacity: 0 }}
@@ -198,7 +198,7 @@ export function UGCMarketing() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              Compartir
+              {t(lang, 'ugc_flow_share')}
             </motion.span>
             <motion.span
               initial={{ opacity: 0 }}
@@ -215,12 +215,11 @@ export function UGCMarketing() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.8 }}
             >
-              Nueva Cliente
+              {t(lang, 'ugc_flow_customer')}
             </motion.span>
           </div>
         </motion.div>
 
-        {/* Benefits Image */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

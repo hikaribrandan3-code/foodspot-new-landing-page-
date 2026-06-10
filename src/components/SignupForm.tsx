@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Mail, Check, AlertCircle } from 'lucide-react';
 import { trackFormSubmit } from '../services/ga4Events';
+import { useLanguage } from '../contexts/LanguageContext';
+import { t } from '../lib/translations';
 
 const SUPABASE_URL = 'https://buendqgmwpxdixwvlkhd.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ1ZW5kcWdtd3B4ZGl4d3Zsa2hkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjczNjEzNzUsImV4cCI6MjA4MjkzNzM3NX0.oKSivOi-JhHZhM9Cp8W-uofbK_-I7slOPgTWtWLpysI';
@@ -20,6 +22,7 @@ const BUSINESS_TYPES = [
 ];
 
 export function SignupForm() {
+  const { lang } = useLanguage();
   const [formData, setFormData] = useState({
     email: '',
     first_name: '',
@@ -43,7 +46,7 @@ export function SignupForm() {
     try {
       if (!formData.business_type) {
         setStatus('error');
-        setErrorMsg('Por favor selecciona un tipo de negocio');
+        setErrorMsg(t(lang, 'form_error_business'));
         return;
       }
 
@@ -94,7 +97,7 @@ export function SignupForm() {
       setTimeout(() => setStatus('idle'), 5000);
     } catch (error) {
       setStatus('error');
-      setErrorMsg(error instanceof Error ? error.message : 'Algo salió mal');
+      setErrorMsg(error instanceof Error ? error.message : t(lang, 'form_error_generic'));
     }
   };
 
@@ -103,10 +106,10 @@ export function SignupForm() {
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-6">
           <h2 className="font-display text-2xl md:text-3xl text-white mb-2 drop-shadow-md">
-            Solicita tu demo gratuita
+            {t(lang, 'form_heading')}
           </h2>
           <p className="text-white/80 text-sm md:text-base">
-            Acceso instantáneo + email de bienvenida con todo lo que necesitas.
+            {t(lang, 'form_sub')}
           </p>
         </div>
 
@@ -115,7 +118,7 @@ export function SignupForm() {
             <input
               type="email"
               name="email"
-              placeholder="Tu email *"
+              placeholder={t(lang, 'form_email')}
               required
               value={formData.email}
               onChange={handleChange}
@@ -125,7 +128,7 @@ export function SignupForm() {
               <input
                 type="text"
                 name="first_name"
-                placeholder="Nombre *"
+                placeholder={t(lang, 'form_firstname')}
                 required
                 value={formData.first_name}
                 onChange={handleChange}
@@ -134,7 +137,7 @@ export function SignupForm() {
               <input
                 type="text"
                 name="last_name"
-                placeholder="Apellido *"
+                placeholder={t(lang, 'form_lastname')}
                 required
                 value={formData.last_name}
                 onChange={handleChange}
@@ -149,7 +152,7 @@ export function SignupForm() {
               onChange={handleChange}
               className="w-full px-3 py-2 border border-outline-variant rounded text-sm focus:outline-none focus:ring-2 focus:ring-primary text-on-surface bg-white"
             >
-              <option value="">Tipo de negocio *</option>
+              <option value="">{t(lang, 'form_business_placeholder')}</option>
               {BUSINESS_TYPES.map(type => (
                 <option key={type} value={type}>{type}</option>
               ))}
@@ -163,15 +166,15 @@ export function SignupForm() {
           >
             {status === 'loading' && <span className="animate-spin">⏳</span>}
             {status === 'success' && <Check className="w-5 h-5" />}
-            {status === 'success' ? '¡Registrado!' : 'Solicitar Demo'}
+            {status === 'success' ? t(lang, 'form_success_btn') : t(lang, 'form_submit')}
           </button>
 
           {status === 'success' && (
             <div className="mt-3 p-3 bg-green-50 border border-green-200 rounded flex gap-2 text-sm">
               <Check className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
               <div>
-                <p className="font-semibold text-green-900">¡Gracias!</p>
-                <p className="text-xs text-green-800">Revisa tu email en los próximos minutos.</p>
+                <p className="font-semibold text-green-900">{t(lang, 'form_success_title')}</p>
+                <p className="text-xs text-green-800">{t(lang, 'form_success_msg')}</p>
               </div>
             </div>
           )}
@@ -180,7 +183,7 @@ export function SignupForm() {
             <div className="mt-3 p-3 bg-red-50 border border-red-200 rounded flex gap-2 text-sm">
               <AlertCircle className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
               <div>
-                <p className="font-semibold text-red-900">Error</p>
+                <p className="font-semibold text-red-900">{t(lang, 'form_error_title')}</p>
                 <p className="text-xs text-red-800">{errorMsg}</p>
               </div>
             </div>

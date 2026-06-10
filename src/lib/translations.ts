@@ -1,0 +1,605 @@
+export type Lang = 'es' | 'en' | 'pt';
+
+const translations = {
+  es: {
+    // Navbar
+    nav_how: 'Cómo Funciona',
+    nav_pricing: 'Precios',
+    nav_testimonials: 'Testimonios',
+    nav_contact: 'Contactos',
+
+    // Hero
+    hero_headline: 'Moderniza tu restaurante con una',
+    hero_accent: 'tienda online',
+    hero_cta: 'Crear mi cuenta gratis',
+    hero_trial: '14 días gratis. Sin tarjeta de crédito.',
+
+    // HeroSubtitle
+    subtitle_heading: '¿Qué es una tienda online?',
+    subtitle_1_title: 'Venta directa, sin comisiones',
+    subtitle_1_desc: 'Tu plataforma, tus ganancias',
+    subtitle_2_title: 'Base de datos de clientes',
+    subtitle_2_desc: 'Conoce quién compra, qué le gusta, cuándo ordena',
+    subtitle_3_title: 'Tu presencia online unificada',
+    subtitle_3_desc: 'Todo conectado en un lugar',
+
+    // TheIdea
+    idea_title: 'La gran idea',
+    idea_body_1: 'Así empezó. Vimos que faltaba: una',
+    idea_body_accent: 'tienda online + cámara',
+    idea_body_2: 'integradas. Creamos',
+    idea_body_brand: 'FoodSpot Mobile',
+    idea_body_3: ', donde ambas funcionan juntas.',
+
+    // MiddleCTA
+    mid_cta_heading: 'Listo para transformar tu negocio?',
+    mid_cta_button: 'Proba gratis 14 dias !',
+    mid_cta_sub: 'Sin tarjeta de credito. Sin vueltas.',
+
+    // UGCMarketingCTA
+    ugc_cta_heading: 'Convierte cada pedido en contenido viral',
+    ugc_cta_button: 'Empieza ahora',
+
+    // DemoSection
+    demo_waiting: '¿Qué esperas?',
+    demo_button: 'Demo',
+
+    // HowItWorks
+    how_heading: 'De tu cocina al mundo en 3 pasos',
+    how_sub: 'Tres simples pasos para digitalizar tu restaurante.',
+    step1_title: 'Crea tu menu en minutos',
+    step1_desc: 'Subi fotos, precios y categorias. Incluso podes agregar calorias, advertencias de salud y etiquetas personalizadas para casos especiales. Tu tienda lista al instante. 100% NO-CODE',
+    step2_title: 'Personaliza tu marca',
+    step2_desc: 'Colores, logos e identidad. Dale vida a tu app con nuestras mascotas animadas.',
+    step3_title: 'Lanza y vende',
+    step3_desc: 'Sin hardware. Sin papelería. Sin drama. Conecta Mercado Pago con token + user ID. Cobra al instante. Todo ocurre en el app.',
+
+    // Features / AI
+    ai_heading: 'Foodspot AI',
+    ai_desc: 'Tu asistente personal de estrategia gastronomica. Genera promociones inteligentes y optimiza tus costos analizando tus datos en tiempo real.',
+
+    // UGCMarketing
+    ugc_heading: 'Convertí a cada cliente en contenido',
+    ugc_stat: 'El 71% de las personas te visita porque un amigo subió una foto.',
+    ugc_flow_photo: 'Foto',
+    ugc_flow_share: 'Compartir',
+    ugc_flow_customer: 'Nueva Cliente',
+
+    // Testimonials
+    testimonials_heading: 'Lo que dicen nuestros clientes',
+    t1_name: 'Martin Gomez',
+    t1_role: 'Dueno, Burger Station',
+    t1_quote: 'Desde que usamos FoodSpot, nuestras ventas directas aumentaron un 40%. La interfaz es tan intuitiva que nuestro equipo aprendio a usarla en un dia.',
+    t2_name: 'Sofia Reyes',
+    t2_role: 'Directora, Green Bowl',
+    t2_quote: 'Las herramientas de IA para inventario y promociones nos ahorran horas cada semana. Es literalmente como tener un gerente extra trabajando 24/7.',
+    t3_name: 'Carlos Mendoza',
+    t3_role: 'Fundador, La Masa',
+    t3_quote: 'Dejamos de pagar comisiones abusivas a las apps de delivery. FoodSpot nos dio la independencia que necesitabamos para crecer nuestro propio canal.',
+
+    // Pricing
+    pricing_heading: 'Planes simples, sin sorpresas',
+    pricing_sub: 'Elige el plan que mejor se adapte al tamano de tu negocio.',
+    plan_free_name: 'Prueba Gratis',
+    plan_free_period: '/14 dias',
+    plan_free_desc: 'Prueba la version completa con todas las funcionalidades por 14 dias sin tarjeta de credito.',
+    plan_free_f1: 'Acceso total 14 dias',
+    plan_free_f2: 'Setup inicial guiado',
+    plan_free_f3: 'Sin tarjeta requerida',
+    plan_free_btn: 'Empezar Prueba Gratis',
+    plan_pro_name: 'Pro',
+    plan_pro_period: '/mes',
+    plan_pro_badge: 'Mas Popular',
+    plan_pro_desc: 'Todas las herramientas profesionales para escalar tu negocio.',
+    plan_pro_btn: 'Suscribirse Ahora',
+    cat_orders: 'Pedidos y Operaciones',
+    feat_orders_1: 'Pedidos ilimitados (sin limite mensual)',
+    feat_orders_2: 'Panel de pedidos en tiempo real',
+    cat_delivery: 'Delivery',
+    feat_delivery_1: 'Radio de delivery inteligente (validado en servidor)',
+    feat_delivery_2: 'Umbral de envio gratis (lo definis vos)',
+    cat_payments: 'Pagos',
+    feat_payments_1: 'Integracion directa con Mercado Pago',
+    feat_payments_2: '0% de comision para FoodSpot — te quedas con el 100%',
+    feat_payments_3: 'Pagos instantaneos',
+    cat_store: 'Tienda',
+    feat_store_1: 'Menu digital limpio (editas en minutos)',
+    feat_store_2: 'Colores y branding personalizables',
+    feat_store_3: 'Soporte bilingue (Espanol / Ingles)',
+    cat_events: 'Eventos',
+    feat_events_1: 'Crea y promociona eventos especiales dentro de la app',
+    feat_events_2: 'Genera trafico en horas valle',
+    cat_marketing: 'Marketing',
+    feat_marketing_1: 'Los clientes capturan y comparten fotos en el punto de compra',
+    feat_marketing_2: 'Convierte cada pedido en prueba social y marketing',
+    cat_analytics: 'Analiticas',
+    feat_analytics_1: 'Dashboard completo con metricas en tiempo real',
+    cat_ai: 'IA',
+    feat_ai_1: 'Chatbot con IA integrado a tu negocio',
+    cat_support: 'Soporte',
+    feat_support_1: 'Soporte prioritario por email y chat',
+
+    // FAQ
+    faq_heading: 'Preguntas frecuentes',
+    faq_sub: 'Todo lo que necesitas saber sobre FoodSpot Mobile.',
+    faq_q1: '¿Necesito saber programar?',
+    faq_a1: 'Absolutamente NO. FoodSpot Mobile es una plataforma No-Code disenada para que cualquier dueno de restaurante pueda lanzar su app profesional sin tocar una sola linea de codigo.',
+    faq_q2: '¿Cuanto tardo en configurar mi tienda?',
+    faq_a2: 'El record son 5 minutos. Solo necesitas tus fotos, tus precios y ganas de vender mas.',
+    faq_q3: '¿Cuanto cuesta FoodSpot Mobile?',
+    faq_a3: 'FoodSpot Mobile cuesta $25.99 USD mensuales. Sin cargos ocultos. Cancela cuando quieras. Incluye: menu digital completo, sistema operativo integrado para gestion de restaurantes, gestion de personal, inventario y gastos, finance tracker, integracion Mercado Pago, herramientas de marketing UGC, asistente IA, 5 juegos integrados, modulo completo de eventos, branding personalizado e integracion WhatsApp. Todo disponible en prueba gratuita.',
+    faq_q4: '¿Funciona FoodSpot Mobile en mi telefono?',
+    faq_a4: 'Si. iOS, Android y web. FoodSpot Mobile esta disponible en ambas plataformas. Elegimos no estar en App Store ni Google Play para enviar actualizaciones semanales al instante sin retrasos. Tu app se actualiza automaticamente.',
+    faq_q5: '¿Me cobran comision en FoodSpot Mobile?',
+    faq_a5: 'Cero comision. No nos quedamos con nada. Solo pagas el 3% de Mercado Pago ya integrado, sin pasos extra. Lo mismo que pagarias en cualquier plataforma de pago.',
+    faq_q6: '¿Para que tipo de restaurante sirve FoodSpot Mobile?',
+    faq_a6: 'Todos. Restaurantes tradicionales, vendedores callejeros, ghost kitchens, food trucks, pizzerias, cafeterias. Cualquier negocio gastronomico. FoodSpot Mobile crece con tu empresa.',
+    faq_q7: '¿Funciona en toda LATAM?',
+    faq_a7: 'Si. FoodSpot Mobile funciona en Argentina, Brasil, Mexico, Chile, Colombia, Peru y toda LATAM. Integracion nativa con Mercado Pago. Soporte en espanol, portugues e ingles.',
+
+    // SignupForm
+    form_heading: 'Solicita tu demo gratuita',
+    form_sub: 'Acceso instantáneo + email de bienvenida con todo lo que necesitas.',
+    form_email: 'Tu email *',
+    form_firstname: 'Nombre *',
+    form_lastname: 'Apellido *',
+    form_business_placeholder: 'Tipo de negocio *',
+    form_submit: 'Solicitar Demo',
+    form_success_btn: '¡Registrado!',
+    form_success_title: '¡Gracias!',
+    form_success_msg: 'Revisa tu email en los próximos minutos.',
+    form_error_title: 'Error',
+    form_error_business: 'Por favor selecciona un tipo de negocio',
+    form_error_generic: 'Algo salió mal',
+
+    // FishDemo
+    demo_90: 'DEMO · Probarlo por 90 segundos',
+
+    // CookieConsent
+    cookie_text: 'Usamos cookies para analítica y personalización.',
+    cookie_sub: 'Al aceptar, Google Analytics y Meta Pixel se activarán para mejorar tu experiencia.',
+    cookie_decline: 'Rechazar',
+    cookie_accept: 'Aceptar',
+
+    // Footer
+    footer_tagline: 'Moderniza tu restaurante con una tienda online',
+    footer_contact: 'Contactos',
+    footer_follow: 'Síguenos',
+    footer_made: 'Hecho con amor en Cordoba Capital, Argentina para el mundo.',
+    footer_rights: '2025 FoodSpot Mobile. All rights reserved.',
+    footer_product: 'Producto',
+    footer_features: 'Caracteristicas',
+    footer_pricing: 'Precios',
+    footer_templates: 'Plantillas',
+    footer_company: 'Compania',
+    footer_about: 'Sobre Nosotros',
+    footer_contact_link: 'Contacto',
+    footer_location: 'Ubicacion',
+    footer_legal: 'Legal',
+    footer_privacy: 'Privacidad',
+    footer_terms: 'Terminos',
+    footer_cookies: 'Cookies',
+
+    // AboutUs
+    about_hero: 'Sobre Nosotros — La Historia del Fundador',
+    about_intro: 'Conocé la historia detrás de FoodSpot. Un emprendedor que entendió el dolor real de los dueños gastronómicos.',
+    about_p1: 'Antes de crear FoodSpot, era dueño del taller de detailing automotriz número uno en Seattle, Washington. Si sabés algo de esa industria, sabés que la perfección está en los detalles, la ejecución lo es todo y la velocidad es lo que te hace ganar.',
+    about_p2: 'Pero cuando miraba a los restaurantes a mi alrededor —y más tarde a los negocios acá en Latinoamérica después de mudarme a Argentina—, seguía viendo exactamente el mismo cuello de botella. Los dueños de los restaurantes estaban atrapados. Perdían pedidos por culpa de tecnología obsoleta, recibían presupuestos de miles de dólares de agencias de desarrollo lentísimas, y tenían que esperar más de 90 días por un código "a medida" que, tarde o temprano, se iba a romper de todos modos.',
+    about_p3: 'Con formación en marketing y gestión de negocios, aprendí que la velocidad de ejecución es lo que diferencia a los ganadores. En Estados Unidos construí sistemas que funcionan bajo presión. Acá en Latinoamérica, vi que los restaurantes necesitaban exactamente eso: tener su propia app funcionando en 14 días, sin esperar 90 días ni gastar miles de dólares.',
+    about_p4: '¿Por qué el dueño de un restaurante tiene que depender de un programador para tener un negocio digital moderno?',
+    about_p5: 'Soy un fundador independiente y desarrollador. No construyo software basándome en teorías o en libros; construyo sistemas basados en la realidad operativa. FoodSpot Mobile nació porque los dueños gastronómicos merecen un sistema operativo de nivel empresarial que simplemente funcione: rápido, eficiente y sin dolores de cabeza técnicos.',
+    about_roadmap_heading: 'Nuestro Roadmap (Hoja de Ruta)',
+    about_phase1_title: 'Fase 1',
+    about_phase1_desc: 'Potenciar a los restaurantes de toda Latinoamérica con herramientas digitales nativas y de alta fidelidad.',
+    about_phase2_title: 'Fase 2',
+    about_phase2_desc: 'Expandir nuestras operaciones al mercado de Estados Unidos en los próximos 6 a 8 meses.',
+    about_mission_heading: 'Nuestra Misión',
+    about_mission_p1: 'Construir el definitivo "Shopify de la Gastronomía para Latinoamérica" — la única plataforma no-code que entiende realmente cómo operan nuestros restaurantes. Queremos darle a los dueños el control total sobre su negocio, con cero fricción y cero dependencia de equipos de desarrollo externos.',
+    about_mission_p2: 'Somos un proyecto bootstrapped (financiado a pulmón, sin inversores), somos completamente independientes y nos movemos rápido.',
+    about_cta: 'Comenzar Prueba Gratis',
+  },
+
+  en: {
+    // Navbar
+    nav_how: 'How It Works',
+    nav_pricing: 'Pricing',
+    nav_testimonials: 'Reviews',
+    nav_contact: 'Contact',
+
+    // Hero
+    hero_headline: 'Modernize your restaurant with an',
+    hero_accent: 'online store',
+    hero_cta: 'Start for free',
+    hero_trial: '14 days free. No credit card needed.',
+
+    // HeroSubtitle
+    subtitle_heading: 'What is an online store?',
+    subtitle_1_title: 'Direct sales, zero commissions',
+    subtitle_1_desc: 'Your platform, your profits',
+    subtitle_2_title: 'Customer database',
+    subtitle_2_desc: 'Know who buys, what they like, when they order',
+    subtitle_3_title: 'Your unified online presence',
+    subtitle_3_desc: 'Everything connected in one place',
+
+    // TheIdea
+    idea_title: 'The big idea',
+    idea_body_1: 'It started here. We saw what was missing: an',
+    idea_body_accent: 'online store + camera',
+    idea_body_2: 'built together. We created',
+    idea_body_brand: 'FoodSpot Mobile',
+    idea_body_3: ', where both work as one.',
+
+    // MiddleCTA
+    mid_cta_heading: 'Ready to transform your business?',
+    mid_cta_button: 'Try free for 14 days!',
+    mid_cta_sub: 'No credit card. No hassle.',
+
+    // UGCMarketingCTA
+    ugc_cta_heading: 'Turn every order into viral content',
+    ugc_cta_button: 'Start now',
+
+    // DemoSection
+    demo_waiting: 'What are you waiting for?',
+    demo_button: 'Demo',
+
+    // HowItWorks
+    how_heading: 'From your kitchen to the world in 3 steps',
+    how_sub: 'Three simple steps to take your restaurant digital.',
+    step1_title: 'Build your menu in minutes',
+    step1_desc: 'Upload photos, prices, and categories. Add calories, health warnings, and custom tags for special cases. Your store live instantly. 100% NO-CODE.',
+    step2_title: 'Customize your brand',
+    step2_desc: 'Colors, logos, identity. Bring your app to life with our animated mascots.',
+    step3_title: 'Launch and sell',
+    step3_desc: 'No hardware. No paperwork. No drama. Connect Mercado Pago with your token + user ID. Get paid instantly. Everything happens in the app.',
+
+    // Features / AI
+    ai_heading: 'Foodspot AI',
+    ai_desc: 'Your personal restaurant strategy assistant. Generate smart promotions and cut costs by analyzing your real-time data.',
+
+    // UGCMarketing
+    ugc_heading: 'Turn every customer into content',
+    ugc_stat: '71% of people visit you because a friend posted a photo.',
+    ugc_flow_photo: 'Photo',
+    ugc_flow_share: 'Share',
+    ugc_flow_customer: 'New Customer',
+
+    // Testimonials
+    testimonials_heading: 'What our customers say',
+    t1_name: 'Martin Gomez',
+    t1_role: 'Owner, Burger Station',
+    t1_quote: 'Since we started using FoodSpot, our direct sales went up 40%. The interface is so intuitive our team learned it in a single day.',
+    t2_name: 'Sofia Reyes',
+    t2_role: 'Director, Green Bowl',
+    t2_quote: 'The AI tools for inventory and promotions save us hours every week. It\'s literally like having an extra manager working 24/7.',
+    t3_name: 'Carlos Mendoza',
+    t3_role: 'Founder, La Masa',
+    t3_quote: 'We stopped paying insane commissions to delivery apps. FoodSpot gave us the independence we needed to grow our own channel.',
+
+    // Pricing
+    pricing_heading: 'Simple pricing, no surprises',
+    pricing_sub: 'Pick the plan that fits your business.',
+    plan_free_name: 'Free Trial',
+    plan_free_period: '/14 days',
+    plan_free_desc: 'Try the full version with every feature for 14 days. No credit card required.',
+    plan_free_f1: 'Full access for 14 days',
+    plan_free_f2: 'Guided onboarding',
+    plan_free_f3: 'No card required',
+    plan_free_btn: 'Start Free Trial',
+    plan_pro_name: 'Pro',
+    plan_pro_period: '/month',
+    plan_pro_badge: 'Most Popular',
+    plan_pro_desc: 'Every professional tool to scale your business.',
+    plan_pro_btn: 'Subscribe Now',
+    cat_orders: 'Orders & Operations',
+    feat_orders_1: 'Unlimited orders (no monthly cap)',
+    feat_orders_2: 'Real-time order dashboard',
+    cat_delivery: 'Delivery',
+    feat_delivery_1: 'Smart delivery radius (server-validated)',
+    feat_delivery_2: 'Free shipping threshold (you decide)',
+    cat_payments: 'Payments',
+    feat_payments_1: 'Direct Mercado Pago integration',
+    feat_payments_2: '0% commission for FoodSpot — you keep 100%',
+    feat_payments_3: 'Instant payouts',
+    cat_store: 'Store',
+    feat_store_1: 'Clean digital menu (edit in minutes)',
+    feat_store_2: 'Customizable colors and branding',
+    feat_store_3: 'Bilingual support (Spanish / English)',
+    cat_events: 'Events',
+    feat_events_1: 'Create and promote special events inside the app',
+    feat_events_2: 'Drive traffic during slow hours',
+    cat_marketing: 'Marketing',
+    feat_marketing_1: 'Customers capture and share photos at point of purchase',
+    feat_marketing_2: 'Turn every order into social proof and marketing',
+    cat_analytics: 'Analytics',
+    feat_analytics_1: 'Full dashboard with real-time metrics',
+    cat_ai: 'AI',
+    feat_ai_1: 'AI chatbot integrated into your business',
+    cat_support: 'Support',
+    feat_support_1: 'Priority support via email and chat',
+
+    // FAQ
+    faq_heading: 'Frequently asked questions',
+    faq_sub: 'Everything you need to know about FoodSpot Mobile.',
+    faq_q1: 'Do I need to know how to code?',
+    faq_a1: 'Absolutely not. FoodSpot Mobile is a No-Code platform built so any restaurant owner can launch a professional app without touching a single line of code.',
+    faq_q2: 'How long does setup take?',
+    faq_a2: 'The record is 5 minutes. All you need is your photos, your prices, and the drive to sell more.',
+    faq_q3: 'How much does FoodSpot Mobile cost?',
+    faq_a3: 'FoodSpot Mobile is $25.99 USD/month. No hidden fees. Cancel anytime. Includes: full digital menu, integrated restaurant operating system, staff management, inventory and expenses, finance tracker, Mercado Pago integration, UGC marketing tools, AI assistant, 5 built-in games, full events module, custom branding, and WhatsApp integration. Everything available in the free trial.',
+    faq_q4: 'Does FoodSpot Mobile work on my phone?',
+    faq_a4: 'Yes. iOS, Android, and web. We chose not to list on the App Store or Google Play so we can ship weekly updates instantly with no delays. Your app updates automatically.',
+    faq_q5: 'Does FoodSpot Mobile charge commissions?',
+    faq_a5: 'Zero commissions. We keep nothing. You only pay Mercado Pago\'s 3% — already integrated, no extra steps. Same as any other payment platform.',
+    faq_q6: 'What type of restaurant is FoodSpot Mobile for?',
+    faq_a6: 'All of them. Traditional restaurants, street vendors, ghost kitchens, food trucks, pizzerias, cafes. Any food business. FoodSpot Mobile grows with you.',
+    faq_q7: 'Does it work across LATAM?',
+    faq_a7: 'Yes. FoodSpot Mobile works in Argentina, Brazil, Mexico, Chile, Colombia, Peru, and all of LATAM. Native Mercado Pago integration. Support in Spanish, Portuguese, and English.',
+
+    // SignupForm
+    form_heading: 'Request your free demo',
+    form_sub: 'Instant access + welcome email with everything you need.',
+    form_email: 'Your email *',
+    form_firstname: 'First name *',
+    form_lastname: 'Last name *',
+    form_business_placeholder: 'Business type *',
+    form_submit: 'Request Demo',
+    form_success_btn: 'Registered!',
+    form_success_title: 'Thanks!',
+    form_success_msg: 'Check your email in the next few minutes.',
+    form_error_title: 'Error',
+    form_error_business: 'Please select a business type',
+    form_error_generic: 'Something went wrong',
+
+    // FishDemo
+    demo_90: 'DEMO · Try it for 90 seconds',
+
+    // CookieConsent
+    cookie_text: 'We use cookies for analytics and personalization.',
+    cookie_sub: 'By accepting, Google Analytics and Meta Pixel will activate to improve your experience.',
+    cookie_decline: 'Decline',
+    cookie_accept: 'Accept',
+
+    // Footer
+    footer_tagline: 'Modernize your restaurant with an online store',
+    footer_contact: 'Contact',
+    footer_follow: 'Follow us',
+    footer_made: 'Made with love in Cordoba, Argentina for the world.',
+    footer_rights: '2025 FoodSpot Mobile. All rights reserved.',
+    footer_product: 'Product',
+    footer_features: 'Features',
+    footer_pricing: 'Pricing',
+    footer_templates: 'Templates',
+    footer_company: 'Company',
+    footer_about: 'About Us',
+    footer_contact_link: 'Contact',
+    footer_location: 'Location',
+    footer_legal: 'Legal',
+    footer_privacy: 'Privacy',
+    footer_terms: 'Terms',
+    footer_cookies: 'Cookies',
+
+    // AboutUs
+    about_hero: 'About Us — The Founder\'s Story',
+    about_intro: 'Meet the story behind FoodSpot. An entrepreneur who understood the real pain of food business owners.',
+    about_p1: 'Before building FoodSpot, I owned the #1 auto detailing shop in Seattle, Washington. If you know anything about that industry, you know perfection is in the details, execution is everything, and speed is what wins.',
+    about_p2: 'But when I looked at the restaurants around me — and later at businesses here in Latin America after I moved to Argentina — I kept seeing the same bottleneck. Restaurant owners were stuck. They lost orders because of outdated tech, got quotes for thousands of dollars from slow dev agencies, and had to wait 90+ days for "custom" code that would break anyway.',
+    about_p3: 'With a background in marketing and business management, I learned that execution speed is what separates winners. In the US I built systems that work under pressure. Here in Latin America, I saw that restaurants needed exactly that: their own app running in 14 days, without waiting 90 days or spending thousands.',
+    about_p4: 'Why does a restaurant owner have to depend on a developer to have a modern digital business?',
+    about_p5: 'I\'m an independent founder and developer. I don\'t build software from theories or books — I build systems based on operational reality. FoodSpot Mobile was born because food business owners deserve an enterprise-grade operating system that just works: fast, efficient, and zero technical headaches.',
+    about_roadmap_heading: 'Our Roadmap',
+    about_phase1_title: 'Phase 1',
+    about_phase1_desc: 'Empower restaurants across Latin America with native, high-fidelity digital tools.',
+    about_phase2_title: 'Phase 2',
+    about_phase2_desc: 'Expand operations into the US market in the next 6–8 months.',
+    about_mission_heading: 'Our Mission',
+    about_mission_p1: 'Build the definitive "Shopify for Restaurants" — the only no-code platform that truly understands how food businesses operate. We want to give owners total control over their business, with zero friction and zero dependence on external dev teams.',
+    about_mission_p2: 'We\'re a bootstrapped project — self-funded, no investors — completely independent and moving fast.',
+    about_cta: 'Start Free Trial',
+  },
+
+  pt: {
+    // Navbar
+    nav_how: 'Como Funciona',
+    nav_pricing: 'Preços',
+    nav_testimonials: 'Depoimentos',
+    nav_contact: 'Contato',
+
+    // Hero
+    hero_headline: 'Modernize seu restaurante com uma',
+    hero_accent: 'loja online',
+    hero_cta: 'Criar minha conta grátis',
+    hero_trial: '14 dias grátis. Sem cartão de crédito.',
+
+    // HeroSubtitle
+    subtitle_heading: 'O que é uma loja online?',
+    subtitle_1_title: 'Venda direta, sem comissões',
+    subtitle_1_desc: 'Sua plataforma, seus ganhos',
+    subtitle_2_title: 'Base de dados de clientes',
+    subtitle_2_desc: 'Saiba quem compra, o que gosta, quando pede',
+    subtitle_3_title: 'Sua presença online unificada',
+    subtitle_3_desc: 'Tudo conectado em um único lugar',
+
+    // TheIdea
+    idea_title: 'A grande ideia',
+    idea_body_1: 'Foi assim que começou. Vimos o que faltava: uma',
+    idea_body_accent: 'loja online + câmera',
+    idea_body_2: 'integradas. Criamos o',
+    idea_body_brand: 'FoodSpot Mobile',
+    idea_body_3: ', onde as duas funcionam juntas.',
+
+    // MiddleCTA
+    mid_cta_heading: 'Pronto para transformar seu negócio?',
+    mid_cta_button: 'Experimente grátis por 14 dias!',
+    mid_cta_sub: 'Sem cartão de crédito. Sem complicações.',
+
+    // UGCMarketingCTA
+    ugc_cta_heading: 'Transforme cada pedido em conteúdo viral',
+    ugc_cta_button: 'Comece agora',
+
+    // DemoSection
+    demo_waiting: 'O que você está esperando?',
+    demo_button: 'Demo',
+
+    // HowItWorks
+    how_heading: 'Da sua cozinha para o mundo em 3 passos',
+    how_sub: 'Três passos simples para digitalizar seu restaurante.',
+    step1_title: 'Crie seu cardápio em minutos',
+    step1_desc: 'Adicione fotos, preços e categorias. Inclua calorias, avisos de saúde e etiquetas personalizadas. Sua loja pronta na hora. 100% SEM CÓDIGO.',
+    step2_title: 'Personalize sua marca',
+    step2_desc: 'Cores, logos e identidade. Dê vida ao seu app com nossas mascotes animadas.',
+    step3_title: 'Lance e venda',
+    step3_desc: 'Sem hardware. Sem papelada. Sem drama. Conecte o Mercado Pago com token + user ID. Receba na hora. Tudo acontece no app.',
+
+    // Features / AI
+    ai_heading: 'Foodspot AI',
+    ai_desc: 'Seu assistente pessoal de estratégia gastronômica. Gere promoções inteligentes e otimize seus custos analisando seus dados em tempo real.',
+
+    // UGCMarketing
+    ugc_heading: 'Transforme cada cliente em conteúdo',
+    ugc_stat: '71% das pessoas visitam você porque um amigo publicou uma foto.',
+    ugc_flow_photo: 'Foto',
+    ugc_flow_share: 'Compartilhar',
+    ugc_flow_customer: 'Novo Cliente',
+
+    // Testimonials
+    testimonials_heading: 'O que nossos clientes dizem',
+    t1_name: 'Martin Gomez',
+    t1_role: 'Proprietário, Burger Station',
+    t1_quote: 'Desde que usamos o FoodSpot, nossas vendas diretas aumentaram 40%. A interface é tão intuitiva que nossa equipe aprendeu em um dia.',
+    t2_name: 'Sofia Reyes',
+    t2_role: 'Diretora, Green Bowl',
+    t2_quote: 'As ferramentas de IA para estoque e promoções nos economizam horas toda semana. É literalmente como ter um gerente extra trabalhando 24/7.',
+    t3_name: 'Carlos Mendoza',
+    t3_role: 'Fundador, La Masa',
+    t3_quote: 'Paramos de pagar comissões abusivas para apps de entrega. O FoodSpot nos deu a independência que precisávamos para crescer nosso próprio canal.',
+
+    // Pricing
+    pricing_heading: 'Planos simples, sem surpresas',
+    pricing_sub: 'Escolha o plano que melhor se adapta ao seu negócio.',
+    plan_free_name: 'Teste Grátis',
+    plan_free_period: '/14 dias',
+    plan_free_desc: 'Experimente a versão completa com todas as funcionalidades por 14 dias sem cartão de crédito.',
+    plan_free_f1: 'Acesso total por 14 dias',
+    plan_free_f2: 'Configuração inicial guiada',
+    plan_free_f3: 'Sem cartão necessário',
+    plan_free_btn: 'Iniciar Teste Grátis',
+    plan_pro_name: 'Pro',
+    plan_pro_period: '/mês',
+    plan_pro_badge: 'Mais Popular',
+    plan_pro_desc: 'Todas as ferramentas profissionais para escalar seu negócio.',
+    plan_pro_btn: 'Assinar Agora',
+    cat_orders: 'Pedidos e Operações',
+    feat_orders_1: 'Pedidos ilimitados (sem limite mensal)',
+    feat_orders_2: 'Painel de pedidos em tempo real',
+    cat_delivery: 'Entrega',
+    feat_delivery_1: 'Raio de entrega inteligente (validado no servidor)',
+    feat_delivery_2: 'Frete grátis configurável (você decide)',
+    cat_payments: 'Pagamentos',
+    feat_payments_1: 'Integração direta com Mercado Pago',
+    feat_payments_2: '0% de comissão para FoodSpot — você fica com 100%',
+    feat_payments_3: 'Pagamentos instantâneos',
+    cat_store: 'Loja',
+    feat_store_1: 'Cardápio digital limpo (edite em minutos)',
+    feat_store_2: 'Cores e branding personalizáveis',
+    feat_store_3: 'Suporte bilíngue (Português / Espanhol)',
+    cat_events: 'Eventos',
+    feat_events_1: 'Crie e promova eventos especiais dentro do app',
+    feat_events_2: 'Gere tráfego nos horários de menor movimento',
+    cat_marketing: 'Marketing',
+    feat_marketing_1: 'Clientes capturam e compartilham fotos no ponto de compra',
+    feat_marketing_2: 'Transforme cada pedido em prova social e marketing',
+    cat_analytics: 'Análises',
+    feat_analytics_1: 'Dashboard completo com métricas em tempo real',
+    cat_ai: 'IA',
+    feat_ai_1: 'Chatbot com IA integrado ao seu negócio',
+    cat_support: 'Suporte',
+    feat_support_1: 'Suporte prioritário por e-mail e chat',
+
+    // FAQ
+    faq_heading: 'Perguntas frequentes',
+    faq_sub: 'Tudo o que você precisa saber sobre o FoodSpot Mobile.',
+    faq_q1: 'Preciso saber programar?',
+    faq_a1: 'Absolutamente NÃO. O FoodSpot Mobile é uma plataforma No-Code desenvolvida para que qualquer proprietário de restaurante possa lançar seu app profissional sem tocar em uma única linha de código.',
+    faq_q2: 'Quanto tempo leva para configurar minha loja?',
+    faq_a2: 'O recorde é 5 minutos. Você só precisa das suas fotos, dos seus preços e vontade de vender mais.',
+    faq_q3: 'Quanto custa o FoodSpot Mobile?',
+    faq_a3: 'O FoodSpot Mobile custa $25,99 USD por mês. Sem taxas ocultas. Cancele quando quiser. Inclui: cardápio digital completo, sistema operacional integrado para gestão de restaurantes, gestão de equipe, inventário e despesas, finance tracker, integração Mercado Pago, ferramentas de marketing UGC, assistente de IA, 5 jogos integrados, módulo completo de eventos, branding personalizado e integração WhatsApp. Tudo disponível no teste gratuito.',
+    faq_q4: 'O FoodSpot Mobile funciona no meu celular?',
+    faq_a4: 'Sim. iOS, Android e web. Optamos por não estar na App Store nem no Google Play para enviar atualizações semanais instantaneamente sem atrasos. Seu app se atualiza automaticamente.',
+    faq_q5: 'O FoodSpot Mobile cobra comissões?',
+    faq_a5: 'Zero comissões. Não ficamos com nada. Você paga apenas os 3% do Mercado Pago já integrado, sem etapas extras. O mesmo que pagaria em qualquer plataforma de pagamento.',
+    faq_q6: 'Para que tipo de restaurante serve o FoodSpot Mobile?',
+    faq_a6: 'Para todos. Restaurantes tradicionais, vendedores de rua, ghost kitchens, food trucks, pizzarias, cafeterias. Qualquer negócio gastronômico. O FoodSpot Mobile cresce com sua empresa.',
+    faq_q7: 'Funciona em toda a América Latina?',
+    faq_a7: 'Sim. O FoodSpot Mobile funciona na Argentina, Brasil, México, Chile, Colômbia, Peru e em toda a América Latina. Integração nativa com Mercado Pago. Suporte em espanhol, português e inglês.',
+
+    // SignupForm
+    form_heading: 'Solicite sua demonstração gratuita',
+    form_sub: 'Acesso instantâneo + e-mail de boas-vindas com tudo o que você precisa.',
+    form_email: 'Seu e-mail *',
+    form_firstname: 'Nome *',
+    form_lastname: 'Sobrenome *',
+    form_business_placeholder: 'Tipo de negócio *',
+    form_submit: 'Solicitar Demo',
+    form_success_btn: 'Registrado!',
+    form_success_title: 'Obrigado!',
+    form_success_msg: 'Verifique seu e-mail nos próximos minutos.',
+    form_error_title: 'Erro',
+    form_error_business: 'Por favor, selecione um tipo de negócio',
+    form_error_generic: 'Algo deu errado',
+
+    // FishDemo
+    demo_90: 'DEMO · Experimente por 90 segundos',
+
+    // CookieConsent
+    cookie_text: 'Usamos cookies para análise e personalização.',
+    cookie_sub: 'Ao aceitar, o Google Analytics e o Meta Pixel serão ativados para melhorar sua experiência.',
+    cookie_decline: 'Recusar',
+    cookie_accept: 'Aceitar',
+
+    // Footer
+    footer_tagline: 'Modernize seu restaurante com uma loja online',
+    footer_contact: 'Contato',
+    footer_follow: 'Siga-nos',
+    footer_made: 'Feito com amor em Córdoba, Argentina para o mundo.',
+    footer_rights: '2025 FoodSpot Mobile. Todos os direitos reservados.',
+    footer_product: 'Produto',
+    footer_features: 'Funcionalidades',
+    footer_pricing: 'Preços',
+    footer_templates: 'Modelos',
+    footer_company: 'Empresa',
+    footer_about: 'Sobre Nós',
+    footer_contact_link: 'Contato',
+    footer_location: 'Localização',
+    footer_legal: 'Legal',
+    footer_privacy: 'Privacidade',
+    footer_terms: 'Termos',
+    footer_cookies: 'Cookies',
+
+    // AboutUs
+    about_hero: 'Sobre Nós — A História do Fundador',
+    about_intro: 'Conheça a história por trás do FoodSpot. Um empreendedor que entendeu a dor real dos donos de negócios gastronômicos.',
+    about_p1: 'Antes de criar o FoodSpot, eu era dono da melhor oficina de detalhamento automotivo de Seattle, Washington. Se você conhece esse setor, sabe que a perfeição está nos detalhes, a execução é tudo e a velocidade é o que faz você ganhar.',
+    about_p2: 'Mas quando olhava para os restaurantes ao meu redor — e mais tarde para os negócios aqui na América Latina depois de me mudar para a Argentina — continuava vendo exatamente o mesmo gargalo. Os donos de restaurantes estavam presos. Perdiam pedidos por causa de tecnologia obsoleta, recebiam orçamentos de milhares de dólares de agências de desenvolvimento lentas e precisavam esperar mais de 90 dias por um código "personalizado" que, cedo ou tarde, quebraria de qualquer forma.',
+    about_p3: 'Com formação em marketing e gestão de negócios, aprendi que a velocidade de execução é o que diferencia os vencedores. Nos Estados Unidos, construí sistemas que funcionam sob pressão. Aqui na América Latina, vi que os restaurantes precisavam exatamente disso: ter seu próprio app funcionando em 14 dias, sem esperar 90 dias nem gastar milhares de dólares.',
+    about_p4: 'Por que o dono de um restaurante precisa depender de um programador para ter um negócio digital moderno?',
+    about_p5: 'Sou um fundador independente e desenvolvedor. Não construo software baseado em teorias ou livros — construo sistemas baseados na realidade operacional. O FoodSpot Mobile nasceu porque os donos de negócios gastronômicos merecem um sistema operacional de nível empresarial que simplesmente funciona: rápido, eficiente e sem dores de cabeça técnicas.',
+    about_roadmap_heading: 'Nosso Roadmap',
+    about_phase1_title: 'Fase 1',
+    about_phase1_desc: 'Capacitar restaurantes de toda a América Latina com ferramentas digitais nativas e de alta fidelidade.',
+    about_phase2_title: 'Fase 2',
+    about_phase2_desc: 'Expandir nossas operações para o mercado dos Estados Unidos nos próximos 6 a 8 meses.',
+    about_mission_heading: 'Nossa Missão',
+    about_mission_p1: 'Construir o definitivo "Shopify da Gastronomia" — a única plataforma no-code que realmente entende como nossos restaurantes operam. Queremos dar aos proprietários controle total sobre seu negócio, com zero fricção e zero dependência de equipes de desenvolvimento externas.',
+    about_mission_p2: 'Somos um projeto bootstrapped — financiado com recursos próprios, sem investidores — completamente independentes e nos movemos rapidamente.',
+    about_cta: 'Iniciar Teste Grátis',
+  },
+};
+
+export default translations;
+
+export type TranslationKey = keyof typeof translations.es;
+
+export function t(lang: Lang, key: TranslationKey): string {
+  return (translations[lang] as Record<string, string>)[key] ?? (translations.es as Record<string, string>)[key] ?? key;
+}
