@@ -182,8 +182,8 @@ export function Hero() {
       </div>
 
       <div className="relative z-20 flex-1 flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
-        <h1 className="font-display text-4xl md:text-6xl text-white font-black mb-6 drop-shadow-2xl leading-tight">
-          Moderniza tu restaurante con una tienda online
+        <h1 className="font-display text-5xl md:text-7xl text-white font-black mb-6 drop-shadow-2xl leading-tight">
+          Moderniza tu restaurante con una <span className="text-emerald-400">tienda online</span>
         </h1>
       </div>
 
@@ -219,11 +219,15 @@ export function Hero() {
 
 export function HeroSubtitle() {
   return (
-    <section className="py-12 px-6 bg-gradient-to-b from-surface to-surface/50">
-      <div className="max-w-3xl mx-auto text-center">
-        <p className="text-base md:text-lg text-on-surface-variant leading-relaxed font-medium">
-          Crea tu tienda. Personalízala. Adapta para crecer.
-        </p>
+    <section className="py-16 px-6 bg-gradient-to-b from-surface to-surface/50">
+      <div className="max-w-2xl mx-auto">
+        <div className="bg-emerald-50 rounded-2xl px-8 py-6 border border-emerald-100">
+          <p className="text-lg md:text-xl text-primary font-bold leading-relaxed">
+            <span className="block">Crea tu tienda.</span>
+            <span className="block">Personalízala.</span>
+            <span className="block text-emerald-600">Adapta para crecer.</span>
+          </p>
+        </div>
       </div>
     </section>
   );
