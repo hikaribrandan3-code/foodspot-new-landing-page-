@@ -186,8 +186,8 @@ export function Hero() {
           FoodSpot Mobile
         </h1>
 
-        <p className="text-lg md:text-2xl text-white/95 leading-relaxed font-semibold italic drop-shadow-xl">
-          Tu tienda online completa — con clientes que venden por ti
+        <p className="text-lg md:text-2xl text-white/95 leading-relaxed font-bold drop-shadow-xl">
+          La única tienda online en LATAM que convierte a cada cliente en tu vendedor
         </p>
       </div>
 
