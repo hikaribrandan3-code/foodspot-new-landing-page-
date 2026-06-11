@@ -45,13 +45,13 @@ const translations = {
     demo_button: 'Demo',
 
     // HowItWorks
-    how_heading: 'De tu cocina al mundo en 3 pasos',
+    how_heading: 'Crea tu tienda online en 3 pasos',
     how_sub: 'Tres simples pasos para digitalizar tu restaurante.',
-    step1_title: 'Crea tu menu en minutos',
+    step1_title: 'Crea tu menú en minutos',
     step1_desc: 'Subi fotos, precios y categorias. Incluso podes agregar calorias, advertencias de salud y etiquetas personalizadas para casos especiales. Tu tienda lista al instante. 100% NO-CODE',
-    step2_title: 'Personaliza tu marca',
+    step2_title: 'Personaliza tu tienda',
     step2_desc: 'Colores, logos e identidad. Dale vida a tu app con nuestras mascotas animadas.',
-    step3_title: 'Lanza y vende',
+    step3_title: 'Lanza tu tienda y vende',
     step3_desc: 'Sin hardware. Sin papelería. Sin drama. Conecta Mercado Pago con token + user ID. Cobra al instante. Todo ocurre en el app.',
 
     // Features / AI
@@ -243,13 +243,13 @@ const translations = {
     demo_button: 'Demo',
 
     // HowItWorks
-    how_heading: 'From your kitchen to the world in 3 steps',
+    how_heading: 'Build your online store in 3 steps',
     how_sub: 'Three simple steps to take your restaurant digital.',
-    step1_title: 'Build your menu in minutes',
+    step1_title: 'Build your digital menu',
     step1_desc: 'Upload photos, prices, and categories. Add calories, health warnings, and custom tags for special cases. Your store live instantly. 100% NO-CODE.',
-    step2_title: 'Customize your brand',
+    step2_title: 'Customize your storefront',
     step2_desc: 'Colors, logos, identity. Bring your app to life with our animated mascots.',
-    step3_title: 'Launch and sell',
+    step3_title: 'Launch your store and sell',
     step3_desc: 'No hardware. No paperwork. No drama. Connect Mercado Pago with your token + user ID. Get paid instantly. Everything happens in the app.',
 
     // Features / AI
@@ -441,13 +441,13 @@ const translations = {
     demo_button: 'Demo',
 
     // HowItWorks
-    how_heading: 'Da sua cozinha para o mundo em 3 passos',
+    how_heading: 'Crie sua loja online em 3 passos',
     how_sub: 'Três passos simples para digitalizar seu restaurante.',
-    step1_title: 'Crie seu cardápio em minutos',
+    step1_title: 'Crie seu cardápio digital',
     step1_desc: 'Adicione fotos, preços e categorias. Inclua calorias, avisos de saúde e etiquetas personalizadas. Sua loja pronta na hora. 100% SEM CÓDIGO.',
-    step2_title: 'Personalize sua marca',
+    step2_title: 'Personalize sua loja',
     step2_desc: 'Cores, logos e identidade. Dê vida ao seu app com nossas mascotes animadas.',
-    step3_title: 'Lance e venda',
+    step3_title: 'Lance sua loja e venda',
     step3_desc: 'Sem hardware. Sem papelada. Sem drama. Conecte o Mercado Pago com token + user ID. Receba na hora. Tudo acontece no app.',
 
     // Features / AI

@@ -182,7 +182,7 @@ export function Hero() {
 
       <div className="relative z-20 flex-1 flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
         <h1 className="font-display text-5xl md:text-7xl text-white font-black mb-6 drop-shadow-2xl leading-tight">
-          {t(lang, 'hero_headline')} <span className="text-emerald-400">{t(lang, 'hero_accent')}</span>
+          {t(lang, 'hero_headline')} <span className="text-[#15803d]">{t(lang, 'hero_accent')}</span>
         </h1>
       </div>
 
