@@ -182,14 +182,14 @@ export function Hero() {
 
   const accents = {
     es: ['Shopify para comida', 'sin comisiones', 'contenido orgánico', 'sin código'],
-    en: ['Shopify for food', 'commission-free', 'organic content', 'no code'],
+    en: ['Shopify for food', '0% commission', 'organic content', 'no code'],
     pt: ['Shopify para comida', 'sem comissões', 'conteúdo orgânico', 'sem código']
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
       setAccentIndex((prev) => (prev + 1) % accents[lang].length);
-    }, 850);
+    }, 777);
     return () => clearInterval(interval);
   }, [lang, accents]);
 
@@ -200,8 +200,8 @@ export function Hero() {
           {/* Left: Text content */}
           <div className="flex flex-col justify-center">
             <h1 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-4 leading-tight">
-              {lang === 'es' ? 'Crear tu tienda online' : lang === 'pt' ? 'Criar sua loja online' : 'Create your online store'} <span className="inline-block w-max" style={{ minWidth: '280px', maxWidth: '100%' }}>
-                <motion.span key={accentIndex} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.25 }} style={{ color: '#10b981', display: 'block' }}>{accents[lang][accentIndex]}</motion.span>
+              {lang === 'es' ? 'Crear tu tienda online' : lang === 'pt' ? 'Criar sua loja online' : 'Create your online store'} <span className="inline-block md:block w-max md:w-full" style={{ minWidth: '280px', maxWidth: '100%' }}>
+                <motion.span key={accentIndex} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.25 }} style={{ color: '#10b981', display: 'inline-block' }}>{accents[lang][accentIndex]}</motion.span>
               </span>
             </h1>
 
