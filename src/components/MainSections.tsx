@@ -206,9 +206,15 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Right: Animated phone mockup */}
-          <div className="hidden md:flex justify-center">
-            <AnimatedPhoneShowcase />
+          {/* Right: Phone with leaf background */}
+          <div className="hidden md:flex justify-center items-center relative" style={{ background: 'linear-gradient(135deg, #10b981 0%, #86efac 100%)', borderRadius: '24px', padding: '40px', minHeight: '500px' }}>
+            {/* Leaf pattern overlay */}
+            <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, #ffffff 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
+
+            {/* Phone mockup - 65% showing */}
+            <div className="relative z-10" style={{ height: '340px', overflow: 'hidden' }}>
+              <AnimatedPhoneShowcase />
+            </div>
           </div>
         </div>
 
