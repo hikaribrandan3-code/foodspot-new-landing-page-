@@ -268,7 +268,6 @@ export function VideoShowcase() {
             <div className="hidden md:block absolute top-2 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-600 rounded-full z-10" />
             <video
               autoPlay
-              muted
               loop
               playsInline
               preload="metadata"
