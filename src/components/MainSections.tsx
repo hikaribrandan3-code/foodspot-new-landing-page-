@@ -156,7 +156,7 @@ export function Hero() {
           {/* Left: Text content */}
           <div className="flex flex-col justify-center">
             <h1 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-4 leading-tight">
-              {t(lang, 'hero_headline')} <span className="text-[#10b981]">{t(lang, 'hero_accent')}</span>
+              {t(lang, 'hero_headline')} <span style={{ color: '#10b981' }}>{t(lang, 'hero_accent')}</span>
             </h1>
 
             <p className="text-lg md:text-xl text-on-surface-variant mb-8 leading-relaxed font-medium">
@@ -231,12 +231,6 @@ function AnimatedPhoneShowcase() {
     <div className={phoneSize}>
       {/* Phone frame */}
       <div className="absolute inset-0 bg-black rounded-[48px] shadow-2xl border-[14px] border-gray-900 overflow-hidden flex flex-col">
-        {/* Status bar */}
-        <div className="bg-white h-6 flex items-center justify-between px-4 text-xs font-semibold border-b border-gray-200">
-          <span>9:41</span>
-          <span>📶 🔋</span>
-        </div>
-
         {/* Notch */}
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-6 bg-black rounded-b-3xl z-10"></div>
 
