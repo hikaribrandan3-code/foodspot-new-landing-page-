@@ -265,8 +265,8 @@ function AnimatedPhoneShowcase() {
 
   // Phone size: full on mobile, much smaller on desktop
   const phoneSize = isMobile
-    ? "relative w-80 h-[650px]"
-    : "relative w-60 h-[416px]";
+    ? "relative w-72 h-[605px]"
+    : "relative w-48 h-[333px]";
 
   return (
     <div className="flex flex-col items-center gap-8 pt-8 md:pt-16">
