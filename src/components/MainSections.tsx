@@ -169,7 +169,7 @@ export function Hero() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left: Text content */}
           <div className="flex flex-col justify-center">
-            <h1 className="font-display text-4xl md:text-5xl text-on-surface font-black mb-4 leading-tight md:text-center">
+            <h1 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-4 leading-tight">
               {lang === 'es' ? 'Crear tu tienda online' : lang === 'pt' ? 'Criar sua loja online' : 'Create your online store'} <span className="inline-block w-max" style={{ minWidth: '280px' }}>
                 <motion.span key={accentIndex} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.4 }} style={{ color: '#10b981', display: 'inline-block' }}>{accents[lang][accentIndex]}</motion.span>
               </span>
