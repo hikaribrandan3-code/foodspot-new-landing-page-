@@ -44,9 +44,9 @@ export function Navbar() {
 
   return (
     <nav className="bg-surface/90 border-b border-outline-variant shadow-sm sticky top-0 backdrop-blur-md z-50">
-      <div className="flex justify-between items-center w-full px-6 max-w-7xl mx-auto h-20">
-        <div className="text-2xl font-display font-bold text-primary">
-          FoodSpot <span className="text-lg font-semibold text-on-surface">Mobile</span>
+      <div className="flex justify-between items-center w-full px-6 max-w-7xl mx-auto h-16">
+        <div className="text-xl font-display font-bold text-primary">
+          FoodSpot <span className="text-xs font-semibold text-on-surface-variant">Mobile</span>
         </div>
 
         {/* Desktop Nav */}
@@ -77,7 +77,7 @@ export function Navbar() {
           <a
             href="https://foodspotapp.vercel.app/foodspot"
             onClick={() => trackCtaClick('demo_90_seconds')}
-            className="px-3 md:px-6 py-1.5 md:py-2.5 rounded-full font-semibold text-xs md:text-sm transition-all active:scale-95"
+            className="px-3 sm:px-4 md:px-6 py-1 sm:py-1.5 md:py-2 rounded-full font-semibold text-[11px] sm:text-xs md:text-sm transition-all active:scale-95 whitespace-nowrap"
             style={{
               background: "white",
               color: "#10b981",
@@ -238,7 +238,7 @@ export function Hero() {
         </div>
 
         {/* Mobile: Phone below text */}
-        <div className="md:hidden flex justify-center mt-24">
+        <div className="md:hidden flex justify-center mt-12">
           <AnimatedPhoneShowcase />
         </div>
       </div>
