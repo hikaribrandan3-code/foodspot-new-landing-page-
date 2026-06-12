@@ -274,7 +274,7 @@ function AnimatedPhoneShowcase() {
     : "relative w-72 h-[520px]";
 
   return (
-    <div className="flex flex-col items-center gap-8">
+    <div className="flex flex-col items-center gap-8 pt-8 md:pt-16">
       {/* 3D Perspective container - desktop only */}
       <div className="hidden md:block" style={{ perspective: '1200px' }}>
         <motion.div
