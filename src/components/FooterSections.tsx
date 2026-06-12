@@ -190,9 +190,7 @@ export function Footer() {
     {
       title: t(lang, 'footer_product'),
       items: [
-        { name: t(lang, 'footer_features'), href: "#beneficios" },
         { name: t(lang, 'footer_pricing'), href: "#precios" },
-        { name: t(lang, 'footer_templates'), href: "#" },
       ],
     },
     {
@@ -200,16 +198,7 @@ export function Footer() {
       items: [
         { name: t(lang, 'footer_about'), href: "#sobre-nosotros" },
         { name: t(lang, 'footer_contact_link'), href: "https://wa.me/543512122600" },
-        { name: t(lang, 'footer_location'), href: "#" },
         { name: "WhatsApp", href: "https://wa.me/543512122600" },
-      ],
-    },
-    {
-      title: t(lang, 'footer_legal'),
-      items: [
-        { name: t(lang, 'footer_privacy'), href: "#" },
-        { name: t(lang, 'footer_terms'), href: "#" },
-        { name: t(lang, 'footer_cookies'), href: "#" },
       ],
     },
   ];
