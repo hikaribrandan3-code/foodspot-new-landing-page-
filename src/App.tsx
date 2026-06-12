@@ -7,7 +7,6 @@ import { FAQ } from "./components/FAQ";
 import { HowItWorks, Features, UGCMarketing } from "./components/Features";
 import { Pricing, Footer } from "./components/FooterSections";
 import { AboutUs } from "./components/AboutUs";
-import { FishDemo } from "./components/FishDemo";
 import { LanguageProvider } from './contexts/LanguageContext';
 import { LanguageSwitcher } from './components/LanguageSwitcher';
 
@@ -50,7 +49,6 @@ export default function App() {
           <AISection />
           <TheIdea />
           <UGCMarketing />
-          <FishDemo />
           <HowItWorks />
           <SignupForm />
           <Features />
