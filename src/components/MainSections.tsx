@@ -46,7 +46,7 @@ export function Navbar() {
     <nav className="bg-surface/90 border-b border-outline-variant shadow-sm sticky top-0 backdrop-blur-md z-50">
       <div className="flex justify-between items-center w-full px-6 max-w-7xl mx-auto h-16">
         <div className="flex items-center gap-2">
-          <svg fill="#10b981" width="24px" height="24px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+          <svg fill="#10b981" width="24px" height="24px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" style={{ color: '#10b981' }}>
             <path d="M199.99975,220H160.73437c5.17652-4.97607,10.74146-10.70947,16.321-17.126,28.09472-32.30859,42.94433-66.499,42.94433-98.874a92,92,0,0,0-184,0c0,50.01221,34.11963,91.94238,59.18408,116H55.99975a12,12,0,0,0,0,24h144a12,12,0,0,0,0-24Zm-140-116a68,68,0,0,1,136,0c0,33.31055-19.95605,63.36621-36.69824,82.71387a249.0586,249.0586,0,0,1-31.30176,30.17138A249.0053,249.0053,0,0,1,96.698,186.71387C79.95581,167.36621,59.99975,137.31055,59.99975,104Zm68,44a44,44,0,1,0-44-44A44.04978,44.04978,0,0,0,127.99975,148Zm0-64a20,20,0,1,1-20,20A20.02229,20.02229,0,0,1,127.99975,84Z"/>
           </svg>
           <div className="text-xl font-display font-bold text-primary">
@@ -199,13 +199,13 @@ export function Hero() {
         <div className="md:grid md:grid-cols-2 md:gap-12 md:items-center flex flex-col items-center text-center md:text-left md:items-center">
           {/* Left: Text content */}
           <div className="flex flex-col justify-center md:text-left">
-            <h1 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-4 leading-tight">
-              {lang === 'es' ? 'Crear tu tienda online' : lang === 'pt' ? 'Criar sua loja online' : 'Create your online store'} <span className="inline-block md:block w-max md:w-full" style={{ minWidth: '280px', maxWidth: '100%' }}>
-                <span key={accentIndex} style={{ color: '#10b981', display: 'block', width: '100%', whiteSpace: 'nowrap', animation: 'fadeInUp 0.25s ease-out forwards' }}>{accents[lang][accentIndex]}</span>
-              </span>
+            <h1 className="font-display text-5xl md:text-6xl text-on-surface font-black mb-6 leading-tight">
+              <div>{lang === 'es' ? 'Crear tu tienda' : lang === 'pt' ? 'Criar sua loja' : 'Create your'}</div>
+              <div>online store</div>
+              <span key={accentIndex} style={{ color: '#10b981', display: 'block', width: '100%', whiteSpace: 'nowrap', animation: 'fadeInUp 0.25s ease-out forwards', marginTop: '8px' }}>{accents[lang][accentIndex]}</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-on-surface-variant mb-8 leading-relaxed font-medium">
+            <p className="text-base md:text-xl text-on-surface-variant mb-8 leading-relaxed font-medium" style={{ fontSize: '16px', lineHeight: '1.6' }}>
               {lang === 'es'
                 ? 'Tu propia app de marca. Pedidos directos. Y el 100% de cada venta — sin comisiones, nunca.'
                 : lang === 'pt'
@@ -243,9 +243,9 @@ export function Hero() {
         </div>
 
         {/* Mobile: Phone below text with food-themed background */}
-        <div className="md:hidden flex justify-center mt-12 relative w-full max-w-sm mx-auto">
+        <div className="md:hidden flex justify-center mt-16 relative w-full max-w-sm mx-auto">
           {/* Food-themed gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-b from-orange-100/40 via-green-50/30 to-amber-50/20 blur-2xl rounded-[60px]" style={{ zIndex: 0 }} />
+          <div className="absolute inset-0 bg-gradient-to-b from-orange-200/60 via-green-100/50 to-amber-100/40 blur-3xl rounded-[80px]" style={{ zIndex: 0, pointerEvents: 'none' }} />
           {/* Phone mockup */}
           <div style={{ zIndex: 10, position: 'relative' }}>
             <AnimatedPhoneShowcase />
