@@ -234,7 +234,7 @@ function AnimatedPhoneShowcase() {
   useEffect(() => {
     const interval = setInterval(() => {
       setScreenIndex((prev) => (prev + 1) % screens.length);
-    }, 800);
+    }, 1300);
     return () => clearInterval(interval);
   }, []);
 
