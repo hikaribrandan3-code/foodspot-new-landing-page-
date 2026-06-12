@@ -196,9 +196,9 @@ export function Hero() {
   return (
     <section className="w-full bg-white px-6 py-12 md:py-20">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="md:grid md:grid-cols-2 md:gap-12 md:items-center flex flex-col items-center text-center md:text-left md:items-center">
           {/* Left: Text content */}
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center md:text-left">
             <h1 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-4 leading-tight">
               {lang === 'es' ? 'Crear tu tienda online' : lang === 'pt' ? 'Criar sua loja online' : 'Create your online store'} <span className="inline-block md:block w-max md:w-full" style={{ minWidth: '280px', maxWidth: '100%' }}>
                 <span key={accentIndex} style={{ color: '#10b981', display: 'block', width: '100%', whiteSpace: 'nowrap', animation: 'fadeInUp 0.25s ease-out forwards' }}>{accents[lang][accentIndex]}</span>
@@ -209,11 +209,11 @@ export function Hero() {
               {lang === 'es'
                 ? 'Tu propia app de marca. Pedidos directos. Y el 100% de cada venta — sin comisiones, nunca.'
                 : lang === 'pt'
-                ? 'Seu próprio app de marca. Pedidos diretos. E 100% de cada venda — sem comissões, nunca.'
+                ? 'Seu próprio app de marca. Pedidos diretos. E 100% de cada venta — sem comissões, nunca.'
                 : 'Your own branded app. Direct orders. And 100% of every sale — no commissions, ever.'}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 items-start">
+            <div className="flex flex-col gap-3 items-center md:items-start">
               <a
                 href="https://foodspotapp.vercel.app/start-trial"
                 onClick={() => trackCtaClick('hero_create_account', 'hero')}
@@ -242,9 +242,14 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Mobile: Phone below text */}
-        <div className="md:hidden flex justify-center mt-12">
-          <AnimatedPhoneShowcase />
+        {/* Mobile: Phone below text with food-themed background */}
+        <div className="md:hidden flex justify-center mt-12 relative w-full max-w-sm mx-auto">
+          {/* Food-themed gradient background */}
+          <div className="absolute inset-0 bg-gradient-to-b from-orange-100/40 via-green-50/30 to-amber-50/20 blur-2xl rounded-[60px]" style={{ zIndex: 0 }} />
+          {/* Phone mockup */}
+          <div style={{ zIndex: 10, position: 'relative' }}>
+            <AnimatedPhoneShowcase />
+          </div>
         </div>
       </div>
     </section>
