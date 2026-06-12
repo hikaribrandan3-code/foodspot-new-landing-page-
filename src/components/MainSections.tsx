@@ -74,13 +74,15 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center space-x-3 md:space-x-4">
+          {/* Demo Button - Left of Hamburger */}
           <a
             href="https://foodspotapp.vercel.app/foodspot"
             onClick={() => trackCtaClick('demo_90_seconds')}
-            className="hidden sm:inline-block px-4 md:px-6 py-2 md:py-2.5 rounded-full font-semibold text-xs md:text-sm transition-all active:scale-95"
+            className="px-4 md:px-6 py-2 md:py-2.5 rounded-full font-semibold text-xs md:text-sm transition-all active:scale-95"
             style={{
-              background: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
-              color: "white"
+              background: "white",
+              color: "#10b981",
+              border: "2px solid #10b981"
             }}
           >
             {lang === 'es' ? '90 seg demo' : lang === 'pt' ? 'Demo 90s' : '90s demo'}

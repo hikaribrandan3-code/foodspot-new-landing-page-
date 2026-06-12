@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { ArrowDown } from "lucide-react";
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../lib/translations';
+import { AISection } from './AISection';
 
 export function HowItWorks() {
   const { lang } = useLanguage();
@@ -105,24 +106,7 @@ export function Features() {
         </p>
       </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="flex justify-center"
-      >
-        <picture>
-          <source srcSet="/foodspotaiimage.webp" type="image/webp" />
-          <img
-            src="/foodspotaiimage.png"
-            alt="FoodSpot AI Features"
-            loading="lazy"
-            width={1200}
-            height={800}
-            className="w-full max-w-4xl h-auto rounded-2xl shadow-2xl"
-          />
-        </picture>
-      </motion.div>
+      <AISection />
     </section>
   );
 }

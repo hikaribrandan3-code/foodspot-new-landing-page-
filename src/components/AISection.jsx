@@ -58,13 +58,6 @@ export function AISection() {
   return (
     <section className="w-full bg-white px-6 py-16 md:py-24">
       <div className="max-w-5xl mx-auto">
-        {/* Powered by AI */}
-        <div className="text-center mb-8">
-          <p className="text-sm md:text-base font-semibold text-primary">
-            {lang === 'es' ? 'Powered by IA' : lang === 'pt' ? 'Powered by IA' : 'Powered by AI'}
-          </p>
-        </div>
-
         {/* Chat Card */}
         <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-xl border border-gray-200 p-6 md:p-8 mb-8">
           {/* Header */}
@@ -120,6 +113,13 @@ export function AISection() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Powered by AI - Bottom */}
+        <div className="text-center">
+          <p className="text-sm md:text-base font-semibold text-primary">
+            {lang === 'es' ? 'Powered by IA' : lang === 'pt' ? 'Powered by IA' : 'Powered by AI'}
+          </p>
         </div>
       </div>
     </section>
