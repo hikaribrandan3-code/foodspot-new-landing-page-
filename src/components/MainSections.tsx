@@ -6,6 +6,7 @@ import { trackCtaClick, trackNavigation } from '../services/ga4Events';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../lib/translations';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { Phone3D } from './Phone3D';
 
 export function Navbar() {
   const { lang } = useLanguage();
@@ -206,15 +207,15 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Right: Animated phone mockup */}
+          {/* Right: 3D Phone */}
           <div className="hidden md:flex justify-center">
-            <AnimatedPhoneShowcase />
+            <Phone3D />
           </div>
         </div>
 
-        {/* Mobile: Phone below text */}
-        <div className="md:hidden flex justify-center mt-12">
-          <AnimatedPhoneShowcase />
+        {/* Mobile: 3D Phone below text */}
+        <div className="md:hidden flex justify-center mt-8">
+          <Phone3D />
         </div>
       </div>
     </section>
