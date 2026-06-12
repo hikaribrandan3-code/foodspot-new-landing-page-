@@ -206,27 +206,15 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Right: 3D Phone */}
+          {/* Right: Animated phone mockup */}
           <div className="hidden md:flex justify-center">
-            <iframe
-              src="https://my.spline.design/iphone14copy-71d5c8b0f13142b38e9dd7e27c6a2fce"
-              frameBorder="0"
-              width="300"
-              height="400"
-              style={{ borderRadius: '24px' }}
-            ></iframe>
+            <AnimatedPhoneShowcase />
           </div>
         </div>
 
         {/* Mobile: Phone below text */}
         <div className="md:hidden flex justify-center mt-12">
-          <iframe
-            src="https://my.spline.design/iphone14copy-71d5c8b0f13142b38e9dd7e27c6a2fce"
-            frameBorder="0"
-            width="280"
-            height="380"
-            style={{ borderRadius: '24px' }}
-          ></iframe>
+          <AnimatedPhoneShowcase />
         </div>
       </div>
     </section>
