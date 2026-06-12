@@ -74,6 +74,13 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center space-x-4">
+          <a
+            href="https://foodspotapp.vercel.app/start-trial"
+            className="hidden md:inline-block bg-[#10b981] hover:bg-[#059669] text-white px-6 py-2 rounded-full font-semibold text-sm transition-all active:scale-95"
+          >
+            {lang === 'es' ? 'Empezar gratis' : lang === 'pt' ? 'Começar grátis' : 'Start for free'}
+          </a>
+
           <LanguageSwitcher variant="navbar" />
 
           {/* Mobile Hamburger */}
@@ -148,45 +155,60 @@ export function Navbar() {
 
 export function Hero() {
   const { lang } = useLanguage();
+  const [subtitleIndex, setSubtitleIndex] = useState(0);
+
+  const subtitles = {
+    es: [
+      'como Shopify pero restaurantes',
+      'sin comisiones',
+      'marketing automático',
+      'sin código'
+    ],
+    en: [
+      'like Shopify but for restaurants',
+      'commission-free',
+      'automatic marketing',
+      'no code needed'
+    ],
+    pt: [
+      'como Shopify mas para restaurantes',
+      'sem comissões',
+      'marketing automático',
+      'sem código'
+    ]
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSubtitleIndex((prev) => (prev + 1) % subtitles[lang].length);
+    }, 700);
+    return () => clearInterval(interval);
+  }, [lang, subtitles]);
 
   return (
-    <section className="w-full bg-white px-6 py-20 md:py-32">
+    <section className="w-full bg-white px-6 py-16 md:py-24">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Left: Text content */}
           <div className="flex flex-col justify-center">
-            <h1 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-4 leading-tight">
-              {t(lang, 'hero_headline')} <span style={{ color: '#10b981' }}>{t(lang, 'hero_accent')}</span>
+            <h1 className="font-display text-4xl md:text-5xl text-on-surface font-black mb-2 leading-tight">
+              {lang === 'es' ? 'Crear tu tienda online' : lang === 'pt' ? 'Criar sua loja online' : 'Create your online store'}
             </h1>
 
-            <p className="text-lg md:text-xl text-on-surface-variant mb-8 leading-relaxed font-medium">
-              {lang === 'es'
-                ? 'Tu propia app de marca. Pedidos directos. Y el 100% de cada venta — sin comisiones, nunca.'
-                : lang === 'pt'
-                ? 'Seu próprio app de marca. Pedidos diretos. E 100% de cada venda — sem comissões, nunca.'
-                : 'Your own branded app. Direct orders. And 100% of every sale — no commissions, ever.'}
-            </p>
+            <motion.h2
+              key={subtitleIndex}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3 }}
+              className="text-lg md:text-2xl font-semibold mb-6 leading-tight"
+              style={{ color: '#10b981' }}
+            >
+              {subtitles[lang][subtitleIndex]}
+            </motion.h2>
 
-            <div className="flex flex-col sm:flex-row gap-4 items-start">
-              <a
-                href="https://foodspotapp.vercel.app/start-trial"
-                onClick={() => trackCtaClick('hero_create_account', 'hero')}
-                className="bg-[#10b981] hover:bg-[#059669] text-white px-8 py-3 rounded-full font-bold shadow-lg transition-all active:scale-95 inline-flex items-center gap-2"
-              >
-                {t(lang, 'hero_cta')}
-                <ArrowRight className="w-5 h-5" />
-              </a>
-
-              <a
-                href="#beneficios"
-                className="border-2 border-[#10b981] text-[#10b981] px-8 py-3 rounded-full font-bold hover:bg-emerald-50 transition-all"
-              >
-                {lang === 'es' ? 'Ver cómo funciona' : lang === 'pt' ? 'Ver como funciona' : 'See how it works'}
-              </a>
-            </div>
-
-            <p className="text-sm text-on-surface-variant mt-6 font-medium">
-              ✓ {t(lang, 'hero_trial')}
+            <p className="text-sm text-on-surface-variant mb-6 leading-relaxed font-medium">
+              ✓ {lang === 'es' ? '7 días gratis. Sin tarjeta de crédito.' : lang === 'pt' ? '7 dias grátis. Sem cartão de crédito.' : '7 days free. No credit card.'}
             </p>
           </div>
 
@@ -197,7 +219,7 @@ export function Hero() {
         </div>
 
         {/* Mobile: Phone below text */}
-        <div className="md:hidden flex justify-center mt-12">
+        <div className="md:hidden flex justify-center mt-4">
           <AnimatedPhoneShowcase />
         </div>
       </div>
