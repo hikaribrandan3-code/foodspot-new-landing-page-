@@ -220,11 +220,22 @@ export function HeroSubtitle() {
   const { lang } = useLanguage();
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-surface to-surface/50">
+    <section className="py-12 px-6 bg-gradient-to-b from-surface to-surface/50">
       <div className="max-w-5xl mx-auto">
-        <h2 className="font-display text-4xl md:text-5xl text-on-surface text-center mb-16 font-black">
+        <h2 className="font-display text-4xl md:text-5xl text-on-surface text-center font-black">
           {t(lang, 'subtitle_heading')}
         </h2>
+      </div>
+    </section>
+  );
+}
+
+export function SubtitleCards() {
+  const { lang } = useLanguage();
+
+  return (
+    <section className="py-20 px-6 bg-gradient-to-b from-surface/50 to-surface/25">
+      <div className="max-w-5xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12">
           <div className="text-center">
             <DollarSign className="w-12 h-12 text-primary mx-auto mb-4" />
