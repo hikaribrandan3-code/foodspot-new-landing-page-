@@ -10,7 +10,7 @@ const translations = {
 
     // Hero
     hero_headline: 'Crea tu Tienda Online para Restaurantes',
-    hero_accent: 'Como Shopify, pero para comida.',
+    hero_accent: 'Como Shopify, pero hecha para restaurantes.',
     hero_cta: 'Crear mi cuenta gratis',
     hero_trial: '7 días gratis. Sin tarjeta de crédito.',
 
@@ -222,7 +222,7 @@ const translations = {
 
     // Hero
     hero_headline: "Build Your Restaurant's Online Store",
-    hero_accent: 'Like Shopify, but built for food.',
+    hero_accent: 'Like Shopify, but made for restaurants.',
     hero_cta: 'Start for free',
     hero_trial: '7 days free. No credit card needed.',
 
@@ -434,7 +434,7 @@ const translations = {
 
     // Hero
     hero_headline: 'Crie sua Loja Online para Restaurantes',
-    hero_accent: 'Como Shopify, mas feita para comida.',
+    hero_accent: 'Como Shopify, mas feita para restaurantes.',
     hero_cta: 'Criar minha conta grátis',
     hero_trial: '7 dias grátis. Sem cartão de crédito.',
 
