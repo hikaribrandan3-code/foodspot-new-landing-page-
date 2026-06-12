@@ -45,8 +45,13 @@ export function Navbar() {
   return (
     <nav className="bg-surface/90 border-b border-outline-variant shadow-sm sticky top-0 backdrop-blur-md z-50">
       <div className="flex justify-between items-center w-full px-6 max-w-7xl mx-auto h-16">
-        <div className="text-xl font-display font-bold text-primary">
-          FoodSpot <span className="text-xs font-semibold text-on-surface-variant">Mobile</span>
+        <div className="flex items-center gap-2">
+          <svg fill="#10b981" width="24px" height="24px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+            <path d="M199.99975,220H160.73437c5.17652-4.97607,10.74146-10.70947,16.321-17.126,28.09472-32.30859,42.94433-66.499,42.94433-98.874a92,92,0,0,0-184,0c0,50.01221,34.11963,91.94238,59.18408,116H55.99975a12,12,0,0,0,0,24h144a12,12,0,0,0,0-24Zm-140-116a68,68,0,0,1,136,0c0,33.31055-19.95605,63.36621-36.69824,82.71387a249.0586,249.0586,0,0,1-31.30176,30.17138A249.0053,249.0053,0,0,1,96.698,186.71387C79.95581,167.36621,59.99975,137.31055,59.99975,104Zm68,44a44,44,0,1,0-44-44A44.04978,44.04978,0,0,0,127.99975,148Zm0-64a20,20,0,1,1-20,20A20.02229,20.02229,0,0,1,127.99975,84Z"/>
+          </svg>
+          <div className="text-xl font-display font-bold text-primary">
+            FoodSpot <span className="text-sm font-semibold text-on-surface-variant">Mobile</span>
+          </div>
         </div>
 
         {/* Desktop Nav */}
