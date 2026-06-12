@@ -194,8 +194,44 @@ export function Hero() {
   }, [lang, accents]);
 
   return (
-    <section className="w-full bg-white px-6 py-12 md:py-20">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative w-full px-6 py-12 md:py-20 overflow-hidden">
+      {/* Background image - visible on mobile */}
+      <div className="absolute inset-0 md:hidden" style={{ zIndex: 0 }}>
+        <picture>
+          <source srcSet="/hero.webp" type="image/webp" />
+          <img
+            src="/hero.jpg"
+            alt="Kitchen background"
+            className="w-full h-full object-cover"
+            style={{ pointerEvents: 'none' }}
+          />
+        </picture>
+
+        {/* Top cream fade-in (15px with blend) */}
+        <div
+          className="absolute top-0 left-0 right-0 z-10"
+          style={{
+            height: '15px',
+            background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.95), transparent)',
+            pointerEvents: 'none'
+          }}
+        />
+
+        {/* Bottom cream fade-out */}
+        <div
+          className="absolute bottom-0 left-0 right-0 z-10"
+          style={{
+            height: '80px',
+            background: 'linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.95))',
+            pointerEvents: 'none'
+          }}
+        />
+      </div>
+
+      {/* Desktop white background */}
+      <div className="absolute inset-0 hidden md:block bg-white" style={{ zIndex: 0 }} />
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="md:grid md:grid-cols-2 md:gap-12 md:items-center flex flex-col items-center text-center md:text-left md:items-center">
           {/* Left: Text content */}
           <div className="flex flex-col justify-center md:text-left">
@@ -242,76 +278,9 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Mobile: Phone below text with food-themed background */}
-        <div className="md:hidden flex justify-center -mt-2 relative w-full max-w-sm mx-auto">
-          {/* Background image container */}
-          <div className="absolute inset-0 overflow-hidden rounded-3xl" style={{ zIndex: 0 }}>
-            {/* Kitchen background image */}
-            <picture>
-              <source srcSet="/hero.webp" type="image/webp" />
-              <img
-                src="/hero.jpg"
-                alt="Kitchen background"
-                className="w-full h-full object-cover"
-                style={{ pointerEvents: 'none' }}
-              />
-            </picture>
-
-            {/* Top cream fade-in (15px with blend) */}
-            <div
-              className="absolute top-0 left-0 right-0 z-10"
-              style={{
-                height: '15px',
-                background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.95), transparent)',
-                pointerEvents: 'none'
-              }}
-            />
-
-            {/* Bottom cream fade-out */}
-            <div
-              className="absolute bottom-0 left-0 right-0 z-10"
-              style={{
-                height: '60px',
-                background: 'linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.9))',
-                pointerEvents: 'none'
-              }}
-            />
-          </div>
-
-          {/* Food SVG elements - strawberry */}
-          <svg className="absolute" width="80" height="80" viewBox="0 0 100 100" style={{ top: '20%', left: '-10px', zIndex: 1, opacity: 0.15, pointerEvents: 'none' }}>
-            <circle cx="50" cy="60" r="35" fill="#e63946" />
-            <circle cx="35" cy="45" r="8" fill="#ffd60a" />
-            <circle cx="50" cy="45" r="8" fill="#ffd60a" />
-            <circle cx="65" cy="45" r="8" fill="#ffd60a" />
-            <path d="M50 20 Q40 10 35 15 Q30 20 35 30 Q40 25 50 28 Q60 25 65 30 Q70 20 65 15 Q60 10 50 20" fill="#228B22" />
-          </svg>
-
-          {/* Orange slice */}
-          <svg className="absolute" width="70" height="70" viewBox="0 0 100 100" style={{ bottom: '15%', right: '-5px', zIndex: 1, opacity: 0.12, pointerEvents: 'none' }}>
-            <circle cx="50" cy="50" r="45" fill="#ff8c00" />
-            <circle cx="50" cy="50" r="40" fill="none" stroke="#ffa500" strokeWidth="3" />
-            <line x1="50" y1="10" x2="50" y2="90" stroke="#ffa500" strokeWidth="2" />
-            <line x1="10" y1="50" x2="90" y2="50" stroke="#ffa500" strokeWidth="2" />
-            <line x1="22" y1="22" x2="78" y2="78" stroke="#ffa500" strokeWidth="2" />
-            <line x1="78" y1="22" x2="22" y2="78" stroke="#ffa500" strokeWidth="2" />
-          </svg>
-
-          {/* Banana */}
-          <svg className="absolute" width="60" height="60" viewBox="0 0 100 100" style={{ top: '35%', right: '5px', zIndex: 1, opacity: 0.14, pointerEvents: 'none' }}>
-            <path d="M30 70 Q40 30 70 20 Q75 25 70 35 Q45 45 35 80 Q32 75 30 70" fill="#ffd700" stroke="#f4a500" strokeWidth="2" />
-          </svg>
-
-          {/* Leaf accent */}
-          <svg className="absolute" width="50" height="50" viewBox="0 0 100 100" style={{ top: '10%', right: '15%', zIndex: 1, opacity: 0.1, pointerEvents: 'none' }}>
-            <ellipse cx="50" cy="50" rx="30" ry="40" fill="#228B22" transform="rotate(-30 50 50)" />
-            <path d="M50 10 Q50 50 50 90" stroke="#1a6b1a" strokeWidth="2" fill="none" />
-          </svg>
-
-          {/* Phone mockup */}
-          <div style={{ zIndex: 10, position: 'relative' }}>
-            <AnimatedPhoneShowcase />
-          </div>
+        {/* Mobile: Phone below text */}
+        <div className="md:hidden flex justify-center -mt-2 relative w-full max-w-sm mx-auto" style={{ zIndex: 10 }}>
+          <AnimatedPhoneShowcase />
         </div>
       </div>
     </section>
