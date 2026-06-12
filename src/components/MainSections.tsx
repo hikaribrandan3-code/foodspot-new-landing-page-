@@ -238,7 +238,7 @@ export function Hero() {
         </div>
 
         {/* Mobile: Phone below text */}
-        <div className="md:hidden flex justify-center mt-20">
+        <div className="md:hidden flex justify-center mt-32">
           <AnimatedPhoneShowcase />
         </div>
       </div>
