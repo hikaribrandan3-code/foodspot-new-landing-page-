@@ -6,7 +6,6 @@ import { trackCtaClick, trackNavigation } from '../services/ga4Events';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../lib/translations';
 import { LanguageSwitcher } from './LanguageSwitcher';
-import { Phone3D } from './Phone3D';
 
 export function Navbar() {
   const { lang } = useLanguage();
@@ -207,15 +206,15 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Right: 3D Phone */}
+          {/* Right: Phone mockup */}
           <div className="hidden md:flex justify-center">
-            <Phone3D />
+            <AnimatedPhoneShowcase />
           </div>
         </div>
 
-        {/* Mobile: 3D Phone below text */}
-        <div className="md:hidden flex justify-center mt-8">
-          <Phone3D />
+        {/* Mobile: Phone below text */}
+        <div className="md:hidden flex justify-center mt-12">
+          <AnimatedPhoneShowcase />
         </div>
       </div>
     </section>
@@ -247,7 +246,7 @@ function AnimatedPhoneShowcase() {
   return (
     <div className={phoneSize}>
       {/* Phone frame */}
-      <div className="absolute inset-0 bg-black rounded-[48px] shadow-2xl border-[14px] border-gray-900 overflow-hidden flex flex-col">
+      <div className="absolute inset-0 bg-black rounded-[48px] shadow-2xl border-[8px] border-gray-900 overflow-hidden flex flex-col">
         {/* Screen content - just display the image */}
         <motion.div
           key={screenIndex}
@@ -280,6 +279,37 @@ function AnimatedPhoneShowcase() {
   );
 }
 
+export function WhatIsOnlineStore() {
+  const { lang } = useLanguage();
+
+  return (
+    <section className="w-full bg-white px-6 py-16 md:py-24">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-12 leading-tight text-center">
+          {lang === 'es' ? '¿Qué es una tienda online?' : lang === 'pt' ? 'O que é uma loja online?' : 'What is an online store?'}
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-12 mt-12">
+          <div className="text-center">
+            <DollarSign className="w-12 h-12 text-primary mx-auto mb-4" />
+            <p className="text-2xl md:text-3xl text-on-surface font-black mb-3">{t(lang, 'subtitle_1_title')}</p>
+            <p className="text-base text-on-surface-variant">{t(lang, 'subtitle_1_desc')}</p>
+          </div>
+          <div className="text-center">
+            <Database className="w-12 h-12 text-primary mx-auto mb-4" />
+            <p className="text-2xl md:text-3xl text-on-surface font-black mb-3">{t(lang, 'subtitle_2_title')}</p>
+            <p className="text-base text-on-surface-variant">{t(lang, 'subtitle_2_desc')}</p>
+          </div>
+          <div className="text-center">
+            <LinkIcon className="w-12 h-12 text-primary mx-auto mb-4" />
+            <p className="text-2xl md:text-3xl text-on-surface font-black mb-3">{t(lang, 'subtitle_3_title')}</p>
+            <p className="text-base text-on-surface-variant">{t(lang, 'subtitle_3_desc')}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export function SubtitleCards() {
   const { lang } = useLanguage();
