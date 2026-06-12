@@ -113,7 +113,7 @@ export function Navbar() {
         initial={{ x: '100%' }}
         animate={{ x: mobileMenuOpen ? 0 : '100%' }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
-        className="fixed top-20 right-0 h-screen w-72 bg-gradient-to-b from-[#1a1a1a] to-[#0f0f0f] md:hidden z-40 border-l border-white/5 overflow-y-auto"
+        className="fixed top-20 right-0 h-screen w-72 bg-white md:hidden z-40 border-l border-gray-200 overflow-y-auto"
       >
         <div className="px-6 py-8 space-y-2">
           {navLinks.map((link) => {
@@ -132,7 +132,7 @@ export function Navbar() {
                 className={`flex items-center gap-3 py-4 px-5 rounded-xl transition-all ${
                   isActive(link.id)
                     ? 'bg-primary text-white font-semibold shadow-lg shadow-primary/30'
-                    : 'text-white/70 hover:text-white hover:bg-white/5'
+                    : 'text-gray-700 hover:text-primary hover:bg-gray-50'
                 }`}
               >
                 <IconComponent className="w-5 h-5 flex-shrink-0" />
@@ -222,57 +222,69 @@ function AnimatedPhoneShowcase() {
     switch(screen) {
       case 'menu':
         return (
-          <div className="h-full bg-white p-4 flex flex-col">
-            <div className="mb-4">
-              <p className="text-xs text-gray-500 mb-2">Categorías</p>
-              <div className="flex gap-2 overflow-x-auto">
-                <div className="bg-black text-white px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap">Burgers</div>
-                <div className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs whitespace-nowrap">Postres</div>
-                <div className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs whitespace-nowrap">Bebidas</div>
+          <div className="h-full bg-white flex flex-col">
+            <div className="p-3 border-b">
+              <p className="text-lg font-bold text-red-700 mb-3">SAPID BURGERS</p>
+              <div className="flex gap-2 overflow-x-auto pb-2">
+                <div className="bg-black text-white px-4 py-1.5 rounded-full text-sm font-semibold whitespace-nowrap">Burgers</div>
+                <div className="bg-gray-200 text-gray-700 px-4 py-1.5 rounded-full text-sm whitespace-nowrap">Postres</div>
+                <div className="bg-gray-200 text-gray-700 px-4 py-1.5 rounded-full text-sm whitespace-nowrap">Bebidas</div>
               </div>
             </div>
-            <div className="space-y-3 flex-1">
-              <div className="bg-gray-100 rounded-lg p-2 h-16 flex items-end">
-                <div><p className="font-bold text-xs">Classic Burger</p><p className="text-gray-600 text-xs">$8.00</p></div>
+            <div className="flex-1 overflow-y-auto p-3 space-y-3">
+              <div className="bg-gray-100 rounded-lg p-3">
+                <div className="w-full h-20 bg-gray-300 rounded mb-2"></div>
+                <p className="font-bold text-sm">Sample Burger</p>
+                <p className="text-gray-600 text-sm">$8.000</p>
               </div>
-              <div className="bg-gray-100 rounded-lg p-2 h-16 flex items-end">
-                <div><p className="font-bold text-xs">Double Burger</p><p className="text-gray-600 text-xs">$12.00</p></div>
+              <div className="bg-gray-100 rounded-lg p-3">
+                <div className="w-full h-20 bg-gray-300 rounded mb-2"></div>
+                <p className="font-bold text-sm">Super Burger</p>
+                <p className="text-gray-600 text-sm">$12.000</p>
               </div>
             </div>
           </div>
         );
       case 'order':
         return (
-          <div className="h-full bg-white p-4 flex flex-col">
-            <p className="font-bold text-sm mb-4">Tu pedido</p>
-            <div className="space-y-3 flex-1">
-              <div className="bg-yellow-50 rounded p-2">
-                <p className="text-xs font-semibold">Pizza example 3</p>
-                <p className="text-gray-600 text-xs">x1</p>
-                <p className="font-bold text-xs text-[#10b981]">$9.000</p>
+          <div className="h-full bg-white flex flex-col">
+            <div className="p-3 border-b">
+              <p className="font-bold text-lg mb-2">Tu pedido</p>
+              <div className="flex gap-2 text-sm">
+                <button className="font-bold text-black pb-1 border-b-2 border-black">Para llevar</button>
+                <button className="text-gray-600">Comer en Local</button>
+                <button className="text-gray-600">Envios</button>
               </div>
             </div>
-            <div className="border-t pt-3">
+            <div className="flex-1 overflow-y-auto p-3 space-y-2">
+              <div className="bg-yellow-50 rounded-lg p-3 border border-yellow-200">
+                <p className="font-bold text-sm">Pizza example 3</p>
+                <p className="text-gray-600 text-xs">×1</p>
+              </div>
+            </div>
+            <div className="border-t p-3 space-y-1">
               <p className="text-xs text-gray-600">Subtotal: $9.000</p>
-              <p className="font-bold text-sm mt-2">Total: <span className="text-[#10b981]">$9.000</span></p>
+              <p className="font-bold text-base">Total: <span className="text-[#10b981]">$9.000</span></p>
             </div>
           </div>
         );
       case 'payment':
         return (
-          <div className="h-full bg-white p-4 flex flex-col">
-            <p className="font-bold text-sm mb-4">Medio de Pago</p>
-            <div className="space-y-2 flex-1">
-              <div className="border rounded p-3 bg-emerald-50 border-[#10b981]">
-                <p className="text-xs font-semibold">Efectivo</p>
+          <div className="h-full bg-white flex flex-col">
+            <div className="p-3 border-b">
+              <p className="font-bold text-lg">Medio de Pago</p>
+            </div>
+            <div className="flex-1 overflow-y-auto p-3 space-y-2">
+              <div className="border-2 border-[#10b981] rounded-lg p-4 bg-emerald-50">
+                <p className="font-bold text-sm">Efectivo</p>
                 <p className="text-gray-600 text-xs">Pagar al recibir</p>
               </div>
-              <div className="border rounded p-3">
-                <p className="text-xs font-semibold">WhatsApp</p>
+              <div className="border rounded-lg p-4">
+                <p className="font-bold text-sm">WhatsApp</p>
                 <p className="text-gray-600 text-xs">Confirmar por WhatsApp</p>
               </div>
-              <div className="border rounded p-3">
-                <p className="text-xs font-semibold">Mercado Pago</p>
+              <div className="border rounded-lg p-4">
+                <p className="font-bold text-sm">Mercado Pago</p>
                 <p className="text-gray-600 text-xs">Tarjeta de crédito/débito</p>
               </div>
             </div>
@@ -280,19 +292,21 @@ function AnimatedPhoneShowcase() {
         );
       case 'receipt':
         return (
-          <div className="h-full bg-white p-4 flex flex-col">
-            <p className="text-xs text-gray-500 mb-2">Foodspot mobile</p>
-            <p className="font-bold text-lg mb-1">Pedido Confirmado</p>
-            <p className="text-xs text-gray-600 mb-4">Esperando que comience el restaurante</p>
-            <div className="space-y-2 flex-1 text-xs">
-              <p><span className="font-semibold">Pedido #32</span> · Jun 12, 2026</p>
-              <div className="border-t pt-2">
+          <div className="h-full bg-white flex flex-col overflow-y-auto p-4">
+            <p className="text-xs text-gray-400 mb-2">Foodspot mobile</p>
+            <p className="font-bold text-2xl mb-1">Pedido Confirmado</p>
+            <p className="text-sm text-gray-600 mb-4">Esperando que comience el restaurante</p>
+            <p className="text-xs text-gray-600 mb-4"><span className="font-bold">Pedido #32</span> · Jun 12, 2026 · 1:48 PM</p>
+            <div className="border-t pt-3 space-y-2 text-sm flex-1">
+              <div className="flex justify-between">
                 <p className="text-gray-600">1x Pizza example 3</p>
-                <p className="text-gray-600">$9.000</p>
+                <p className="font-semibold">$9.000</p>
               </div>
-              <div className="border-t pt-2 font-bold">
-                <p className="text-[#10b981]">TOTAL: $9.000</p>
-              </div>
+            </div>
+            <div className="border-t pt-3 mt-3">
+              <p className="text-xs text-gray-600 mb-2">Subtotal: $9.000</p>
+              <p className="text-xs text-gray-600 mb-3">Impuestos: $0</p>
+              <p className="font-bold text-lg"><span className="text-[#10b981]">TOTAL: $9.000</span></p>
             </div>
           </div>
         );
@@ -302,11 +316,17 @@ function AnimatedPhoneShowcase() {
   };
 
   return (
-    <div className="relative w-64 h-96">
+    <div className="relative w-80 h-[500px]">
       {/* Phone frame */}
-      <div className="absolute inset-0 bg-black rounded-3xl shadow-2xl border-8 border-gray-900 overflow-hidden">
+      <div className="absolute inset-0 bg-black rounded-[48px] shadow-2xl border-[14px] border-gray-900 overflow-hidden flex flex-col">
+        {/* Status bar */}
+        <div className="bg-white h-6 flex items-center justify-between px-6 text-xs font-semibold border-b border-gray-200">
+          <span>9:41</span>
+          <span>📶 📡 🔋</span>
+        </div>
+
         {/* Notch */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-7 bg-black rounded-b-3xl z-10"></div>
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-48 h-6 bg-black rounded-b-3xl z-10"></div>
 
         {/* Screen content with fade animation */}
         <motion.div
@@ -315,19 +335,19 @@ function AnimatedPhoneShowcase() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="w-full h-full"
+          className="flex-1 overflow-hidden"
         >
           {getScreenContent()}
         </motion.div>
       </div>
 
       {/* Indicator dots */}
-      <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2">
+      <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 flex gap-2">
         {screens.map((_, idx) => (
           <div
             key={idx}
-            className={`w-2 h-2 rounded-full transition-all ${
-              idx === screenIndex ? 'bg-[#10b981] w-6' : 'bg-gray-300'
+            className={`h-2 rounded-full transition-all ${
+              idx === screenIndex ? 'bg-[#10b981] w-6' : 'bg-gray-300 w-2'
             }`}
           />
         ))}
