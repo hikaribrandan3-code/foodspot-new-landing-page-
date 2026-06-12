@@ -1,67 +1,9 @@
-import { Star, Mail, Phone, Instagram, TrendingUp, ChevronDown } from "lucide-react";
+import { Mail, Phone, Instagram, TrendingUp, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { CanvasBackground } from './CanvasBackground';
 import { trackPricingSelection } from '../services/ga4Events';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../lib/translations';
-
-export function Testimonials() {
-  const { lang } = useLanguage();
-
-  const reviews = [
-    {
-      name: t(lang, 't1_name'),
-      role: t(lang, 't1_role'),
-      quote: t(lang, 't1_quote'),
-      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuAkvYIARZavcH4JACEszHpL5_jqSjXfbsXp5RlGI9QH2YljWq5EdLCWXOJSgoZ0zlOtWLJJaXh6v7J7UU8EpZaN1nWYs5A1EXdL3JdQECl3J12jh-7FDwyPWhSCLt4Or1IlayQ6RKHL2i4INhb3wo0Ku-Kj4Dp0bMheZcCNlcf-GcaiwpUivImdtm6QUyzWz23its8Rggr47Pqf9ZEuG0AY2-HN4Hcg8cjEa0b-anB0RfF9QM9GQGObaCo-ZKq5dlLjQv_cWt_7qzsn",
-      rating: 5,
-    },
-    {
-      name: t(lang, 't2_name'),
-      role: t(lang, 't2_role'),
-      quote: t(lang, 't2_quote'),
-      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuDGcybAYVHqJNMmwISRAYhpLrymKa7EgQyOMRINv8BVx8Yr2EoZ-xEldWS28HM85pOZJYg_ufD7SL9yIn1hCm_MfQtCVYgr0cb9liTb7NXePW7Z1UDVMD-503h9cIrU1KfPfTpB_2UwUpk1bMZeBOqE5rXlm4lVsvqixqnNIU0syeto1f7SxdGbuD3ehHGs8IV31xVNQkRKz9H4yEMj4t5e_ssG5V0ziP5hkxcBUwu9fQzjlsWzdIvvYDIJGAWv4vX8ANJ_LOb-r5qO",
-      rating: 5,
-    },
-    {
-      name: t(lang, 't3_name'),
-      role: t(lang, 't3_role'),
-      quote: t(lang, 't3_quote'),
-      avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuDIvfupqrNB2CpVZfh9pV_wo498HNQCUy9zw6OKqR8LmD3ibJE3_o1eCfmQruWDyRHI5UifB_FY5a54aldfei48bIeCiqtjHGRM9-71t-tuqTNj1b7gjjoz1kHcRL4_abPjk1j_4CKleded3ksLGKbGwoncQ0c_e8CrshG53EvWfdITrhmu7auVAEdxp5b2txFJgBX9jwW_hDtKNrxq-54So42HebU6gD-vwKyD43Mx7iOVGushrKqe7Zbz7GIdLYClMBo1VMRxQ1mw",
-      rating: 4.5,
-    },
-  ];
-
-  return (
-    <section id="testimonios" className="py-20 px-6 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="font-display text-3xl md:text-4xl text-center text-on-surface mb-16">{t(lang, 'testimonials_heading')}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {reviews.map((row, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-2xl p-8 ambient-shadow flex flex-col transition-transform hover:-translate-y-1"
-            >
-              <div className="flex items-center gap-1 mb-6 text-yellow-500">
-                {[...Array(5)].map((_, idx) => (
-                   <Star key={idx} className={`w-4 h-4 ${idx < Math.floor(row.rating) ? 'fill-current' : 'text-gray-300'}`} />
-                ))}
-              </div>
-              <p className="text-on-surface-variant mb-8 italic flex-grow">"{row.quote}"</p>
-              <div className="flex items-center gap-4">
-                <img src={row.avatar} alt={row.name} loading="lazy" width="48" height="48" className="w-12 h-12 rounded-full object-cover" />
-                <div>
-                  <div className="font-semibold text-on-surface text-sm">{row.name}</div>
-                  <p className="text-xs text-on-surface-variant font-medium">{row.role}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 export function Comparison() {
   return (

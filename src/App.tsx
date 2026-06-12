@@ -4,7 +4,7 @@ import { Navbar, Hero, HeroSubtitle, SubtitleCards, TheIdea, MiddleCTA, UGCMarke
 import { SignupForm } from "./components/SignupForm";
 import { FAQ } from "./components/FAQ";
 import { HowItWorks, Features, UGCMarketing, VideoShowcase } from "./components/Features";
-import { Testimonials, Pricing, Footer } from "./components/FooterSections";
+import { Pricing, Footer } from "./components/FooterSections";
 import { AboutUs } from "./components/AboutUs";
 import { FishDemo } from "./components/FishDemo";
 import { LanguageProvider } from './contexts/LanguageContext';
@@ -56,7 +56,6 @@ export default function App() {
           <Features />
           <FAQ />
           <MiddleCTA />
-          <Testimonials />
           <Pricing />
           <DemoSection />
         </main>
