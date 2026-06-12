@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from "motion/react";
 import { ArrowDown } from "lucide-react";
 import { useLanguage } from '../contexts/LanguageContext';
@@ -128,6 +129,26 @@ export function Features() {
 
 export function UGCMarketing() {
   const { lang } = useLanguage();
+  const ugcVideoRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const video = ugcVideoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="py-16 px-6 max-w-7xl mx-auto">
@@ -149,7 +170,7 @@ export function UGCMarketing() {
         >
           <div className="relative w-72 h-[550px]">
             <video
-              autoPlay
+              ref={ugcVideoRef}
               muted
               loop
               playsInline
@@ -241,6 +262,27 @@ export function UGCMarketing() {
 }
 
 export function VideoShowcase() {
+  const videoRef = React.useRef(null);
+
+  React.useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="py-20 px-6 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
@@ -254,12 +296,13 @@ export function VideoShowcase() {
             <div className="md:hidden absolute top-0 left-1/2 -translate-x-1/2 w-24 h-5 bg-gray-800 rounded-b-2xl z-10" />
             <div className="hidden md:block absolute top-2 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-600 rounded-full z-10" />
             <video
-              autoPlay
+              ref={videoRef}
               loop
               playsInline
               preload="metadata"
               className="w-full h-full object-cover"
             >
+              <source src="/demo-video.webm" type="video/webm" />
               <source src="/demo-video.mp4" type="video/mp4" />
             </video>
           </div>
