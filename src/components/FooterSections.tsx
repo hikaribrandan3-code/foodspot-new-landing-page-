@@ -1,4 +1,5 @@
-import { Star, Mail, Phone, Instagram, TrendingUp } from "lucide-react";
+import { Star, Mail, Phone, Instagram, TrendingUp, ChevronDown } from "lucide-react";
+import { useState } from "react";
 import { CanvasBackground } from './CanvasBackground';
 import { trackPricingSelection } from '../services/ga4Events';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -86,6 +87,7 @@ export function Comparison() {
 
 export function Pricing() {
   const { lang } = useLanguage();
+  const [expandedFeatures, setExpandedFeatures] = useState(false);
 
   const checkIcon = (
     <div className="w-4 h-4 text-primary mr-3 shrink-0">
@@ -94,6 +96,12 @@ export function Pricing() {
       </svg>
     </div>
   );
+
+  const topFeatures = [
+    t(lang, 'feat_marketing_1'), // UGC organic marketing
+    t(lang, 'feat_orders_1'), // Kitchen KDS + unlimited orders
+    t(lang, 'feat_analytics_1'), // AI/Analytics dashboard
+  ];
 
   const featureCategories = [
     {
@@ -185,21 +193,43 @@ export function Pricing() {
             </div>
             <p className="text-on-surface-variant mb-6 min-h-[48px]">{t(lang, 'plan_pro_desc')}</p>
 
-            <div className="space-y-4 mb-8 flex-grow overflow-y-auto max-h-[500px]">
-              {featureCategories.map((group, gi) => (
-                <div key={gi}>
-                  <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">{group.cat}</p>
-                  <ul className="space-y-2">
-                    {group.items.map((item, ii) => (
-                      <li key={ii} className="flex items-center text-sm text-on-surface font-medium">
-                        {checkIcon}
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            {/* Top 3 Features */}
+            <ul className="space-y-3 mb-6 flex-grow">
+              {topFeatures.map((feature, i) => (
+                <li key={i} className="flex items-center text-sm text-on-surface font-medium">
+                  {checkIcon}
+                  {feature}
+                </li>
               ))}
-            </div>
+            </ul>
+
+            {/* Expandable All Features */}
+            {expandedFeatures && (
+              <div className="space-y-4 mb-6 pb-4 border-t border-gray-200 pt-4">
+                {featureCategories.map((group, gi) => (
+                  <div key={gi}>
+                    <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">{group.cat}</p>
+                    <ul className="space-y-2">
+                      {group.items.map((item, ii) => (
+                        <li key={ii} className="flex items-center text-sm text-on-surface font-medium">
+                          {checkIcon}
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Toggle Button */}
+            <button
+              onClick={() => setExpandedFeatures(!expandedFeatures)}
+              className="w-full py-2 mb-6 flex items-center justify-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
+            >
+              {expandedFeatures ? 'Hide all features' : 'View all features'}
+              <ChevronDown className={`w-4 h-4 transition-transform ${expandedFeatures ? 'rotate-180' : ''}`} />
+            </button>
 
             <a href="https://foodspotapp.vercel.app/" onClick={() => trackPricingSelection('pro_plan')} className="w-full py-4 rounded-full bg-primary text-white font-semibold hover:bg-primary/90 transition-all shadow-md active:scale-[0.98] group-hover:scale-[1.02] block text-center">
               {t(lang, 'plan_pro_btn')}

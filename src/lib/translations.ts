@@ -12,7 +12,7 @@ const translations = {
     hero_headline: 'Moderniza tu restaurante con una',
     hero_accent: 'tienda online',
     hero_cta: 'Crear mi cuenta gratis',
-    hero_trial: '14 días gratis. Sin tarjeta de crédito.',
+    hero_trial: '7 días gratis. Sin tarjeta de crédito.',
 
     // HeroSubtitle
     subtitle_heading: '¿Qué es una tienda online?',
@@ -33,7 +33,7 @@ const translations = {
 
     // MiddleCTA
     mid_cta_heading: 'Listo para transformar tu negocio?',
-    mid_cta_button: 'Proba gratis 14 dias !',
+    mid_cta_button: 'Proba gratis 7 dias !',
     mid_cta_sub: 'Sin tarjeta de credito. Sin vueltas.',
 
     // UGCMarketingCTA
@@ -81,9 +81,9 @@ const translations = {
     pricing_heading: 'Planes simples, sin sorpresas',
     pricing_sub: 'Elige el plan que mejor se adapte al tamano de tu negocio.',
     plan_free_name: 'Prueba Gratis',
-    plan_free_period: '/14 dias',
-    plan_free_desc: 'Prueba la version completa con todas las funcionalidades por 14 dias sin tarjeta de credito.',
-    plan_free_f1: 'Acceso total 14 dias',
+    plan_free_period: '/7 dias',
+    plan_free_desc: 'Prueba la version completa con todas las funcionalidades por 7 dias sin tarjeta de credito.',
+    plan_free_f1: 'Acceso total 7 dias',
     plan_free_f2: 'Setup inicial guiado',
     plan_free_f3: 'Sin tarjeta requerida',
     plan_free_btn: 'Empezar Prueba Gratis',
@@ -210,7 +210,7 @@ const translations = {
     hero_headline: 'Modernize your restaurant with an',
     hero_accent: 'online store',
     hero_cta: 'Start for free',
-    hero_trial: '14 days free. No credit card needed.',
+    hero_trial: '7 days free. No credit card needed.',
 
     // HeroSubtitle
     subtitle_heading: 'What is an online store?',
@@ -231,7 +231,7 @@ const translations = {
 
     // MiddleCTA
     mid_cta_heading: 'Ready to transform your business?',
-    mid_cta_button: 'Try free for 14 days!',
+    mid_cta_button: 'Try free for 7 days!',
     mid_cta_sub: 'No credit card. No hassle.',
 
     // UGCMarketingCTA
@@ -279,9 +279,9 @@ const translations = {
     pricing_heading: 'Simple pricing, no surprises',
     pricing_sub: 'Pick the plan that fits your business.',
     plan_free_name: 'Free Trial',
-    plan_free_period: '/14 days',
-    plan_free_desc: 'Try the full version with every feature for 14 days. No credit card required.',
-    plan_free_f1: 'Full access for 14 days',
+    plan_free_period: '/7 days',
+    plan_free_desc: 'Try the full version with every feature for 7 days. No credit card required.',
+    plan_free_f1: 'Full access for 7 days',
     plan_free_f2: 'Guided onboarding',
     plan_free_f3: 'No card required',
     plan_free_btn: 'Start Free Trial',
@@ -408,7 +408,7 @@ const translations = {
     hero_headline: 'Modernize seu restaurante com uma',
     hero_accent: 'loja online',
     hero_cta: 'Criar minha conta grátis',
-    hero_trial: '14 dias grátis. Sem cartão de crédito.',
+    hero_trial: '7 dias grátis. Sem cartão de crédito.',
 
     // HeroSubtitle
     subtitle_heading: 'O que é uma loja online?',
@@ -429,7 +429,7 @@ const translations = {
 
     // MiddleCTA
     mid_cta_heading: 'Pronto para transformar seu negócio?',
-    mid_cta_button: 'Experimente grátis por 14 dias!',
+    mid_cta_button: 'Experimente grátis por 7 dias!',
     mid_cta_sub: 'Sem cartão de crédito. Sem complicações.',
 
     // UGCMarketingCTA
@@ -477,9 +477,9 @@ const translations = {
     pricing_heading: 'Planos simples, sem surpresas',
     pricing_sub: 'Escolha o plano que melhor se adapta ao seu negócio.',
     plan_free_name: 'Teste Grátis',
-    plan_free_period: '/14 dias',
-    plan_free_desc: 'Experimente a versão completa com todas as funcionalidades por 14 dias sem cartão de crédito.',
-    plan_free_f1: 'Acesso total por 14 dias',
+    plan_free_period: '/7 dias',
+    plan_free_desc: 'Experimente a versão completa com todas as funcionalidades por 7 dias sem cartão de crédito.',
+    plan_free_f1: 'Acesso total por 7 dias',
     plan_free_f2: 'Configuração inicial guiada',
     plan_free_f3: 'Sem cartão necessário',
     plan_free_btn: 'Iniciar Teste Grátis',
