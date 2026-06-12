@@ -181,13 +181,13 @@ export function Hero() {
       </div>
 
       <div className="relative z-20 flex-1 flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
-        <h1 className="font-display text-5xl md:text-7xl text-white font-black mb-6 drop-shadow-2xl leading-tight">
+        <h1 className="font-display text-5xl md:text-7xl text-white font-black mb-4 drop-shadow-2xl leading-snug" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}>
           {t(lang, 'hero_headline')} <span className="text-[#10b981]" style={{ textShadow: '0 0 20px rgba(16, 185, 129, 0.6)' }}>{t(lang, 'hero_accent')}</span>
         </h1>
       </div>
 
       <div className="relative z-20 w-full max-w-2xl mx-auto flex justify-center">
-        <div className="flex flex-col gap-6 items-center text-center">
+        <div className="flex flex-col gap-4 items-center text-center">
           <a
             href="https://foodspotapp.vercel.app/start-trial"
             onClick={() => trackCtaClick('hero_create_account', 'hero')}
