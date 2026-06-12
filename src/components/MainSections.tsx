@@ -220,10 +220,10 @@ export function HeroSubtitle() {
   const { lang } = useLanguage();
 
   return (
-    <section className="py-12 px-6 bg-white">
+    <section className="py-8 px-6 bg-white">
       <div className="max-w-5xl mx-auto">
-        <h2 className="font-display text-4xl md:text-5xl text-on-surface text-center font-black">
-          {t(lang, 'subtitle_heading')}
+        <h2 className="font-display text-5xl md:text-6xl text-on-surface text-center font-black leading-tight">
+          ¿Qué es una <span className="text-[#15803d]">{lang === 'es' ? 'tienda' : lang === 'pt' ? 'loja' : 'store'}</span> {lang === 'es' ? 'online?' : lang === 'pt' ? 'online?' : 'online?'}
         </h2>
       </div>
     </section>

@@ -284,7 +284,7 @@ export function VideoShowcase() {
   }, []);
 
   return (
-    <section className="py-20 px-6 bg-white overflow-hidden">
+    <section className="py-6 px-6 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
