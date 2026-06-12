@@ -171,7 +171,7 @@ export function Hero() {
           <div className="flex flex-col justify-center">
             <h1 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-4 leading-tight">
               {lang === 'es' ? 'Crear tu tienda online' : lang === 'pt' ? 'Criar sua loja online' : 'Create your online store'} <span className="inline-block w-max" style={{ minWidth: '280px' }}>
-                <motion.span key={accentIndex} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.4 }} style={{ color: '#10b981', display: 'inline-block' }}>{accents[lang][accentIndex]}</motion.span>
+                <motion.span key={accentIndex} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.25 }} style={{ color: '#10b981', display: 'inline-block' }}>{accents[lang][accentIndex]}</motion.span>
               </span>
             </h1>
 
@@ -234,7 +234,7 @@ function AnimatedPhoneShowcase() {
   useEffect(() => {
     const interval = setInterval(() => {
       setScreenIndex((prev) => (prev + 1) % screens.length);
-    }, 4000);
+    }, 2500);
     return () => clearInterval(interval);
   }, []);
 
@@ -253,7 +253,7 @@ function AnimatedPhoneShowcase() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
+          transition={{ duration: 0.2 }}
           className="flex-1 overflow-hidden w-full h-full"
         >
           <img
@@ -279,44 +279,15 @@ function AnimatedPhoneShowcase() {
   );
 }
 
-export function WhatIsOnlineStore() {
-  const { lang } = useLanguage();
-
-  return (
-    <section className="w-full bg-white px-6 py-16 md:py-24">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-12 leading-tight text-center">
-          {lang === 'es' ? '¿Qué es una tienda online?' : lang === 'pt' ? 'O que é uma loja online?' : 'What is an online store?'}
-        </h2>
-
-        <div className="grid md:grid-cols-3 gap-12 mt-12">
-          <div className="text-center">
-            <DollarSign className="w-12 h-12 text-primary mx-auto mb-4" />
-            <p className="text-2xl md:text-3xl text-on-surface font-black mb-3">{t(lang, 'subtitle_1_title')}</p>
-            <p className="text-base text-on-surface-variant">{t(lang, 'subtitle_1_desc')}</p>
-          </div>
-          <div className="text-center">
-            <Database className="w-12 h-12 text-primary mx-auto mb-4" />
-            <p className="text-2xl md:text-3xl text-on-surface font-black mb-3">{t(lang, 'subtitle_2_title')}</p>
-            <p className="text-base text-on-surface-variant">{t(lang, 'subtitle_2_desc')}</p>
-          </div>
-          <div className="text-center">
-            <LinkIcon className="w-12 h-12 text-primary mx-auto mb-4" />
-            <p className="text-2xl md:text-3xl text-on-surface font-black mb-3">{t(lang, 'subtitle_3_title')}</p>
-            <p className="text-base text-on-surface-variant">{t(lang, 'subtitle_3_desc')}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export function SubtitleCards() {
   const { lang } = useLanguage();
 
   return (
     <section className="py-20 px-6 bg-gradient-to-b from-surface/50 to-surface/25">
       <div className="max-w-5xl mx-auto">
+        <h2 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-12 leading-tight text-center">
+          {lang === 'es' ? '¿Qué es una tienda online?' : lang === 'pt' ? 'O que é uma loja online?' : 'What is an online store?'}
+        </h2>
         <div className="grid md:grid-cols-3 gap-12">
           <div className="text-center">
             <DollarSign className="w-12 h-12 text-primary mx-auto mb-4" />
