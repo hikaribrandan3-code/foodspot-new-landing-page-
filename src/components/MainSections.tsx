@@ -271,31 +271,66 @@ function AnimatedPhoneShowcase() {
   // Phone size: full on mobile, much smaller on desktop
   const phoneSize = isMobile
     ? "relative w-80 h-[650px]"
-    : "relative w-48 h-[380px]";
+    : "relative w-72 h-[520px]";
 
   return (
-    <div className={phoneSize}>
-      {/* Phone frame */}
-      <div className="absolute inset-0 bg-black rounded-[48px] shadow-2xl border-[8px] border-gray-900 overflow-hidden flex flex-col">
-        {/* Screen content - just display the image */}
+    <div className="flex flex-col items-center gap-8">
+      {/* 3D Perspective container - desktop only */}
+      <div className="hidden md:block" style={{ perspective: '1200px' }}>
         <motion.div
-          key={screenIndex}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.35 }}
-          className="flex-1 overflow-hidden w-full h-full"
+          style={{
+            transform: 'rotateX(8deg) rotateY(-18deg) rotateZ(5deg)',
+            transformStyle: 'preserve-3d'
+          }}
+          className={phoneSize}
         >
-          <img
-            src={screens[screenIndex].src}
-            alt={screens[screenIndex].alt}
-            className="w-full h-full object-cover"
-          />
+          {/* Phone frame */}
+          <div className="absolute inset-0 bg-black rounded-[48px] shadow-2xl border-[8px] border-gray-900 overflow-hidden flex flex-col">
+            {/* Screen content */}
+            <motion.div
+              key={screenIndex}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.35 }}
+              className="flex-1 overflow-hidden w-full h-full"
+            >
+              <img
+                src={screens[screenIndex].src}
+                alt={screens[screenIndex].alt}
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          </div>
         </motion.div>
       </div>
 
+      {/* Mobile version - no 3D perspective */}
+      <div className="md:hidden" style={{ perspective: 'none' }}>
+        <div className={phoneSize}>
+          {/* Phone frame */}
+          <div className="absolute inset-0 bg-black rounded-[48px] shadow-2xl border-[8px] border-gray-900 overflow-hidden flex flex-col">
+            {/* Screen content */}
+            <motion.div
+              key={screenIndex}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.35 }}
+              className="flex-1 overflow-hidden w-full h-full"
+            >
+              <img
+                src={screens[screenIndex].src}
+                alt={screens[screenIndex].alt}
+                className="w-full h-full object-cover"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
       {/* Indicator dots */}
-      <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 flex gap-2">
+      <div className="flex gap-2">
         {screens.map((_, idx) => (
           <div
             key={idx}
