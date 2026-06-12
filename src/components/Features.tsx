@@ -239,3 +239,46 @@ export function UGCMarketing() {
     </section>
   );
 }
+
+export function VideoShowcase() {
+  return (
+    <section className="py-20 px-6 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12"
+        >
+          <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-4">
+            Miralo en accion
+          </h2>
+          <p className="text-lg text-on-surface-variant max-w-xl">
+            Asi de simple es gestionar tu negocio con FoodSpot.
+          </p>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="relative mx-auto w-[260px] h-[540px] md:w-[390px] md:h-[540px]"
+        >
+          <div className="absolute inset-0 rounded-[2.5rem] md:rounded-[2rem] border-[10px] md:border-[14px] border-gray-800 bg-gray-800 shadow-2xl overflow-hidden">
+            <div className="md:hidden absolute top-0 left-1/2 -translate-x-1/2 w-24 h-5 bg-gray-800 rounded-b-2xl z-10" />
+            <div className="hidden md:block absolute top-2 left-1/2 -translate-x-1/2 w-2 h-2 bg-gray-600 rounded-full z-10" />
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              className="w-full h-full object-cover"
+            >
+              <source src="/demo-video.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
