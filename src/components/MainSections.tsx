@@ -151,9 +151,9 @@ export function Hero() {
   const [accentIndex, setAccentIndex] = useState(0);
 
   const accents = {
-    es: ['Shopify para restaurantes', 'sin comisiones', 'marketing automático', 'sin código'],
-    en: ['Shopify for restaurants', 'commission-free', 'automatic marketing', 'no code'],
-    pt: ['Shopify para restaurantes', 'sem comissões', 'marketing automático', 'sem código']
+    es: ['Shopify para comida', 'sin comisiones', 'marketing automático', 'sin código'],
+    en: ['Shopify for food', 'commission-free', 'automatic marketing', 'no code'],
+    pt: ['Shopify para comida', 'sem comissões', 'marketing automático', 'sem código']
   };
 
   useEffect(() => {
