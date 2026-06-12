@@ -231,16 +231,13 @@ function AnimatedPhoneShowcase() {
     <div className={phoneSize}>
       {/* Phone frame */}
       <div className="absolute inset-0 bg-black rounded-[48px] shadow-2xl border-[14px] border-gray-900 overflow-hidden flex flex-col">
-        {/* Notch */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-6 bg-black rounded-b-3xl z-10"></div>
-
         {/* Screen content - just display the image */}
         <motion.div
           key={screenIndex}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
           className="flex-1 overflow-hidden w-full h-full"
         >
           <img
