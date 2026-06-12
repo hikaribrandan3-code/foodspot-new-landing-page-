@@ -183,19 +183,19 @@ export function Hero() {
                 : 'Your own branded app. Direct orders. And 100% of every sale — no commissions, ever.'}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 items-start">
+            <div className="flex flex-col sm:flex-row gap-3 items-start">
               <a
                 href="https://foodspotapp.vercel.app/start-trial"
                 onClick={() => trackCtaClick('hero_create_account', 'hero')}
-                className="bg-[#10b981] hover:bg-[#059669] text-white px-8 py-3 rounded-full font-bold shadow-lg transition-all active:scale-95 inline-flex items-center gap-2"
+                className="bg-[#10b981] hover:bg-[#059669] text-white px-6 py-2 rounded-full font-semibold text-sm shadow-lg transition-all active:scale-95 inline-flex items-center justify-center gap-2"
               >
                 {t(lang, 'hero_cta')}
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4" />
               </a>
 
               <a
                 href="#beneficios"
-                className="border-2 border-[#10b981] text-[#10b981] px-8 py-3 rounded-full font-bold hover:bg-emerald-50 transition-all"
+                className="border-2 border-[#10b981] text-[#10b981] px-6 py-2 rounded-full font-semibold text-sm hover:bg-emerald-50 transition-all inline-flex items-center justify-center"
               >
                 {lang === 'es' ? 'Ver cómo funciona' : lang === 'pt' ? 'Ver como funciona' : 'See how it works'}
               </a>
@@ -241,7 +241,7 @@ function AnimatedPhoneShowcase() {
   // Phone size: full on mobile, much smaller on desktop
   const phoneSize = isMobile
     ? "relative w-80 h-[650px]"
-    : "relative w-64 h-[520px]";
+    : "relative w-48 h-[380px]";
 
   return (
     <div className={phoneSize}>
