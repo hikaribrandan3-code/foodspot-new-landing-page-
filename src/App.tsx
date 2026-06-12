@@ -46,11 +46,11 @@ export default function App() {
         <main>
           <Hero />
           <HeroSubtitle />
+          <VideoShowcase />
           <TheIdea />
           <UGCMarketing />
           <FishDemo />
           <HowItWorks />
-          <VideoShowcase />
           <SignupForm />
           <Features />
           <FAQ />
