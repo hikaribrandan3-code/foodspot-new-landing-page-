@@ -181,9 +181,9 @@ export function Hero() {
   const [accentIndex, setAccentIndex] = useState(0);
 
   const accents = {
-    es: ['Shopify para comida', '0% comisión', 'contenido orgánico', 'sin código'],
+    es: ['Shopify for food', '0% comisión', 'organic content', 'sin código'],
     en: ['Shopify for food', '0% commission', 'organic content', 'no code'],
-    pt: ['Shopify para comida', '0% comissão', 'conteúdo orgânico', 'sem código']
+    pt: ['Shopify for food', '0% comissão', 'organic content', 'sem código']
   };
 
   useEffect(() => {
@@ -244,8 +244,39 @@ export function Hero() {
 
         {/* Mobile: Phone below text with food-themed background */}
         <div className="md:hidden flex justify-center -mt-2 relative w-full max-w-sm mx-auto">
-          {/* Food-themed gradient background with feather effect */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-100/40 to-green-100/70 blur-3xl rounded-[80px]" style={{ zIndex: 0, pointerEvents: 'none' }} />
+          {/* Background image container */}
+          <div className="absolute inset-0 overflow-hidden rounded-3xl" style={{ zIndex: 0 }}>
+            {/* Kitchen background image */}
+            <picture>
+              <source srcSet="/hero.webp" type="image/webp" />
+              <img
+                src="/hero.jpg"
+                alt="Kitchen background"
+                className="w-full h-full object-cover"
+                style={{ pointerEvents: 'none' }}
+              />
+            </picture>
+
+            {/* Top cream fade-in (15px with blend) */}
+            <div
+              className="absolute top-0 left-0 right-0 z-10"
+              style={{
+                height: '15px',
+                background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.95), transparent)',
+                pointerEvents: 'none'
+              }}
+            />
+
+            {/* Bottom cream fade-out */}
+            <div
+              className="absolute bottom-0 left-0 right-0 z-10"
+              style={{
+                height: '60px',
+                background: 'linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.9))',
+                pointerEvents: 'none'
+              }}
+            />
+          </div>
 
           {/* Food SVG elements - strawberry */}
           <svg className="absolute" width="80" height="80" viewBox="0 0 100 100" style={{ top: '20%', left: '-10px', zIndex: 1, opacity: 0.15, pointerEvents: 'none' }}>
