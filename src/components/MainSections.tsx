@@ -197,15 +197,12 @@ export function Hero() {
     <section className="relative w-full px-6 py-12 md:py-20 overflow-hidden">
       {/* Background image - visible on mobile */}
       <div className="absolute inset-0 md:hidden" style={{ zIndex: 0 }}>
-        <picture>
-          <source srcSet="/hero.webp" type="image/webp" />
-          <img
-            src="/hero.jpg"
-            alt="Kitchen background"
-            className="w-full h-full object-cover"
-            style={{ pointerEvents: 'none' }}
-          />
-        </picture>
+        <img
+          src="/landingpagebackgroundfoodspotlanding.png"
+          alt="Kitchen background"
+          className="w-full h-full object-cover"
+          style={{ pointerEvents: 'none' }}
+        />
 
         {/* Top cream fade-in (15px with blend) */}
         <div
