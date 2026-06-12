@@ -10,8 +10,6 @@ export function FishDemo() {
       <a
         href="https://foodspotapp.vercel.app/foodspot"
         onClick={() => trackCtaClick('demo_90_seconds')}
-        target="_blank"
-        rel="noopener noreferrer"
         className="px-10 py-4 rounded-full font-bold text-base shadow-xl inline-flex items-center gap-2 transition-all active:scale-95 hover:shadow-2xl"
         style={{
           background: "linear-gradient(135deg, #10b981 0%, #059669 100%)",

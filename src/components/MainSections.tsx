@@ -366,8 +366,6 @@ export function DemoSection() {
         <a
           href="https://foodspotapp.vercel.app/foodspot"
           onClick={() => trackCtaClick('demo_button', 'demo_section')}
-          target="_blank"
-          rel="noopener noreferrer"
           className="inline-block px-20 py-6 rounded-full font-black text-3xl shadow-2xl transition-all active:scale-95 hover:shadow-2xl"
           style={{
             background: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
