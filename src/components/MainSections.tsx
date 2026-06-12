@@ -242,21 +242,21 @@ function AnimatedPhoneShowcase() {
             <div className="flex-1 overflow-y-auto p-3 space-y-3">
               <p className="text-xs font-bold text-gray-500 mt-2">Burgers</p>
               <div className="bg-gray-100 rounded-lg overflow-hidden">
-                <div className="w-full h-24 bg-gradient-to-br from-orange-400 to-amber-600"></div>
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&h=200&fit=crop" alt="Sample burger" className="w-full h-24 object-cover" />
                 <div className="p-3">
                   <p className="font-bold text-sm">Sample burger</p>
                   <p className="text-gray-600 text-sm">$79.000</p>
                 </div>
               </div>
               <div className="bg-gray-100 rounded-lg overflow-hidden">
-                <div className="w-full h-24 bg-gradient-to-br from-yellow-400 to-orange-500"></div>
+                <img src="https://images.unsplash.com/photo-1550547990-ee7a67f9a7ce?w=300&h=200&fit=crop" alt="Super burger" className="w-full h-24 object-cover" />
                 <div className="p-3">
                   <p className="font-bold text-sm">Super burger</p>
                   <p className="text-gray-600 text-sm">$8.000</p>
                 </div>
               </div>
               <div className="bg-gray-100 rounded-lg overflow-hidden">
-                <div className="w-full h-24 bg-gradient-to-br from-amber-500 to-yellow-600"></div>
+                <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=300&h=200&fit=crop" alt="Stacked burger" className="w-full h-24 object-cover" />
                 <div className="p-3">
                   <p className="font-bold text-sm">Stacked burger</p>
                   <p className="text-gray-600 text-sm">$8.000</p>
@@ -377,7 +377,7 @@ function AnimatedPhoneShowcase() {
             <div className="border-t p-4">
               <p className="font-bold text-sm mb-3">Resumen</p>
               <div className="flex gap-3 mb-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg"></div>
+                <img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=100&h=100&fit=crop" alt="Pizza example 3" className="w-16 h-16 object-cover rounded-lg" />
                 <div className="flex-1">
                   <p className="font-bold text-sm">Pizza example 3</p>
                   <p className="text-gray-600 text-xs">$9.000</p>
@@ -475,9 +475,9 @@ function AnimatedPhoneShowcase() {
     }
   };
 
-  // Phone size: bigger on desktop, taller on mobile
+  // Phone size: bigger on desktop, taller on mobile (mobile reduced 12%)
   const phoneSize = isMobile
-    ? "relative w-72 h-[650px]"
+    ? "relative w-72 h-[572px]"
     : "relative w-96 h-[550px]";
 
   return (
