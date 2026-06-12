@@ -232,13 +232,13 @@ export function Hero() {
         <div className="md:grid md:grid-cols-2 md:gap-12 md:items-center flex flex-col items-center text-center md:text-left md:items-center">
           {/* Left: Text content */}
           <div className="flex flex-col justify-center md:text-left">
-            <h1 className="font-display text-5xl md:text-6xl text-on-surface font-black mb-6 leading-none">
+            <h1 className="font-display text-5xl md:text-6xl text-white font-black mb-6 leading-none">
               <div>{lang === 'es' ? 'Crear tu tienda' : lang === 'pt' ? 'Criar sua loja' : 'Create your'}</div>
               <div>online store</div>
-              <span key={accentIndex} style={{ color: '#10b981', display: 'block', width: '100%', whiteSpace: 'nowrap', animation: 'fadeInUp 0.25s ease-out forwards', marginTop: '4px' }}>{accents[lang][accentIndex]}</span>
+              <span key={accentIndex} style={{ color: '#000000', WebkitTextStroke: '1px rgba(255,255,255,0.6)', display: 'block', width: '100%', whiteSpace: 'nowrap', animation: 'fadeInUp 0.25s ease-out forwards', marginTop: '4px' }}>{accents[lang][accentIndex]}</span>
             </h1>
 
-            <p className="text-base md:text-xl text-on-surface-variant mb-8 leading-relaxed font-medium" style={{ fontSize: '16px', lineHeight: '1.6' }}>
+            <p className="text-base md:text-xl text-white mb-8 leading-relaxed font-medium" style={{ fontSize: '16px', lineHeight: '1.6', opacity: 0.95 }}>
               {lang === 'es'
                 ? 'Tu propia app de marca. Pedidos directos. Y el 100% de cada venta — sin comisiones, nunca.'
                 : lang === 'pt'
@@ -264,7 +264,7 @@ export function Hero() {
               </a>
             </div>
 
-            <p className="text-sm text-on-surface-variant mt-6 font-medium">
+            <p className="text-sm text-white mt-6 font-medium" style={{ opacity: 0.9 }}>
               ✓ {t(lang, 'hero_trial')}
             </p>
           </div>
