@@ -35,9 +35,9 @@ export function HowItWorks() {
   ];
 
   return (
-    <section id="como-funciona" className="py-20 px-6 bg-white overflow-hidden">
+    <section id="como-funciona" className="py-16 md:py-20 px-6 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-4">{t(lang, 'how_heading')}</h2>
           <p className="text-lg text-on-surface-variant max-w-2xl mx-auto mb-6">
             {t(lang, 'how_sub')}
@@ -93,14 +93,14 @@ export function Features() {
   const { lang } = useLanguage();
 
   return (
-    <section className="py-20 px-6 max-w-7xl mx-auto">
+    <section className="py-16 md:py-20 px-6 max-w-7xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="mb-12"
+        className="mb-8"
       >
-        <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-6">{t(lang, 'ai_heading')}</h2>
+        <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-4">{t(lang, 'ai_heading')}</h2>
         <p className="text-lg text-on-surface-variant max-w-2xl">
           {t(lang, 'ai_desc')}
         </p>

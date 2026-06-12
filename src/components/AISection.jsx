@@ -56,7 +56,7 @@ export function AISection() {
   }, [lang, questions]);
 
   return (
-    <section className="w-full bg-white px-6 py-16 md:py-24">
+    <section className="w-full bg-white px-6 py-12 md:py-16">
       <div className="max-w-5xl mx-auto">
         {/* Chat Card */}
         <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-xl border border-gray-200 p-6 md:p-8 mb-8">

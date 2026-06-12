@@ -313,9 +313,9 @@ export function SubtitleCards() {
   const { lang } = useLanguage();
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-surface/50 to-surface/25">
+    <section className="py-16 md:py-20 px-6 bg-gradient-to-b from-surface/50 to-surface/25">
       <div className="max-w-5xl mx-auto">
-        <h2 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-12 leading-tight text-center">
+        <h2 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-8 md:mb-12 leading-tight text-center">
           {lang === 'es' ? '¿Qué es una tienda online?' : lang === 'pt' ? 'O que é uma loja online?' : 'What is an online store?'}
         </h2>
         <div className="grid md:grid-cols-3 gap-12">

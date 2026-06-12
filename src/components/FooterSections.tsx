@@ -7,7 +7,7 @@ import { t } from '../lib/translations';
 
 export function Comparison() {
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-16 md:py-20 px-6 bg-white">
       <div className="max-w-4xl mx-auto">
         <div className="fade-in-up">
           <picture>

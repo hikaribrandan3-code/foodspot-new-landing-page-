@@ -27,9 +27,9 @@ export function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-20 px-6 bg-white">
+    <section id="faq" className="py-16 md:py-20 px-6 bg-white">
       <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-14">
+        <div className="text-center mb-10">
           <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-4">
             {t(lang, 'faq_heading')}
           </h2>
