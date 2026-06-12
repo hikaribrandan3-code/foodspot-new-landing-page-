@@ -9,8 +9,8 @@ const translations = {
     nav_contact: 'Contactos',
 
     // Hero
-    hero_headline: 'Moderniza tu restaurante con una',
-    hero_accent: 'tienda online',
+    hero_headline: 'Pedidos, POS y Marketing',
+    hero_accent: 'Impulsado por IA',
     hero_cta: 'Crear mi cuenta gratis',
     hero_trial: '7 días gratis. Sin tarjeta de crédito.',
 
@@ -43,6 +43,20 @@ const translations = {
     // DemoSection
     demo_waiting: '¿Qué esperas?',
     demo_button: 'Demo',
+
+    // Features Detailed
+    features_intro_heading: 'Todo Lo Que Necesitas para Dirigir Tu Restaurante',
+    features_intro_desc: 'FoodSpot es la plataforma integral que combina pedidos, POS, marketing y análisis de IA en un solo sistema. A diferencia de herramientas fragmentadas que requieren múltiples suscripciones, FoodSpot te da todo—sin comisiones.',
+    features_ordering_heading: 'Sistema de Pedidos Online para Restaurantes',
+    features_ordering_desc: 'Acepta pedidos directos de clientes sin depender de apps de delivery. Nuestro sistema de pedidos para restaurantes permite que los clientes ordenen a través de tu app personalizada, sitio web o código QR. Sin DoorDash. Sin comisiones de Uber Eats. Las ventas directas significan márgenes más altos y lealtad del cliente. Procesa pedidos ilimitados con notificaciones en tiempo real e integración con tu cocina.',
+    features_pos_heading: 'Sistema POS Integrado para Restaurantes',
+    features_pos_desc: 'Gestiona toda tu operación desde un único sistema POS para restaurantes. Rastrea inventario en tiempo real, procesa pagos al instante, gestiona horarios del personal y visualiza análisis—todo sin cambiar de aplicación. Nuestro POS es diseñado para velocidad y simplicidad, con soporte sin conexión para que nunca pierdas una venta.',
+    features_marketing_heading: 'Herramientas de Marketing para Restaurantes',
+    features_marketing_desc: 'Impulsa negocios recurrentes con software de marketing integrado. Usa promociones impulsadas por IA, programas de lealtad y descuentos dirigidos. Captura contenido generado por usuarios (UGC) automáticamente cuando los clientes comparten fotos de sus comidas. Convierte cada pedido en prueba social y contenido de marketing. Rastrea qué promociones funcionan mejor y optimiza.',
+    features_ai_heading: 'Análisis Impulsado por IA',
+    features_ai_desc: 'Toma decisiones basadas en datos con el análisis de IA de FoodSpot. Entiende qué items se venden mejor, predice horas pico, optimiza precios y pronostica necesidades de inventario. Nuestro chatbot de IA analiza tus patrones de ventas y recomienda promociones que realmente funcionan.',
+    features_commission_heading: 'Sin Comisiones. Quédate Con El 100%.',
+    features_commission_desc: 'Cada peso que ganas se queda contigo. A diferencia de competidores, FoodSpot cobra una suscripción plana sin comisión en ventas. Sin cuotas ocultas. Sin porcentajes. Solo pagas el 3% de Mercado Pago—lo mismo que pagarías en cualquier plataforma. Las matemáticas son simples: más ganancias para tu negocio.',
 
     // HowItWorks
     how_heading: 'Crea tu tienda online en 3 pasos',
@@ -207,8 +221,8 @@ const translations = {
     nav_contact: 'Contact',
 
     // Hero
-    hero_headline: 'Modernize your restaurant with an',
-    hero_accent: 'online store',
+    hero_headline: 'Restaurant Ordering, POS & Marketing',
+    hero_accent: 'Powered by AI',
     hero_cta: 'Start for free',
     hero_trial: '7 days free. No credit card needed.',
 
@@ -241,6 +255,20 @@ const translations = {
     // DemoSection
     demo_waiting: 'What are you waiting for?',
     demo_button: 'Demo',
+
+    // Features Detailed
+    features_intro_heading: 'Everything You Need to Run Your Restaurant',
+    features_intro_desc: 'FoodSpot is the all-in-one restaurant platform that combines ordering, POS, marketing, and AI analytics in one unified system. Unlike fragmented tools that require multiple subscriptions and integrations, FoodSpot gives you everything—commission-free.',
+    features_ordering_heading: 'Restaurant Ordering System',
+    features_ordering_desc: 'Accept online orders directly from customers without relying on delivery apps. Our restaurant ordering system lets customers place orders through your branded app, website, or QR code. No DoorDash. No Uber Eats commissions. Direct sales mean higher margins and customer loyalty. Process unlimited orders with real-time notifications, order tracking, and seamless kitchen integration.',
+    features_pos_heading: 'Integrated Restaurant POS System',
+    features_pos_desc: 'Manage your entire operation from one unified restaurant POS system. Track inventory in real-time, process payments instantly, manage staff schedules, and view analytics—all without switching between apps. Our restaurant POS is built for speed and simplicity, with offline support so you never lose a sale.',
+    features_marketing_heading: 'Restaurant Marketing Tools',
+    features_marketing_desc: 'Drive repeat business with built-in restaurant marketing software. Use AI-powered promotions, loyalty programs, and targeted discounts. Capture user-generated content (UGC) automatically when customers share photos of their meals. Turn every order into social proof and marketing content. Track which promotions work best and double down on what drives revenue.',
+    features_ai_heading: 'AI-Powered Analytics',
+    features_ai_desc: 'Make data-driven decisions with FoodSpot\'s AI analytics. Understand which menu items sell best, predict busy hours, optimize pricing, and forecast inventory needs. Our AI chatbot analyzes your sales patterns and recommends promotions that actually work. Get insights in plain language, not spreadsheets.',
+    features_commission_heading: 'Commission-Free. Keep 100%.',
+    features_commission_desc: 'Every peso you earn stays with you. Unlike competitors, FoodSpot charges a flat subscription with zero commission on sales. No hidden per-order fees. No percentage cuts. You pay only for Mercado Pago processing (3%)—the same you\'d pay on any platform. The math is simple: more profit for your business.',
 
     // HowItWorks
     how_heading: 'Build your online store in 3 steps',
@@ -405,8 +433,8 @@ const translations = {
     nav_contact: 'Contato',
 
     // Hero
-    hero_headline: 'Modernize seu restaurante com uma',
-    hero_accent: 'loja online',
+    hero_headline: 'Pedidos, POS e Marketing',
+    hero_accent: 'Alimentado por IA',
     hero_cta: 'Criar minha conta grátis',
     hero_trial: '7 dias grátis. Sem cartão de crédito.',
 
@@ -439,6 +467,20 @@ const translations = {
     // DemoSection
     demo_waiting: 'O que você está esperando?',
     demo_button: 'Demo',
+
+    // Features Detailed
+    features_intro_heading: 'Tudo Que Você Precisa Para Gerenciar Seu Restaurante',
+    features_intro_desc: 'FoodSpot é a plataforma completa que combina pedidos, POS, marketing e análise de IA em um único sistema. Ao contrário de ferramentas fragmentadas que requerem múltiplas assinaturas, FoodSpot oferece tudo—sem comissões.',
+    features_ordering_heading: 'Sistema de Pedidos Online para Restaurantes',
+    features_ordering_desc: 'Aceite pedidos diretos de clientes sem depender de aplicativos de entrega. Nosso sistema de pedidos para restaurantes permite que os clientes façam pedidos através do seu app personalizado, site ou código QR. Sem DoorDash. Sem comissões do Uber Eats. As vendas diretas significam margens mais altas e lealdade do cliente. Processe pedidos ilimitados com notificações em tempo real e integração perfeita com sua cozinha.',
+    features_pos_heading: 'Sistema POS Integrado para Restaurantes',
+    features_pos_desc: 'Gerencie toda sua operação a partir de um único sistema POS para restaurantes. Rastreie inventário em tempo real, processe pagamentos instantaneamente, gerencie agendas de funcionários e visualize análises—tudo sem alternar entre aplicativos. Nosso POS foi projetado para velocidade e simplicidade, com suporte offline para que você nunca perca uma venda.',
+    features_marketing_heading: 'Ferramentas de Marketing para Restaurantes',
+    features_marketing_desc: 'Impulsione negócios recorrentes com software de marketing integrado. Use promoções alimentadas por IA, programas de fidelidade e descontos direcionados. Capture conteúdo gerado pelo usuário (UGC) automaticamente quando os clientes compartilham fotos de suas refeições. Transforme cada pedido em prova social e conteúdo de marketing.',
+    features_ai_heading: 'Análises Alimentadas por IA',
+    features_ai_desc: 'Tome decisões baseadas em dados com as análises de IA do FoodSpot. Entenda quais itens do menu vendem melhor, preveja horários de pico, otimize preços e preveja necessidades de inventário. Nosso chatbot de IA analisa seus padrões de vendas e recomenda promoções que realmente funcionam.',
+    features_commission_heading: 'Sem Comissões. Mantenha 100%.',
+    features_commission_desc: 'Cada real que você ganha fica com você. Ao contrário dos concorrentes, FoodSpot cobra uma assinatura fixa sem comissão nas vendas. Sem taxas ocultas. Sem percentuais. Você paga apenas o processamento do Mercado Pago (3%)—o mesmo que pagaria em qualquer plataforma. A matemática é simples: mais lucro para seu negócio.',
 
     // HowItWorks
     how_heading: 'Crie sua loja online em 3 passos',
