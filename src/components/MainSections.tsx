@@ -208,6 +208,7 @@ export function Hero() {
 function AnimatedPhoneShowcase() {
   const [screenIndex, setScreenIndex] = useState(0);
   const screens = ['menu', 'order', 'payment', 'receipt'];
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -223,90 +224,249 @@ function AnimatedPhoneShowcase() {
       case 'menu':
         return (
           <div className="h-full bg-white flex flex-col">
-            <div className="p-3 border-b">
-              <p className="text-lg font-bold text-red-700 mb-3">SAPID BURGERS</p>
-              <div className="flex gap-2 overflow-x-auto pb-2">
-                <div className="bg-black text-white px-4 py-1.5 rounded-full text-sm font-semibold whitespace-nowrap">Burgers</div>
-                <div className="bg-gray-200 text-gray-700 px-4 py-1.5 rounded-full text-sm whitespace-nowrap">Postres</div>
-                <div className="bg-gray-200 text-gray-700 px-4 py-1.5 rounded-full text-sm whitespace-nowrap">Bebidas</div>
+            {/* Logo */}
+            <div className="p-4 text-center border-b">
+              <p className="text-2xl font-bold text-[#8B4513]">SAPID<span className="text-red-700">🍔</span></p>
+              <p className="text-xl font-bold text-red-700">BURGERS</p>
+            </div>
+
+            {/* Categories */}
+            <div className="px-3 py-3 border-b flex gap-2 overflow-x-auto">
+              <div className="bg-black text-white px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap">Burgers</div>
+              <div className="bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-xs whitespace-nowrap">Postres</div>
+              <div className="bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-xs whitespace-nowrap">Pizza</div>
+              <div className="bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-xs whitespace-nowrap">Combos</div>
+            </div>
+
+            {/* Menu items */}
+            <div className="flex-1 overflow-y-auto p-3 space-y-3">
+              <p className="text-xs font-bold text-gray-500 mt-2">Burgers</p>
+              <div className="bg-gray-100 rounded-lg overflow-hidden">
+                <div className="w-full h-24 bg-gradient-to-br from-orange-400 to-amber-600"></div>
+                <div className="p-3">
+                  <p className="font-bold text-sm">Sample burger</p>
+                  <p className="text-gray-600 text-sm">$79.000</p>
+                </div>
+              </div>
+              <div className="bg-gray-100 rounded-lg overflow-hidden">
+                <div className="w-full h-24 bg-gradient-to-br from-yellow-400 to-orange-500"></div>
+                <div className="p-3">
+                  <p className="font-bold text-sm">Super burger</p>
+                  <p className="text-gray-600 text-sm">$8.000</p>
+                </div>
+              </div>
+              <div className="bg-gray-100 rounded-lg overflow-hidden">
+                <div className="w-full h-24 bg-gradient-to-br from-amber-500 to-yellow-600"></div>
+                <div className="p-3">
+                  <p className="font-bold text-sm">Stacked burger</p>
+                  <p className="text-gray-600 text-sm">$8.000</p>
+                </div>
               </div>
             </div>
-            <div className="flex-1 overflow-y-auto p-3 space-y-3">
-              <div className="bg-gray-100 rounded-lg p-3">
-                <div className="w-full h-20 bg-gray-300 rounded mb-2"></div>
-                <p className="font-bold text-sm">Sample Burger</p>
-                <p className="text-gray-600 text-sm">$8.000</p>
+
+            {/* Order preview */}
+            <div className="border-t p-3 bg-gray-50">
+              <p className="text-xs text-gray-400 uppercase mb-2">TU PEDIDO</p>
+              <div className="flex justify-between items-center text-sm mb-2">
+                <p>Pizza example 3 <span className="text-gray-600">×1</span></p>
+                <p className="font-bold">$9.000</p>
               </div>
-              <div className="bg-gray-100 rounded-lg p-3">
-                <div className="w-full h-20 bg-gray-300 rounded mb-2"></div>
-                <p className="font-bold text-sm">Super Burger</p>
-                <p className="text-gray-600 text-sm">$12.000</p>
+              <div className="border-t pt-2 font-bold text-sm flex justify-between">
+                <p>Total</p>
+                <p>$9.000</p>
               </div>
             </div>
           </div>
         );
       case 'order':
         return (
-          <div className="h-full bg-white flex flex-col">
-            <div className="p-3 border-b">
-              <p className="font-bold text-lg mb-2">Tu pedido</p>
-              <div className="flex gap-2 text-sm">
-                <button className="font-bold text-black pb-1 border-b-2 border-black">Para llevar</button>
-                <button className="text-gray-600">Comer en Local</button>
-                <button className="text-gray-600">Envios</button>
+          <div className="h-full bg-white flex flex-col overflow-y-auto">
+            {/* Header */}
+            <div className="p-4 border-b sticky top-0 bg-white">
+              <p className="font-bold text-xl mb-3">Tu pedido</p>
+              <div className="flex gap-3">
+                <button className="font-bold text-black bg-black text-white px-4 py-2 rounded-full text-xs">Para llevar</button>
+                <button className="text-gray-600 text-xs">Comer en Local</button>
+                <button className="text-gray-600 text-xs">Envios</button>
               </div>
             </div>
-            <div className="flex-1 overflow-y-auto p-3 space-y-2">
-              <div className="bg-yellow-50 rounded-lg p-3 border border-yellow-200">
-                <p className="font-bold text-sm">Pizza example 3</p>
-                <p className="text-gray-600 text-xs">×1</p>
+
+            {/* Delivery details */}
+            <div className="p-4 space-y-3">
+              <div>
+                <p className="text-xs font-bold text-gray-700 mb-2">NOMBRE</p>
+                <input type="text" value="Hikari Brandan" className="w-full bg-yellow-100 border border-yellow-300 rounded-lg p-3 text-sm font-medium" readOnly />
+              </div>
+              <div>
+                <p className="text-xs font-bold text-gray-700 mb-2">TELÉFONO</p>
+                <input type="text" value="2538939452" className="w-full bg-yellow-100 border border-yellow-300 rounded-lg p-3 text-sm font-medium" readOnly />
+              </div>
+
+              {/* Payment methods */}
+              <div className="mt-4">
+                <p className="font-bold text-lg mb-3">Medio de Pago</p>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3 p-3 border-b">
+                    <div className="w-5 h-5 rounded-full bg-black"></div>
+                    <div>
+                      <p className="font-bold text-sm">Efectivo</p>
+                      <p className="text-gray-600 text-xs">Pagar al recibir</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 border-b">
+                    <div className="w-5 h-5 rounded-full border-2 border-gray-400"></div>
+                    <div>
+                      <p className="font-bold text-sm">WhatsApp</p>
+                      <p className="text-gray-600 text-xs">Confirmar por WhatsApp</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 p-3">
+                    <div className="w-5 h-5 rounded-full border-2 border-gray-400"></div>
+                    <div>
+                      <p className="font-bold text-sm">Mercado Pago</p>
+                      <p className="text-gray-600 text-xs">Tarjeta de crédito/débito o billetera</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="border-t p-3 space-y-1">
-              <p className="text-xs text-gray-600">Subtotal: $9.000</p>
-              <p className="font-bold text-base">Total: <span className="text-[#10b981]">$9.000</span></p>
+
+            {/* Button */}
+            <div className="p-4 border-t">
+              <button className="w-full bg-green-500 text-white font-bold py-3 rounded-full text-sm">Confirmar Pedido →</button>
             </div>
           </div>
         );
       case 'payment':
         return (
-          <div className="h-full bg-white flex flex-col">
-            <div className="p-3 border-b">
-              <p className="font-bold text-lg">Medio de Pago</p>
+          <div className="h-full bg-white flex flex-col overflow-y-auto">
+            {/* Payment header */}
+            <div className="p-4 border-b sticky top-0 bg-white">
+              <p className="font-bold text-xl">Medio de Pago</p>
             </div>
-            <div className="flex-1 overflow-y-auto p-3 space-y-2">
-              <div className="border-2 border-[#10b981] rounded-lg p-4 bg-emerald-50">
-                <p className="font-bold text-sm">Efectivo</p>
-                <p className="text-gray-600 text-xs">Pagar al recibir</p>
+
+            {/* Payment options */}
+            <div className="p-4 space-y-3">
+              <div className="flex items-center gap-3 p-3 border-b">
+                <div className="text-2xl">💵</div>
+                <div className="flex-1">
+                  <p className="font-bold text-sm">Efectivo</p>
+                  <p className="text-gray-600 text-xs">Pagar al recibir</p>
+                </div>
+                <div className="w-6 h-6 rounded-full bg-black"></div>
               </div>
-              <div className="border rounded-lg p-4">
-                <p className="font-bold text-sm">WhatsApp</p>
-                <p className="text-gray-600 text-xs">Confirmar por WhatsApp</p>
+              <div className="flex items-center gap-3 p-3 border-b">
+                <div className="text-2xl">💬</div>
+                <div className="flex-1">
+                  <p className="font-bold text-sm">WhatsApp</p>
+                  <p className="text-gray-600 text-xs">Confirmar por WhatsApp</p>
+                </div>
+                <div className="w-6 h-6 rounded-full border-2 border-gray-400"></div>
               </div>
-              <div className="border rounded-lg p-4">
-                <p className="font-bold text-sm">Mercado Pago</p>
-                <p className="text-gray-600 text-xs">Tarjeta de crédito/débito</p>
+              <div className="flex items-center gap-3 p-3">
+                <div className="text-2xl">🏦</div>
+                <div className="flex-1">
+                  <p className="font-bold text-sm">Mercado Pago</p>
+                  <p className="text-gray-600 text-xs">Tarjeta de crédito/débito o billetera</p>
+                </div>
+                <div className="w-6 h-6 rounded-full border-2 border-gray-400"></div>
               </div>
+            </div>
+
+            {/* Summary */}
+            <div className="border-t p-4">
+              <p className="font-bold text-sm mb-3">Resumen</p>
+              <div className="flex gap-3 mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg"></div>
+                <div className="flex-1">
+                  <p className="font-bold text-sm">Pizza example 3</p>
+                  <p className="text-gray-600 text-xs">$9.000</p>
+                  <div className="flex gap-2 mt-2">
+                    <button className="text-gray-600 text-sm">−</button>
+                    <span className="text-sm">1</span>
+                    <button className="text-gray-600 text-sm">+</button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between text-gray-600">
+                  <span>Subtotal</span>
+                  <span>$9.000</span>
+                </div>
+                <div className="border-t pt-2 font-bold text-green-600 flex justify-between">
+                  <span>Total</span>
+                  <span>$9.000</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Button */}
+            <div className="p-4 border-t">
+              <button className="w-full bg-green-500 text-white font-bold py-3 rounded-full text-sm">Confirmar Pedido →</button>
             </div>
           </div>
         );
       case 'receipt':
         return (
-          <div className="h-full bg-white flex flex-col overflow-y-auto p-4">
-            <p className="text-xs text-gray-400 mb-2">Foodspot mobile</p>
-            <p className="font-bold text-2xl mb-1">Pedido Confirmado</p>
-            <p className="text-sm text-gray-600 mb-4">Esperando que comience el restaurante</p>
-            <p className="text-xs text-gray-600 mb-4"><span className="font-bold">Pedido #32</span> · Jun 12, 2026 · 1:48 PM</p>
-            <div className="border-t pt-3 space-y-2 text-sm flex-1">
-              <div className="flex justify-between">
-                <p className="text-gray-600">1x Pizza example 3</p>
-                <p className="font-semibold">$9.000</p>
-              </div>
+          <div className="h-full bg-white flex flex-col overflow-y-auto">
+            {/* Header with wavy separator */}
+            <div className="text-center p-4 border-b">
+              <p className="text-lg font-bold text-red-700 mb-2">SAPID BURGERS</p>
+              <svg className="w-full h-3 mb-3" viewBox="0 0 100 10" preserveAspectRatio="none">
+                <path d="M0,5 Q12.5,0 25,5 T50,5 T75,5 T100,5" stroke="#ccc" fill="none" strokeWidth="1"/>
+              </svg>
             </div>
-            <div className="border-t pt-3 mt-3">
-              <p className="text-xs text-gray-600 mb-2">Subtotal: $9.000</p>
-              <p className="text-xs text-gray-600 mb-3">Impuestos: $0</p>
-              <p className="font-bold text-lg"><span className="text-[#10b981]">TOTAL: $9.000</span></p>
+
+            {/* Receipt content */}
+            <div className="flex-1 p-4 space-y-3">
+              <p className="text-xs text-gray-500">Foodspot mobile</p>
+              <div>
+                <p className="text-2xl font-bold text-black mb-1">Pedido Confirmado</p>
+                <p className="text-sm text-gray-600">Esperando que comience el restaurante</p>
+              </div>
+
+              <p className="text-xs text-gray-600">
+                <span className="font-bold">Pedido # 32</span> · Jun 12, 2026 · 1:48 PM
+              </p>
+
+              {/* Divider */}
+              <div className="border-t pt-3">
+                <div className="flex justify-between text-sm mb-2">
+                  <p className="text-gray-600">1x Pizza example 3</p>
+                  <p className="font-bold">$9.000</p>
+                </div>
+              </div>
+
+              {/* Summary lines */}
+              <div className="space-y-1 text-xs">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Subtotal</span>
+                  <span className="text-gray-600">$9.000</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Impuestos</span>
+                  <span className="text-gray-600">$0</span>
+                </div>
+                <div className="border-t pt-2 font-bold text-base">
+                  <div className="flex justify-between">
+                    <span>TOTAL</span>
+                    <span className="text-green-600">$9.000</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Payment & Status */}
+              <div className="border-t pt-3 text-xs space-y-1">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Método de Pago</span>
+                  <span className="font-bold">Efectivo</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Estado</span>
+                  <span className="font-bold">Pedido Confirmado</span>
+                </div>
+              </div>
             </div>
           </div>
         );
@@ -315,20 +475,25 @@ function AnimatedPhoneShowcase() {
     }
   };
 
+  // Phone size: bigger on desktop, taller on mobile
+  const phoneSize = isMobile
+    ? "relative w-72 h-[650px]"
+    : "relative w-96 h-[550px]";
+
   return (
-    <div className="relative w-80 h-[500px]">
+    <div className={phoneSize}>
       {/* Phone frame */}
       <div className="absolute inset-0 bg-black rounded-[48px] shadow-2xl border-[14px] border-gray-900 overflow-hidden flex flex-col">
         {/* Status bar */}
-        <div className="bg-white h-6 flex items-center justify-between px-6 text-xs font-semibold border-b border-gray-200">
+        <div className="bg-white h-6 flex items-center justify-between px-4 text-xs font-semibold border-b border-gray-200">
           <span>9:41</span>
-          <span>📶 📡 🔋</span>
+          <span>📶 🔋</span>
         </div>
 
         {/* Notch */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-48 h-6 bg-black rounded-b-3xl z-10"></div>
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-6 bg-black rounded-b-3xl z-10"></div>
 
-        {/* Screen content with fade animation */}
+        {/* Screen content */}
         <motion.div
           key={screenIndex}
           initial={{ opacity: 0 }}
@@ -342,12 +507,12 @@ function AnimatedPhoneShowcase() {
       </div>
 
       {/* Indicator dots */}
-      <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 flex gap-2">
+      <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 flex gap-2">
         {screens.map((_, idx) => (
           <div
             key={idx}
             className={`h-2 rounded-full transition-all ${
-              idx === screenIndex ? 'bg-[#10b981] w-6' : 'bg-gray-300 w-2'
+              idx === screenIndex ? 'bg-green-500 w-6' : 'bg-gray-300 w-2'
             }`}
           />
         ))}
