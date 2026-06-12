@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from "motion/react";
 import { ArrowDown } from "lucide-react";
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../lib/translations';
@@ -42,13 +41,9 @@ export function HowItWorks() {
           <p className="text-lg text-on-surface-variant max-w-2xl mx-auto mb-6">
             {t(lang, 'how_sub')}
           </p>
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="flex justify-center"
-          >
+          <div className="flex justify-center" style={{ animation: 'bounce 2s infinite ease-in-out' }}>
             <ArrowDown className="w-8 h-8 text-primary/50" />
-          </motion.div>
+          </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
           {steps.map((step, idx) => (
@@ -65,6 +60,7 @@ export function HowItWorks() {
                     src={step.img}
                     alt={step.title}
                     loading="lazy"
+                    decoding="async"
                     width="256"
                     height="500"
                     className="absolute inset-0 w-full h-full object-cover rounded-[2.5rem] shadow-md border-4 border-white"
@@ -94,17 +90,12 @@ export function Features() {
 
   return (
     <section className="py-16 md:py-20 px-6 max-w-7xl mx-auto">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mb-8"
-      >
+      <div className="mb-8">
         <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-4">{t(lang, 'ai_heading')}</h2>
         <p className="text-lg text-on-surface-variant max-w-2xl">
           {t(lang, 'ai_desc')}
         </p>
-      </motion.div>
+      </div>
 
       <AISection />
     </section>
@@ -136,96 +127,45 @@ export function UGCMarketing() {
 
   return (
     <section className="py-16 px-6 max-w-7xl mx-auto">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="text-center mb-8"
-      >
+      <div className="text-center mb-8">
         <h2 className="font-display text-4xl md:text-5xl text-on-surface font-black">{t(lang, 'ugc_heading')}</h2>
-      </motion.div>
+      </div>
 
       <div className="flex flex-col items-center gap-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex justify-center"
-        >
+        <div className="flex justify-center">
           <div className="relative w-72 h-[550px]">
             <video
               ref={ugcVideoRef}
               muted
               loop
               playsInline
-              preload="auto"
+              preload="none"
               className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl border-8 border-gray-100"
             >
               <source src="/ugc.webm" type="video/webm" />
               <source src="/ugc.mp4" type="video/mp4" />
             </video>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
+        <div className="text-center">
           <p className="text-xl md:text-2xl text-on-surface font-semibold max-w-2xl">
             {t(lang, 'ugc_stat')}
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div className="text-center">
+        <div className="text-center">
           <div className="text-lg md:text-xl text-on-surface-variant font-semibold flex items-center justify-center gap-3 flex-wrap">
-            <motion.span
-              initial={{ opacity: 0, x: -10 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              {t(lang, 'ugc_flow_photo')}
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-2xl"
-            >
-              →
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0, x: -10 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              {t(lang, 'ugc_flow_share')}
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="text-2xl"
-            >
-              →
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0, x: -10 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-            >
-              {t(lang, 'ugc_flow_customer')}
-            </motion.span>
+            <span>{t(lang, 'ugc_flow_photo')}</span>
+            <span className="text-2xl">→</span>
+            <span>{t(lang, 'ugc_flow_share')}</span>
+            <span className="text-2xl">→</span>
+            <span>{t(lang, 'ugc_flow_customer')}
+            </span>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -239,7 +179,7 @@ export function UGCMarketing() {
             height={1024}
             className="w-full max-w-xs rounded-3xl shadow-2xl"
           />
-        </motion.div>
+        </div>
       </div>
     </section>
   );
@@ -278,7 +218,7 @@ export function VideoShowcase() {
   return (
     <section className="py-6 px-6 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -292,7 +232,7 @@ export function VideoShowcase() {
               loop
               muted
               playsInline
-              preload="auto"
+              preload="none"
               className="w-full h-full object-cover"
             >
               <source src="/demo-video.webm" type="video/webm" />
@@ -310,7 +250,7 @@ export function VideoShowcase() {
               </button>
             )}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

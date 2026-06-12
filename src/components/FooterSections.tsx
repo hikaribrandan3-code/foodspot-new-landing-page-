@@ -16,6 +16,7 @@ export function Comparison() {
               src="/comparison.webp"
               alt="Comparativa de Plataformas para Restaurantes - FoodSpot vs Pedix"
               loading="lazy"
+              decoding="async"
               width="704"
               height="1527"
               className="w-full h-auto rounded-2xl shadow-lg"

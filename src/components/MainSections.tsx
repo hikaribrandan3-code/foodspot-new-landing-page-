@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { motion } from "motion/react";
 import { ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail, DollarSign, Database, Link as LinkIcon, ShoppingCart, Lightbulb } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
 import { trackCtaClick, trackNavigation } from '../services/ga4Events';
@@ -95,45 +94,41 @@ export function Navbar() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg hover:bg-surface transition-colors"
             aria-label="Toggle menu"
+            style={{ cursor: 'pointer' }}
           >
-            <motion.div
-              animate={{ rotate: mobileMenuOpen ? 90 : 0 }}
-              transition={{ duration: 0.3 }}
-            >
+            <div style={{ transform: mobileMenuOpen ? 'rotate(90deg)' : 'rotate(0)', transition: 'transform 0.3s ease' }}>
               {mobileMenuOpen ? (
                 <X className="w-6 h-6 text-on-surface" />
               ) : (
                 <Menu className="w-6 h-6 text-on-surface" />
               )}
-            </motion.div>
+            </div>
           </button>
         </div>
       </div>
 
       {/* Mobile Menu Backdrop */}
       {mobileMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.2 }}
+        <div
           className="fixed inset-0 bg-black/20 md:hidden z-40"
           onClick={() => setMobileMenuOpen(false)}
+          style={{ animation: 'fadeIn 0.2s ease-out forwards' }}
         />
       )}
 
       {/* Mobile Menu Slide from Right */}
-      <motion.div
-        initial={{ x: '100%' }}
-        animate={{ x: mobileMenuOpen ? 0 : '100%' }}
-        transition={{ duration: 0.3, ease: 'easeInOut' }}
+      <div
         className="fixed top-20 right-0 h-screen w-72 bg-white md:hidden z-40 border-l border-gray-200 overflow-y-auto"
+        style={{
+          transform: mobileMenuOpen ? 'translateX(0)' : 'translateX(100%)',
+          transition: 'transform 0.3s ease-in-out',
+        }}
       >
         <div className="px-6 py-8 space-y-2">
           {navLinks.map((link) => {
             const IconComponent = link.icon;
             return (
-              <motion.a
+              <a
                 key={link.id}
                 href={link.href}
                 onClick={(e) => {
@@ -142,21 +137,21 @@ export function Navbar() {
                   document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' });
                   setMobileMenuOpen(false);
                 }}
-                whileHover={{ x: 4 }}
                 className={`flex items-center gap-3 py-4 px-5 rounded-xl transition-all ${
                   isActive(link.id)
                     ? 'bg-primary text-white font-semibold shadow-lg shadow-primary/30'
                     : 'text-gray-700 hover:text-primary hover:bg-gray-50'
                 }`}
+                style={{ display: 'block' }}
               >
                 <IconComponent className="w-5 h-5 flex-shrink-0" />
                 <span>{link.label}</span>
-              </motion.a>
+              </a>
             );
           })}
 
           {/* Request Demo Button */}
-          <motion.a
+          <a
             href="#signup"
             onClick={(e) => {
               e.preventDefault();
@@ -164,14 +159,14 @@ export function Navbar() {
               document.getElementById('signup')?.scrollIntoView({ behavior: 'smooth' });
               setMobileMenuOpen(false);
             }}
-            whileHover={{ x: 4 }}
             className="flex items-center gap-3 py-4 px-5 rounded-xl transition-all bg-primary text-white font-semibold shadow-lg shadow-primary/30 mt-4"
+            style={{ display: 'flex' }}
           >
             <Mail className="w-5 h-5 flex-shrink-0" />
             <span>{lang === 'es' ? 'Solicitar Demo' : lang === 'pt' ? 'Solicitar Demo' : 'Request Demo'}</span>
-          </motion.a>
+          </a>
         </div>
-      </motion.div>
+      </div>
     </nav>
   );
 }
@@ -201,7 +196,7 @@ export function Hero() {
           <div className="flex flex-col justify-center">
             <h1 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-4 leading-tight">
               {lang === 'es' ? 'Crear tu tienda online' : lang === 'pt' ? 'Criar sua loja online' : 'Create your online store'} <span className="inline-block md:block w-max md:w-full" style={{ minWidth: '280px', maxWidth: '100%' }}>
-                <motion.span key={accentIndex} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.25 }} style={{ color: '#10b981', display: 'block', width: '100%', whiteSpace: 'nowrap' }}>{accents[lang][accentIndex]}</motion.span>
+                <span key={accentIndex} style={{ color: '#10b981', display: 'block', width: '100%', whiteSpace: 'nowrap', animation: 'fadeInUp 0.25s ease-out forwards' }}>{accents[lang][accentIndex]}</span>
               </span>
             </h1>
 
@@ -277,7 +272,7 @@ function AnimatedPhoneShowcase() {
     <div className="flex flex-col items-center gap-8 pt-8 md:pt-16">
       {/* 3D Perspective container - desktop only */}
       <div className="hidden md:block" style={{ perspective: '1200px' }}>
-        <motion.div
+        <div
           style={{
             transform: 'rotateX(8deg) rotateY(-18deg) rotateZ(5deg)',
             transformStyle: 'preserve-3d'
@@ -287,22 +282,21 @@ function AnimatedPhoneShowcase() {
           {/* Phone frame */}
           <div className="absolute inset-0 bg-black rounded-[48px] shadow-2xl border-[8px] border-gray-900 overflow-hidden flex flex-col">
             {/* Screen content */}
-            <motion.div
+            <div
               key={screenIndex}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.35 }}
               className="flex-1 overflow-hidden w-full h-full"
+              style={{ animation: 'fadeIn 0.35s ease-out forwards' }}
             >
               <img
                 src={screens[screenIndex].src}
                 alt={screens[screenIndex].alt}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-top"
               />
-            </motion.div>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Mobile version - no 3D perspective */}
@@ -311,20 +305,19 @@ function AnimatedPhoneShowcase() {
           {/* Phone frame */}
           <div className="absolute inset-0 bg-black rounded-[48px] shadow-2xl border-[8px] border-gray-900 overflow-hidden flex flex-col">
             {/* Screen content */}
-            <motion.div
+            <div
               key={screenIndex}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.35 }}
               className="flex-1 overflow-hidden w-full h-full"
+              style={{ animation: 'fadeIn 0.35s ease-out forwards' }}
             >
               <img
                 src={screens[screenIndex].src}
                 alt={screens[screenIndex].alt}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover object-top"
               />
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
@@ -392,13 +385,12 @@ export function TheIdea() {
         <p className="text-base md:text-lg text-white/95 leading-relaxed font-semibold mb-8">
           {t(lang, 'idea_body_1')} <span className="font-black">{t(lang, 'idea_body_accent')}</span> {t(lang, 'idea_body_2')} <span className="font-black">{t(lang, 'idea_body_brand')}</span>{t(lang, 'idea_body_3')}
         </p>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        <div
           className="text-white/60 hover:text-white transition-colors"
+          style={{ animation: 'bounce 2s infinite ease-in-out' }}
         >
           <ArrowDown className="w-5 h-5 mx-auto" />
-        </motion.div>
+        </div>
       </div>
     </section>
   );

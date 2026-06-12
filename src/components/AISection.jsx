@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'motion/react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export function AISection() {
@@ -80,16 +79,13 @@ export function AISection() {
 
             {/* Animated question */}
             <div className="flex justify-end">
-              <motion.div
+              <div
                 key={questionIndex}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.35 }}
                 className="bg-[#10b981] text-white rounded-2xl px-4 py-3 max-w-xs md:max-w-md"
+                style={{ animation: 'fadeInUp 0.35s ease-out forwards' }}
               >
                 <p className="text-sm md:text-base">{questions[lang][questionIndex]}</p>
-              </motion.div>
+              </div>
             </div>
 
             {/* Input placeholder */}

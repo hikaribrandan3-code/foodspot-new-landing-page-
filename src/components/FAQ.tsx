@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown } from "lucide-react";
 import { trackFaqClick } from "../services/ga4Events";
 import { useLanguage } from '../contexts/LanguageContext';
@@ -50,32 +49,30 @@ export function FAQ() {
                 <span className="text-lg md:text-xl font-semibold text-on-surface pr-4 group-hover:text-primary transition-colors">
                   {faq.question}
                 </span>
-                <motion.span
-                  animate={{ rotate: openIndex === idx ? 180 : 0 }}
-                  transition={{ duration: 0.2 }}
+                <span
                   className="mt-1 shrink-0 text-primary"
+                  style={{
+                    transform: openIndex === idx ? 'rotate(180deg)' : 'rotate(0)',
+                    transition: 'transform 0.2s ease',
+                    display: 'flex'
+                  }}
                 >
                   <ChevronDown className="w-5 h-5" />
-                </motion.span>
+                </span>
               </button>
 
-              <AnimatePresence initial={false}>
-                {openIndex === idx && (
-                  <motion.div
-                    id={`faq-answer-${idx}`}
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.25, ease: "easeInOut" }}
-                    className="overflow-hidden"
-                    role="region"
-                  >
-                    <p className="pt-4 text-base text-gray-500 leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              {openIndex === idx && (
+                <div
+                  id={`faq-answer-${idx}`}
+                  className="overflow-hidden"
+                  role="region"
+                  style={{ animation: 'slideDown 0.25s ease-in-out forwards' }}
+                >
+                  <p className="pt-4 text-base text-gray-500 leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              )}
             </div>
           ))}
         </div>
