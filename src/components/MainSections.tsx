@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail, DollarSign, Database, Link as LinkIcon, ShoppingCart, Lightbulb } from "lucide-react";
-import { iPhone } from 'react-mockframe';
+import { MockFrame } from 'react-mockframe';
 import { CanvasBackground } from './CanvasBackground';
 import { trackCtaClick, trackNavigation } from '../services/ga4Events';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -279,10 +279,13 @@ function AnimatedPhoneShowcase() {
     >
       {/* 3D iPhone Mockup */}
       <div className="w-64 md:w-80">
-        <iPhone
-          src={screens[screenIndex].src}
-          color="black"
-        />
+        <MockFrame device="iPhone 15" color="black">
+          <img
+            src={screens[screenIndex].src}
+            alt={screens[screenIndex].alt}
+            className="w-full h-full object-cover"
+          />
+        </MockFrame>
       </div>
 
       {/* Indicator dots */}
