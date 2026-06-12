@@ -199,10 +199,10 @@ export function Hero() {
         <div className="md:grid md:grid-cols-2 md:gap-12 md:items-center flex flex-col items-center text-center md:text-left md:items-center">
           {/* Left: Text content */}
           <div className="flex flex-col justify-center md:text-left">
-            <h1 className="font-display text-5xl md:text-6xl text-on-surface font-black mb-6 leading-tight">
+            <h1 className="font-display text-5xl md:text-6xl text-on-surface font-black mb-6 leading-none">
               <div>{lang === 'es' ? 'Crear tu tienda' : lang === 'pt' ? 'Criar sua loja' : 'Create your'}</div>
               <div>online store</div>
-              <span key={accentIndex} style={{ color: '#10b981', display: 'block', width: '100%', whiteSpace: 'nowrap', animation: 'fadeInUp 0.25s ease-out forwards', marginTop: '8px' }}>{accents[lang][accentIndex]}</span>
+              <span key={accentIndex} style={{ color: '#10b981', display: 'block', width: '100%', whiteSpace: 'nowrap', animation: 'fadeInUp 0.25s ease-out forwards', marginTop: '4px' }}>{accents[lang][accentIndex]}</span>
             </h1>
 
             <p className="text-base md:text-xl text-on-surface-variant mb-8 leading-relaxed font-medium" style={{ fontSize: '16px', lineHeight: '1.6' }}>
@@ -243,7 +243,7 @@ export function Hero() {
         </div>
 
         {/* Mobile: Phone below text with food-themed background */}
-        <div className="md:hidden flex justify-center mt-8 relative w-full max-w-sm mx-auto">
+        <div className="md:hidden flex justify-center -mt-2 relative w-full max-w-sm mx-auto">
           {/* Food-themed gradient background with feather effect */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-orange-100/40 to-green-100/70 blur-3xl rounded-[80px]" style={{ zIndex: 0, pointerEvents: 'none' }} />
 
