@@ -208,10 +208,10 @@ export function Hero() {
 function AnimatedPhoneShowcase() {
   const [screenIndex, setScreenIndex] = useState(0);
   const screens = [
-    { src: '/IMG_5412.png', alt: 'Menu' },
-    { src: '/IMG_5413.png', alt: 'Order' },
-    { src: '/IMG_5414.png', alt: 'Payment' },
-    { src: '/IMG_5415.png', alt: 'Receipt' }
+    { src: '/IMG_5412.jpeg', alt: 'Menu' },
+    { src: '/IMG_5413.jpeg', alt: 'Order' },
+    { src: '/IMG_5414.jpeg', alt: 'Payment' },
+    { src: '/IMG_5415.jpeg', alt: 'Receipt' }
   ];
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
@@ -222,10 +222,10 @@ function AnimatedPhoneShowcase() {
     return () => clearInterval(interval);
   }, []);
 
-  // Phone size: bigger on desktop, taller on mobile (mobile reduced 12%)
+  // Phone size: full on mobile, slightly smaller on desktop
   const phoneSize = isMobile
-    ? "relative w-72 h-[572px]"
-    : "relative w-96 h-[550px]";
+    ? "relative w-full max-w-sm h-auto"
+    : "relative w-80 h-auto";
 
   return (
     <div className={phoneSize}>
