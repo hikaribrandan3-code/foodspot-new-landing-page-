@@ -253,7 +253,7 @@ function AnimatedPhoneShowcase() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: 0.35 }}
           className="flex-1 overflow-hidden w-full h-full"
         >
           <img
