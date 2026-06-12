@@ -263,6 +263,14 @@ export function UGCMarketing() {
 
 export function VideoShowcase() {
   const videoRef = React.useRef(null);
+  const [isMuted, setIsMuted] = React.useState(true);
+
+  const handleUnmute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = false;
+      setIsMuted(false);
+    }
+  };
 
   React.useEffect(() => {
     const video = videoRef.current;
@@ -306,6 +314,17 @@ export function VideoShowcase() {
               <source src="/demo-video.webm" type="video/webm" />
               <source src="/demo-video.mp4" type="video/mp4" />
             </video>
+            {isMuted && (
+              <button
+                onClick={handleUnmute}
+                className="absolute bottom-4 right-4 bg-white/90 hover:bg-white text-gray-800 rounded-full p-3 shadow-lg transition-all z-20"
+                aria-label="Unmute video"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.383 3.076A1 1 0 0110 4v12a1 1 0 01-1.707.707L4.586 13H2a1 1 0 01-1-1V8a1 1 0 011-1h2.586l3.707-3.707a1 1 0 011.09-.217zM14.657 2.343a1 1 0 011.414 0A6.5 6.5 0 0119 10a6.5 6.5 0 01-2.929 5.243 1 1 0 01-1.414-1.414A4.5 4.5 0 0017 10a4.5 4.5 0 00-2.343-3.929 1 1 0 010-1.414z" />
+                </svg>
+              </button>
+            )}
           </div>
         </motion.div>
       </div>
