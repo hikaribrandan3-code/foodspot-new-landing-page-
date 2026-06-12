@@ -102,7 +102,7 @@ export function SignupForm() {
   };
 
   return (
-    <section className="py-8 px-6 bg-gradient-to-b from-primary to-primary/90 overflow-hidden relative">
+    <section id="signup" className="py-8 px-6 bg-gradient-to-b from-primary to-primary/90 overflow-hidden relative">
       <div className="max-w-2xl mx-auto">
         <div className="text-center mb-6">
           <h2 className="font-display text-2xl md:text-3xl text-white mb-2 drop-shadow-md">

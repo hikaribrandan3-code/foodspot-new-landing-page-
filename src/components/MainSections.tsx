@@ -85,7 +85,7 @@ export function Navbar() {
               border: "2px solid #10b981"
             }}
           >
-            {lang === 'es' ? '90 seg demo' : lang === 'pt' ? 'Demo 90s' : '90s demo'}
+            {lang === 'es' ? 'Probar Demo' : lang === 'pt' ? 'Tentar Demo' : 'Try Demo'}
           </a>
 
           <LanguageSwitcher variant="navbar" />
@@ -154,6 +154,22 @@ export function Navbar() {
               </motion.a>
             );
           })}
+
+          {/* Request Demo Button */}
+          <motion.a
+            href="#signup"
+            onClick={(e) => {
+              e.preventDefault();
+              trackNavigation('signup');
+              document.getElementById('signup')?.scrollIntoView({ behavior: 'smooth' });
+              setMobileMenuOpen(false);
+            }}
+            whileHover={{ x: 4 }}
+            className="flex items-center gap-3 py-4 px-5 rounded-xl transition-all bg-primary text-white font-semibold shadow-lg shadow-primary/30 mt-4"
+          >
+            <Mail className="w-5 h-5 flex-shrink-0" />
+            <span>{lang === 'es' ? 'Solicitar Demo' : lang === 'pt' ? 'Solicitar Demo' : 'Request Demo'}</span>
+          </motion.a>
         </div>
       </motion.div>
     </nav>
