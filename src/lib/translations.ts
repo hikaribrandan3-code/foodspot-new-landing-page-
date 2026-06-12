@@ -9,8 +9,8 @@ const translations = {
     nav_contact: 'Contactos',
 
     // Hero
-    hero_headline: 'Crea tu Tienda Online',
-    hero_accent: 'Como Shopify, pero para Restaurantes',
+    hero_headline: 'Moderniza tu Restaurante',
+    hero_accent: 'Con una tienda online',
     hero_cta: 'Crear mi cuenta gratis',
     hero_trial: '7 días gratis. Sin tarjeta de crédito.',
 
@@ -221,8 +221,8 @@ const translations = {
     nav_contact: 'Contact',
 
     // Hero
-    hero_headline: 'Build Your Online Store',
-    hero_accent: 'Like Shopify, for Restaurants',
+    hero_headline: 'Modernize Your Restaurant',
+    hero_accent: 'With an online store',
     hero_cta: 'Start for free',
     hero_trial: '7 days free. No credit card needed.',
 
@@ -433,8 +433,8 @@ const translations = {
     nav_contact: 'Contato',
 
     // Hero
-    hero_headline: 'Crie sua Loja Online',
-    hero_accent: 'Como Shopify, para Restaurantes',
+    hero_headline: 'Modernize seu Restaurante',
+    hero_accent: 'Com uma loja online',
     hero_cta: 'Criar minha conta grátis',
     hero_trial: '7 dias grátis. Sem cartão de crédito.',
 

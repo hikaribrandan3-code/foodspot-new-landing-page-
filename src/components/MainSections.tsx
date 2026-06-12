@@ -148,87 +148,194 @@ export function Navbar() {
 
 export function Hero() {
   const { lang } = useLanguage();
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
   return (
-    <section className="relative w-full min-h-[85vh] flex flex-col justify-between overflow-hidden px-6 py-16 pb-24">
-      <div className="absolute inset-0 overflow-hidden">
-        {isMobile ? (
-          <picture>
-            <source srcSet="/hero.webp" type="image/webp" />
-            <img
-              src="/hero.jpg"
-              alt="FoodSpot Hero"
-              className="absolute inset-0 w-full h-full object-cover"
-              fetchPriority="high"
-              decoding="async"
-            />
-          </picture>
-        ) : (
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            className="absolute inset-0 w-full h-full object-cover"
-          >
-            <source src="/foodspotherovideo.webm" type="video/webm" />
-            <source src="/foodspotherovideo.mp4" type="video/mp4" />
-          </video>
-        )}
-        <div className="absolute inset-0 bg-black/50 pointer-events-none"></div>
-      </div>
+    <section className="w-full bg-white px-6 py-20 md:py-32">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left: Text content */}
+          <div className="flex flex-col justify-center">
+            <h1 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-4 leading-tight">
+              {t(lang, 'hero_headline')} <span className="text-[#10b981]">{t(lang, 'hero_accent')}</span>
+            </h1>
 
-      <div className="relative z-20 flex-1 flex flex-col items-center justify-center text-center max-w-2xl mx-auto">
-        <h1 className="font-display text-5xl md:text-7xl text-white font-black mb-4 drop-shadow-2xl leading-snug" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.5)' }}>
-          {t(lang, 'hero_headline')} <span className="text-[#10b981]" style={{ textShadow: '0 0 20px rgba(16, 185, 129, 0.6)' }}>{t(lang, 'hero_accent')}</span>
-        </h1>
-      </div>
+            <p className="text-lg md:text-xl text-on-surface-variant mb-8 leading-relaxed font-medium">
+              {lang === 'es'
+                ? 'Tu propia app de marca. Pedidos directos. Y el 100% de cada venta — sin comisiones, nunca.'
+                : lang === 'pt'
+                ? 'Seu próprio app de marca. Pedidos diretos. E 100% de cada venda — sem comissões, nunca.'
+                : 'Your own branded app. Direct orders. And 100% of every sale — no commissions, ever.'}
+            </p>
 
-      <div className="relative z-20 w-full max-w-2xl mx-auto flex justify-center">
-        <div className="flex flex-col gap-4 items-center text-center">
-          <a
-            href="https://foodspotapp.vercel.app/start-trial"
-            onClick={() => trackCtaClick('hero_create_account', 'hero')}
-            className="bg-[#15803d] hover:bg-[#166534] text-white px-10 py-3 rounded-full text-base md:text-lg font-bold shadow-xl flex items-center gap-2 inline-flex transition-all active:scale-95"
-          >
-            {t(lang, 'hero_cta')}
-            <ArrowRight className="w-5 h-5" />
-          </a>
+            <div className="flex flex-col sm:flex-row gap-4 items-start">
+              <a
+                href="https://foodspotapp.vercel.app/start-trial"
+                onClick={() => trackCtaClick('hero_create_account', 'hero')}
+                className="bg-[#10b981] hover:bg-[#059669] text-white px-8 py-3 rounded-full font-bold shadow-lg transition-all active:scale-95 inline-flex items-center gap-2"
+              >
+                {t(lang, 'hero_cta')}
+                <ArrowRight className="w-5 h-5" />
+              </a>
 
-          <p className="text-sm md:text-base text-white font-bold tracking-wider uppercase drop-shadow-md">
-            {t(lang, 'hero_trial')}
-          </p>
+              <a
+                href="#beneficios"
+                className="border-2 border-[#10b981] text-[#10b981] px-8 py-3 rounded-full font-bold hover:bg-emerald-50 transition-all"
+              >
+                {lang === 'es' ? 'Ver cómo funciona' : lang === 'pt' ? 'Ver como funciona' : 'See how it works'}
+              </a>
+            </div>
+
+            <p className="text-sm text-on-surface-variant mt-6 font-medium">
+              ✓ {t(lang, 'hero_trial')}
+            </p>
+          </div>
+
+          {/* Right: Animated phone mockup */}
+          <div className="hidden md:flex justify-center">
+            <AnimatedPhoneShowcase />
+          </div>
+        </div>
+
+        {/* Mobile: Phone below text */}
+        <div className="md:hidden flex justify-center mt-12">
+          <AnimatedPhoneShowcase />
         </div>
       </div>
-
-      <div className="relative z-20 flex justify-center pt-8">
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="text-white/60 hover:text-white transition-colors"
-        >
-          <ArrowDown className="w-6 h-6" />
-        </motion.div>
-      </div>
     </section>
   );
 }
 
-export function HeroSubtitle() {
-  const { lang } = useLanguage();
+function AnimatedPhoneShowcase() {
+  const [screenIndex, setScreenIndex] = useState(0);
+  const screens = ['menu', 'order', 'payment', 'receipt'];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setScreenIndex((prev) => (prev + 1) % screens.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const getScreenContent = () => {
+    const screen = screens[screenIndex];
+
+    switch(screen) {
+      case 'menu':
+        return (
+          <div className="h-full bg-white p-4 flex flex-col">
+            <div className="mb-4">
+              <p className="text-xs text-gray-500 mb-2">Categorías</p>
+              <div className="flex gap-2 overflow-x-auto">
+                <div className="bg-black text-white px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap">Burgers</div>
+                <div className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs whitespace-nowrap">Postres</div>
+                <div className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs whitespace-nowrap">Bebidas</div>
+              </div>
+            </div>
+            <div className="space-y-3 flex-1">
+              <div className="bg-gray-100 rounded-lg p-2 h-16 flex items-end">
+                <div><p className="font-bold text-xs">Classic Burger</p><p className="text-gray-600 text-xs">$8.00</p></div>
+              </div>
+              <div className="bg-gray-100 rounded-lg p-2 h-16 flex items-end">
+                <div><p className="font-bold text-xs">Double Burger</p><p className="text-gray-600 text-xs">$12.00</p></div>
+              </div>
+            </div>
+          </div>
+        );
+      case 'order':
+        return (
+          <div className="h-full bg-white p-4 flex flex-col">
+            <p className="font-bold text-sm mb-4">Tu pedido</p>
+            <div className="space-y-3 flex-1">
+              <div className="bg-yellow-50 rounded p-2">
+                <p className="text-xs font-semibold">Pizza example 3</p>
+                <p className="text-gray-600 text-xs">x1</p>
+                <p className="font-bold text-xs text-[#10b981]">$9.000</p>
+              </div>
+            </div>
+            <div className="border-t pt-3">
+              <p className="text-xs text-gray-600">Subtotal: $9.000</p>
+              <p className="font-bold text-sm mt-2">Total: <span className="text-[#10b981]">$9.000</span></p>
+            </div>
+          </div>
+        );
+      case 'payment':
+        return (
+          <div className="h-full bg-white p-4 flex flex-col">
+            <p className="font-bold text-sm mb-4">Medio de Pago</p>
+            <div className="space-y-2 flex-1">
+              <div className="border rounded p-3 bg-emerald-50 border-[#10b981]">
+                <p className="text-xs font-semibold">Efectivo</p>
+                <p className="text-gray-600 text-xs">Pagar al recibir</p>
+              </div>
+              <div className="border rounded p-3">
+                <p className="text-xs font-semibold">WhatsApp</p>
+                <p className="text-gray-600 text-xs">Confirmar por WhatsApp</p>
+              </div>
+              <div className="border rounded p-3">
+                <p className="text-xs font-semibold">Mercado Pago</p>
+                <p className="text-gray-600 text-xs">Tarjeta de crédito/débito</p>
+              </div>
+            </div>
+          </div>
+        );
+      case 'receipt':
+        return (
+          <div className="h-full bg-white p-4 flex flex-col">
+            <p className="text-xs text-gray-500 mb-2">Foodspot mobile</p>
+            <p className="font-bold text-lg mb-1">Pedido Confirmado</p>
+            <p className="text-xs text-gray-600 mb-4">Esperando que comience el restaurante</p>
+            <div className="space-y-2 flex-1 text-xs">
+              <p><span className="font-semibold">Pedido #32</span> · Jun 12, 2026</p>
+              <div className="border-t pt-2">
+                <p className="text-gray-600">1x Pizza example 3</p>
+                <p className="text-gray-600">$9.000</p>
+              </div>
+              <div className="border-t pt-2 font-bold">
+                <p className="text-[#10b981]">TOTAL: $9.000</p>
+              </div>
+            </div>
+          </div>
+        );
+      default:
+        return null;
+    }
+  };
 
   return (
-    <section className="py-8 px-6 bg-white">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="font-display text-5xl md:text-6xl text-on-surface text-center font-black leading-tight">
-          ¿Qué es una <span className="text-[#15803d]">{lang === 'es' ? 'tienda' : lang === 'pt' ? 'loja' : 'store'}</span> {lang === 'es' ? 'online?' : lang === 'pt' ? 'online?' : 'online?'}
-        </h2>
+    <div className="relative w-64 h-96">
+      {/* Phone frame */}
+      <div className="absolute inset-0 bg-black rounded-3xl shadow-2xl border-8 border-gray-900 overflow-hidden">
+        {/* Notch */}
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-7 bg-black rounded-b-3xl z-10"></div>
+
+        {/* Screen content with fade animation */}
+        <motion.div
+          key={screenIndex}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+          className="w-full h-full"
+        >
+          {getScreenContent()}
+        </motion.div>
       </div>
-    </section>
+
+      {/* Indicator dots */}
+      <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2">
+        {screens.map((_, idx) => (
+          <div
+            key={idx}
+            className={`w-2 h-2 rounded-full transition-all ${
+              idx === screenIndex ? 'bg-[#10b981] w-6' : 'bg-gray-300'
+            }`}
+          />
+        ))}
+      </div>
+    </div>
   );
 }
+
 
 export function SubtitleCards() {
   const { lang } = useLanguage();
