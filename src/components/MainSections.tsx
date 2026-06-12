@@ -298,7 +298,7 @@ function AnimatedPhoneShowcase() {
               <img
                 src={screens[screenIndex].src}
                 alt={screens[screenIndex].alt}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
             </motion.div>
           </div>
@@ -322,7 +322,7 @@ function AnimatedPhoneShowcase() {
               <img
                 src={screens[screenIndex].src}
                 alt={screens[screenIndex].alt}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
             </motion.div>
           </div>
