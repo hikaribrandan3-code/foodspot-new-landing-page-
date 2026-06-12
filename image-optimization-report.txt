@@ -1,7 +1,7 @@
 Image Optimization Report
-Generated: 2026-05-15T14:14:25.749Z
+Generated: 2026-06-12T20:47:44.833Z
 Quality: 70%
 
-Total Original: 5.99 MB
-Total WebP:     313.74 KB
-Total Saved:    5.69 MB (94.9%)
+Total Original: 15.58 MB
+Total WebP:     1.24 MB
+Total Saved:    14.34 MB (92.0%)

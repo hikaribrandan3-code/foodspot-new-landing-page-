@@ -13,7 +13,7 @@ export function Comparison() {
           <picture>
             <source srcSet="/comparison.webp" type="image/webp" />
             <img
-              src="/comparison.png"
+              src="/comparison.webp"
               alt="Comparativa de Plataformas para Restaurantes - FoodSpot vs Pedix"
               loading="lazy"
               width="704"

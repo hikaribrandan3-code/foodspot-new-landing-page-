@@ -12,14 +12,14 @@ export function HowItWorks() {
     {
       title: t(lang, 'step1_title'),
       desc: t(lang, 'step1_desc'),
-      img: "/1menu.png",
+      img: "/1menu.webp",
       imgWebp: "/1menu.webp",
       rotation: "rotate-2",
     },
     {
       title: t(lang, 'step2_title'),
       desc: t(lang, 'step2_desc'),
-      img: "/2brand.png",
+      img: "/2brand.webp",
       imgWebp: "/2brand.webp",
       rotation: "-rotate-2",
       offset: "md:mt-12",
@@ -27,7 +27,7 @@ export function HowItWorks() {
     {
       title: t(lang, 'step3_title'),
       desc: t(lang, 'step3_desc'),
-      img: "/3pago.png",
+      img: "/3pago.webp",
       imgWebp: "/3pago.webp",
       rotation: "rotate-2",
       offset: "md:mt-24",
