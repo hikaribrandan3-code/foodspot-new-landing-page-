@@ -207,7 +207,12 @@ export function Hero() {
 
 function AnimatedPhoneShowcase() {
   const [screenIndex, setScreenIndex] = useState(0);
-  const screens = ['menu', 'order', 'payment', 'receipt'];
+  const screens = [
+    { src: '/IMG_5412.png', alt: 'Menu' },
+    { src: '/IMG_5413.png', alt: 'Order' },
+    { src: '/IMG_5414.png', alt: 'Payment' },
+    { src: '/IMG_5415.png', alt: 'Receipt' }
+  ];
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
   useEffect(() => {
@@ -216,264 +221,6 @@ function AnimatedPhoneShowcase() {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
-
-  const getScreenContent = () => {
-    const screen = screens[screenIndex];
-
-    switch(screen) {
-      case 'menu':
-        return (
-          <div className="h-full bg-white flex flex-col">
-            {/* Logo */}
-            <div className="p-4 text-center border-b">
-              <p className="text-2xl font-bold text-[#8B4513]">SAPID<span className="text-red-700">🍔</span></p>
-              <p className="text-xl font-bold text-red-700">BURGERS</p>
-            </div>
-
-            {/* Categories */}
-            <div className="px-3 py-3 border-b flex gap-2 overflow-x-auto">
-              <div className="bg-black text-white px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap">Burgers</div>
-              <div className="bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-xs whitespace-nowrap">Postres</div>
-              <div className="bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-xs whitespace-nowrap">Pizza</div>
-              <div className="bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-xs whitespace-nowrap">Combos</div>
-            </div>
-
-            {/* Menu items */}
-            <div className="flex-1 overflow-y-auto p-3 space-y-3">
-              <p className="text-xs font-bold text-gray-500 mt-2">Burgers</p>
-              <div className="bg-gray-100 rounded-lg overflow-hidden">
-                <img src="/IMG_5412.png" alt="Sample burger" className="w-full h-24 object-cover" />
-                <div className="p-3">
-                  <p className="font-bold text-sm">Sample burger</p>
-                  <p className="text-gray-600 text-sm">$79.000</p>
-                </div>
-              </div>
-              <div className="bg-gray-100 rounded-lg overflow-hidden">
-                <img src="/IMG_5413.png" alt="Super burger" className="w-full h-24 object-cover" />
-                <div className="p-3">
-                  <p className="font-bold text-sm">Super burger</p>
-                  <p className="text-gray-600 text-sm">$8.000</p>
-                </div>
-              </div>
-              <div className="bg-gray-100 rounded-lg overflow-hidden">
-                <img src="/IMG_5414.png" alt="Stacked burger" className="w-full h-24 object-cover" />
-                <div className="p-3">
-                  <p className="font-bold text-sm">Stacked burger</p>
-                  <p className="text-gray-600 text-sm">$8.000</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Order preview */}
-            <div className="border-t p-3 bg-gray-50">
-              <p className="text-xs text-gray-400 uppercase mb-2">TU PEDIDO</p>
-              <div className="flex justify-between items-center text-sm mb-2">
-                <p>Pizza example 3 <span className="text-gray-600">×1</span></p>
-                <p className="font-bold">$9.000</p>
-              </div>
-              <div className="border-t pt-2 font-bold text-sm flex justify-between">
-                <p>Total</p>
-                <p>$9.000</p>
-              </div>
-            </div>
-          </div>
-        );
-      case 'order':
-        return (
-          <div className="h-full bg-white flex flex-col overflow-y-auto">
-            {/* Header */}
-            <div className="p-4 border-b sticky top-0 bg-white">
-              <p className="font-bold text-xl mb-3">Tu pedido</p>
-              <div className="flex gap-3">
-                <button className="font-bold text-black bg-black text-white px-4 py-2 rounded-full text-xs">Para llevar</button>
-                <button className="text-gray-600 text-xs">Comer en Local</button>
-                <button className="text-gray-600 text-xs">Envios</button>
-              </div>
-            </div>
-
-            {/* Delivery details */}
-            <div className="p-4 space-y-3">
-              <div>
-                <p className="text-xs font-bold text-gray-700 mb-2">NOMBRE</p>
-                <input type="text" value="Hikari Brandan" className="w-full bg-yellow-100 border border-yellow-300 rounded-lg p-3 text-sm font-medium" readOnly />
-              </div>
-              <div>
-                <p className="text-xs font-bold text-gray-700 mb-2">TELÉFONO</p>
-                <input type="text" value="2538939452" className="w-full bg-yellow-100 border border-yellow-300 rounded-lg p-3 text-sm font-medium" readOnly />
-              </div>
-
-              {/* Payment methods */}
-              <div className="mt-4">
-                <p className="font-bold text-lg mb-3">Medio de Pago</p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3 p-3 border-b">
-                    <div className="w-5 h-5 rounded-full bg-black"></div>
-                    <div>
-                      <p className="font-bold text-sm">Efectivo</p>
-                      <p className="text-gray-600 text-xs">Pagar al recibir</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3 p-3 border-b">
-                    <div className="w-5 h-5 rounded-full border-2 border-gray-400"></div>
-                    <div>
-                      <p className="font-bold text-sm">WhatsApp</p>
-                      <p className="text-gray-600 text-xs">Confirmar por WhatsApp</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3 p-3">
-                    <div className="w-5 h-5 rounded-full border-2 border-gray-400"></div>
-                    <div>
-                      <p className="font-bold text-sm">Mercado Pago</p>
-                      <p className="text-gray-600 text-xs">Tarjeta de crédito/débito o billetera</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Button */}
-            <div className="p-4 border-t">
-              <button className="w-full bg-[#10b981] text-white font-bold py-3 rounded-full text-sm">Confirmar Pedido →</button>
-            </div>
-          </div>
-        );
-      case 'payment':
-        return (
-          <div className="h-full bg-white flex flex-col overflow-y-auto">
-            {/* Payment header */}
-            <div className="p-4 border-b sticky top-0 bg-white">
-              <p className="font-bold text-xl">Medio de Pago</p>
-            </div>
-
-            {/* Payment options */}
-            <div className="p-4 space-y-3">
-              <div className="flex items-center gap-3 p-3 border-b">
-                <div className="text-2xl">💵</div>
-                <div className="flex-1">
-                  <p className="font-bold text-sm">Efectivo</p>
-                  <p className="text-gray-600 text-xs">Pagar al recibir</p>
-                </div>
-                <div className="w-6 h-6 rounded-full bg-black"></div>
-              </div>
-              <div className="flex items-center gap-3 p-3 border-b">
-                <div className="text-2xl">💬</div>
-                <div className="flex-1">
-                  <p className="font-bold text-sm">WhatsApp</p>
-                  <p className="text-gray-600 text-xs">Confirmar por WhatsApp</p>
-                </div>
-                <div className="w-6 h-6 rounded-full border-2 border-gray-400"></div>
-              </div>
-              <div className="flex items-center gap-3 p-3">
-                <div className="text-2xl">🏦</div>
-                <div className="flex-1">
-                  <p className="font-bold text-sm">Mercado Pago</p>
-                  <p className="text-gray-600 text-xs">Tarjeta de crédito/débito o billetera</p>
-                </div>
-                <div className="w-6 h-6 rounded-full border-2 border-gray-400"></div>
-              </div>
-            </div>
-
-            {/* Summary */}
-            <div className="border-t p-4">
-              <p className="font-bold text-sm mb-3">Resumen</p>
-              <div className="flex gap-3 mb-4">
-                <img src="/IMG_5415.png" alt="Pizza example 3" className="w-16 h-16 object-cover rounded-lg" />
-                <div className="flex-1">
-                  <p className="font-bold text-sm">Pizza example 3</p>
-                  <p className="text-gray-600 text-xs">$9.000</p>
-                  <div className="flex gap-2 mt-2">
-                    <button className="text-gray-600 text-sm">−</button>
-                    <span className="text-sm">1</span>
-                    <button className="text-gray-600 text-sm">+</button>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between text-gray-600">
-                  <span>Subtotal</span>
-                  <span>$9.000</span>
-                </div>
-                <div className="border-t pt-2 font-bold text-[#10b981] flex justify-between">
-                  <span>Total</span>
-                  <span>$9.000</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Button */}
-            <div className="p-4 border-t">
-              <button className="w-full bg-[#10b981] text-white font-bold py-3 rounded-full text-sm">Confirmar Pedido →</button>
-            </div>
-          </div>
-        );
-      case 'receipt':
-        return (
-          <div className="h-full bg-white flex flex-col overflow-y-auto">
-            {/* Header with wavy separator */}
-            <div className="text-center p-4 border-b">
-              <p className="text-lg font-bold text-red-700 mb-2">SAPID BURGERS</p>
-              <svg className="w-full h-3 mb-3" viewBox="0 0 100 10" preserveAspectRatio="none">
-                <path d="M0,5 Q12.5,0 25,5 T50,5 T75,5 T100,5" stroke="#ccc" fill="none" strokeWidth="1"/>
-              </svg>
-            </div>
-
-            {/* Receipt content */}
-            <div className="flex-1 p-4 space-y-3">
-              <p className="text-xs text-gray-500">Foodspot mobile</p>
-              <div>
-                <p className="text-2xl font-bold text-black mb-1">Pedido Confirmado</p>
-                <p className="text-sm text-gray-600">Esperando que comience el restaurante</p>
-              </div>
-
-              <p className="text-xs text-gray-600">
-                <span className="font-bold">Pedido # 32</span> · Jun 12, 2026 · 1:48 PM
-              </p>
-
-              {/* Divider */}
-              <div className="border-t pt-3">
-                <div className="flex justify-between text-sm mb-2">
-                  <p className="text-gray-600">1x Pizza example 3</p>
-                  <p className="font-bold">$9.000</p>
-                </div>
-              </div>
-
-              {/* Summary lines */}
-              <div className="space-y-1 text-xs">
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Subtotal</span>
-                  <span className="text-gray-600">$9.000</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Impuestos</span>
-                  <span className="text-gray-600">$0</span>
-                </div>
-                <div className="border-t pt-2 font-bold text-base">
-                  <div className="flex justify-between">
-                    <span>TOTAL</span>
-                    <span className="text-[#10b981]">$9.000</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Payment & Status */}
-              <div className="border-t pt-3 text-xs space-y-1">
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Método de Pago</span>
-                  <span className="font-bold">Efectivo</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Estado</span>
-                  <span className="font-bold">Pedido Confirmado</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        );
-      default:
-        return null;
-    }
-  };
 
   // Phone size: bigger on desktop, taller on mobile (mobile reduced 12%)
   const phoneSize = isMobile
@@ -493,16 +240,20 @@ function AnimatedPhoneShowcase() {
         {/* Notch */}
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-40 h-6 bg-black rounded-b-3xl z-10"></div>
 
-        {/* Screen content */}
+        {/* Screen content - just display the image */}
         <motion.div
           key={screenIndex}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex-1 overflow-hidden"
+          className="flex-1 overflow-hidden w-full h-full"
         >
-          {getScreenContent()}
+          <img
+            src={screens[screenIndex].src}
+            alt={screens[screenIndex].alt}
+            className="w-full h-full object-cover"
+          />
         </motion.div>
       </div>
 
