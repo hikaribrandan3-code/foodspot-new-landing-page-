@@ -242,21 +242,21 @@ function AnimatedPhoneShowcase() {
             <div className="flex-1 overflow-y-auto p-3 space-y-3">
               <p className="text-xs font-bold text-gray-500 mt-2">Burgers</p>
               <div className="bg-gray-100 rounded-lg overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300&h=200&fit=crop" alt="Sample burger" className="w-full h-24 object-cover" />
+                <img src="/IMG_5412.png" alt="Sample burger" className="w-full h-24 object-cover" />
                 <div className="p-3">
                   <p className="font-bold text-sm">Sample burger</p>
                   <p className="text-gray-600 text-sm">$79.000</p>
                 </div>
               </div>
               <div className="bg-gray-100 rounded-lg overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1550547990-ee7a67f9a7ce?w=300&h=200&fit=crop" alt="Super burger" className="w-full h-24 object-cover" />
+                <img src="/IMG_5413.png" alt="Super burger" className="w-full h-24 object-cover" />
                 <div className="p-3">
                   <p className="font-bold text-sm">Super burger</p>
                   <p className="text-gray-600 text-sm">$8.000</p>
                 </div>
               </div>
               <div className="bg-gray-100 rounded-lg overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=300&h=200&fit=crop" alt="Stacked burger" className="w-full h-24 object-cover" />
+                <img src="/IMG_5414.png" alt="Stacked burger" className="w-full h-24 object-cover" />
                 <div className="p-3">
                   <p className="font-bold text-sm">Stacked burger</p>
                   <p className="text-gray-600 text-sm">$8.000</p>
@@ -333,7 +333,7 @@ function AnimatedPhoneShowcase() {
 
             {/* Button */}
             <div className="p-4 border-t">
-              <button className="w-full bg-green-500 text-white font-bold py-3 rounded-full text-sm">Confirmar Pedido →</button>
+              <button className="w-full bg-[#10b981] text-white font-bold py-3 rounded-full text-sm">Confirmar Pedido →</button>
             </div>
           </div>
         );
@@ -377,7 +377,7 @@ function AnimatedPhoneShowcase() {
             <div className="border-t p-4">
               <p className="font-bold text-sm mb-3">Resumen</p>
               <div className="flex gap-3 mb-4">
-                <img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=100&h=100&fit=crop" alt="Pizza example 3" className="w-16 h-16 object-cover rounded-lg" />
+                <img src="/IMG_5415.png" alt="Pizza example 3" className="w-16 h-16 object-cover rounded-lg" />
                 <div className="flex-1">
                   <p className="font-bold text-sm">Pizza example 3</p>
                   <p className="text-gray-600 text-xs">$9.000</p>
@@ -394,7 +394,7 @@ function AnimatedPhoneShowcase() {
                   <span>Subtotal</span>
                   <span>$9.000</span>
                 </div>
-                <div className="border-t pt-2 font-bold text-green-600 flex justify-between">
+                <div className="border-t pt-2 font-bold text-[#10b981] flex justify-between">
                   <span>Total</span>
                   <span>$9.000</span>
                 </div>
@@ -403,7 +403,7 @@ function AnimatedPhoneShowcase() {
 
             {/* Button */}
             <div className="p-4 border-t">
-              <button className="w-full bg-green-500 text-white font-bold py-3 rounded-full text-sm">Confirmar Pedido →</button>
+              <button className="w-full bg-[#10b981] text-white font-bold py-3 rounded-full text-sm">Confirmar Pedido →</button>
             </div>
           </div>
         );
@@ -451,7 +451,7 @@ function AnimatedPhoneShowcase() {
                 <div className="border-t pt-2 font-bold text-base">
                   <div className="flex justify-between">
                     <span>TOTAL</span>
-                    <span className="text-green-600">$9.000</span>
+                    <span className="text-[#10b981]">$9.000</span>
                   </div>
                 </div>
               </div>
@@ -512,7 +512,7 @@ function AnimatedPhoneShowcase() {
           <div
             key={idx}
             className={`h-2 rounded-full transition-all ${
-              idx === screenIndex ? 'bg-green-500 w-6' : 'bg-gray-300 w-2'
+              idx === screenIndex ? 'bg-[#10b981] w-6' : 'bg-gray-300 w-2'
             }`}
           />
         ))}
