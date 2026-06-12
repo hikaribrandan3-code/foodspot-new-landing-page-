@@ -245,19 +245,6 @@ export function VideoShowcase() {
     <section className="py-20 px-6 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-12"
-        >
-          <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-4">
-            Miralo en accion
-          </h2>
-          <p className="text-lg text-on-surface-variant max-w-xl">
-            Asi de simple es gestionar tu negocio con FoodSpot.
-          </p>
-        </motion.div>
-        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
