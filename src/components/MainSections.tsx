@@ -159,18 +159,18 @@ export function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setAccentIndex((prev) => (prev + 1) % accents[lang].length);
-    }, 700);
+    }, 850);
     return () => clearInterval(interval);
   }, [lang, accents]);
 
   return (
-    <section className="w-full bg-white px-6 py-20 md:py-32">
+    <section className="w-full bg-white px-6 py-12 md:py-20">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left: Text content */}
           <div className="flex flex-col justify-center">
             <h1 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-4 leading-tight">
-              {lang === 'es' ? 'Crear tu tienda online' : lang === 'pt' ? 'Criar sua loja online' : 'Create your online store'} <motion.span key={accentIndex} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }} style={{ color: '#10b981' }}>{accents[lang][accentIndex]}</motion.span>
+              {lang === 'es' ? 'Crear tu tienda online' : lang === 'pt' ? 'Criar sua loja online' : 'Create your online store'} <motion.span key={accentIndex} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.4 }} style={{ color: '#10b981', display: 'inline-block' }}>{accents[lang][accentIndex]}</motion.span>
             </h1>
 
             <p className="text-lg md:text-xl text-on-surface-variant mb-8 leading-relaxed font-medium">
