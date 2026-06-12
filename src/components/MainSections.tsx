@@ -220,7 +220,7 @@ export function HeroSubtitle() {
   const { lang } = useLanguage();
 
   return (
-    <section className="py-12 px-6 bg-gradient-to-b from-surface to-surface/50">
+    <section className="py-12 px-6 bg-white">
       <div className="max-w-5xl mx-auto">
         <h2 className="font-display text-4xl md:text-5xl text-on-surface text-center font-black">
           {t(lang, 'subtitle_heading')}
