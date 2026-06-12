@@ -181,9 +181,9 @@ export function Hero() {
   const [accentIndex, setAccentIndex] = useState(0);
 
   const accents = {
-    es: ['Shopify para comida', '0% comisión', 'marketing IA', 'sin código'],
+    es: ['Shopify para comida', '0% comisión', 'contenido orgánico', 'sin código'],
     en: ['Shopify for food', '0% commission', 'organic content', 'no code'],
-    pt: ['Shopify para comida', '0% comissão', 'marketing IA', 'sem código']
+    pt: ['Shopify para comida', '0% comissão', 'conteúdo orgánico', 'sem código']
   };
 
   useEffect(() => {
@@ -201,7 +201,7 @@ export function Hero() {
           <div className="flex flex-col justify-center">
             <h1 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-4 leading-tight">
               {lang === 'es' ? 'Crear tu tienda online' : lang === 'pt' ? 'Criar sua loja online' : 'Create your online store'} <span className="inline-block md:block w-max md:w-full" style={{ minWidth: '280px', maxWidth: '100%' }}>
-                <motion.span key={accentIndex} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.25 }} style={{ color: '#10b981', display: 'block', width: '100%' }}>{accents[lang][accentIndex]}</motion.span>
+                <motion.span key={accentIndex} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.25 }} style={{ color: '#10b981', display: 'block', width: '100%', whiteSpace: 'nowrap' }}>{accents[lang][accentIndex]}</motion.span>
               </span>
             </h1>
 
