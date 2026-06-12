@@ -148,6 +148,20 @@ export function Navbar() {
 
 export function Hero() {
   const { lang } = useLanguage();
+  const [accentIndex, setAccentIndex] = useState(0);
+
+  const accents = {
+    es: ['como Shopify pero restaurantes', 'sin comisiones', 'marketing automático', 'sin código'],
+    en: ['like Shopify but for restaurants', 'commission-free', 'automatic marketing', 'no code'],
+    pt: ['como Shopify mas para restaurantes', 'sem comissões', 'marketing automático', 'sem código']
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAccentIndex((prev) => (prev + 1) % accents[lang].length);
+    }, 700);
+    return () => clearInterval(interval);
+  }, [lang, accents]);
 
   return (
     <section className="w-full bg-white px-6 py-20 md:py-32">
@@ -156,7 +170,7 @@ export function Hero() {
           {/* Left: Text content */}
           <div className="flex flex-col justify-center">
             <h1 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-4 leading-tight">
-              {t(lang, 'hero_headline')} <span style={{ color: '#10b981' }}>{t(lang, 'hero_accent')}</span>
+              {lang === 'es' ? 'Crear tu tienda online' : lang === 'pt' ? 'Criar sua loja online' : 'Create your online store'} <motion.span key={accentIndex} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }} style={{ color: '#10b981' }}>{accents[lang][accentIndex]}</motion.span>
             </h1>
 
             <p className="text-lg md:text-xl text-on-surface-variant mb-8 leading-relaxed font-medium">
