@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail, DollarSign, Database, Link as LinkIcon, ShoppingCart, Lightbulb } from "lucide-react";
-import { MockFrame } from 'react-mockframe';
 import { CanvasBackground } from './CanvasBackground';
 import { trackCtaClick, trackNavigation } from '../services/ga4Events';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -260,6 +259,7 @@ function AnimatedPhoneShowcase() {
     { src: '/IMG_5414.jpeg', alt: 'Payment' },
     { src: '/IMG_5415.jpeg', alt: 'Receipt' }
   ];
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -268,28 +268,34 @@ function AnimatedPhoneShowcase() {
     return () => clearInterval(interval);
   }, []);
 
+  // Phone size: full on mobile, much smaller on desktop
+  const phoneSize = isMobile
+    ? "relative w-80 h-[650px]"
+    : "relative w-48 h-[380px]";
+
   return (
-    <motion.div
-      key={screenIndex}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.35 }}
-      className="flex flex-col items-center gap-6"
-    >
-      {/* 3D iPhone Mockup */}
-      <div className="w-64 md:w-80">
-        <MockFrame device="iPhone 15" color="black">
+    <div className={phoneSize}>
+      {/* Phone frame */}
+      <div className="absolute inset-0 bg-black rounded-[48px] shadow-2xl border-[8px] border-gray-900 overflow-hidden flex flex-col">
+        {/* Screen content - just display the image */}
+        <motion.div
+          key={screenIndex}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.35 }}
+          className="flex-1 overflow-hidden w-full h-full"
+        >
           <img
             src={screens[screenIndex].src}
             alt={screens[screenIndex].alt}
             className="w-full h-full object-cover"
           />
-        </MockFrame>
+        </motion.div>
       </div>
 
       {/* Indicator dots */}
-      <div className="flex gap-2">
+      <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 flex gap-2">
         {screens.map((_, idx) => (
           <div
             key={idx}
@@ -299,7 +305,7 @@ function AnimatedPhoneShowcase() {
           />
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 }
 
