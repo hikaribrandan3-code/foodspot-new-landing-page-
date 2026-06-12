@@ -77,7 +77,7 @@ export function Navbar() {
           <a
             href="https://foodspotapp.vercel.app/foodspot"
             onClick={() => trackCtaClick('demo_90_seconds')}
-            className="px-4 md:px-6 py-2 md:py-2.5 rounded-full font-semibold text-xs md:text-sm transition-all active:scale-95"
+            className="px-3 md:px-6 py-1.5 md:py-2.5 rounded-full font-semibold text-xs md:text-sm transition-all active:scale-95"
             style={{
               background: "white",
               color: "#10b981",
@@ -238,7 +238,7 @@ export function Hero() {
         </div>
 
         {/* Mobile: Phone below text */}
-        <div className="md:hidden flex justify-center mt-32">
+        <div className="md:hidden flex justify-center mt-24">
           <AnimatedPhoneShowcase />
         </div>
       </div>
