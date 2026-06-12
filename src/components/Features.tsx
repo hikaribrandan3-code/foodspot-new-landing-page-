@@ -298,8 +298,9 @@ export function VideoShowcase() {
             <video
               ref={videoRef}
               loop
+              muted
               playsInline
-              preload="metadata"
+              preload="auto"
               className="w-full h-full object-cover"
             >
               <source src="/demo-video.webm" type="video/webm" />
