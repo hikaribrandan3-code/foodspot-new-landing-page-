@@ -377,12 +377,12 @@ export function DemoSection() {
         <a
           href="https://foodspotapp.vercel.app/foodspot"
           onClick={() => trackCtaClick('demo_button', 'demo_section')}
-          className="inline-block px-20 py-6 rounded-full font-black text-3xl shadow-2xl transition-all active:scale-95 hover:shadow-2xl"
+          className="inline-block px-10 py-3 rounded-full font-semibold text-lg shadow-lg transition-all active:scale-95 hover:shadow-xl hover:-translate-y-0.5"
           style={{
-            background: "linear-gradient(135deg, #10b981 0%, #059669 100%)",
+            background: "#10b981",
             color: "white",
-            border: "3px solid #059669",
-            boxShadow: "0 0 30px rgba(16, 185, 129, 0.4), 0 8px 24px rgba(0,0,0,0.15)",
+            border: "none",
+            boxShadow: "0 4px 15px rgba(16, 185, 129, 0.3)",
           }}
         >
           {t(lang, 'demo_button')}
