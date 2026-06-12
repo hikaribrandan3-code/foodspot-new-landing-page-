@@ -222,10 +222,10 @@ function AnimatedPhoneShowcase() {
     return () => clearInterval(interval);
   }, []);
 
-  // Phone size: full on mobile, slightly smaller on desktop
+  // Phone size: full on mobile, much smaller on desktop
   const phoneSize = isMobile
     ? "relative w-80 h-[650px]"
-    : "relative w-80 h-[650px]";
+    : "relative w-64 h-[520px]";
 
   return (
     <div className={phoneSize}>
