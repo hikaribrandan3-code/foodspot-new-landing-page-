@@ -367,27 +367,3 @@ export function UGCMarketingCTA() {
   );
 }
 
-export function DemoSection() {
-  const { lang } = useLanguage();
-
-  return (
-    <section className="py-16 px-6 bg-white">
-      <div className="max-w-4xl mx-auto text-center">
-        <p className="text-on-surface-variant mb-8 font-medium text-lg">{t(lang, 'demo_waiting')}</p>
-        <a
-          href="https://foodspotapp.vercel.app/foodspot"
-          onClick={() => trackCtaClick('demo_button', 'demo_section')}
-          className="inline-block px-10 py-3 rounded-full font-semibold text-lg shadow-lg transition-all active:scale-95 hover:shadow-xl hover:-translate-y-0.5"
-          style={{
-            background: "#10b981",
-            color: "white",
-            border: "none",
-            boxShadow: "0 4px 15px rgba(16, 185, 129, 0.3)",
-          }}
-        >
-          {t(lang, 'demo_button')}
-        </a>
-      </div>
-    </section>
-  );
-}
