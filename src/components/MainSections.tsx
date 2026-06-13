@@ -213,7 +213,7 @@ export function Hero() {
                 : 'Your own branded app. Direct orders. And 100% of every sale — no commissions, ever.'}
             </p>
 
-            <div className="hidden md:flex flex-col gap-3 items-center md:items-start">
+            <div className="flex flex-col gap-3 items-center md:items-start">
               <a
                 href="https://foodspotapp.vercel.app/start-trial"
                 onClick={() => trackCtaClick('hero_create_account', 'hero')}
@@ -242,56 +242,8 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Mobile: Phone below text with decorative elements */}
+        {/* Mobile: Phone below text */}
         <div className="md:hidden flex justify-center mt-6 relative w-full max-w-sm mx-auto" style={{ zIndex: 10 }}>
-          {/* Green leaf - top left */}
-          <svg className="absolute" width="50" height="50" viewBox="0 0 100 100" style={{ top: '-20px', left: '-15px', zIndex: 5, opacity: 0.7 }}>
-            <ellipse cx="50" cy="50" rx="35" ry="45" fill="#10b981" transform="rotate(-35 50 50)" />
-            <path d="M50 10 Q50 50 50 90" stroke="#059669" strokeWidth="2" fill="none" />
-          </svg>
-
-          {/* Cucumber - top right */}
-          <svg className="absolute" width="45" height="60" viewBox="0 0 100 100" style={{ top: '-10px', right: '-10px', zIndex: 5, opacity: 0.7 }}>
-            <rect x="30" y="15" width="40" height="70" rx="20" fill="#10b981" />
-            <circle cx="40" cy="30" r="4" fill="#059669" />
-            <circle cx="60" cy="35" r="4" fill="#059669" />
-            <circle cx="45" cy="50" r="4" fill="#059669" />
-            <circle cx="55" cy="60" r="4" fill="#059669" />
-            <circle cx="40" cy="75" r="4" fill="#059669" />
-          </svg>
-
-          {/* Carrot - bottom left */}
-          <svg className="absolute" width="50" height="60" viewBox="0 0 100 100" style={{ bottom: '-15px', left: '-20px', zIndex: 5, opacity: 0.65 }}>
-            <path d="M50 80 L30 20 L70 20 Z" fill="#10b981" />
-            <line x1="35" y1="15" x2="30" y2="5" stroke="#059669" strokeWidth="2" />
-            <line x1="50" y1="15" x2="50" y2="0" stroke="#059669" strokeWidth="2" />
-            <line x1="65" y1="15" x2="70" y2="5" stroke="#059669" strokeWidth="2" />
-          </svg>
-
-          {/* Fork - bottom right */}
-          <svg className="absolute" width="45" height="55" viewBox="0 0 100 100" style={{ bottom: '-20px', right: '-15px', zIndex: 5, opacity: 0.7 }}>
-            <rect x="45" y="20" width="10" height="50" fill="#10b981" />
-            <circle cx="35" cy="75" r="6" fill="#10b981" />
-            <circle cx="50" cy="75" r="6" fill="#10b981" />
-            <circle cx="65" cy="75" r="6" fill="#10b981" />
-            <line x1="35" y1="70" x2="35" y2="35" stroke="#10b981" strokeWidth="5" />
-            <line x1="50" y1="70" x2="50" y2="35" stroke="#10b981" strokeWidth="5" />
-            <line x1="65" y1="70" x2="65" y2="35" stroke="#10b981" strokeWidth="5" />
-          </svg>
-
-          {/* Bell pepper - left side middle */}
-          <svg className="absolute" width="48" height="55" viewBox="0 0 100 100" style={{ left: '-22px', top: '40%', zIndex: 5, opacity: 0.65 }}>
-            <ellipse cx="50" cy="55" rx="35" ry="38" fill="#10b981" />
-            <path d="M50 10 Q45 18 50 22 Q55 18 50 10" fill="#059669" />
-          </svg>
-
-          {/* Tomato - right side middle */}
-          <svg className="absolute" width="50" height="50" viewBox="0 0 100 100" style={{ right: '-20px', top: '35%', zIndex: 5, opacity: 0.7 }}>
-            <circle cx="50" cy="55" r="35" fill="#059669" opacity="0.8" />
-            <circle cx="50" cy="60" r="32" fill="#10b981" />
-            <ellipse cx="50" cy="25" rx="12" ry="15" fill="#059669" />
-          </svg>
-
           <AnimatedPhoneShowcase />
         </div>
       </div>
