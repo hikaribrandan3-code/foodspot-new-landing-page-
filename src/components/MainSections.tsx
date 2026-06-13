@@ -213,25 +213,7 @@ export function Hero() {
                 : 'Your own branded app. Direct orders. And 100% of every sale — no commissions, ever.'}
             </p>
 
-            <div className="flex flex-col gap-3 items-center md:items-start">
-              <a
-                href="https://foodspotapp.vercel.app/start-trial"
-                onClick={() => trackCtaClick('hero_create_account', 'hero')}
-                className="bg-[#10b981] hover:bg-[#059669] text-white px-6 py-2 rounded-full font-semibold text-sm shadow-lg transition-all active:scale-95 inline-flex items-center justify-center gap-2"
-              >
-                {t(lang, 'hero_cta')}
-                <ArrowRight className="w-4 h-4" />
-              </a>
-
-              <a
-                href="#beneficios"
-                className="border-2 border-[#10b981] text-[#10b981] px-6 py-2 rounded-full font-semibold text-sm hover:bg-emerald-50 transition-all inline-flex items-center justify-center"
-              >
-                {lang === 'es' ? 'Ver cómo funciona' : lang === 'pt' ? 'Ver como funciona' : 'See how it works'}
-              </a>
-            </div>
-
-            <p className="text-sm text-on-surface-variant mt-6 font-medium">
+            <p className="text-sm text-on-surface-variant mt-4 font-medium">
               ✓ {t(lang, 'hero_trial')}
             </p>
           </div>
@@ -243,7 +225,7 @@ export function Hero() {
         </div>
 
         {/* Mobile: Phone below text with decorative elements */}
-        <div className="md:hidden flex justify-center -mt-2 relative w-full max-w-sm mx-auto" style={{ zIndex: 10 }}>
+        <div className="md:hidden flex justify-center mt-6 relative w-full max-w-sm mx-auto" style={{ zIndex: 10 }}>
           {/* Green leaf - top left */}
           <svg className="absolute" width="50" height="50" viewBox="0 0 100 100" style={{ top: '-20px', left: '-15px', zIndex: 5, opacity: 0.7 }}>
             <ellipse cx="50" cy="50" rx="35" ry="45" fill="#10b981" transform="rotate(-35 50 50)" />
