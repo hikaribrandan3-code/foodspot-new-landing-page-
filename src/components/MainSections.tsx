@@ -213,6 +213,24 @@ export function Hero() {
                 : 'Your own branded app. Direct orders. And 100% of every sale — no commissions, ever.'}
             </p>
 
+            <div className="hidden md:flex flex-col gap-3 items-center md:items-start">
+              <a
+                href="https://foodspotapp.vercel.app/start-trial"
+                onClick={() => trackCtaClick('hero_create_account', 'hero')}
+                className="bg-[#10b981] hover:bg-[#059669] text-white px-6 py-2 rounded-full font-semibold text-sm shadow-lg transition-all active:scale-95 inline-flex items-center justify-center gap-2"
+              >
+                {t(lang, 'hero_cta')}
+                <ArrowRight className="w-4 h-4" />
+              </a>
+
+              <a
+                href="#beneficios"
+                className="border-2 border-[#10b981] text-[#10b981] px-6 py-2 rounded-full font-semibold text-sm hover:bg-emerald-50 transition-all inline-flex items-center justify-center"
+              >
+                {lang === 'es' ? 'Ver cómo funciona' : lang === 'pt' ? 'Ver como funciona' : 'See how it works'}
+              </a>
+            </div>
+
             <p className="text-sm text-on-surface-variant mt-4 font-medium">
               ✓ {t(lang, 'hero_trial')}
             </p>
