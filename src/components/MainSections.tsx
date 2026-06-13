@@ -381,9 +381,14 @@ export function TheIdea() {
   const { lang } = useLanguage();
 
   return (
-    <section className="py-12 px-6 bg-primary">
+    <section className="py-10 px-6 bg-primary">
       <div className="max-w-3xl mx-auto text-center">
-        <Lightbulb className="w-8 h-8 text-white/80 mx-auto mb-4" />
+        <motion.div
+          animate={{ y: [0, -8, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <Lightbulb className="w-8 h-8 text-white/80 mx-auto mb-4" />
+        </motion.div>
         <h2 className="font-display text-4xl md:text-5xl text-white font-black mb-6">
           {t(lang, 'idea_title')}
         </h2>
@@ -437,7 +442,7 @@ export function MiddleCTA() {
   const { lang } = useLanguage();
 
   return (
-    <section className="py-20 px-6 bg-primary overflow-hidden relative">
+    <section className="py-16 px-6 bg-primary overflow-hidden relative">
       <div className="absolute inset-0 opacity-20">
         <CanvasBackground color="#ffffff" variant="blobs" />
       </div>

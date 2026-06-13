@@ -89,8 +89,8 @@ export function Features() {
   const { lang } = useLanguage();
 
   return (
-    <section className="py-16 md:py-20 px-6 max-w-7xl mx-auto">
-      <div className="mb-8">
+    <section className="py-12 md:py-20 px-6 max-w-7xl mx-auto">
+      <div className="mb-6">
         <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-4">{t(lang, 'ai_heading')}</h2>
         <p className="text-lg text-on-surface-variant max-w-2xl">
           {t(lang, 'ai_desc')}
