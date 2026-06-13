@@ -199,9 +199,9 @@ export function Hero() {
         <div className="md:grid md:grid-cols-2 md:gap-12 md:items-center flex flex-col items-center text-center md:text-left md:items-center">
           {/* Left: Text content */}
           <div className="flex flex-col justify-center md:text-left">
-            <h1 className={`font-display ${lang === 'en' ? 'text-6xl' : 'text-5xl'} md:text-6xl text-on-surface font-black mb-6 leading-none`}>
-              <div>{lang === 'es' ? 'Crear tu tienda' : lang === 'pt' ? 'Criar sua loja' : 'Create your'}</div>
-              <div>online store</div>
+            <h1 className="font-display text-5xl md:text-6xl text-on-surface font-black mb-6 leading-none">
+              <div style={lang === 'en' ? { fontSize: '3.75rem' } : {}}>{lang === 'es' ? 'Crear tu tienda' : lang === 'pt' ? 'Criar sua loja' : 'Create your'}</div>
+              <div style={lang === 'en' ? { fontSize: '3.75rem' } : {}}>online store</div>
               <span key={accentIndex} style={{ color: '#10b981', display: 'block', width: '100%', whiteSpace: 'nowrap', animation: 'fadeInUp 0.25s ease-out forwards', marginTop: '4px' }}>{accents[lang][accentIndex]}</span>
             </h1>
 
