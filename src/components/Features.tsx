@@ -165,21 +165,6 @@ export function UGCMarketing() {
           </div>
         </div>
 
-        <div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="flex justify-center"
-        >
-          <img
-            src="/ugc-benefits.webp"
-            alt="UGC Benefits"
-            loading="lazy"
-            width={572}
-            height={1024}
-            className="w-full max-w-xs rounded-3xl shadow-2xl"
-          />
-        </div>
       </div>
     </section>
   );

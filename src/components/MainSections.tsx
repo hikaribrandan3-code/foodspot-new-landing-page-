@@ -196,7 +196,7 @@ export function Hero() {
   return (
     <section className="w-full bg-white px-6 py-12 md:py-20">
       <div className="max-w-7xl mx-auto">
-        <div className="md:grid md:grid-cols-2 md:gap-12 md:items-center flex flex-col items-center text-center md:text-left md:items-center">
+        <div className="md:grid md:grid-cols-2 md:gap-12 md:items-center flex flex-col items-start md:text-left">
           {/* Left: Text content */}
           <div className="flex flex-col justify-center md:text-left">
             <h1 className="font-display text-5xl md:text-6xl text-on-surface font-black mb-6 leading-none">
@@ -437,7 +437,7 @@ export function MiddleCTA() {
   const { lang } = useLanguage();
 
   return (
-    <section className="py-16 px-6 bg-primary overflow-hidden relative">
+    <section className="py-8 px-6 bg-primary overflow-hidden relative">
       <div className="absolute inset-0 opacity-20">
         <CanvasBackground color="#ffffff" variant="blobs" />
       </div>
