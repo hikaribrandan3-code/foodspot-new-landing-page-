@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { motion } from "motion";
 import { ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail, DollarSign, Database, Link as LinkIcon, ShoppingCart, Lightbulb } from "lucide-react";
 import { CanvasBackground } from './CanvasBackground';
 import { trackCtaClick, trackNavigation } from '../services/ga4Events';
@@ -384,12 +383,7 @@ export function TheIdea() {
   return (
     <section className="py-10 px-6 bg-primary">
       <div className="max-w-3xl mx-auto text-center">
-        <motion.div
-          animate={{ y: [0, -8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <Lightbulb className="w-8 h-8 text-white/80 mx-auto mb-4" />
-        </motion.div>
+        <Lightbulb className="w-8 h-8 text-white/80 mx-auto mb-4" />
         <h2 className="font-display text-4xl md:text-5xl text-white font-black mb-6">
           {t(lang, 'idea_title')}
         </h2>
