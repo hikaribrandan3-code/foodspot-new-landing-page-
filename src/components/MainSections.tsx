@@ -82,7 +82,7 @@ export function Navbar() {
           <a
             href="https://foodspotapp.vercel.app/foodspot"
             onClick={() => trackCtaClick('demo_90_seconds')}
-            className="px-3 sm:px-4 md:px-6 py-1 sm:py-1.5 md:py-2 rounded-full font-semibold text-[11px] sm:text-xs md:text-sm transition-all active:scale-95 whitespace-nowrap"
+            className="px-3 sm:px-4 md:px-6 py-1 sm:py-1.5 md:py-2 rounded-full font-semibold text-[11px] sm:text-xs md:text-sm transition-all active:scale-95 whitespace-nowrap hidden sm:inline-flex"
             style={{
               background: "white",
               color: "#047857",
@@ -92,6 +92,7 @@ export function Navbar() {
             {lang === 'es' ? 'Probar Demo' : lang === 'pt' ? 'Tentar Demo' : 'Try Demo'}
           </a>
 
+          {/* Language switcher - show on all screen sizes in navbar */}
           <LanguageSwitcher variant="navbar" />
 
           {/* Mobile Hamburger */}
@@ -123,10 +124,11 @@ export function Navbar() {
 
       {/* Mobile Menu Slide from Right */}
       <div
-        className="fixed top-20 right-0 h-screen w-72 bg-white md:hidden z-40 border-l border-gray-200 overflow-y-auto"
+        className="fixed top-16 right-0 h-screen bg-white md:hidden z-40 border-l border-gray-200 overflow-y-auto w-[85%] sm:w-72"
         style={{
           transform: mobileMenuOpen ? 'translateX(0)' : 'translateX(100%)',
           transition: 'transform 0.3s ease-in-out',
+          maxWidth: '320px'
         }}
       >
         <div className="px-6 py-8 space-y-2">

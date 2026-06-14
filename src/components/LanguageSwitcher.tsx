@@ -34,10 +34,10 @@ export function LanguageSwitcher({ variant = 'floating' }: Props) {
         <button
           onClick={() => setOpen(!open)}
           aria-label="Change language"
-          className="hidden md:flex text-on-surface-variant hover:text-primary transition-colors items-center gap-1"
+          className="flex text-on-surface-variant hover:text-primary transition-colors items-center gap-1"
         >
           <Globe className="w-5 h-5" />
-          <span className="text-xs font-semibold uppercase">{lang}</span>
+          <span className="text-xs font-semibold uppercase hidden sm:inline">{lang}</span>
         </button>
         {open && (
           <div className="absolute right-0 top-8 bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden z-50 min-w-[80px]">
