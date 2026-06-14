@@ -143,14 +143,17 @@ export function UGCMarketing() {
 
       <div className="flex flex-col items-center gap-8">
         <div className="flex justify-center">
-          <div className="relative w-72 h-[550px]">
+          <div className="relative w-72 h-[550px] group">
             <video
               ref={ugcVideoRef}
               muted
               loop
               playsInline
-              preload="none"
-              className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl border-8 border-gray-100"
+              preload="metadata"
+              poster="/ugc-poster.webp"
+              className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl border-8 border-gray-100 group-hover:opacity-100 transition-opacity duration-500"
+              onPlay={(e) => e.currentTarget.style.opacity = '1'}
+              onLoadStart={(e) => e.currentTarget.style.opacity = '0.95'}
             >
               <source src="/ugc.webm" type="video/webm" />
               <source src="/ugc.mp4" type="video/mp4" />
