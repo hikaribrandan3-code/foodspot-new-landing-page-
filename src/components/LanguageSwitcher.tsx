@@ -69,7 +69,17 @@ export function LanguageSwitcher({ variant = 'floating' }: Props) {
   if (!isMobile) return null;
 
   return (
-    <div ref={ref} className="fixed bottom-6 right-4 z-50 flex flex-col items-end gap-2">
+    <div
+      ref={ref}
+      className="flex flex-col items-end gap-2"
+      style={{
+        position: 'fixed',
+        right: '8px',
+        bottom: '24px',
+        zIndex: 9999,
+        pointerEvents: 'auto',
+      }}
+    >
       {open && (
         <div className="flex flex-col items-center gap-1 bg-white border border-gray-200 rounded-2xl shadow-xl px-2 py-2">
           {LANGS.map(({ code, label }) => (
