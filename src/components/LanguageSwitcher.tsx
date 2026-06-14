@@ -30,14 +30,14 @@ export function LanguageSwitcher({ variant = 'floating' }: Props) {
 
   if (variant === 'navbar') {
     return (
-      <div ref={ref} className="relative">
+      <div ref={ref} className="relative hidden md:block">
         <button
           onClick={() => setOpen(!open)}
           aria-label="Change language"
           className="flex text-on-surface-variant hover:text-primary transition-colors items-center gap-1"
         >
           <Globe className="w-5 h-5" />
-          <span className="text-xs font-semibold uppercase hidden sm:inline">{lang}</span>
+          <span className="text-xs font-semibold uppercase">{lang}</span>
         </button>
         {open && (
           <div className="absolute right-0 top-8 bg-white border border-gray-200 rounded-xl shadow-lg overflow-hidden z-50 min-w-[80px]">
