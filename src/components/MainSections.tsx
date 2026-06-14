@@ -195,7 +195,7 @@ export function Hero() {
   }, [lang, accents]);
 
   return (
-    <section className="w-full bg-white px-6 py-12 md:pt-[15px] md:pb-20">
+    <section className="w-full bg-white px-6 py-8 md:pt-[15px] md:pb-12">
       <div className="max-w-7xl mx-auto">
         <div className="md:grid md:grid-cols-2 md:gap-12 md:items-center flex flex-col items-center text-center md:text-left md:items-center">
           {/* Left: Text content */}
@@ -345,7 +345,7 @@ export function SubtitleCards() {
   const { lang } = useLanguage();
 
   return (
-    <section className="py-16 md:py-20 px-6 bg-gradient-to-b from-surface/50 to-surface/25">
+    <section className="py-10 md:py-12 px-6 bg-gradient-to-b from-surface/50 to-surface/25">
       <div className="max-w-5xl mx-auto">
         <h2 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-8 md:mb-12 leading-tight text-center">
           {lang === 'es' ? '¿Qué es una tienda online?' : lang === 'pt' ? 'O que é uma loja online?' : 'What is an online store?'}
@@ -380,13 +380,13 @@ export function TheIdea() {
   const { lang } = useLanguage();
 
   return (
-    <section className="py-10 px-6 bg-primary">
+    <section className="py-6 md:py-8 px-6 bg-primary">
       <div className="max-w-3xl mx-auto text-center">
-        <Lightbulb className="w-8 h-8 text-white/80 mx-auto mb-4" />
-        <h2 className="font-display text-4xl md:text-5xl text-white font-black mb-6">
+        <Lightbulb className="w-8 h-8 text-white/80 mx-auto mb-2" />
+        <h2 className="font-display text-4xl md:text-5xl text-white font-black mb-3">
           {t(lang, 'idea_title')}
         </h2>
-        <p className="text-base md:text-lg text-white/95 leading-relaxed font-semibold mb-8">
+        <p className="text-base md:text-lg text-white/95 leading-relaxed font-semibold mb-4">
           {t(lang, 'idea_body_1')} <span className="font-black">{t(lang, 'idea_body_accent')}</span> {t(lang, 'idea_body_2')} <span className="font-black">{t(lang, 'idea_body_brand')}</span>{t(lang, 'idea_body_3')}
         </p>
         <div
