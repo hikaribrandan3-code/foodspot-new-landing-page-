@@ -16,6 +16,7 @@ interface Props {
 export function LanguageSwitcher({ variant = 'floating' }: Props) {
   const { lang, setLang } = useLanguage();
   const [open, setOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -26,6 +27,14 @@ export function LanguageSwitcher({ variant = 'floating' }: Props) {
     }
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 768);
+    }
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   if (variant === 'navbar') {
@@ -56,9 +65,11 @@ export function LanguageSwitcher({ variant = 'floating' }: Props) {
     );
   }
 
-  // Floating variant (mobile)
+  // Floating variant (mobile) - only show when isMobile is true
+  if (!isMobile) return null;
+
   return (
-    <div ref={ref} className="fixed bottom-6 right-4 z-50 md:hidden flex flex-col items-end gap-2">
+    <div ref={ref} className="fixed bottom-6 right-4 z-50 flex flex-col items-end gap-2">
       {open && (
         <div className="flex flex-col items-center gap-1 bg-white border border-gray-200 rounded-2xl shadow-xl px-2 py-2">
           {LANGS.map(({ code, label }) => (
