@@ -194,18 +194,18 @@ export function Hero() {
   }, [lang, accents]);
 
   return (
-    <section className="w-full bg-white px-6 py-12 md:pt-[15px] md:pb-20">
+    <section className="w-full bg-white px-6 py-6 md:pt-[15px] md:pb-20">
       <div className="max-w-7xl mx-auto">
         <div className="md:grid md:grid-cols-2 md:gap-12 md:items-center flex flex-col items-center text-center md:text-left md:items-center">
           {/* Left: Text content */}
           <div className="flex flex-col justify-center md:text-left">
-            <h1 className="font-display text-5xl md:text-6xl text-on-surface font-black mb-6 leading-none">
+            <h1 className="font-display text-5xl md:text-6xl text-on-surface font-black mb-2 md:mb-6 leading-none">
               <div style={lang === 'en' ? { fontSize: '3.21rem' } : {}}>{lang === 'es' ? 'Crear tu tienda' : lang === 'pt' ? 'Criar sua loja' : 'Create your'}</div>
               <div style={lang === 'en' ? { fontSize: '3.21rem' } : {}}>online store</div>
               <span key={accentIndex} style={{ color: '#047857', display: 'block', width: '100%', whiteSpace: 'nowrap', animation: 'fadeInUp 0.25s ease-out forwards', marginTop: '4px' }}>{accents[lang][accentIndex]}</span>
             </h1>
 
-            <p className="text-base md:text-xl text-on-surface-variant mb-8 leading-relaxed font-medium" style={{ fontSize: '16px', lineHeight: '1.6' }}>
+            <p className="text-base md:text-xl text-on-surface-variant mb-4 md:mb-8 leading-relaxed font-medium" style={{ fontSize: '16px', lineHeight: '1.6' }}>
               {lang === 'es'
                 ? 'Tu propia app de marca. Pedidos directos. Y el 100% de cada venta — sin comisiones, nunca.'
                 : lang === 'pt'
