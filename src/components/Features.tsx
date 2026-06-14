@@ -85,7 +85,7 @@ export function HowItWorks() {
         <div className="text-center mt-16">
           <a
             href="https://foodspotapp.vercel.app/start-trial"
-            className="bg-[#10b981] hover:bg-[#059669] text-white px-8 py-3 rounded-full font-semibold text-base shadow-lg transition-all active:scale-95 inline-flex items-center justify-center gap-2"
+            className="bg-[#047857] hover:bg-[#059669] text-white px-8 py-3 rounded-full font-semibold text-base shadow-lg transition-all active:scale-95 inline-flex items-center justify-center gap-2"
           >
             {lang === 'es' ? 'Prueba la demo ahora' : lang === 'pt' ? 'Experimente a demo agora' : 'See it in action'}
           </a>

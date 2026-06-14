@@ -98,3 +98,16 @@ export const trackNavigation = (destination: string) => {
     event_category: 'engagement'
   });
 };
+
+// Meta Pixel conversion tracking
+export const trackMetaLead = () => {
+  if (typeof window !== 'undefined' && window.fbq) {
+    window.fbq('track', 'Lead');
+  }
+};
+
+declare global {
+  interface Window {
+    fbq?: (command: string, event: string, data?: Record<string, any>) => void;
+  }
+}

@@ -81,7 +81,7 @@ export function AISection() {
             <div className="flex justify-end">
               <div
                 key={questionIndex}
-                className="bg-[#10b981] text-white rounded-2xl px-4 py-3 max-w-xs md:max-w-md"
+                className="bg-[#047857] text-white rounded-2xl px-4 py-3 max-w-xs md:max-w-md"
                 style={{ animation: 'fadeInUp 0.35s ease-out forwards' }}
               >
                 <p className="text-sm md:text-base">{questions[lang][questionIndex]}</p>

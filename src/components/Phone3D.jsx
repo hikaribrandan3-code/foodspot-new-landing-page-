@@ -32,7 +32,7 @@ export function Phone3D() {
     const screenGeometry = new THREE.PlaneGeometry(0.9, 1.7);
     const screenMaterial = new THREE.MeshStandardMaterial({
       color: 0x1a1a1a,
-      emissive: 0x10b981,
+      emissive: 0x047857,
       emissiveIntensity: 0.2
     });
     const screen = new THREE.Mesh(screenGeometry, screenMaterial);
@@ -55,7 +55,7 @@ export function Phone3D() {
     directionalLight.position.set(5, 5, 5);
     scene.add(directionalLight);
 
-    const pointLight = new THREE.PointLight(0x10b981, 0.5);
+    const pointLight = new THREE.PointLight(0x047857, 0.5);
     pointLight.position.set(-5, 3, 5);
     scene.add(pointLight);
 

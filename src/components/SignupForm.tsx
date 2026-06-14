@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Mail, Check, AlertCircle } from 'lucide-react';
-import { trackFormSubmit } from '../services/ga4Events';
+import { trackFormSubmit, trackMetaLead } from '../services/ga4Events';
 import { useLanguage } from '../contexts/LanguageContext';
 import { t } from '../lib/translations';
 
@@ -91,6 +91,7 @@ export function SignupForm() {
 
       setStatus('success');
       trackFormSubmit('demo_request_form');
+      trackMetaLead();
       setFormData({ email: '', first_name: '', last_name: '', company: '', business_type: '' });
 
       // Reset after 5 seconds

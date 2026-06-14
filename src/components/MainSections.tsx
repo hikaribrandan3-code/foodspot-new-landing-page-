@@ -46,7 +46,7 @@ export function Navbar() {
     <nav className="bg-surface/90 border-b border-outline-variant shadow-sm sticky top-0 backdrop-blur-md z-50">
       <div className="flex justify-between items-center w-full px-6 max-w-7xl mx-auto h-16">
         <div className="flex items-center gap-2">
-          <svg fill="#10b981" width="24px" height="24px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" style={{ color: '#10b981' }}>
+          <svg fill="#047857" width="24px" height="24px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" style={{ color: '#047857' }}>
             <path d="M199.99975,220H160.73437c5.17652-4.97607,10.74146-10.70947,16.321-17.126,28.09472-32.30859,42.94433-66.499,42.94433-98.874a92,92,0,0,0-184,0c0,50.01221,34.11963,91.94238,59.18408,116H55.99975a12,12,0,0,0,0,24h144a12,12,0,0,0,0-24Zm-140-116a68,68,0,0,1,136,0c0,33.31055-19.95605,63.36621-36.69824,82.71387a249.0586,249.0586,0,0,1-31.30176,30.17138A249.0053,249.0053,0,0,1,96.698,186.71387C79.95581,167.36621,59.99975,137.31055,59.99975,104Zm68,44a44,44,0,1,0-44-44A44.04978,44.04978,0,0,0,127.99975,148Zm0-64a20,20,0,1,1-20,20A20.02229,20.02229,0,0,1,127.99975,84Z"/>
           </svg>
           <div className="text-xl font-display font-bold text-primary">
@@ -85,8 +85,8 @@ export function Navbar() {
             className="px-3 sm:px-4 md:px-6 py-1 sm:py-1.5 md:py-2 rounded-full font-semibold text-[11px] sm:text-xs md:text-sm transition-all active:scale-95 whitespace-nowrap"
             style={{
               background: "white",
-              color: "#10b981",
-              border: "2px solid #10b981"
+              color: "#047857",
+              border: "2px solid #047857"
             }}
           >
             {lang === 'es' ? 'Probar Demo' : lang === 'pt' ? 'Tentar Demo' : 'Try Demo'}
@@ -202,7 +202,7 @@ export function Hero() {
             <h1 className="font-display text-5xl md:text-6xl text-on-surface font-black mb-6 leading-none">
               <div style={lang === 'en' ? { fontSize: '3.21rem' } : {}}>{lang === 'es' ? 'Crear tu tienda' : lang === 'pt' ? 'Criar sua loja' : 'Create your'}</div>
               <div style={lang === 'en' ? { fontSize: '3.21rem' } : {}}>online store</div>
-              <span key={accentIndex} style={{ color: '#10b981', display: 'block', width: '100%', whiteSpace: 'nowrap', animation: 'fadeInUp 0.25s ease-out forwards', marginTop: '4px' }}>{accents[lang][accentIndex]}</span>
+              <span key={accentIndex} style={{ color: '#047857', display: 'block', width: '100%', whiteSpace: 'nowrap', animation: 'fadeInUp 0.25s ease-out forwards', marginTop: '4px' }}>{accents[lang][accentIndex]}</span>
             </h1>
 
             <p className="text-base md:text-xl text-on-surface-variant mb-8 leading-relaxed font-medium" style={{ fontSize: '16px', lineHeight: '1.6' }}>
@@ -217,7 +217,7 @@ export function Hero() {
               <a
                 href="https://foodspotapp.vercel.app/start-trial"
                 onClick={() => trackCtaClick('hero_create_account', 'hero')}
-                className="bg-[#10b981] hover:bg-[#059669] text-white px-6 py-2 rounded-full font-semibold text-sm shadow-lg transition-all active:scale-95 inline-flex items-center justify-center gap-2"
+                className="bg-[#047857] hover:bg-[#059669] text-white px-6 py-2 rounded-full font-semibold text-sm shadow-lg transition-all active:scale-95 inline-flex items-center justify-center gap-2"
               >
                 {t(lang, 'hero_cta')}
                 <ArrowRight className="w-4 h-4" />
@@ -225,7 +225,7 @@ export function Hero() {
 
               <a
                 href="#beneficios"
-                className="border-2 border-[#10b981] text-[#10b981] px-6 py-2 rounded-full font-semibold text-sm hover:bg-emerald-50 transition-all inline-flex items-center justify-center"
+                className="border-2 border-[#047857] text-[#047857] px-6 py-2 rounded-full font-semibold text-sm hover:bg-emerald-50 transition-all inline-flex items-center justify-center"
               >
                 {lang === 'es' ? 'Ver cómo funciona' : lang === 'pt' ? 'Ver como funciona' : 'See how it works'}
               </a>
@@ -333,7 +333,7 @@ function AnimatedPhoneShowcase() {
           <div
             key={idx}
             className={`h-2 rounded-full transition-all ${
-              idx === screenIndex ? 'bg-[#10b981] w-6' : 'bg-gray-300 w-2'
+              idx === screenIndex ? 'bg-[#047857] w-6' : 'bg-gray-300 w-2'
             }`}
           />
         ))}
