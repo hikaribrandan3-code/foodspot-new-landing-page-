@@ -11,7 +11,7 @@ const translations = {
     // Hero
     hero_headline: 'Crea tu',
     hero_accent: 'tienda online:',
-    hero_cta: 'Crear mi cuenta gratis',
+    hero_cta: 'Empezar gratis',
     hero_trial: '7 días gratis. Sin tarjeta de crédito.',
 
     // HeroSubtitle
@@ -435,7 +435,7 @@ const translations = {
     // Hero
     hero_headline: 'Crie sua',
     hero_accent: 'loja online:',
-    hero_cta: 'Criar minha conta grátis',
+    hero_cta: 'Começar grátis',
     hero_trial: '7 dias grátis. Sem cartão de crédito.',
 
     // HeroSubtitle
