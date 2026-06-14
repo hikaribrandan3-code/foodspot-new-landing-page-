@@ -194,7 +194,7 @@ export function Hero() {
   }, [lang, accents]);
 
   return (
-    <section className="w-full bg-white px-6 py-12 md:pt-10 md:pb-20">
+    <section className="w-full bg-white px-6 py-12 md:pt-[15px] md:pb-20">
       <div className="max-w-7xl mx-auto">
         <div className="md:grid md:grid-cols-2 md:gap-12 md:items-center flex flex-col items-center text-center md:text-left md:items-center">
           {/* Left: Text content */}
@@ -243,7 +243,7 @@ export function Hero() {
         </div>
 
         {/* Mobile: Phone below text */}
-        <div className="md:hidden flex justify-center mt-[9px] relative w-full max-w-sm mx-auto" style={{ zIndex: 10 }}>
+        <div className="md:hidden flex justify-center mt-1 relative w-full max-w-sm mx-auto" style={{ zIndex: 10 }}>
           <AnimatedPhoneShowcase />
         </div>
       </div>
@@ -298,7 +298,7 @@ function AnimatedPhoneShowcase() {
 
       {/* Mobile version - no 3D perspective */}
       <div className="md:hidden">
-        <div className="relative w-[332px] h-[696px] overflow-hidden">
+        <div className="relative w-[345px] h-[724px] overflow-hidden">
           <div
             key={screenIndex}
             className="w-full h-full"
