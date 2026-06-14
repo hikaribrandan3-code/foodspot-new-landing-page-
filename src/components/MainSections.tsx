@@ -288,7 +288,7 @@ function AnimatedPhoneShowcase() {
             <img
               src={screens[screenIndex].src}
               alt={screens[screenIndex].alt}
-              loading="lazy"
+              loading={screenIndex === 0 ? "eager" : "lazy"}
               decoding="async"
               className="w-full h-full object-cover object-center"
             />
@@ -307,7 +307,7 @@ function AnimatedPhoneShowcase() {
             <img
               src={screens[screenIndex].src}
               alt={screens[screenIndex].alt}
-              loading="lazy"
+              loading={screenIndex === 0 ? "eager" : "lazy"}
               decoding="async"
               className="w-full h-full object-cover object-center"
             />
