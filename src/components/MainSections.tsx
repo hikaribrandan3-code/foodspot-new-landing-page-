@@ -254,10 +254,12 @@ export function Hero() {
 function AnimatedPhoneShowcase() {
   const [screenIndex, setScreenIndex] = useState(0);
   const screens = [
-    { src: '/IMG_5412.webp', alt: 'Menu' },
-    { src: '/IMG_5413.webp', alt: 'Order' },
-    { src: '/IMG_5414.webp', alt: 'Payment' },
-    { src: '/IMG_5415.webp', alt: 'Receipt' }
+    { src: '/phone-screens/1-menu.webp', alt: 'Menu - Browse items' },
+    { src: '/phone-screens/2-ordering.webp', alt: 'Ordering - Multiple types' },
+    { src: '/phone-screens/3-menu-builder.webp', alt: 'Menu Builder - Setup' },
+    { src: '/phone-screens/4-kds.webp', alt: 'KDS - Kitchen orders' },
+    { src: '/phone-screens/5-metrics.webp', alt: 'Metrics - Analytics' },
+    { src: '/phone-screens/6-ai.webp', alt: 'AI - Smart recommendations' }
   ];
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
