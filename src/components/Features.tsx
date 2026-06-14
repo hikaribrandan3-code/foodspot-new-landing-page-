@@ -26,8 +26,8 @@ export function HowItWorks() {
     {
       title: t(lang, 'step3_title'),
       desc: t(lang, 'step3_desc'),
-      img: lang === 'en' ? "/step3-ui-usa.webp" : "/3pago.webp",
-      imgWebp: lang === 'en' ? "/step3-ui-usa.webp" : "/3pago.webp",
+      img: lang === 'en' ? "/step3-ui-usa.webp" : lang === 'pt' ? "/step3-ui-brazil.webp" : "/3pago.webp",
+      imgWebp: lang === 'en' ? "/step3-ui-usa.webp" : lang === 'pt' ? "/step3-ui-brazil.webp" : "/3pago.webp",
       rotation: "rotate-2",
       offset: "md:mt-24",
     },
