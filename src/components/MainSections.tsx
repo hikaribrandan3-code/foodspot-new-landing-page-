@@ -436,12 +436,12 @@ export function MiddleCTA() {
   const { lang } = useLanguage();
 
   return (
-    <section className="py-8 px-6 bg-primary overflow-hidden relative">
+    <section className="py-5 px-6 bg-primary overflow-hidden relative">
       <div className="absolute inset-0 opacity-20">
         <CanvasBackground color="#ffffff" variant="blobs" />
       </div>
       <div className="max-w-4xl mx-auto text-center relative z-10">
-        <h2 className="font-display text-4xl md:text-5xl text-white mb-8 drop-shadow-md">
+        <h2 className="font-display text-4xl md:text-5xl text-white mb-5 drop-shadow-md">
           {t(lang, 'mid_cta_heading')}
         </h2>
         <a
@@ -452,7 +452,7 @@ export function MiddleCTA() {
           {t(lang, 'mid_cta_button')}
           <Rocket className="w-6 h-6" />
         </a>
-        <p className="text-white/80 mt-6 font-medium">{t(lang, 'mid_cta_sub')}</p>
+        <p className="text-white/80 mt-3 font-medium">{t(lang, 'mid_cta_sub')}</p>
       </div>
     </section>
   );
