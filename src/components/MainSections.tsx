@@ -231,7 +231,7 @@ export function Hero() {
               </a>
             </div>
 
-            <p className="text-sm text-on-surface-variant mt-4 font-medium">
+            <p className="text-sm text-on-surface-variant mt-4 mb-0 font-medium">
               ✓ {t(lang, 'hero_trial')}
             </p>
           </div>
@@ -243,7 +243,7 @@ export function Hero() {
         </div>
 
         {/* Mobile: Phone below text */}
-        <div className="md:hidden flex justify-center mt-1 relative w-full max-w-sm mx-auto" style={{ zIndex: 10 }}>
+        <div className="md:hidden flex justify-center mt-7 relative w-full max-w-sm mx-auto" style={{ zIndex: 10 }}>
           <AnimatedPhoneShowcase />
         </div>
       </div>
