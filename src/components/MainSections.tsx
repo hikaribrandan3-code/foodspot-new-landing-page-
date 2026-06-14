@@ -234,17 +234,17 @@ export function Hero() {
             <p className="text-sm text-on-surface-variant mt-4 mb-0 font-medium">
               ✓ {t(lang, 'hero_trial')}
             </p>
+
+            {/* Mobile: Phone directly inside text column */}
+            <div className="md:hidden flex justify-center mt-2">
+              <AnimatedPhoneShowcase />
+            </div>
           </div>
 
-          {/* Right: Phone mockup */}
+          {/* Right: Phone mockup - desktop only */}
           <div className="hidden md:flex justify-center">
             <AnimatedPhoneShowcase />
           </div>
-        </div>
-
-        {/* Mobile: Phone below text */}
-        <div className="md:hidden flex justify-center mt-2 relative w-full max-w-sm mx-auto" style={{ zIndex: 10 }}>
-          <AnimatedPhoneShowcase />
         </div>
       </div>
     </section>
