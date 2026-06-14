@@ -213,7 +213,7 @@ export function Hero() {
                 : 'Your own branded app. Direct orders. And 100% of every sale — no commissions, ever.'}
             </p>
 
-            <div className="flex flex-col gap-3 items-center md:items-start">
+            <div className="flex flex-row md:flex-col gap-2 md:gap-3 items-center md:items-start">
               <a
                 href="https://foodspotapp.vercel.app/start-trial"
                 onClick={() => trackCtaClick('hero_create_account', 'hero')}
@@ -231,12 +231,12 @@ export function Hero() {
               </a>
             </div>
 
-            <p className="text-sm text-on-surface-variant mt-4 mb-0 font-medium">
+            <p className="text-sm text-on-surface-variant mt-2 md:mt-4 mb-0 font-medium">
               ✓ {t(lang, 'hero_trial')}
             </p>
 
             {/* Mobile: Phone directly inside text column */}
-            <div className="md:hidden flex justify-center -mt-24">
+            <div className="md:hidden flex justify-center -mt-12">
               <AnimatedPhoneShowcase />
             </div>
           </div>
