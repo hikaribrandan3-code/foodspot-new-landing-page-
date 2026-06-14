@@ -31,8 +31,8 @@ export default function App() {
           <Navbar />
           <AboutUs />
           <Footer />
-          <LanguageSwitcher variant="floating" />
         </div>
+        <LanguageSwitcher variant="floating" />
       </LanguageProvider>
     );
   }
@@ -53,9 +53,9 @@ export default function App() {
           <Pricing />
         </main>
         <Footer />
-        <LanguageSwitcher variant="floating" />
         <CookieConsent />
       </div>
+      <LanguageSwitcher variant="floating" />
     </LanguageProvider>
   );
 }
