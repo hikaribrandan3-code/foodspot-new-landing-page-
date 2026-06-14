@@ -213,7 +213,7 @@ export function Hero() {
                 : 'Your own branded app. Direct orders. And 100% of every sale — no commissions, ever.'}
             </p>
 
-            <div className="flex flex-row md:flex-col gap-2 md:gap-3 items-center md:items-start">
+            <div className="flex flex-row md:flex-col gap-2 md:gap-3 items-center justify-center md:justify-start md:items-start">
               <a
                 href="https://foodspotapp.vercel.app/start-trial"
                 onClick={() => trackCtaClick('hero_create_account', 'hero')}
