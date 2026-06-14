@@ -115,9 +115,9 @@ export function Navbar() {
       {/* Mobile Menu Backdrop */}
       {mobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-black/20 md:hidden z-40"
+          className="fixed inset-0 bg-black/20 md:hidden z-40 pointer-events-none"
           onClick={() => setMobileMenuOpen(false)}
-          style={{ animation: 'fadeIn 0.2s ease-out forwards' }}
+          style={{ animation: 'fadeIn 0.2s ease-out forwards', pointerEvents: 'auto' }}
         />
       )}
 
