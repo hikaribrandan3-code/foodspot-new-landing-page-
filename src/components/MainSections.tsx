@@ -280,38 +280,48 @@ function AnimatedPhoneShowcase() {
           }}
           className="relative w-64 h-[455px] overflow-hidden"
         >
-          <div
-            key={screenIndex}
-            className="w-full h-full"
-            style={{ animation: 'fadeIn 0.35s ease-out forwards' }}
-          >
-            <img
-              src={screens[screenIndex].src}
-              alt={screens[screenIndex].alt}
-              loading={screenIndex === 0 ? "eager" : "lazy"}
-              decoding="async"
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
+          {screens.map((screen, idx) => (
+            <div
+              key={idx}
+              className="absolute inset-0 w-full h-full"
+              style={{
+                opacity: idx === screenIndex ? 1 : 0,
+                transition: 'opacity 0.6s ease-in-out'
+              }}
+            >
+              <img
+                src={screen.src}
+                alt={screen.alt}
+                loading={idx === 0 ? "eager" : "lazy"}
+                decoding="async"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Mobile version - no 3D perspective */}
       <div className="md:hidden">
         <div className="relative w-[345px] h-[724px] overflow-hidden">
-          <div
-            key={screenIndex}
-            className="w-full h-full"
-            style={{ animation: 'fadeIn 0.35s ease-out forwards' }}
-          >
-            <img
-              src={screens[screenIndex].src}
-              alt={screens[screenIndex].alt}
-              loading={screenIndex === 0 ? "eager" : "lazy"}
-              decoding="async"
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
+          {screens.map((screen, idx) => (
+            <div
+              key={idx}
+              className="absolute inset-0 w-full h-full"
+              style={{
+                opacity: idx === screenIndex ? 1 : 0,
+                transition: 'opacity 0.6s ease-in-out'
+              }}
+            >
+              <img
+                src={screen.src}
+                alt={screen.alt}
+                loading={idx === 0 ? "eager" : "lazy"}
+                decoding="async"
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+          ))}
         </div>
       </div>
 
