@@ -243,7 +243,7 @@ export function Hero() {
         </div>
 
         {/* Mobile: Phone below text */}
-        <div className="md:hidden flex justify-center mt-7 relative w-full max-w-sm mx-auto" style={{ zIndex: 10 }}>
+        <div className="md:hidden flex justify-center mt-2 relative w-full max-w-sm mx-auto" style={{ zIndex: 10 }}>
           <AnimatedPhoneShowcase />
         </div>
       </div>
