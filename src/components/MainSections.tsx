@@ -261,7 +261,6 @@ function AnimatedPhoneShowcase() {
     { src: '/phone-screens/5-metrics.webp', alt: 'Metrics - Analytics' },
     { src: '/phone-screens/6-ai.webp', alt: 'AI - Smart recommendations' }
   ];
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -269,11 +268,6 @@ function AnimatedPhoneShowcase() {
     }, 1300);
     return () => clearInterval(interval);
   }, []);
-
-  // Phone size: full on mobile, much smaller on desktop
-  const phoneSize = isMobile
-    ? "relative w-72 h-[605px]"
-    : "relative w-48 h-[350px]";
 
   return (
     <div className="flex flex-col items-center gap-8 pt-8 md:pt-16">
@@ -284,47 +278,39 @@ function AnimatedPhoneShowcase() {
             transform: 'rotateX(8deg) rotateY(-18deg) rotateZ(5deg)',
             transformStyle: 'preserve-3d'
           }}
-          className={phoneSize}
+          className="relative w-48 h-[350px] overflow-hidden"
         >
-          {/* Phone frame */}
-          <div className="absolute inset-0 bg-black rounded-[48px] shadow-2xl border-[8px] border-gray-900 overflow-hidden flex flex-col">
-            {/* Screen content */}
-            <div
-              key={screenIndex}
-              className="flex-1 overflow-hidden w-full h-full"
-              style={{ animation: 'fadeIn 0.35s ease-out forwards' }}
-            >
-              <img
-                src={screens[screenIndex].src}
-                alt={screens[screenIndex].alt}
-                loading="lazy"
-                decoding="async"
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
+          <div
+            key={screenIndex}
+            className="w-full h-full"
+            style={{ animation: 'fadeIn 0.35s ease-out forwards' }}
+          >
+            <img
+              src={screens[screenIndex].src}
+              alt={screens[screenIndex].alt}
+              loading="lazy"
+              decoding="async"
+              className="w-full h-full object-cover object-center"
+            />
           </div>
         </div>
       </div>
 
       {/* Mobile version - no 3D perspective */}
-      <div className="md:hidden" style={{ perspective: 'none' }}>
-        <div className={phoneSize}>
-          {/* Phone frame */}
-          <div className="absolute inset-0 bg-black rounded-[48px] shadow-2xl border-[8px] border-gray-900 overflow-hidden flex flex-col">
-            {/* Screen content */}
-            <div
-              key={screenIndex}
-              className="flex-1 overflow-hidden w-full h-full"
-              style={{ animation: 'fadeIn 0.35s ease-out forwards' }}
-            >
-              <img
-                src={screens[screenIndex].src}
-                alt={screens[screenIndex].alt}
-                loading="lazy"
-                decoding="async"
-                className="w-full h-full object-cover object-top"
-              />
-            </div>
+      <div className="md:hidden">
+        <div className="relative w-72 h-[605px] overflow-hidden">
+          <div
+            key={screenIndex}
+            className="w-full h-full"
+            style={{ animation: 'fadeIn 0.35s ease-out forwards' }}
+          >
+            <img
+              src={screens[screenIndex].src}
+              alt={screens[screenIndex].alt}
+              loading="lazy"
+              decoding="async"
+              className="w-full h-full object-cover object-center"
+            />
           </div>
         </div>
       </div>
