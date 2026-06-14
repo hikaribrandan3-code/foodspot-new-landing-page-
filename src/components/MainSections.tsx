@@ -236,7 +236,7 @@ export function Hero() {
             </p>
 
             {/* Mobile: Phone directly inside text column */}
-            <div className="md:hidden flex justify-center mt-2">
+            <div className="md:hidden flex justify-center -mt-24">
               <AnimatedPhoneShowcase />
             </div>
           </div>
