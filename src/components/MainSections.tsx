@@ -270,7 +270,7 @@ function AnimatedPhoneShowcase() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center gap-8 pt-8 md:pt-16">
+    <div className="flex flex-col items-center gap-8 pt-0 md:pt-16">
       {/* 3D Perspective container - desktop only */}
       <div className="hidden md:block" style={{ perspective: '1200px' }}>
         <div
@@ -278,7 +278,7 @@ function AnimatedPhoneShowcase() {
             transform: 'rotateX(8deg) rotateY(-18deg) rotateZ(5deg)',
             transformStyle: 'preserve-3d'
           }}
-          className="relative w-48 h-[350px] overflow-hidden"
+          className="relative w-64 h-[455px] overflow-hidden"
         >
           <div
             key={screenIndex}
