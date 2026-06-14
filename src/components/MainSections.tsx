@@ -217,7 +217,7 @@ export function Hero() {
               <a
                 href="https://foodspotapp.vercel.app/start-trial"
                 onClick={() => trackCtaClick('hero_create_account', 'hero')}
-                className="bg-[#047857] hover:bg-[#059669] text-white px-3 md:px-6 py-1.5 md:py-2 rounded-full font-semibold text-xs md:text-sm shadow-lg transition-all active:scale-95 inline-flex items-center justify-center gap-2"
+                className="bg-[#047857] hover:bg-[#059669] text-white px-6 py-2 rounded-full font-semibold text-sm shadow-lg transition-all active:scale-95 inline-flex items-center justify-center gap-2"
               >
                 {t(lang, 'hero_cta')}
                 <ArrowRight className="w-4 h-4" />
@@ -225,7 +225,7 @@ export function Hero() {
 
               <a
                 href="#beneficios"
-                className="border-2 border-[#047857] text-[#047857] px-3 md:px-6 py-1.5 md:py-2 rounded-full font-semibold text-xs md:text-sm hover:bg-emerald-50 transition-all inline-flex items-center justify-center"
+                className="border-2 border-[#047857] text-[#047857] px-6 py-2 rounded-full font-semibold text-sm hover:bg-emerald-50 transition-all inline-flex items-center justify-center"
               >
                 {lang === 'es' ? 'Cómo funciona' : lang === 'pt' ? 'Como funciona' : 'See how it works'}
               </a>
@@ -236,7 +236,7 @@ export function Hero() {
             </p>
 
             {/* Mobile: Phone directly inside text column */}
-            <div className="md:hidden flex justify-center -mt-12">
+            <div className="md:hidden flex justify-center" style={{ marginTop: '-53px' }}>
               <AnimatedPhoneShowcase />
             </div>
           </div>
