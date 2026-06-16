@@ -3,6 +3,7 @@ import { CookieConsent } from './components/CookieConsent';
 import { Navbar, Hero, SubtitleCards, TheIdea, MiddleCTA, UGCMarketingCTA } from "./components/MainSections";
 import { FAQ } from "./components/FAQ";
 import { HowItWorks, Features, UGCMarketing } from "./components/Features";
+import { BlogSection } from "./components/BlogSection";
 import { Pricing, Footer } from "./components/FooterSections";
 import { AboutUs } from "./components/AboutUs";
 import { LanguageProvider } from './contexts/LanguageContext';
@@ -49,6 +50,7 @@ export default function App() {
           <HowItWorks />
           <Features />
           <FAQ />
+          <BlogSection />
           <MiddleCTA />
           <Pricing />
         </main>

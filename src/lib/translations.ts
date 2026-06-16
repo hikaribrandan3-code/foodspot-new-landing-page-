@@ -219,6 +219,188 @@ const translations = {
     about_mission_p1: 'Construir el definitivo "Shopify de la Gastronomía para Latinoamérica" — la única plataforma no-code que entiende realmente cómo operan nuestros restaurantes. Queremos darle a los dueños el control total sobre su negocio, con cero fricción y cero dependencia de equipos de desarrollo externos.',
     about_mission_p2: 'Somos un proyecto bootstrapped (financiado a pulmón, sin inversores), somos completamente independientes y nos movemos rápido.',
     about_cta: 'Comenzar Prueba Gratis',
+
+    // Expert Tips (Blog)
+    blog_section_heading: 'Tips de Expertos',
+    blog_section_sub: 'Todo lo que necesitás saber para llevar tu restaurante o cafetería al siguiente nivel.',
+    blog_read_more: 'Leer más',
+    blog_cta: 'Empezar Prueba Gratis',
+
+    blog1_title: 'Shopify vs Restaurantes: Por Qué No Funciona',
+    blog1_excerpt: 'Shopify domina el e-commerce, pero no fue diseñado para restaurantes. Te mostramos por qué.',
+    blog1_body: `## Shopify vs Restaurantes: Por Qué No Funciona
+
+**La Pregunta Que Nadie Quiere Hacer (Pero Todos Se Hacen)**
+
+Estás en Google. Buscás: "mejor sistema de pedidos online para restaurantes". O quizás "cómo poner mi restaurante online". O "POS para restaurantes que realmente funcione".
+
+Encontrás Shopify. Está en todos lados. Se ve profesional. Parece la respuesta.
+
+Después vas a Reddit. Buscás foros de dueños de restaurantes. Y ves las mismas preguntas una y otra vez:
+
+*"¿Shopify es bueno para restaurantes?"*
+*"El POS de Shopify nos está matando. ¿Alguna alternativa?"*
+*"Estoy pagando 10 apps solo para que Shopify funcione en mi cocina."*
+
+Los dueños de restaurantes buscan desesperadamente algo mejor. Y Shopify sigue apareciendo como "la solución" — aunque no fue construido para vos.
+
+**El Problema de Shopify: Hacer de Todo, No Dominar Nada**
+
+Shopify domina el e-commerce — más de 79 países, miles de millones en transacciones procesadas. Pero acá está el secreto: **Shopify fue construido para vender remeras y zapatillas dropshipped, no comida.**
+
+Y todo dueño de restaurante que lo probó lo sabe.
+
+Shopify no tiene un POS nativo. No tiene un KDS (sistema de pantalla de cocina). No se integra con delivery. No rastrea el estado del pedido en tiempo real. Entonces, ¿qué hacés? Le agregás apps. Muchas apps.
+
+App de inventario. App de pantalla de cocina. Integración de delivery. Programa de fidelización. Procesador de pagos. Notificaciones por mensaje. Constructor de menú que funcione de verdad.
+
+**Hablamos de 12+ apps como mínimo.** Cada una cuesta entre $20 y $100 por mes. Cada una es otro login, otro problema de sincronización, otro punto de falla cuando tus clientes piden en la hora pico y todo el sistema se cuelga.
+
+**La Diferencia FoodSpot: Construido Para Restaurantes, Desde el Día Uno**
+
+No empezamos tratando de construir la plataforma que hace de todo. Empezamos con una sola pregunta: *¿Qué necesita realmente un restaurante?*
+
+Respuesta: Una app. Un panel. Todo incluido.
+
+Subís tu menú, ponés tus colores de marca, agregás tu logo. Construimos una **app móvil personalizada** que tus clientes descargan o acceden por link. Navegan. Piden. Pagan. Listo.
+
+Mientras tanto, en tu cocina: actualizaciones de pedidos en tiempo real, pantalla de cocina, seguimiento de delivery, puntos de fidelización ganados automáticamente. Tus clientes ven el estado de su pedido en vivo. Vuelven porque son recompensados por hacerlo.
+
+**Y acá está la clave:** Shopify todavía no tiene una app móvil nativa para restaurantes. Somos los primeros en hacer esto a escala. Vos tenés una experiencia completamente personalizada. Ellos todavía están tratando de meter un cuadrado en un círculo.
+
+**Sin Comisión No Es Solo Sobre el Precio**
+
+Sí, Shopify se queda con un porcentaje. 2.9% + 30¢ por transacción, además de las tarifas de procesamiento. Pero el costo real está escondido:
+
+- Clientes perdidos porque tu POS se colgó en el almuerzo
+- Pagar por 12 apps en lugar de 1 solución
+- Tiempo gestionando integraciones en lugar de manejar tu negocio
+- Sin programa de fidelización, los clientes se van a la competencia
+
+**Con FoodSpot, no hay comisión. Sin tarifas ocultas de apps. Sin licencias de POS. Solo vos, tus clientes, y un sistema construido para cómo realmente funcionan los restaurantes.**
+
+---
+
+**¿Listo para dejar de pagar por 12 apps?**
+
+**Empezá tu prueba gratis de 7 días** — Sin tarjeta de crédito. Sin compromiso. Mirá por qué los dueños de restaurantes están dejando Shopify.`,
+
+    blog2_title: 'Qué Significa una Tienda Online Para Tu Negocio de Comida',
+    blog2_excerpt: 'La mayoría piensa que una tienda online es para vender productos como Amazon. Para restaurantes es otra cosa.',
+    blog2_body: `## Qué Significa una Tienda Online Para Tu Negocio de Comida
+
+**Estás Buscando, y No Estás Solo**
+
+"¿Cómo armo una tienda online para mi restaurante?"
+"¿Cuál es la mejor forma de tomar pedidos online?"
+"¿Cómo pongo mi restaurante online?"
+
+Todos los días, miles de dueños de restaurantes buscan exactamente estas preguntas. Y con razón — el negocio gastronómico está cambiando más rápido que nunca.
+
+**El Malentendido**
+
+La mayoría de los restaurantes piensa que una "tienda online" es para vender productos, como Amazon. Vendés remeras. Vendés electrodomésticos. Eso es una tienda online, ¿no?
+
+Incorrecto.
+
+Para restaurantes, una tienda online es algo completamente distinto. **Es una representación digital de tu negocio.** Es donde tus clientes van a ver tu menú, pedir comida y pagarte — todo sin levantar el teléfono ni visitarte en persona.
+
+**Por Qué Esto Importa Ahora**
+
+En los años 2000, tener un sitio web era suficiente. Subías tu menú, tus horarios, tu ubicación. Los clientes te encontraban, te llamaban, venían.
+
+Ese mundo se terminó.
+
+¿Hoy? **El 67% de los clientes prefiere pedir directamente del sitio web o app del restaurante** — no de plataformas de delivery de terceros. Quieren una relación directa con vos. Y si no estás ahí, se van a otro lado.
+
+**Cómo una Tienda Online Realmente Te Ayuda**
+
+Una tienda online hace tres cosas que los pedidos tradicionales no hacen:
+
+1. **Te hace ver profesional.** Menús digitales, un sistema de carrito pulido, y un proceso de pago — eso es mucho más impresionante que una lista de precios garabateada o un link a un PDF. Los clientes te ven como legítimo, moderno y confiable.
+
+2. **Te pagan en el momento del pedido.** Acá está la verdadera ventaja: cuando un cliente pasa la tarjeta y paga en ese momento, está comprometido. Se acabó el "sí, voy a pedir" seguido de que te abandonen por la competencia. Pago = venta asegurada. Vos recibís el dinero por adelantado, ellos recibent su comida a tiempo.
+
+3. **Tu audiencia crece.** Una tienda online significa que los clientes te pueden encontrar 24/7. Alguien con antojo de tu comida a las 11 PM puede navegar tu menú y hacer un pedido sin llamar. Llegás a gente que nunca hubiera entrado porque no sabía que existías.
+
+**La Conclusión**
+
+Una tienda online no es un lujo. Es cómo sobrevivís en 2026.
+
+Si tu restaurante no está online, es invisible. Y los restaurantes invisibles no crecen.
+
+---
+
+**¿Listo para llevar tu restaurante online?**
+
+**Empezá tu prueba gratis de 7 días** — Construí tu tienda online personalizada en minutos. Sin tarjeta de crédito. Sin contratos a largo plazo.`,
+
+    blog3_title: 'Cómo Capturar Contenido Orgánico Para Tu Negocio: Comprobante UGC',
+    blog3_excerpt: 'Todos sacan fotos de comida. Te mostramos cómo convertir eso en marketing gratis para tu negocio.',
+    blog3_body: `## Cómo Capturar Contenido Orgánico Para Tu Negocio: Comprobante UGC
+
+**Todos Sacan Fotos de Comida. ¿Cómo Puede Tu Negocio Aprovechar Esto?**
+
+Pensá en tus clientes. Piden comida. Esperan. Llega la comida. ¿Qué es lo primero que hacen?
+
+Sacan el teléfono y sacan una foto.
+
+Es automático. Habitual. Ya están creando contenido para vos — compartiendo tu comida con sus seguidores, etiquetando tu ubicación, vendiéndote mejor que cualquier anuncio de Instagram.
+
+Pero acá está el problema: **ninguna app de comida tiene una cámara nativa.** Ni DoorDash. Ni Uber Eats. Ni los restaurantes de Shopify. Ni las empresas multimillonarias. Todas se lo perdieron.
+
+Nosotros no.
+
+**El Vacío en el Mercado**
+
+Pensalo. Los clientes ya sacan fotos. Los restaurantes necesitan desesperadamente marketing gratis y auténtico. Instagram y TikTok están llenos de contenido de comida. Y sin embargo, cuando los clientes piden desde tu app, tienen que saltar a otra app para compartir la foto.
+
+Fricción. Momento perdido. El contenido nunca queda etiquetado con el nombre de tu negocio. Oportunidad de marketing perdida.
+
+**Inventamos el Comprobante UGC Para Arreglar Esto**
+
+Así funciona:
+
+1. **El cliente pide** a través de tu app FoodSpot
+2. **Comprobante en tiempo real** muestra el estado del pedido (conectado a tu KDS)
+3. **La comida está lista** — aparece un personaje animado y pregunta: "¿Querés sacar una foto?"
+4. **Se abre la cámara nativa** — filtros, stickers, texto, dibujo (igual que Instagram)
+5. **Comparten en redes sociales** — el nombre de tu negocio ya está incluido
+6. **Vos los recompensás** — puntos, descuentos, fidelización ganada
+
+Eso es todo. Un flujo continuo. Sin saltar entre apps. Sin oportunidades de marketing perdidas.
+
+**La Matemática Es Innegable**
+
+Digamos que tenés 50 clientes por día. Solo el 10% dice que sí a la propuesta de la foto. Son 5 fotos por día.
+
+Multiplicá eso por un mes (aproximadamente 25 días operativos): **125 fotos orgánicas y auténticas de tu comida compartidas en redes sociales.**
+
+Cada una etiquetada con el nombre de tu negocio. Cada una llegando a sus seguidores. Cada una diciendo: *"Este lugar es lo suficientemente bueno para postear."*
+
+Eso es prueba social real. Eso es marketing gratis. Eso es lo que el dinero no puede comprar.
+
+**El Poder del Boca en Boca (Con Pruebas)**
+
+Acá está lo que sabemos: **el 71% de las personas te visita porque un amigo subió una foto.**
+
+No por un anuncio. No por un influencer. Porque alguien en quien confían te mostró tu comida.
+
+Comprobante UGC es el sistema que hace que esto pase automáticamente. Cada cliente feliz se convierte en un marketer. Cada foto se convierte en una referencia. Cada compartido se convierte en un nuevo cliente entrando.
+
+**Sin Influencers. Sin Anuncios. Solo Clientes Reales.**
+
+El marketing tradicional es caro. Los influencers cobran miles. Los anuncios te comen el margen. ¿Pero contenido orgánico? Es gratis. Es auténtico. Y convierte mejor que cualquier cosa que puedas pagar.
+
+Somos la primera (y única) app de comida que construyó esto dentro de la experiencia de pedido. Cuando los clientes piden, no solo están comprando comida — se están registrando para hacer marketing de tu negocio.
+
+Y lo van a hacer felices.
+
+---
+
+**¿Listo para convertir a cada cliente en un marketer?**
+
+**Empezá tu prueba gratis de 7 días** — Construí tu app personalizada con marketing UGC incluido. Sin tarjeta de crédito. Sin contratos a largo plazo.`,
   },
 
   en: {
@@ -439,6 +621,188 @@ const translations = {
     about_mission_p1: 'Build the definitive "Shopify for Restaurants" — the only no-code platform that truly understands how food businesses operate. We want to give owners total control over their business, with zero friction and zero dependence on external dev teams.',
     about_mission_p2: 'We\'re a bootstrapped project — self-funded, no investors — completely independent and moving fast.',
     about_cta: 'Start Free Trial',
+
+    // Expert Tips (Blog)
+    blog_section_heading: 'Expert Tips',
+    blog_section_sub: 'Everything you need to know to take your restaurant or café to the next level.',
+    blog_read_more: 'Read more',
+    blog_cta: 'Start Free Trial',
+
+    blog1_title: 'Shopify vs Restaurants: Why It Doesn\'t Work',
+    blog1_excerpt: 'Shopify dominates e-commerce, but it wasn\'t built for restaurants. Here\'s why.',
+    blog1_body: `## Shopify vs Restaurants: Why It Doesn't Work
+
+**The Question Nobody Wants To Ask (But Everyone Asks)**
+
+You're on Google. Searching: "best online ordering system for restaurants." Or maybe "how to get my restaurant online." Or "POS for restaurants that actually works."
+
+You find Shopify. It's everywhere. It looks professional. It feels like the answer.
+
+Then you go to Reddit. You search restaurant owner forums. And you see the same questions over and over:
+
+*"Is Shopify good for restaurants?"*
+*"Shopify's POS is killing us. Any alternative?"*
+*"I'm paying for 10 apps just to make Shopify work in my kitchen."*
+
+Restaurant owners are desperately searching for something better. And Shopify keeps showing up as "the solution" — even though it wasn't built for you.
+
+**Shopify's Problem: Doing Everything, Mastering Nothing**
+
+Shopify dominates e-commerce — over 79 countries, billions in transactions processed. But here's the secret: **Shopify was built to sell dropshipped t-shirts and sneakers, not food.**
+
+And every restaurant owner who's tried it knows it.
+
+Shopify has no native POS. No KDS (kitchen display system). No delivery integration. No real-time order status tracking. So what do you do? You bolt on apps. A lot of apps.
+
+Inventory app. Kitchen display app. Delivery integration. Loyalty program. Payment processor. Text notifications. A menu builder that actually works.
+
+**We're talking 12+ apps minimum.** Each one costs $20–$100 a month. Each one is another login, another sync failure, another point of breakage when your customers order during the dinner rush and the whole system buckles.
+
+**The FoodSpot Difference: Built For Restaurants, From Day One**
+
+We didn't start by trying to build the platform that does everything. We started with one question: *What does a restaurant actually need?*
+
+The answer: One app. One dashboard. Everything included.
+
+You upload your menu, set your brand colors, add your logo. We build you a **custom mobile app** your customers download or access via link. They browse. They order. They pay. Done.
+
+Meanwhile, on your end: real-time order updates, kitchen display, delivery tracking, loyalty points earned automatically. Your customers see their order status live. They come back because they're rewarded for it.
+
+**And here's the kicker:** Shopify still doesn't have a native mobile app for restaurants. We're the first to do this at scale. You get a fully custom experience. They're still trying to force a square peg into a round hole.
+
+**Commission-Free Isn't Just About Price**
+
+Yes, Shopify takes a cut. 2.9% + 30¢ per transaction, on top of processing fees. But the real cost is hidden:
+
+- Lost customers because your POS crashed during lunch rush
+- Paying for 12 apps instead of 1 solution
+- Time spent managing integrations instead of running your business
+- No loyalty program, so customers drift to the competition
+
+**With FoodSpot, there's no commission. No hidden app fees. No POS licenses. Just you, your customers, and a system built for how restaurants actually work.**
+
+---
+
+**Ready to stop paying for 12 apps?**
+
+**Start your free 7-day trial** — No credit card. No commitment. See why restaurant owners are ditching Shopify.`,
+
+    blog2_title: 'What an Online Store Means For Your Food Business',
+    blog2_excerpt: 'Most people think an online store is for selling products like Amazon. For restaurants, it\'s something else entirely.',
+    blog2_body: `## What an Online Store Means For Your Food Business
+
+**You're Searching, And You're Not Alone**
+
+"How do I build an online store for my restaurant?"
+"What's the best way to take orders online?"
+"How do I get my restaurant online?"
+
+Every day, thousands of restaurant owners search exactly these questions. And for good reason — the food business is changing faster than ever.
+
+**The Misunderstanding**
+
+Most restaurants think an "online store" is for selling products, like Amazon. You sell t-shirts. You sell appliances. That's an online store, right?
+
+Wrong.
+
+For restaurants, an online store is something completely different. **It's a digital representation of your business.** It's where your customers go to see your menu, order food, and pay you — all without picking up the phone or visiting in person.
+
+**Why This Matters Now**
+
+Back in the early 2000s, having a website was enough. You uploaded your menu, your hours, your location. Customers found you, called you, showed up.
+
+That world is over.
+
+Today? **67% of customers prefer ordering directly from a restaurant's own website or app** — not from third-party delivery platforms. They want a direct relationship with you. And if you're not there, they go somewhere else.
+
+**How an Online Store Actually Helps You**
+
+An online store does three things traditional ordering doesn't:
+
+1. **It makes you look professional.** Digital menus, a polished cart system, and a checkout process — that's far more impressive than a scribbled price list or a PDF link. Customers see you as legitimate, modern, and trustworthy.
+
+2. **You get paid at the point of order.** Here's the real advantage: when a customer swipes their card and pays right then, they're committed. No more "yeah, I'll order" followed by them ditching you for the competitor down the street. Payment = locked-in sale. You get the money upfront, they get their food on time.
+
+3. **Your audience grows.** An online store means customers can find you 24/7. Someone craving your food at 11 PM can browse your menu and place an order without calling. You reach people who never would have walked in because they didn't know you existed.
+
+**The Bottom Line**
+
+An online store isn't a luxury. It's how you survive in 2026.
+
+If your restaurant isn't online, it's invisible. And invisible restaurants don't grow.
+
+---
+
+**Ready to take your restaurant online?**
+
+**Start your free 7-day trial** — Build your custom online store in minutes. No credit card. No long-term contracts.`,
+
+    blog3_title: 'How to Capture Organic Content for Your Business: UGC Receipts',
+    blog3_excerpt: 'Everyone takes food photos. Here\'s how to turn that into free marketing for your business.',
+    blog3_body: `## How to Capture Organic Content for Your Business: UGC Receipts
+
+**Everyone Takes Food Photos. Why Isn't Your App Capturing Them?**
+
+Think about your customers. They order food. They wait. The food arrives. What's the first thing they do?
+
+They pull out their phone and take a photo.
+
+It's automatic. Habitual. They're already creating content for you — sharing your food with their followers, tagging your location, selling you better than any Instagram ad could.
+
+But here's the problem: **no food app has a native camera.** Not DoorDash. Not Uber Eats. Not Shopify restaurants. Not the billion-dollar companies. They all missed it.
+
+We didn't.
+
+**The Gap In The Market**
+
+Think about it. Customers already take photos. Restaurants desperately need free, authentic marketing. Instagram and TikTok are flooded with food content. And yet, when customers order from your app, they have to jump to a different app to share the photo.
+
+Friction. Lost moment. The content never gets tagged with your business name. Missed marketing opportunity.
+
+**We Invented UGC Receipts To Fix This**
+
+Here's how it works:
+
+1. **Customer orders** through your FoodSpot app
+2. **Real-time receipt** shows order status (connected to your KDS)
+3. **Food is ready** — an animated character pops up and asks: "Want to take a photo?"
+4. **Native camera opens** — filters, stickers, text, drawing (just like Instagram)
+5. **They share to social media** — your business name is already embedded
+6. **You reward them** — points, discounts, earned loyalty
+
+That's it. One continuous flow. No app-switching. No lost marketing opportunities.
+
+**The Math Is Undeniable**
+
+Say you have 50 customers a day. Only 10% say yes to the photo prompt. That's 5 photos a day.
+
+Multiply that by a month (roughly 25 operating days): **125 organic, authentic photos of your food shared on social media.**
+
+Each one tagged with your business name. Each one reaching their followers. Each one saying: *"This place is good enough to post about."*
+
+That's real social proof. That's free marketing. That's what money can't buy.
+
+**The Power Of Word Of Mouth (With Proof)**
+
+Here's what we know: **71% of people visit you because a friend posted a photo.**
+
+Not because of an ad. Not because of an influencer. Because someone they trust showed them your food.
+
+UGC Receipts is the system that makes this happen automatically. Every happy customer becomes a marketer. Every photo becomes a referral. Every share becomes a new customer walking in.
+
+**No Influencers. No Ads. Just Real Customers.**
+
+Traditional marketing is expensive. Influencers charge thousands. Ads eat your margin. But organic content? It's free. It's authentic. And it converts better than anything you could pay for.
+
+We're the first (and only) food app to build this directly into the ordering experience. When customers order, they're not just buying food — they're signing up to market your business.
+
+And they're going to do it happily.
+
+---
+
+**Ready to turn every customer into a marketer?**
+
+**Start your free 7-day trial** — Build your custom app with UGC marketing built in. No credit card. No long-term contracts.`,
   },
 
   pt: {
@@ -659,6 +1023,188 @@ const translations = {
     about_mission_p1: 'Construir o definitivo "Shopify da Gastronomia" — a única plataforma no-code que realmente entende como nossos restaurantes operam. Queremos dar aos proprietários controle total sobre seu negócio, com zero fricção e zero dependência de equipes de desenvolvimento externas.',
     about_mission_p2: 'Somos um projeto bootstrapped — financiado com recursos próprios, sem investidores — completamente independentes e nos movemos rapidamente.',
     about_cta: 'Iniciar Teste Grátis',
+
+    // Expert Tips (Blog)
+    blog_section_heading: 'Dicas de Especialistas',
+    blog_section_sub: 'Tudo o que você precisa saber para levar seu restaurante ou café para o próximo nível.',
+    blog_read_more: 'Leia mais',
+    blog_cta: 'Iniciar Teste Grátis',
+
+    blog1_title: 'Shopify vs Restaurantes: Por Que Não Funciona',
+    blog1_excerpt: 'O Shopify domina o e-commerce, mas não foi feito para restaurantes. Veja por quê.',
+    blog1_body: `## Shopify vs Restaurantes: Por Que Não Funciona
+
+**A Pergunta Que Ninguém Quer Fazer (Mas Todos Fazem)**
+
+Você está no Google. Pesquisando: "melhor sistema de pedidos online para restaurantes". Ou talvez "como colocar meu restaurante online". Ou "PDV para restaurantes que realmente funcione".
+
+Você encontra o Shopify. Está em todo lugar. Parece profissional. Parece a resposta.
+
+Depois você vai ao Reddit. Pesquisa fóruns de donos de restaurantes. E vê as mesmas perguntas repetidas vezes:
+
+*"O Shopify é bom para restaurantes?"*
+*"O PDV do Shopify está nos matando. Alguma alternativa?"*
+*"Estou pagando por 10 apps só para o Shopify funcionar na minha cozinha."*
+
+Donos de restaurantes estão desesperadamente procurando algo melhor. E o Shopify continua aparecendo como "a solução" — mesmo não tendo sido feito para você.
+
+**O Problema do Shopify: Fazer de Tudo, Não Dominar Nada**
+
+O Shopify domina o e-commerce — mais de 79 países, bilhões em transações processadas. Mas aqui está o segredo: **o Shopify foi criado para vender camisetas e tênis dropshipping, não comida.**
+
+E todo dono de restaurante que já tentou usar sabe disso.
+
+O Shopify não tem PDV nativo. Não tem KDS (sistema de tela de cozinha). Não se integra com delivery. Não rastreia o status do pedido em tempo real. Então o que você faz? Você adiciona apps. Muitos apps.
+
+App de estoque. App de tela de cozinha. Integração de delivery. Programa de fidelidade. Processador de pagamentos. Notificações por mensagem. Um construtor de menu que realmente funcione.
+
+**Estamos falando de 12+ apps no mínimo.** Cada um custa entre $20 e $100 por mês. Cada um é outro login, outra falha de sincronização, outro ponto de quebra quando seus clientes pedem no horário de pico e o sistema todo trava.
+
+**A Diferença FoodSpot: Construído Para Restaurantes, Desde o Dia Um**
+
+Não começamos tentando construir a plataforma que faz tudo. Começamos com uma única pergunta: *O que um restaurante realmente precisa?*
+
+Resposta: Um app. Um painel. Tudo incluído.
+
+Você faz upload do seu menu, define suas cores de marca, adiciona seu logo. Construímos um **app móvel personalizado** que seus clientes baixam ou acessam por link. Eles navegam. Pedem. Pagam. Pronto.
+
+Enquanto isso, na sua cozinha: atualizações de pedidos em tempo real, tela de cozinha, rastreamento de delivery, pontos de fidelidade ganhos automaticamente. Seus clientes veem o status do pedido em tempo real. Eles voltam porque são recompensados por isso.
+
+**E aqui está o ponto principal:** o Shopify ainda não tem um app móvel nativo para restaurantes. Somos os primeiros a fazer isso em escala. Você tem uma experiência totalmente personalizada. Eles ainda estão tentando encaixar um quadrado em um círculo.
+
+**Sem Comissão Não É Só Sobre Preço**
+
+Sim, o Shopify cobra uma porcentagem. 2,9% + 30¢ por transação, além das taxas de processamento. Mas o custo real está escondido:
+
+- Clientes perdidos porque seu PDV travou no horário de almoço
+- Pagar por 12 apps em vez de 1 solução
+- Tempo gerenciando integrações em vez de administrar seu negócio
+- Sem programa de fidelidade, os clientes vão para a concorrência
+
+**Com o FoodSpot, não há comissão. Sem taxas ocultas de apps. Sem licenças de PDV. Só você, seus clientes, e um sistema construído para como os restaurantes realmente funcionam.**
+
+---
+
+**Pronto para parar de pagar por 12 apps?**
+
+**Comece seu teste gratuito de 7 dias** — Sem cartão de crédito. Sem compromisso. Veja por que donos de restaurantes estão abandonando o Shopify.`,
+
+    blog2_title: 'O Que Uma Loja Online Significa Para Seu Negócio de Comida',
+    blog2_excerpt: 'A maioria pensa que uma loja online é para vender produtos como a Amazon. Para restaurantes é outra coisa.',
+    blog2_body: `## O Que Uma Loja Online Significa Para Seu Negócio de Comida
+
+**Você Está Pesquisando, e Não Está Sozinho**
+
+"Como eu crio uma loja online para meu restaurante?"
+"Qual a melhor forma de receber pedidos online?"
+"Como coloco meu restaurante online?"
+
+Todos os dias, milhares de donos de restaurantes pesquisam exatamente essas perguntas. E com razão — o negócio gastronômico está mudando mais rápido do que nunca.
+
+**O Mal-Entendido**
+
+A maioria dos restaurantes pensa que uma "loja online" é para vender produtos, como a Amazon. Você vende camisetas. Você vende eletrodomésticos. Isso é uma loja online, certo?
+
+Errado.
+
+Para restaurantes, uma loja online é algo completamente diferente. **É uma representação digital do seu negócio.** É onde seus clientes vão ver seu menu, pedir comida e pagar você — tudo sem pegar o telefone ou visitar pessoalmente.
+
+**Por Que Isso Importa Agora**
+
+Nos anos 2000, ter um site já era suficiente. Você fazia upload do seu menu, horários, localização. Os clientes te encontravam, ligavam, apareciam.
+
+Esse mundo acabou.
+
+Hoje? **67% dos clientes preferem pedir diretamente do site ou app do restaurante** — não de plataformas de delivery terceirizadas. Eles querem um relacionamento direto com você. E se você não está lá, eles vão para outro lugar.
+
+**Como Uma Loja Online Realmente Te Ajuda**
+
+Uma loja online faz três coisas que os pedidos tradicionais não fazem:
+
+1. **Faz você parecer profissional.** Menus digitais, um sistema de carrinho bem feito, e um processo de pagamento — isso é muito mais impressionante do que uma lista de preços rabiscada ou um link de PDF. Os clientes te veem como legítimo, moderno e confiável.
+
+2. **Você recebe o pagamento no momento do pedido.** Aqui está a verdadeira vantagem: quando um cliente passa o cartão e paga naquele momento, ele está comprometido. Acabou o "sim, vou pedir" seguido de ele te abandonar pela concorrência. Pagamento = venda garantida. Você recebe o dinheiro adiantado, eles recebem a comida no horário certo.
+
+3. **Seu público cresce.** Uma loja online significa que os clientes podem te encontrar 24/7. Alguém com vontade da sua comida às 23h pode navegar pelo seu menu e fazer um pedido sem ligar. Você alcança pessoas que nunca teriam entrado porque não sabiam que você existia.
+
+**A Conclusão**
+
+Uma loja online não é um luxo. É como você sobrevive em 2026.
+
+Se seu restaurante não está online, ele é invisível. E restaurantes invisíveis não crescem.
+
+---
+
+**Pronto para colocar seu restaurante online?**
+
+**Comece seu teste gratuito de 7 dias** — Construa sua loja online personalizada em minutos. Sem cartão de crédito. Sem contratos de longo prazo.`,
+
+    blog3_title: 'Como Capturar Conteúdo Orgânico Para Seu Negócio: Comprovante UGC',
+    blog3_excerpt: 'Todo mundo tira fotos de comida. Veja como transformar isso em marketing gratuito para seu negócio.',
+    blog3_body: `## Como Capturar Conteúdo Orgânico Para Seu Negócio: Comprovante UGC
+
+**Todo Mundo Tira Fotos de Comida. Por Que Seu App Não Está Capturando Isso?**
+
+Pense nos seus clientes. Eles pedem comida. Esperam. A comida chega. Qual é a primeira coisa que fazem?
+
+Tiram o celular e fazem uma foto.
+
+É automático. Habitual. Eles já estão criando conteúdo para você — compartilhando sua comida com seus seguidores, marcando sua localização, vendendo você melhor do que qualquer anúncio do Instagram.
+
+Mas aqui está o problema: **nenhum app de comida tem uma câmera nativa.** Nem o DoorDash. Nem o Uber Eats. Nem os restaurantes do Shopify. Nem as empresas de bilhões de dólares. Todos perderam essa.
+
+Nós não.
+
+**A Lacuna No Mercado**
+
+Pense nisso. Os clientes já tiram fotos. Os restaurantes precisam desesperadamente de marketing gratuito e autêntico. Instagram e TikTok estão inundados de conteúdo de comida. E ainda assim, quando os clientes pedem pelo seu app, eles precisam pular para outro app para compartilhar a foto.
+
+Fricção. Momento perdido. O conteúdo nunca fica marcado com o nome do seu negócio. Oportunidade de marketing perdida.
+
+**Inventamos o Comprovante UGC Para Resolver Isso**
+
+Veja como funciona:
+
+1. **Cliente pede** através do seu app FoodSpot
+2. **Comprovante em tempo real** mostra o status do pedido (conectado ao seu KDS)
+3. **A comida está pronta** — um personagem animado aparece e pergunta: "Quer tirar uma foto?"
+4. **A câmera nativa abre** — filtros, adesivos, texto, desenho (igual ao Instagram)
+5. **Eles compartilham nas redes sociais** — o nome do seu negócio já está incluído
+6. **Você os recompensa** — pontos, descontos, fidelidade conquistada
+
+É isso. Um fluxo contínuo. Sem trocar de app. Sem oportunidades de marketing perdidas.
+
+**A Matemática É Inegável**
+
+Digamos que você tenha 50 clientes por dia. Apenas 10% dizem sim à proposta da foto. São 5 fotos por dia.
+
+Multiplique isso por um mês (aproximadamente 25 dias operacionais): **125 fotos orgânicas e autênticas da sua comida compartilhadas nas redes sociais.**
+
+Cada uma marcada com o nome do seu negócio. Cada uma alcançando seus seguidores. Cada uma dizendo: *"Esse lugar é bom o suficiente para postar."*
+
+Essa é prova social real. Isso é marketing gratuito. Isso é o que dinheiro não pode comprar.
+
+**O Poder do Boca a Boca (Com Provas)**
+
+Aqui está o que sabemos: **71% das pessoas visitam você porque um amigo postou uma foto.**
+
+Não por causa de um anúncio. Não por causa de um influenciador. Porque alguém em quem confiam mostrou sua comida.
+
+Comprovante UGC é o sistema que faz isso acontecer automaticamente. Cada cliente feliz se torna um marqueteiro. Cada foto se torna uma indicação. Cada compartilhamento se torna um novo cliente entrando.
+
+**Sem Influenciadores. Sem Anúncios. Só Clientes Reais.**
+
+O marketing tradicional é caro. Influenciadores cobram milhares. Anúncios consomem sua margem. Mas conteúdo orgânico? É gratuito. É autêntico. E converte melhor do que qualquer coisa que você pudesse pagar.
+
+Somos o primeiro (e único) app de comida a construir isso diretamente na experiência de pedido. Quando os clientes pedem, eles não estão apenas comprando comida — estão se inscrevendo para fazer marketing do seu negócio.
+
+E eles vão fazer isso com prazer.
+
+---
+
+**Pronto para transformar cada cliente em um marqueteiro?**
+
+**Comece seu teste gratuito de 7 dias** — Construa seu app personalizado com marketing UGC incluído. Sem cartão de crédito. Sem contratos de longo prazo.`,
   },
 };
 
