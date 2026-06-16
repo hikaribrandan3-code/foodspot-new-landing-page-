@@ -13,7 +13,7 @@ const translations = {
     // Navbar
     nav_how: 'Cómo Funciona',
     nav_pricing: 'Precios',
-    nav_testimonials: 'Testimonios',
+    nav_expert_tips: 'Tips de Expertos',
     nav_contact: 'Contactos',
 
     // Hero
@@ -427,7 +427,7 @@ Y lo van a hacer felices.
     // Navbar
     nav_how: 'How It Works',
     nav_pricing: 'Pricing',
-    nav_testimonials: 'Reviews',
+    nav_expert_tips: 'Expert Tips',
     nav_contact: 'Contact',
 
     // Hero
@@ -841,7 +841,7 @@ And they're going to do it happily.
     // Navbar
     nav_how: 'Como Funciona',
     nav_pricing: 'Preços',
-    nav_testimonials: 'Depoimentos',
+    nav_expert_tips: 'Dicas de Especialistas',
     nav_contact: 'Contato',
 
     // Hero

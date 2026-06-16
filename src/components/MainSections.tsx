@@ -13,7 +13,7 @@ export function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['como-funciona', 'precios', 'testimonios'];
+      const sections = ['como-funciona', 'precios', 'expert-tips'];
       const scrollPos = window.scrollY + 100;
 
       for (const section of sections) {
@@ -36,7 +36,7 @@ export function Navbar() {
   const navLinks = [
     { label: t(lang, 'nav_how'), href: '#como-funciona', id: 'como-funciona', icon: ListChecks },
     { label: t(lang, 'nav_pricing'), href: '#precios', id: 'precios', icon: Tag },
-    { label: t(lang, 'nav_testimonials'), href: '#testimonios', id: 'testimonios', icon: Star },
+    { label: t(lang, 'nav_expert_tips'), href: '#expert-tips', id: 'expert-tips', icon: Lightbulb },
     { label: t(lang, 'nav_contact'), href: '#contactos', id: 'contactos', icon: Mail },
   ];
 
