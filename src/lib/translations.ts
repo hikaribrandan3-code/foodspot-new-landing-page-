@@ -2,6 +2,14 @@ export type Lang = 'es' | 'en' | 'pt';
 
 const translations = {
   es: {
+    // SEO meta
+    seo_title: 'FoodSpot: Pedidos Online, POS y Marketing para Restaurantes | Con IA',
+    seo_description: 'Plataforma de pedidos online sin comisiones. POS completo, análisis con IA, herramientas de marketing. Crea tu propia tienda online y quédate con el 100% de tus ventas.',
+    seo_og_title: 'FoodSpot Mobile — Pedidos Online y Tienda Digital para Restaurantes',
+    seo_og_description: 'Tienda online sin comisiones para restaurantes. Menú digital, pedidos, pagos y marketing con contenido de usuarios — todo en una plataforma.',
+    seo_twitter_title: 'FoodSpot Mobile — Sistema de Pedidos Online para Restaurantes',
+    seo_twitter_description: 'Tienda online sin comisiones con promociones impulsadas por IA y marketing de contenido generado por usuarios.',
+
     // Navbar
     nav_how: 'Cómo Funciona',
     nav_pricing: 'Precios',
@@ -214,6 +222,14 @@ const translations = {
   },
 
   en: {
+    // SEO meta
+    seo_title: 'FoodSpot: Restaurant Ordering, POS & Marketing | AI-Powered',
+    seo_description: 'Commission-free restaurant ordering platform. Full POS, AI analytics, marketing tools. Build your own restaurant app — keep 100% of sales.',
+    seo_og_title: 'FoodSpot Mobile — Restaurant Online Ordering & E-commerce Platform',
+    seo_og_description: 'Commission-free restaurant online store. Digital menu, orders, payments, UGC marketing — all in one platform.',
+    seo_twitter_title: 'FoodSpot Mobile — Restaurant Online Ordering System',
+    seo_twitter_description: 'Commission-free restaurant online store with AI-powered promotions and UGC marketing.',
+
     // Navbar
     nav_how: 'How It Works',
     nav_pricing: 'Pricing',
@@ -426,6 +442,14 @@ const translations = {
   },
 
   pt: {
+    // SEO meta
+    seo_title: 'FoodSpot: Pedidos Online, PDV e Marketing para Restaurantes | Com IA',
+    seo_description: 'Plataforma de pedidos online sem comissões. PDV completo, análises com IA, ferramentas de marketing. Crie sua própria loja online e fique com 100% das vendas.',
+    seo_og_title: 'FoodSpot Mobile — Pedidos Online e Loja Digital para Restaurantes',
+    seo_og_description: 'Loja online sem comissões para restaurantes. Menu digital, pedidos, pagamentos e marketing com conteúdo de usuários — tudo em uma plataforma.',
+    seo_twitter_title: 'FoodSpot Mobile — Sistema de Pedidos Online para Restaurantes',
+    seo_twitter_description: 'Loja online sem comissões com promoções impulsionadas por IA e marketing de conteúdo gerado por usuários.',
+
     // Navbar
     nav_how: 'Como Funciona',
     nav_pricing: 'Preços',

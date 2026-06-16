@@ -99,6 +99,14 @@ export const trackNavigation = (destination: string) => {
   });
 };
 
+export const trackLangDetection = (lang: string, source: 'url' | 'cookie' | 'localStorage' | 'browser' | 'default') => {
+  trackGA4Event('lang_detected', {
+    lang: lang,
+    detection_source: source,
+    event_category: 'engagement'
+  });
+};
+
 // Meta Pixel conversion tracking
 export const trackMetaLead = () => {
   if (typeof window !== 'undefined' && window.fbq) {
