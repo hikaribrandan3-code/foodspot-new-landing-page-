@@ -225,8 +225,10 @@ const translations = {
     blog_section_sub: 'Todo lo que necesitás saber para llevar tu restaurante o cafetería al siguiente nivel.',
     blog_read_more: 'Leer más',
     blog_cta: 'Empezar Prueba Gratis',
+    blog_back: 'Volver a Tips de Expertos',
 
     blog1_title: 'Shopify vs Restaurantes: Por Qué No Funciona',
+    blog1_meta: 'Shopify no fue creado para restaurantes. Sin POS, sin KDS, sin delivery — necesitás 12+ apps para que funcione. Descubrí por qué los dueños de restaurantes lo están dejando.',
     blog1_excerpt: 'Shopify domina el e-commerce, pero no fue diseñado para restaurantes. Te mostramos por qué.',
     blog1_body: `## Shopify vs Restaurantes: Por Qué No Funciona
 
@@ -255,6 +257,8 @@ Shopify no tiene un POS nativo. No tiene un KDS (sistema de pantalla de cocina).
 App de inventario. App de pantalla de cocina. Integración de delivery. Programa de fidelización. Procesador de pagos. Notificaciones por mensaje. Constructor de menú que funcione de verdad.
 
 **Hablamos de 12+ apps como mínimo.** Cada una cuesta entre $20 y $100 por mes. Cada una es otro login, otro problema de sincronización, otro punto de falla cuando tus clientes piden en la hora pico y todo el sistema se cuelga.
+
+{{IMG}}
 
 **La Diferencia FoodSpot: Construido Para Restaurantes, Desde el Día Uno**
 
@@ -286,6 +290,7 @@ Sí, Shopify se queda con un porcentaje. 2.9% + 30¢ por transacción, además d
 **Empezá tu prueba gratis de 7 días** — Sin tarjeta de crédito. Sin compromiso. Mirá por qué los dueños de restaurantes están dejando Shopify.`,
 
     blog2_title: 'Qué Significa una Tienda Online Para Tu Negocio de Comida',
+    blog2_meta: 'El 67% de los clientes prefiere pedir directo desde el sitio de un restaurante. Descubrí qué es realmente una tienda online y por qué tu negocio de comida la necesita en 2026.',
     blog2_excerpt: 'La mayoría piensa que una tienda online es para vender productos como Amazon. Para restaurantes es otra cosa.',
     blog2_body: `## Qué Significa una Tienda Online Para Tu Negocio de Comida
 
@@ -313,6 +318,8 @@ Ese mundo se terminó.
 
 ¿Hoy? **El 67% de los clientes prefiere pedir directamente del sitio web o app del restaurante** — no de plataformas de delivery de terceros. Quieren una relación directa con vos. Y si no estás ahí, se van a otro lado.
 
+{{IMG}}
+
 **Cómo una Tienda Online Realmente Te Ayuda**
 
 Una tienda online hace tres cosas que los pedidos tradicionales no hacen:
@@ -336,6 +343,7 @@ Si tu restaurante no está online, es invisible. Y los restaurantes invisibles n
 **Empezá tu prueba gratis de 7 días** — Construí tu tienda online personalizada en minutos. Sin tarjeta de crédito. Sin contratos a largo plazo.`,
 
     blog3_title: 'Cómo Capturar Contenido Orgánico Para Tu Negocio: Comprobante UGC',
+    blog3_meta: 'Tus clientes ya sacan fotos de comida. Descubrí el Comprobante UGC, el sistema que convierte cada pedido en marketing orgánico gratis para tu restaurante.',
     blog3_excerpt: 'Todos sacan fotos de comida. Te mostramos cómo convertir eso en marketing gratis para tu negocio.',
     blog3_body: `## Cómo Capturar Contenido Orgánico Para Tu Negocio: Comprobante UGC
 
@@ -368,6 +376,8 @@ Así funciona:
 5. **Comparten en redes sociales** — el nombre de tu negocio ya está incluido
 6. **Vos los recompensás** — puntos, descuentos, fidelización ganada
 
+{{IMG}}
+
 Eso es todo. Un flujo continuo. Sin saltar entre apps. Sin oportunidades de marketing perdidas.
 
 **La Matemática Es Innegable**
@@ -379,6 +389,8 @@ Multiplicá eso por un mes (aproximadamente 25 días operativos): **125 fotos or
 Cada una etiquetada con el nombre de tu negocio. Cada una llegando a sus seguidores. Cada una diciendo: *"Este lugar es lo suficientemente bueno para postear."*
 
 Eso es prueba social real. Eso es marketing gratis. Eso es lo que el dinero no puede comprar.
+
+{{IMG}}
 
 **El Poder del Boca en Boca (Con Pruebas)**
 
@@ -627,8 +639,10 @@ Y lo van a hacer felices.
     blog_section_sub: 'Everything you need to know to take your restaurant or café to the next level.',
     blog_read_more: 'Read more',
     blog_cta: 'Start Free Trial',
+    blog_back: 'Back to Expert Tips',
 
     blog1_title: 'Shopify vs Restaurants: Why It Doesn\'t Work',
+    blog1_meta: 'Shopify wasn\'t built for restaurants. No native POS, no KDS, no delivery — you need 12+ apps to make it work. See why restaurant owners are ditching it.',
     blog1_excerpt: 'Shopify dominates e-commerce, but it wasn\'t built for restaurants. Here\'s why.',
     blog1_body: `## Shopify vs Restaurants: Why It Doesn't Work
 
@@ -657,6 +671,8 @@ Shopify has no native POS. No KDS (kitchen display system). No delivery integrat
 Inventory app. Kitchen display app. Delivery integration. Loyalty program. Payment processor. Text notifications. A menu builder that actually works.
 
 **We're talking 12+ apps minimum.** Each one costs $20–$100 a month. Each one is another login, another sync failure, another point of breakage when your customers order during the dinner rush and the whole system buckles.
+
+{{IMG}}
 
 **The FoodSpot Difference: Built For Restaurants, From Day One**
 
@@ -688,6 +704,7 @@ Yes, Shopify takes a cut. 2.9% + 30¢ per transaction, on top of processing fees
 **Start your free 7-day trial** — No credit card. No commitment. See why restaurant owners are ditching Shopify.`,
 
     blog2_title: 'What an Online Store Means For Your Food Business',
+    blog2_meta: '67% of customers prefer ordering directly from a restaurant\'s own site. Learn what an online store actually means for your food business and why you need one in 2026.',
     blog2_excerpt: 'Most people think an online store is for selling products like Amazon. For restaurants, it\'s something else entirely.',
     blog2_body: `## What an Online Store Means For Your Food Business
 
@@ -715,6 +732,8 @@ That world is over.
 
 Today? **67% of customers prefer ordering directly from a restaurant's own website or app** — not from third-party delivery platforms. They want a direct relationship with you. And if you're not there, they go somewhere else.
 
+{{IMG}}
+
 **How an Online Store Actually Helps You**
 
 An online store does three things traditional ordering doesn't:
@@ -738,6 +757,7 @@ If your restaurant isn't online, it's invisible. And invisible restaurants don't
 **Start your free 7-day trial** — Build your custom online store in minutes. No credit card. No long-term contracts.`,
 
     blog3_title: 'How to Capture Organic Content for Your Business: UGC Receipts',
+    blog3_meta: 'Your customers already take food photos. Discover UGC Receipts, the system that turns every order into free organic marketing for your restaurant.',
     blog3_excerpt: 'Everyone takes food photos. Here\'s how to turn that into free marketing for your business.',
     blog3_body: `## How to Capture Organic Content for Your Business: UGC Receipts
 
@@ -770,6 +790,8 @@ Here's how it works:
 5. **They share to social media** — your business name is already embedded
 6. **You reward them** — points, discounts, earned loyalty
 
+{{IMG}}
+
 That's it. One continuous flow. No app-switching. No lost marketing opportunities.
 
 **The Math Is Undeniable**
@@ -781,6 +803,8 @@ Multiply that by a month (roughly 25 operating days): **125 organic, authentic p
 Each one tagged with your business name. Each one reaching their followers. Each one saying: *"This place is good enough to post about."*
 
 That's real social proof. That's free marketing. That's what money can't buy.
+
+{{IMG}}
 
 **The Power Of Word Of Mouth (With Proof)**
 
@@ -1029,8 +1053,10 @@ And they're going to do it happily.
     blog_section_sub: 'Tudo o que você precisa saber para levar seu restaurante ou café para o próximo nível.',
     blog_read_more: 'Leia mais',
     blog_cta: 'Iniciar Teste Grátis',
+    blog_back: 'Voltar para Dicas de Especialistas',
 
     blog1_title: 'Shopify vs Restaurantes: Por Que Não Funciona',
+    blog1_meta: 'O Shopify não foi feito para restaurantes. Sem PDV, sem KDS, sem delivery — você precisa de 12+ apps para funcionar. Veja por que os donos de restaurantes estão abandonando ele.',
     blog1_excerpt: 'O Shopify domina o e-commerce, mas não foi feito para restaurantes. Veja por quê.',
     blog1_body: `## Shopify vs Restaurantes: Por Que Não Funciona
 
@@ -1059,6 +1085,8 @@ O Shopify não tem PDV nativo. Não tem KDS (sistema de tela de cozinha). Não s
 App de estoque. App de tela de cozinha. Integração de delivery. Programa de fidelidade. Processador de pagamentos. Notificações por mensagem. Um construtor de menu que realmente funcione.
 
 **Estamos falando de 12+ apps no mínimo.** Cada um custa entre $20 e $100 por mês. Cada um é outro login, outra falha de sincronização, outro ponto de quebra quando seus clientes pedem no horário de pico e o sistema todo trava.
+
+{{IMG}}
 
 **A Diferença FoodSpot: Construído Para Restaurantes, Desde o Dia Um**
 
@@ -1090,6 +1118,7 @@ Sim, o Shopify cobra uma porcentagem. 2,9% + 30¢ por transação, além das tax
 **Comece seu teste gratuito de 7 dias** — Sem cartão de crédito. Sem compromisso. Veja por que donos de restaurantes estão abandonando o Shopify.`,
 
     blog2_title: 'O Que Uma Loja Online Significa Para Seu Negócio de Comida',
+    blog2_meta: '67% dos clientes preferem pedir direto do site do restaurante. Descubra o que uma loja online realmente significa para o seu negócio de comida e por que você precisa de uma em 2026.',
     blog2_excerpt: 'A maioria pensa que uma loja online é para vender produtos como a Amazon. Para restaurantes é outra coisa.',
     blog2_body: `## O Que Uma Loja Online Significa Para Seu Negócio de Comida
 
@@ -1117,6 +1146,8 @@ Esse mundo acabou.
 
 Hoje? **67% dos clientes preferem pedir diretamente do site ou app do restaurante** — não de plataformas de delivery terceirizadas. Eles querem um relacionamento direto com você. E se você não está lá, eles vão para outro lugar.
 
+{{IMG}}
+
 **Como Uma Loja Online Realmente Te Ajuda**
 
 Uma loja online faz três coisas que os pedidos tradicionais não fazem:
@@ -1140,6 +1171,7 @@ Se seu restaurante não está online, ele é invisível. E restaurantes invisív
 **Comece seu teste gratuito de 7 dias** — Construa sua loja online personalizada em minutos. Sem cartão de crédito. Sem contratos de longo prazo.`,
 
     blog3_title: 'Como Capturar Conteúdo Orgânico Para Seu Negócio: Comprovante UGC',
+    blog3_meta: 'Seus clientes já tiram fotos de comida. Descubra o Comprovante UGC, o sistema que transforma cada pedido em marketing orgânico gratuito para seu restaurante.',
     blog3_excerpt: 'Todo mundo tira fotos de comida. Veja como transformar isso em marketing gratuito para seu negócio.',
     blog3_body: `## Como Capturar Conteúdo Orgânico Para Seu Negócio: Comprovante UGC
 
@@ -1172,6 +1204,8 @@ Veja como funciona:
 5. **Eles compartilham nas redes sociais** — o nome do seu negócio já está incluído
 6. **Você os recompensa** — pontos, descontos, fidelidade conquistada
 
+{{IMG}}
+
 É isso. Um fluxo contínuo. Sem trocar de app. Sem oportunidades de marketing perdidas.
 
 **A Matemática É Inegável**
@@ -1183,6 +1217,8 @@ Multiplique isso por um mês (aproximadamente 25 dias operacionais): **125 fotos
 Cada uma marcada com o nome do seu negócio. Cada uma alcançando seus seguidores. Cada uma dizendo: *"Esse lugar é bom o suficiente para postar."*
 
 Essa é prova social real. Isso é marketing gratuito. Isso é o que dinheiro não pode comprar.
+
+{{IMG}}
 
 **O Poder do Boca a Boca (Com Provas)**
 

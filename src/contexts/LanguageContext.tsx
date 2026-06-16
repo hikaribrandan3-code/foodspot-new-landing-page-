@@ -46,6 +46,9 @@ function detectLang(): { lang: Lang; source: DetectionSource } {
 }
 
 function syncDocumentMeta(lang: Lang) {
+  // Blog post pages own their own title/meta tags (see BlogPost.tsx) — don't clobber them.
+  if (window.location.pathname.startsWith('/blog/')) return;
+
   document.title = t(lang, 'seo_title');
 
   const setMeta = (selector: string, attr: 'content', value: string) => {

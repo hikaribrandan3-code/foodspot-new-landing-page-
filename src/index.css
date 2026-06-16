@@ -84,3 +84,62 @@
 .fade-in {
   animation: fadeIn 0.6s ease-out forwards;
 }
+
+.blog-article-content {
+  color: var(--text-primary, #1f2937);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.blog-article-content p {
+  margin-bottom: 1.5rem;
+}
+
+.blog-article-content h3 {
+  font-family: var(--font-family-brand, inherit);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.blog-article-content strong {
+  font-weight: 700;
+  color: var(--text-primary, #111827);
+}
+
+.blog-article-content ul,
+.blog-article-content ol {
+  margin: 0 0 1.5rem 1.25rem;
+  padding-left: 0.5rem;
+}
+
+.blog-article-content li {
+  margin-bottom: 0.6rem;
+}
+
+.blog-article-content hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 2.5rem 0;
+}
+
+.blog-inline-figure {
+  margin: 2.5rem -1.5rem;
+}
+
+.blog-inline-figure img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 768px) {
+  .blog-inline-figure {
+    margin: 3rem 0;
+  }
+}
