@@ -248,12 +248,20 @@ export function UGCMegaSection() {
               <React.Fragment key={i}>
                 <div className="flex flex-col items-center gap-4">
                   {step.isImage ? (
-                    <div className="flex flex-col items-center gap-3">
+                    <div className="flex flex-col items-center gap-6 w-full">
+                      <div className="text-center">
+                        <p className="text-primary font-display text-2xl md:text-3xl font-black mb-2">
+                          {lang === 'es' ? 'Interactivo: Toca la cámara' : lang === 'pt' ? 'Interativo: Toque a câmera' : 'Interactive: Tap the camera'}
+                        </p>
+                        <p className="text-on-surface-variant text-base md:text-lg">
+                          {lang === 'es' ? 'para ver cómo funciona →' : lang === 'pt' ? 'para ver como funciona →' : 'to see how it works →'}
+                        </p>
+                      </div>
                       <a
                         href="https://foodspotapp.vercel.app/foodspot/camera"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group relative w-64 h-[500px] rounded-[2.5rem] shadow-xl overflow-hidden border-4 border-white bg-gray-200 block transition-opacity hover:opacity-90 cursor-pointer"
+                        className="relative w-64 h-[500px] rounded-[2.5rem] shadow-xl overflow-hidden border-4 border-white bg-gray-200 block transition-opacity hover:opacity-90 cursor-pointer"
                       >
                         <img
                           src={step.image}
@@ -261,9 +269,6 @@ export function UGCMegaSection() {
                           className="w-full h-full object-cover"
                         />
                       </a>
-                      <p className="text-sm text-primary font-semibold">
-                        {lang === 'es' ? 'Toca la imagen para probar la cámara' : lang === 'pt' ? 'Toque a imagem para testar a câmera' : 'Tap the image to try the camera'}
-                      </p>
                     </div>
                   ) : (
                     <div className="flex flex-col items-center gap-4 max-w-[200px]">
@@ -276,7 +281,7 @@ export function UGCMegaSection() {
                     </div>
                   )}
                   <h3 className="font-display text-lg font-bold text-on-surface">{step.title}</h3>
-                  <p className="text-on-surface-variant text-sm max-w-[250px]">{step.desc}</p>
+                  {!step.isImage && <p className="text-on-surface-variant text-sm max-w-[250px]">{step.desc}</p>}
                 </div>
                 {i < 2 && (
                   <div className="mt-10 text-4xl text-on-surface-variant/25 font-black flex-shrink-0 select-none">→</div>
@@ -289,9 +294,17 @@ export function UGCMegaSection() {
           <div className="flex md:hidden flex-col items-center gap-8">
             {steps.map((step, i) => (
               <React.Fragment key={i}>
-                <div className="flex flex-col items-center gap-3">
+                <div className="flex flex-col items-center gap-4">
                   {step.isImage ? (
-                    <div className="flex flex-col items-center gap-2">
+                    <div className="flex flex-col items-center gap-4 w-full">
+                      <div className="text-center">
+                        <p className="text-primary font-display text-xl font-black mb-1">
+                          {lang === 'es' ? 'Interactivo: Toca la cámara' : lang === 'pt' ? 'Interativo: Toque a câmera' : 'Interactive: Tap the camera'}
+                        </p>
+                        <p className="text-on-surface-variant text-sm">
+                          {lang === 'es' ? 'para ver cómo funciona →' : lang === 'pt' ? 'para ver como funciona →' : 'to see how it works →'}
+                        </p>
+                      </div>
                       <a
                         href="https://foodspotapp.vercel.app/foodspot/camera"
                         target="_blank"
@@ -304,9 +317,6 @@ export function UGCMegaSection() {
                           className="w-full h-full object-cover"
                         />
                       </a>
-                      <p className="text-sm text-primary font-semibold">
-                        {lang === 'es' ? 'Toca la imagen para probar la cámara' : lang === 'pt' ? 'Toque a imagem para testar a câmera' : 'Tap the image to try the camera'}
-                      </p>
                     </div>
                   ) : (
                     <div
@@ -317,7 +327,7 @@ export function UGCMegaSection() {
                     </div>
                   )}
                   <h3 className="font-display text-lg font-bold text-on-surface">{step.title}</h3>
-                  <p className="text-on-surface-variant text-sm max-w-[240px]">{step.desc}</p>
+                  {!step.isImage && <p className="text-on-surface-variant text-sm max-w-[240px]">{step.desc}</p>}
                 </div>
                 {i < 2 && <div className="text-2xl text-on-surface-variant/25 select-none">↓</div>}
               </React.Fragment>
