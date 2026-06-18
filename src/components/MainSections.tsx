@@ -347,9 +347,12 @@ export function SubtitleCards() {
   return (
     <section className="py-10 md:py-12 px-6 bg-gradient-to-b from-surface/50 to-surface/25">
       <div className="max-w-5xl mx-auto">
-        <h2 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-8 md:mb-12 leading-tight text-center">
+        <h2 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-6 md:mb-8 leading-tight text-center">
           {lang === 'es' ? '¿Qué es una tienda online?' : lang === 'pt' ? 'O que é uma loja online?' : 'What is an online store?'}
         </h2>
+        <p className="text-lg md:text-xl text-on-surface-variant text-center max-w-3xl mx-auto mb-12 md:mb-16">
+          {t(lang, 'ugc_definition')}
+        </p>
         <div className="grid md:grid-cols-3 gap-12">
           <div className="text-center">
             <DollarSign className="w-12 h-12 text-primary mx-auto mb-4" />
