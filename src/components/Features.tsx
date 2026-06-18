@@ -337,6 +337,31 @@ export function UGCMegaSection() {
         </div>
       </section>
 
+      {/* ── Video Section ── */}
+      <section className="py-16 px-6 bg-surface">
+        <div className="max-w-2xl mx-auto flex flex-col items-center">
+          <h2 className="font-display text-3xl md:text-4xl text-on-surface font-black mb-12 text-center">
+            {t(lang, 'ugc_video_title')}
+          </h2>
+          <div className="relative w-72 h-[550px]">
+            <video
+              ref={ugcVideoRef}
+              muted loop playsInline preload="metadata"
+              poster="/ugc-poster.webp"
+              className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl border-8 border-gray-100"
+            >
+              <source src="/ugc.webm" type="video/webm" />
+              <source src="/ugc.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <a
+            href={lang === 'es' ? '/blog/como-captura-contenido-organico' : lang === 'pt' ? '/blog/como-captura-conteudo-organico' : '/blog/how-to-capture-organic-content'}
+            className="mt-8 text-primary font-semibold hover:underline text-base flex items-center gap-1"
+          >
+            {t(lang, 'ugc_learn_more_link')} <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
 
       {/* ── Beat 4: Calculator ── */}
       <section className="py-16 px-6 bg-surface">
