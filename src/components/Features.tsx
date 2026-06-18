@@ -176,39 +176,6 @@ export function UGCMegaSection() {
       title: '',
       desc: '',
     },
-    {
-      bg: 'bg-rose-500',
-      svg: (
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-14 h-14">
-          <rect x="22" y="12" width="20" height="36" rx="5" fill="white"/>
-          <rect x="26" y="18" width="12" height="24" rx="2.5" fill="#fca5a5"/>
-          <path d="M43 26 L53 22" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
-          <path d="M53 22 L49.5 21 M53 22 L52 25.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M43 34 L53 38" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
-          <path d="M53 38 L49.5 38.5 M53 38 L52.5 34.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M21 26 L11 22" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
-          <path d="M11 22 L14.5 21 M11 22 L12 25.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M21 34 L11 38" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
-          <path d="M11 38 L14.5 38.5 M11 38 L11.5 34.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <circle cx="57" cy="22" r="5" fill="white" opacity="0.9"/>
-          <circle cx="57" cy="22" r="2" fill="#fb7185"/>
-          <path d="M53 28 Q55 25 57 25 Q59 25 61 28" stroke="#fb7185" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
-          <circle cx="7" cy="22" r="5" fill="white" opacity="0.9"/>
-          <circle cx="7" cy="22" r="2" fill="#fb7185"/>
-          <path d="M3 28 Q5 25 7 25 Q9 25 11 28" stroke="#fb7185" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
-          <circle cx="57" cy="38" r="5" fill="white" opacity="0.9"/>
-          <circle cx="57" cy="38" r="2" fill="#fb7185"/>
-          <path d="M53 44 Q55 41 57 41 Q59 41 61 44" stroke="#fb7185" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
-          <circle cx="7" cy="38" r="5" fill="white" opacity="0.9"/>
-          <circle cx="7" cy="38" r="2" fill="#fb7185"/>
-          <path d="M3 44 Q5 41 7 41 Q9 41 11 44" stroke="#fb7185" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
-        </svg>
-      ),
-      title: t(lang, 'ugc_share_earn'),
-      desc: '',
-      hideDesc: true,
-      textAsTitle: true,
-    },
   ];
 
   return (
@@ -282,7 +249,7 @@ export function UGCMegaSection() {
                           href="https://foodspotapp.vercel.app/foodspot/camera"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="relative w-64 h-[500px] rounded-[2.5rem] shadow-xl overflow-hidden border-4 border-white bg-gray-200 block transition-opacity hover:opacity-90 cursor-pointer"
+                          className="relative w-64 h-[500px] rounded-[2.5rem] shadow-xl overflow-hidden border-4 border-white bg-white block transition-opacity hover:opacity-90 cursor-pointer"
                         >
                           <img
                             src={step.image}
@@ -311,7 +278,7 @@ export function UGCMegaSection() {
                     )}
                   </div>
                   {i < steps.length - 1 && !step.isImage && (
-                    <div className="mt-10 text-4xl text-on-surface-variant/25 font-black flex-shrink-0 select-none">→</div>
+                    <div className="mt-10 text-4xl text-on-surface-variant/25 font-black flex-shrink-0 select-none" style={{ animation: 'slideHorizontal 1.5s ease-in-out infinite' }}>→</div>
                   )}
                 </React.Fragment>
               ))}
