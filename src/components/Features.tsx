@@ -212,6 +212,15 @@ export function UGCMegaSection() {
 
   return (
     <>
+      {/* ── Definition: What is an Online Store ── */}
+      <section className="py-12 px-6 bg-gradient-to-b from-white to-surface">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="text-lg text-on-surface-variant leading-relaxed">
+            {t(lang, 'ugc_definition')}
+          </p>
+        </div>
+      </section>
+
       {/* ── Beat 1: The Invention (formerly Beat 2) ── */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-5xl mx-auto text-center">
