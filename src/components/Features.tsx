@@ -212,11 +212,14 @@ export function UGCMegaSection() {
 
   return (
     <>
-      {/* ── Definition: What is an Online Store ── */}
+      {/* ── UGC RECEIPTS Definition Section ── */}
       <section className="py-12 px-6 bg-gradient-to-b from-white to-surface">
         <div className="max-w-2xl mx-auto text-center">
+          <h3 className="font-display text-2xl md:text-3xl text-on-surface font-black mb-3">
+            {t(lang, 'ugc_receipts_heading')}
+          </h3>
           <p className="text-lg text-on-surface-variant leading-relaxed">
-            {t(lang, 'ugc_definition')}
+            {t(lang, 'ugc_receipts_def')}
           </p>
         </div>
       </section>
@@ -230,16 +233,33 @@ export function UGCMegaSection() {
           <p className="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-12">
             {t(lang, 'ugc_invented_sub')}
           </p>
-          <div className="bg-surface rounded-2xl p-8 mb-12 text-left">
+
+          {/* Desktop Bullets */}
+          <div className="hidden md:block bg-surface rounded-2xl p-8 mb-12 text-left">
             <div className="space-y-4">
               <p className="text-on-surface font-semibold text-base">
-                <span className="text-primary font-black">→ </span>{t(lang, 'ugc_bullet1')}
+                <span className="text-primary font-black">→ </span>{t(lang, 'ugc_bullet1_desktop')}
               </p>
               <p className="text-on-surface font-semibold text-base">
-                <span className="text-primary font-black">→ </span>{t(lang, 'ugc_bullet2')}
+                <span className="text-primary font-black">→ </span>{t(lang, 'ugc_bullet2_desktop')}
               </p>
               <p className="text-on-surface font-semibold text-base">
-                <span className="text-primary font-black">→ </span>{t(lang, 'ugc_bullet3')}
+                <span className="text-primary font-black">→ </span>{t(lang, 'ugc_bullet3_desktop')}
+              </p>
+            </div>
+          </div>
+
+          {/* Mobile Bullets */}
+          <div className="md:hidden bg-surface rounded-2xl p-8 mb-12 text-left">
+            <div className="space-y-4">
+              <p className="text-on-surface font-semibold text-base">
+                <span className="text-primary font-black">→ </span>{t(lang, 'ugc_bullet1_mobile')}
+              </p>
+              <p className="text-on-surface font-semibold text-base">
+                <span className="text-primary font-black">→ </span>{t(lang, 'ugc_bullet2_mobile')}
+              </p>
+              <p className="text-on-surface font-semibold text-base">
+                <span className="text-primary font-black">→ </span>{t(lang, 'ugc_bullet3_mobile')}
               </p>
             </div>
           </div>
