@@ -235,10 +235,7 @@ export function UGCMegaSection() {
                     {step.isImage ? (
                       <div className="flex flex-col items-center gap-6 w-full">
                         <div className="text-center">
-                          <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
-                            <ArrowDown className="w-6 h-6 mx-auto text-primary/50 mb-2" />
-                          </div>
-                          <p className="text-on-surface font-display text-2xl md:text-3xl font-black mb-2">
+                          <p className="text-on-surface font-display text-2xl md:text-3xl font-black mb-3">
                             {t(lang, 'ugc_try_camera')}
                           </p>
                           <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
@@ -293,10 +290,7 @@ export function UGCMegaSection() {
                   {step.isImage ? (
                     <div className="flex flex-col items-center gap-4 w-full">
                       <div className="text-center">
-                        <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
-                          <ArrowDown className="w-5 h-5 mx-auto text-primary/50 mb-2" />
-                        </div>
-                        <p className="text-on-surface font-display text-2xl font-black mb-2">
+                        <p className="text-on-surface font-display text-2xl font-black mb-3">
                           {t(lang, 'ugc_try_camera')}
                         </p>
                         <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
@@ -339,50 +333,6 @@ export function UGCMegaSection() {
         </div>
       </section>
 
-      {/* ── Beat 3: Video + Spec Badges ── */}
-      <section className="py-16 px-6 bg-surface">
-        <div className="max-w-2xl mx-auto flex flex-col items-center">
-          <h2 className="font-display text-3xl md:text-4xl text-on-surface font-black mb-12 text-center">
-            {t(lang, 'ugc_video_title')}
-          </h2>
-          <div className="relative">
-            {/* Desktop floating badges */}
-            <div className="hidden md:flex absolute -left-48 top-1/2 -translate-y-1/2 flex-col gap-6">
-              <SpecBadge color="bg-emerald-500" glowColor="rgba(16,185,129,0.55)" text="4K" sub={resLabel} />
-              <SpecBadge color="bg-amber-400" glowColor="rgba(251,191,36,0.55)" text="100+" sub="Stickers" />
-            </div>
-            <div className="hidden md:block absolute -right-44 top-1/2 -translate-y-1/2">
-              <SpecBadge color="bg-rose-500" glowColor="rgba(244,63,94,0.55)" text="📍" sub="Business Pin" />
-            </div>
-
-            <div className="relative w-72 h-[550px]">
-              <video
-                ref={ugcVideoRef}
-                muted loop playsInline preload="metadata"
-                poster="/ugc-poster.webp"
-                className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl border-8 border-gray-100"
-              >
-                <source src="/ugc.webm" type="video/webm" />
-                <source src="/ugc.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </div>
-
-          {/* Mobile badges */}
-          <div className="flex md:hidden gap-4 mt-8 flex-wrap justify-center">
-            <SpecBadge color="bg-emerald-500" glowColor="rgba(16,185,129,0.55)" text="4K" sub={resLabel} />
-            <SpecBadge color="bg-amber-400" glowColor="rgba(251,191,36,0.55)" text="100+" sub="Stickers" />
-            <SpecBadge color="bg-rose-500" glowColor="rgba(244,63,94,0.55)" text="📍" sub="Business Pin" />
-          </div>
-
-          <a
-            href={lang === 'es' ? '/blog/como-captura-contenido-organico' : lang === 'pt' ? '/blog/como-captura-conteudo-organico' : '/blog/how-to-capture-organic-content'}
-            className="mt-8 text-primary font-semibold hover:underline text-base flex items-center gap-1"
-          >
-            {t(lang, 'ugc_learn_more_link')} <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </section>
 
       {/* ── Beat 4: Calculator ── */}
       <section className="py-16 px-6 bg-surface">
