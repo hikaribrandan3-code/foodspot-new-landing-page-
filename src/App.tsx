@@ -86,8 +86,8 @@ export default function App() {
         <Navbar />
         <main>
           <Hero />
-          <SubtitleCards />
           <UGCMegaSection />
+          <SubtitleCards />
           <HowItWorks />
           <Features />
           <FAQ />
