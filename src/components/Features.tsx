@@ -183,8 +183,11 @@ export function UGCMegaSection() {
       {/* ── UGC RECEIPTS + Free Marketing Section ── */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-lg md:text-xl text-on-surface-variant font-semibold mb-6">
-            {lang === 'es' ? 'Creamos una nueva forma de promoción digital tu negocio!' : lang === 'pt' ? 'Criamos uma nova forma de promover seu negócio digitalmente!' : 'We created a new way to promote your business digitally!'}
+          <p className="text-lg md:text-xl text-on-surface-variant font-semibold mb-8">
+            {lang === 'es' ? 'FoodSpot Mobile es una plataforma donde restaurantes, bares y cafés crean sus propias apps personalizadas, todo integrado en tu teléfono.' : lang === 'pt' ? 'FoodSpot Mobile é uma plataforma onde restaurantes, bares e cafés criam seus próprios apps personalizados, tudo integrado no seu telefone.' : 'FoodSpot Mobile is a platform where restaurants, bars, and cafes create their own custom apps, all integrated on your phone.'}
+          </p>
+          <p className="text-lg md:text-xl text-on-surface-variant font-semibold mb-12">
+            {lang === 'es' ? 'Somos los creadores de UGC RECEIPTS — comprobantes digitales que piden a tus clientes que compartan una foto de su comida en tu app y redes sociales!' : lang === 'pt' ? 'Somos os criadores de UGC RECEIPTS — recibos digitais que pedem aos seus clientes para compartilhar uma foto da comida no seu app e redes sociais!' : 'We are the creators of UGC RECEIPTS — digital receipts that prompt your customers to share a photo of their food on your app and social media!'}
           </p>
           <div className="mb-12">
             <h2 className="font-display text-5xl md:text-6xl text-on-surface font-black">
@@ -225,6 +228,40 @@ export function UGCMegaSection() {
                 <p className="text-on-surface font-semibold text-base">
                   <span className="text-primary font-black text-xl">→ </span>{t(lang, 'ugc_bullet3_mobile')}
                 </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Receipt Flow Visual */}
+          <div className="my-16 pb-12 border-b border-outline-variant/30">
+            <div className="max-w-3xl mx-auto">
+              <div className="hidden md:flex justify-center items-center gap-4 flex-wrap">
+                <div className="text-center">
+                  <p className="text-sm text-on-surface-variant font-semibold">Orden</p>
+                </div>
+                <span className="text-2xl text-primary/50">→</span>
+                <div className="text-center">
+                  <p className="text-sm text-on-surface-variant font-semibold">Pago</p>
+                </div>
+                <span className="text-2xl text-primary/50">→</span>
+                <div className="text-center">
+                  <p className="text-sm text-on-surface-variant font-semibold">Comida Entregada</p>
+                </div>
+                <span className="text-2xl text-primary/50">→</span>
+                <div className="text-center">
+                  <p className="text-sm text-on-surface-variant font-semibold">Toma una Foto</p>
+                </div>
+                <span className="text-2xl text-primary/50">→</span>
+                <div className="text-center">
+                  <p className="text-sm text-on-surface-variant font-semibold">Edita</p>
+                </div>
+                <span className="text-2xl text-primary/50">→</span>
+                <div className="text-center">
+                  <p className="text-sm text-on-surface-variant font-semibold">Comparte</p>
+                </div>
+              </div>
+              <div className="md:hidden space-y-3">
+                <p className="text-sm text-on-surface-variant font-semibold">Orden → Pago → Comida Entregada → Toma una Foto → Edita → Comparte</p>
               </div>
             </div>
           </div>

@@ -86,9 +86,8 @@ export default function App() {
         <Navbar />
         <main>
           <Hero />
-          <UGCMegaSection />
-          <SubtitleCards />
           <HowItWorks />
+          <UGCMegaSection />
           <Features />
           <FAQ />
           <BlogSection onOpenPost={navigateToBlog} />
