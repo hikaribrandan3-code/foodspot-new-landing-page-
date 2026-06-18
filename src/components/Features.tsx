@@ -246,9 +246,9 @@ export function UGCMegaSection() {
           <div className="hidden md:flex items-start justify-center gap-4">
             {steps.map((step, i) => (
               <React.Fragment key={i}>
-                <div className="flex flex-col items-center gap-4 max-w-[200px]">
+                <div className="flex flex-col items-center gap-4">
                   {step.isImage ? (
-                    <div className="relative w-32 h-48 rounded-3xl shadow-xl overflow-hidden border-4 border-white bg-gray-200">
+                    <div className="relative w-64 h-[500px] rounded-[2.5rem] shadow-xl overflow-hidden border-4 border-white bg-gray-200">
                       <img
                         src={step.image}
                         alt={step.title}
@@ -256,15 +256,17 @@ export function UGCMegaSection() {
                       />
                     </div>
                   ) : (
-                    <div
-                      className={`w-24 h-24 rounded-3xl ${step.bg} flex items-center justify-center shadow-xl`}
-                      style={{ animation: `float 3s ease-in-out infinite`, animationDelay: `${i * 0.8}s` }}
-                    >
-                      {step.svg}
+                    <div className="flex flex-col items-center gap-4 max-w-[200px]">
+                      <div
+                        className={`w-24 h-24 rounded-3xl ${step.bg} flex items-center justify-center shadow-xl`}
+                        style={{ animation: `float 3s ease-in-out infinite`, animationDelay: `${i * 0.8}s` }}
+                      >
+                        {step.svg}
+                      </div>
                     </div>
                   )}
                   <h3 className="font-display text-lg font-bold text-on-surface">{step.title}</h3>
-                  <p className="text-on-surface-variant text-sm">{step.desc}</p>
+                  <p className="text-on-surface-variant text-sm max-w-[250px]">{step.desc}</p>
                 </div>
                 {i < 2 && (
                   <div className="mt-10 text-4xl text-on-surface-variant/25 font-black flex-shrink-0 select-none">→</div>
@@ -279,7 +281,7 @@ export function UGCMegaSection() {
               <React.Fragment key={i}>
                 <div className="flex flex-col items-center gap-3">
                   {step.isImage ? (
-                    <div className="relative w-24 h-36 rounded-3xl shadow-xl overflow-hidden border-4 border-white bg-gray-200">
+                    <div className="relative w-56 h-96 rounded-[2.5rem] shadow-xl overflow-hidden border-4 border-white bg-gray-200">
                       <img
                         src={step.image}
                         alt={step.title}
