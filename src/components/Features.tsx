@@ -170,7 +170,7 @@ export function UGCMegaSection() {
   const steps = [
     {
       bg: 'bg-amber-400',
-      image: '/blog3-receipt.webp',
+      image: '/receipt-foto.png',
       isImage: true,
       isReceipt: true,
       title: '',
