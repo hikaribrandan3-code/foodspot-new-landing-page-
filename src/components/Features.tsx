@@ -112,74 +112,307 @@ export function Features() {
   );
 }
 
-export function UGCMarketing() {
+function SpecBadge({ color, text, sub }: { color: string; text: string; sub: string }) {
+  return (
+    <div className={`${color} text-white rounded-2xl px-4 py-2.5 shadow-lg text-center min-w-[90px]`}>
+      <p className="font-display font-black text-xl leading-none">{text}</p>
+      <p className="text-xs font-semibold mt-0.5 opacity-90">{sub}</p>
+    </div>
+  );
+}
+
+export function UGCMegaSection() {
   const { lang } = useLanguage();
-  const ugcVideoRef = React.useRef(null);
+  const [visitors, setVisitors] = React.useState(100);
+  const ugcVideoRef = React.useRef<HTMLVideoElement>(null);
 
   React.useEffect(() => {
     const video = ugcVideoRef.current;
     if (!video) return;
-
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          video.play();
-        } else {
-          video.pause();
-        }
+        if (entry.isIntersecting) video.play();
+        else video.pause();
       },
       { threshold: 0.5 }
     );
-
     observer.observe(video);
     return () => observer.disconnect();
   }, []);
 
-  return (
-    <section className="py-16 px-6 max-w-7xl mx-auto">
-      <div className="text-center mb-8">
-        <h2 className="font-display text-4xl md:text-5xl text-on-surface font-black">{t(lang, 'ugc_heading')}</h2>
-      </div>
+  const at5day = Math.round(visitors * 0.05);
+  const at10day = Math.round(visitors * 0.10);
 
-      <div className="flex flex-col items-center gap-8">
-        <div className="flex justify-center">
-          <div className="relative w-72 h-[550px] group">
-            <video
-              ref={ugcVideoRef}
-              muted
-              loop
-              playsInline
-              preload="metadata"
-              poster="/ugc-poster.webp"
-              className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl border-8 border-gray-100 group-hover:opacity-100 transition-opacity duration-500"
-              onPlay={(e) => e.currentTarget.style.opacity = '1'}
-              onLoadStart={(e) => e.currentTarget.style.opacity = '0.95'}
-            >
-              <source src="/ugc.webm" type="video/webm" />
-              <source src="/ugc.mp4" type="video/mp4" />
-            </video>
+  const calcRows = [
+    { label: t(lang, 'ugc_calc_row_day'), v5: at5day, v10: at10day },
+    { label: t(lang, 'ugc_calc_row_week'), v5: at5day * 7, v10: at10day * 7 },
+    { label: t(lang, 'ugc_calc_row_month'), v5: at5day * 30, v10: at10day * 30 },
+  ];
+
+  const resLabel = lang === 'pt' ? 'Resolução' : 'Resolución';
+
+  const steps = [
+    {
+      bg: 'bg-emerald-500',
+      svg: (
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-14 h-14">
+          <rect x="10" y="6" width="28" height="36" rx="4" fill="white"/>
+          <path d="M10 38 Q14 44 18 38 Q22 32 26 38 Q30 44 34 38 Q38 32 38 38 V48 H10 V38Z" fill="white"/>
+          <rect x="16" y="14" width="16" height="2.5" rx="1.25" fill="#d1fae5"/>
+          <rect x="16" y="20" width="12" height="2.5" rx="1.25" fill="#d1fae5"/>
+          <rect x="16" y="26" width="14" height="2.5" rx="1.25" fill="#d1fae5"/>
+          <circle cx="46" cy="46" r="14" fill="#fbbf24"/>
+          <rect x="39" y="41" width="14" height="10" rx="3" fill="white"/>
+          <circle cx="46" cy="46" r="4" fill="#fbbf24"/>
+          <circle cx="46" cy="46" r="2.5" fill="#f59e0b"/>
+          <rect x="41" y="38.5" width="6" height="3.5" rx="1.5" fill="white"/>
+        </svg>
+      ),
+      title: t(lang, 'ugc_step1_title'),
+      desc: t(lang, 'ugc_step1_desc'),
+    },
+    {
+      bg: 'bg-amber-400',
+      svg: (
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-14 h-14">
+          <rect x="18" y="8" width="28" height="48" rx="6" fill="white"/>
+          <rect x="22" y="16" width="20" height="32" rx="3" fill="#fef3c7"/>
+          <circle cx="32" cy="29" r="8" fill="#fb923c" opacity="0.8"/>
+          <circle cx="32" cy="29" r="5" fill="#f97316" opacity="0.6"/>
+          <circle cx="10" cy="14" r="7" fill="#f43f5e"/>
+          <path d="M10 8.5 L11.3 12.2 L15.3 12.2 L12.2 14.3 L13.5 18 L10 15.9 L6.5 18 L7.8 14.3 L4.7 12.2 L8.7 12.2 Z" fill="white"/>
+          <circle cx="54" cy="14" r="7" fill="#a78bfa"/>
+          <path d="M54 19.5 C53 18 47.5 14.5 47.5 11.5 C47.5 9.5 49.2 8 51 8 C52.2 8 53.3 8.7 54 9.5 C54.7 8.7 55.8 8 57 8 C58.8 8 60.5 9.5 60.5 11.5 C60.5 14.5 55 18 54 19.5Z" fill="white"/>
+          <circle cx="56" cy="48" r="6" fill="#10b981"/>
+          <path d="M56 42.5 L57.1 46 L60.5 47 L57.1 48 L56 51.5 L54.9 48 L51.5 47 L54.9 46 Z" fill="white"/>
+          <circle cx="8" cy="46" r="6" fill="#006c49"/>
+          <path d="M8 41 C6 41 4 43 4 45.2 C4 48 8 52 8 52 C8 52 12 48 12 45.2 C12 43 10 41 8 41Z" fill="white"/>
+          <circle cx="8" cy="45" r="1.5" fill="#006c49"/>
+        </svg>
+      ),
+      title: t(lang, 'ugc_step2_title'),
+      desc: t(lang, 'ugc_step2_desc'),
+    },
+    {
+      bg: 'bg-rose-500',
+      svg: (
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-14 h-14">
+          <rect x="22" y="12" width="20" height="36" rx="5" fill="white"/>
+          <rect x="26" y="18" width="12" height="24" rx="2.5" fill="#fca5a5"/>
+          <path d="M43 26 L53 22" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
+          <path d="M53 22 L49.5 21 M53 22 L52 25.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M43 34 L53 38" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
+          <path d="M53 38 L49.5 38.5 M53 38 L52.5 34.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M21 26 L11 22" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
+          <path d="M11 22 L14.5 21 M11 22 L12 25.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M21 34 L11 38" stroke="white" strokeWidth="2.5" strokeLinecap="round"/>
+          <path d="M11 38 L14.5 38.5 M11 38 L11.5 34.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <circle cx="57" cy="22" r="5" fill="white" opacity="0.9"/>
+          <circle cx="57" cy="22" r="2" fill="#fb7185"/>
+          <path d="M53 28 Q55 25 57 25 Q59 25 61 28" stroke="#fb7185" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+          <circle cx="7" cy="22" r="5" fill="white" opacity="0.9"/>
+          <circle cx="7" cy="22" r="2" fill="#fb7185"/>
+          <path d="M3 28 Q5 25 7 25 Q9 25 11 28" stroke="#fb7185" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+          <circle cx="57" cy="38" r="5" fill="white" opacity="0.9"/>
+          <circle cx="57" cy="38" r="2" fill="#fb7185"/>
+          <path d="M53 44 Q55 41 57 41 Q59 41 61 44" stroke="#fb7185" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+          <circle cx="7" cy="38" r="5" fill="white" opacity="0.9"/>
+          <circle cx="7" cy="38" r="2" fill="#fb7185"/>
+          <path d="M3 44 Q5 41 7 41 Q9 41 11 44" stroke="#fb7185" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
+        </svg>
+      ),
+      title: t(lang, 'ugc_step3_title'),
+      desc: t(lang, 'ugc_step3_desc'),
+    },
+  ];
+
+  return (
+    <>
+      {/* ── Beat 1: Owner Truth ── */}
+      <section className="py-12 md:py-16 px-6 bg-primary">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="font-display text-2xl md:text-3xl text-white/60 font-semibold mb-3">
+            {t(lang, 'ugc_owner_line1')}
+          </p>
+          <p className="font-display text-2xl md:text-3xl text-white/90 font-semibold mb-3">
+            {t(lang, 'ugc_owner_line2')}
+          </p>
+          <p className="font-display text-xl md:text-2xl text-white/60 font-semibold mb-8">
+            {t(lang, 'ugc_owner_line3')}
+          </p>
+          <p className="font-display text-4xl md:text-5xl text-white font-black mb-8">
+            {t(lang, 'ugc_owner_punch')}
+          </p>
+          <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
+            <ArrowDown className="w-5 h-5 mx-auto text-white/50" />
           </div>
         </div>
+      </section>
 
-        <div className="text-center">
-          <p className="text-xl md:text-2xl text-on-surface font-semibold max-w-2xl">
-            {t(lang, 'ugc_stat')}
+      {/* ── Beat 2: The Invention ── */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-5xl mx-auto text-center">
+          <span className="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase">
+            {t(lang, 'ugc_invented_label')}
+          </span>
+          <h2 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-4">
+            {t(lang, 'ugc_invented_heading')}
+          </h2>
+          <p className="text-lg md:text-xl text-on-surface-variant max-w-3xl mx-auto mb-14">
+            {t(lang, 'ugc_invented_sub')}
+          </p>
+
+          {/* Desktop: horizontal with arrows */}
+          <div className="hidden md:flex items-start justify-center gap-4">
+            {steps.map((step, i) => (
+              <React.Fragment key={i}>
+                <div className="flex flex-col items-center gap-4 max-w-[200px]">
+                  <div className={`w-24 h-24 rounded-3xl ${step.bg} flex items-center justify-center shadow-xl`}>
+                    {step.svg}
+                  </div>
+                  <h3 className="font-display text-lg font-bold text-on-surface">{step.title}</h3>
+                  <p className="text-on-surface-variant text-sm">{step.desc}</p>
+                </div>
+                {i < 2 && (
+                  <div className="mt-10 text-4xl text-on-surface-variant/25 font-black flex-shrink-0 select-none">→</div>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+
+          {/* Mobile: stacked */}
+          <div className="flex md:hidden flex-col items-center gap-8">
+            {steps.map((step, i) => (
+              <React.Fragment key={i}>
+                <div className="flex flex-col items-center gap-3">
+                  <div className={`w-20 h-20 rounded-3xl ${step.bg} flex items-center justify-center shadow-xl`}>
+                    {step.svg}
+                  </div>
+                  <h3 className="font-display text-lg font-bold text-on-surface">{step.title}</h3>
+                  <p className="text-on-surface-variant text-sm max-w-[240px]">{step.desc}</p>
+                </div>
+                {i < 2 && <div className="text-2xl text-on-surface-variant/25 select-none">↓</div>}
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Beat 3: Video + Spec Badges ── */}
+      <section className="py-16 px-6 bg-surface">
+        <div className="max-w-2xl mx-auto flex flex-col items-center">
+          <div className="relative">
+            {/* Desktop floating badges */}
+            <div className="hidden md:flex absolute -left-48 top-1/2 -translate-y-1/2 flex-col gap-4">
+              <SpecBadge color="bg-emerald-500" text="4K" sub={resLabel} />
+              <SpecBadge color="bg-amber-400" text="100+" sub="Stickers" />
+            </div>
+            <div className="hidden md:block absolute -right-44 top-1/2 -translate-y-1/2">
+              <SpecBadge color="bg-rose-500" text="📍" sub="Business Pin" />
+            </div>
+
+            <div className="relative w-72 h-[550px]">
+              <video
+                ref={ugcVideoRef}
+                muted loop playsInline preload="metadata"
+                poster="/ugc-poster.webp"
+                className="w-full h-full object-cover rounded-[2.5rem] shadow-2xl border-8 border-gray-100"
+              >
+                <source src="/ugc.webm" type="video/webm" />
+                <source src="/ugc.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </div>
+
+          {/* Mobile badges */}
+          <div className="flex md:hidden gap-3 mt-6 flex-wrap justify-center">
+            <SpecBadge color="bg-emerald-500" text="4K" sub={resLabel} />
+            <SpecBadge color="bg-amber-400" text="100+" sub="Stickers" />
+            <SpecBadge color="bg-rose-500" text="📍" sub="Business Pin" />
+          </div>
+
+          <a
+            href="#expert-tips"
+            className="mt-8 text-primary font-semibold hover:underline text-base flex items-center gap-1"
+          >
+            {t(lang, 'ugc_learn_more')} <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
+      {/* ── Beat 4: The Stat ── */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="font-display leading-none font-black text-primary" style={{ fontSize: 'clamp(5rem, 18vw, 9rem)' }}>
+            71%
+          </p>
+          <p className="text-xl md:text-2xl text-on-surface-variant font-semibold mt-4 max-w-lg mx-auto">
+            {t(lang, 'ugc_stat_text')}
           </p>
         </div>
+      </section>
 
-        <div className="text-center">
-          <div className="text-lg md:text-xl text-on-surface-variant font-semibold flex items-center justify-center gap-3 flex-wrap">
-            <span>{t(lang, 'ugc_flow_photo')}</span>
-            <span className="text-2xl">→</span>
-            <span>{t(lang, 'ugc_flow_share')}</span>
-            <span className="text-2xl">→</span>
-            <span>{t(lang, 'ugc_flow_customer')}
-            </span>
+      {/* ── Beat 5: Calculator ── */}
+      <section className="py-16 px-6 bg-surface">
+        <div className="max-w-2xl mx-auto text-center">
+          <h3 className="font-display text-3xl md:text-4xl text-on-surface font-black mb-2">
+            {t(lang, 'ugc_calc_heading')}
+          </h3>
+
+          <div className="mt-8 mb-8">
+            <label className="text-on-surface-variant font-semibold text-base block">
+              {t(lang, 'ugc_calc_slider_label')}:{' '}
+              <span className="text-primary font-black text-2xl">{visitors}</span>
+            </label>
+            <input
+              type="range"
+              min={20} max={500} value={visitors}
+              onChange={(e) => setVisitors(Number(e.target.value))}
+              className="w-full mt-3 h-2 rounded-full appearance-none cursor-pointer accent-primary"
+            />
+            <div className="flex justify-between text-xs text-on-surface-variant mt-1.5">
+              <span>20</span>
+              <span>500</span>
+            </div>
           </div>
-        </div>
 
-      </div>
-    </section>
+          <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-outline-variant">
+            <div className="grid grid-cols-3 bg-on-surface text-white text-sm font-bold">
+              <div className="px-4 py-3 text-left">{t(lang, 'ugc_calc_period')}</div>
+              <div className="px-4 py-3 text-center border-l border-white/10">{t(lang, 'ugc_calc_col_5')}</div>
+              <div className="px-4 py-3 text-center border-l border-white/10">{t(lang, 'ugc_calc_col_10')}</div>
+            </div>
+            {calcRows.map((row, i) => (
+              <div key={i} className={`grid grid-cols-3 text-sm ${i % 2 === 0 ? 'bg-white' : 'bg-surface'}`}>
+                <div className="px-4 py-3 text-left font-semibold text-on-surface">{row.label}</div>
+                <div className="px-4 py-3 text-center font-bold text-primary border-l border-outline-variant">
+                  {row.v5} {t(lang, 'ugc_calc_photos')}
+                </div>
+                <div className="px-4 py-3 text-center font-bold text-primary border-l border-outline-variant">
+                  {row.v10} {t(lang, 'ugc_calc_photos')}
+                </div>
+              </div>
+            ))}
+            <div className="grid grid-cols-3 bg-primary text-white text-base font-black">
+              <div className="px-4 py-4 text-left">{t(lang, 'ugc_calc_cost')}</div>
+              <div className="px-4 py-4 text-center border-l border-white/20">$0</div>
+              <div className="px-4 py-4 text-center border-l border-white/20">$0</div>
+            </div>
+          </div>
+
+          <p className="mt-6 text-on-surface-variant font-semibold text-base">
+            {t(lang, 'ugc_calc_footer')}
+          </p>
+
+          <a
+            href="https://foodspotapp.vercel.app/start-trial"
+            className="mt-6 inline-block bg-primary hover:bg-primary-container text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg transition-all active:scale-95"
+          >
+            {t(lang, 'ugc_calc_cta')}
+          </a>
+        </div>
+      </section>
+    </>
   );
 }
 

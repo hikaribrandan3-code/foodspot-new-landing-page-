@@ -80,12 +80,38 @@ const translations = {
     ai_heading: 'Foodspot AI',
     ai_desc: 'Tu asistente personal de estrategia gastronomica. Genera promociones inteligentes y optimiza tus costos analizando tus datos en tiempo real.',
 
-    // UGCMarketing
-    ugc_heading: 'Convertí a cada cliente en contenido',
-    ugc_stat: 'El 71% de las personas te visita porque un amigo subió una foto.',
-    ugc_flow_photo: 'Foto',
-    ugc_flow_share: 'Compartir',
-    ugc_flow_customer: 'Nueva Cliente',
+    // UGCMegaSection — Beat 1
+    ugc_owner_line1: 'Lo ves todos los días.',
+    ugc_owner_line2: 'Tus clientes sacan el teléfono, sacan una foto, la suben.',
+    ugc_owner_line3: 'Siempre pasó. Ninguna app lo captura. Ninguna plataforma lo usa para vos.',
+    ugc_owner_punch: 'Nosotros lo hicimos.',
+    // Beat 2
+    ugc_invented_label: 'Inventado por FoodSpot',
+    ugc_invented_heading: 'Inventamos el Comprobante UGC',
+    ugc_invented_sub: 'Construimos el primer loop de marketing alrededor del momento más obvio que todos ignoraron: cuando tu cliente abre el comprobante.',
+    ugc_step1_title: 'El cliente abre el comprobante',
+    ugc_step1_desc: 'La cámara se activa automáticamente',
+    ugc_step2_title: 'Edita y personaliza',
+    ugc_step2_desc: 'Cámara 4K · 100+ stickers · pin de tu negocio',
+    ugc_step3_title: 'Comparte a stories',
+    ugc_step3_desc: 'Sus amigos lo ven. Nuevos clientes entran.',
+    // Beat 3
+    ugc_learn_more: '¿Querés aprender a aprovecharlo al máximo?',
+    // Beat 4
+    ugc_stat_text: 'de las personas te visitan porque un amigo subió una foto.',
+    // Beat 5 — Calculator
+    ugc_calc_heading: '¿Cuánto contenido gratis estás dejando sobre la mesa?',
+    ugc_calc_slider_label: 'Clientes que visitan tu local por día',
+    ugc_calc_period: 'Período',
+    ugc_calc_col_5: 'Al 5%',
+    ugc_calc_col_10: 'Al 10%',
+    ugc_calc_row_day: 'Por día',
+    ugc_calc_row_week: 'Por semana',
+    ugc_calc_row_month: 'Por mes',
+    ugc_calc_cost: 'Costo por foto',
+    ugc_calc_photos: 'fotos',
+    ugc_calc_footer: 'Todo eso, gratis — incluido en tu plan.',
+    ugc_calc_cta: 'Empezá gratis ahora',
 
     // Testimonials
     testimonials_heading: 'Lo que dicen nuestros clientes',
@@ -494,12 +520,38 @@ Y lo van a hacer felices.
     ai_heading: 'Foodspot AI',
     ai_desc: 'Your personal restaurant strategy assistant. Generate smart promotions and cut costs by analyzing your real-time data.',
 
-    // UGCMarketing
-    ugc_heading: 'Turn every customer into content',
-    ugc_stat: '71% of people visit you because a friend posted a photo.',
-    ugc_flow_photo: 'Photo',
-    ugc_flow_share: 'Share',
-    ugc_flow_customer: 'New Customer',
+    // UGCMegaSection — Beat 1
+    ugc_owner_line1: 'You see it every day.',
+    ugc_owner_line2: 'Your customers pull out their phones, take a photo, post it.',
+    ugc_owner_line3: "It's always happened. No app captures it. No platform uses it for you.",
+    ugc_owner_punch: 'We did.',
+    // Beat 2
+    ugc_invented_label: 'Invented by FoodSpot',
+    ugc_invented_heading: 'We Invented UGC Receipts',
+    ugc_invented_sub: 'We built the first marketing loop around the most obvious moment everyone ignored: when your customer opens their receipt.',
+    ugc_step1_title: 'Customer opens the receipt',
+    ugc_step1_desc: 'The camera activates automatically',
+    ugc_step2_title: 'Edit and personalize',
+    ugc_step2_desc: '4K camera · 100+ stickers · your business pin',
+    ugc_step3_title: 'Share to stories',
+    ugc_step3_desc: 'Friends see it. New customers walk in.',
+    // Beat 3
+    ugc_learn_more: 'Want to learn how to use it to its full potential?',
+    // Beat 4
+    ugc_stat_text: 'of people visit you because a friend posted a photo.',
+    // Beat 5 — Calculator
+    ugc_calc_heading: 'How much free content are you leaving on the table?',
+    ugc_calc_slider_label: 'Customers visiting your location per day',
+    ugc_calc_period: 'Period',
+    ugc_calc_col_5: 'At 5%',
+    ugc_calc_col_10: 'At 10%',
+    ugc_calc_row_day: 'Per day',
+    ugc_calc_row_week: 'Per week',
+    ugc_calc_row_month: 'Per month',
+    ugc_calc_cost: 'Cost per photo',
+    ugc_calc_photos: 'photos',
+    ugc_calc_footer: 'All of that, free — included in your plan.',
+    ugc_calc_cta: 'Start for free',
 
     // Testimonials
     testimonials_heading: 'What our customers say',
@@ -908,12 +960,38 @@ And they're going to do it happily.
     ai_heading: 'Foodspot AI',
     ai_desc: 'Seu assistente pessoal de estratégia gastronômica. Gere promoções inteligentes e otimize seus custos analisando seus dados em tempo real.',
 
-    // UGCMarketing
-    ugc_heading: 'Transforme cada cliente em conteúdo',
-    ugc_stat: '71% das pessoas visitam você porque um amigo publicou uma foto.',
-    ugc_flow_photo: 'Foto',
-    ugc_flow_share: 'Compartilhar',
-    ugc_flow_customer: 'Novo Cliente',
+    // UGCMegaSection — Beat 1
+    ugc_owner_line1: 'Você vê isso todos os dias.',
+    ugc_owner_line2: 'Seus clientes pegam o celular, tiram uma foto, postam.',
+    ugc_owner_line3: 'Sempre aconteceu. Nenhum app captura isso. Nenhuma plataforma usa pra você.',
+    ugc_owner_punch: 'A gente fez.',
+    // Beat 2
+    ugc_invented_label: 'Inventado pela FoodSpot',
+    ugc_invented_heading: 'Inventamos o Comprovante UGC',
+    ugc_invented_sub: 'Construímos o primeiro loop de marketing em torno do momento mais óbvio que todos ignoraram: quando seu cliente abre o comprovante.',
+    ugc_step1_title: 'O cliente abre o comprovante',
+    ugc_step1_desc: 'A câmera se ativa automaticamente',
+    ugc_step2_title: 'Edita e personaliza',
+    ugc_step2_desc: 'Câmera 4K · 100+ stickers · pin do seu negócio',
+    ugc_step3_title: 'Compartilha nos stories',
+    ugc_step3_desc: 'Os amigos veem. Novos clientes entram.',
+    // Beat 3
+    ugc_learn_more: 'Quer aprender a aproveitá-lo ao máximo?',
+    // Beat 4
+    ugc_stat_text: 'das pessoas visitam você porque um amigo postou uma foto.',
+    // Beat 5 — Calculator
+    ugc_calc_heading: 'Quanto conteúdo grátis você está deixando na mesa?',
+    ugc_calc_slider_label: 'Clientes que visitam seu local por dia',
+    ugc_calc_period: 'Período',
+    ugc_calc_col_5: 'A 5%',
+    ugc_calc_col_10: 'A 10%',
+    ugc_calc_row_day: 'Por dia',
+    ugc_calc_row_week: 'Por semana',
+    ugc_calc_row_month: 'Por mês',
+    ugc_calc_cost: 'Custo por foto',
+    ugc_calc_photos: 'fotos',
+    ugc_calc_footer: 'Tudo isso, grátis — incluído no seu plano.',
+    ugc_calc_cta: 'Comece grátis agora',
 
     // Testimonials
     testimonials_heading: 'O que nossos clientes dizem',

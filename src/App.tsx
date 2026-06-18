@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { CookieConsent } from './components/CookieConsent';
-import { Navbar, Hero, SubtitleCards, TheIdea, MiddleCTA, UGCMarketingCTA } from "./components/MainSections";
+import { Navbar, Hero, SubtitleCards, MiddleCTA, UGCMarketingCTA } from "./components/MainSections";
 import { FAQ } from "./components/FAQ";
-import { HowItWorks, Features, UGCMarketing } from "./components/Features";
+import { HowItWorks, Features, UGCMegaSection } from "./components/Features";
 import { BlogSection } from "./components/BlogSection";
 import { BlogPost } from "./components/BlogPost";
 import { getPostBySlug } from "./lib/blogPosts";
@@ -87,8 +87,7 @@ export default function App() {
         <main>
           <Hero />
           <SubtitleCards />
-          <TheIdea />
-          <UGCMarketing />
+          <UGCMegaSection />
           <HowItWorks />
           <Features />
           <FAQ />
