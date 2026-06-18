@@ -170,10 +170,11 @@ export function UGCMegaSection() {
   const steps = [
     {
       bg: 'bg-amber-400',
-      image: '/camera-ui-snap.jpg',
+      image: '/receipt-card.jpg',
       isImage: true,
-      title: t(lang, 'ugc_step2_title'),
-      desc: t(lang, 'ugc_step2_desc'),
+      isReceipt: true,
+      title: '',
+      desc: '',
     },
     {
       bg: 'bg-rose-500',
@@ -212,27 +213,17 @@ export function UGCMegaSection() {
 
   return (
     <>
-      {/* ── UGC RECEIPTS Definition Section ── */}
+      {/* ── UGC RECEIPTS + Free Marketing Section ── */}
       <section className="py-16 px-6 bg-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-display text-5xl md:text-6xl text-on-surface font-black mb-6">
-            {t(lang, 'ugc_receipts_heading')}
-          </h2>
-          <p className="text-xl md:text-2xl text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
-            {t(lang, 'ugc_receipts_def')}
-          </p>
-        </div>
-      </section>
-
-      {/* ── Beat 1: The Invention (formerly Beat 2) ── */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="font-display text-4xl md:text-5xl text-on-surface font-black mb-4">
-            {t(lang, 'ugc_invented_heading')}
-          </h2>
-          <p className="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-12">
-            {t(lang, 'ugc_invented_sub')}
-          </p>
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="mb-12">
+            <h2 className="font-display text-5xl md:text-6xl text-on-surface font-black">
+              {t(lang, 'ugc_receipts_heading')}
+            </h2>
+            <h2 className="font-display text-4xl md:text-5xl text-on-surface font-black mt-2">
+              {t(lang, 'ugc_invented_heading')}
+            </h2>
+          </div>
 
           {/* Desktop Bullets - Centered, Bigger */}
           <div className="hidden md:flex justify-center mb-16">
