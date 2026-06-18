@@ -213,12 +213,12 @@ export function UGCMegaSection() {
   return (
     <>
       {/* ── UGC RECEIPTS Definition Section ── */}
-      <section className="py-12 px-6 bg-gradient-to-b from-white to-surface">
-        <div className="max-w-2xl mx-auto text-center">
-          <h3 className="font-display text-2xl md:text-3xl text-on-surface font-black mb-3">
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="font-display text-5xl md:text-6xl text-on-surface font-black mb-6">
             {t(lang, 'ugc_receipts_heading')}
-          </h3>
-          <p className="text-lg text-on-surface-variant leading-relaxed">
+          </h2>
+          <p className="text-xl md:text-2xl text-on-surface-variant leading-relaxed max-w-2xl mx-auto">
             {t(lang, 'ugc_receipts_def')}
           </p>
         </div>
@@ -234,33 +234,37 @@ export function UGCMegaSection() {
             {t(lang, 'ugc_invented_sub')}
           </p>
 
-          {/* Desktop Bullets */}
-          <div className="hidden md:block bg-surface rounded-2xl p-8 mb-12 text-left">
-            <div className="space-y-4">
-              <p className="text-on-surface font-semibold text-base">
-                <span className="text-primary font-black">→ </span>{t(lang, 'ugc_bullet1_desktop')}
-              </p>
-              <p className="text-on-surface font-semibold text-base">
-                <span className="text-primary font-black">→ </span>{t(lang, 'ugc_bullet2_desktop')}
-              </p>
-              <p className="text-on-surface font-semibold text-base">
-                <span className="text-primary font-black">→ </span>{t(lang, 'ugc_bullet3_desktop')}
-              </p>
+          {/* Desktop Bullets - Centered, Bigger */}
+          <div className="hidden md:flex justify-center mb-16">
+            <div className="bg-surface rounded-3xl p-12 max-w-3xl text-center">
+              <div className="space-y-6">
+                <p className="text-on-surface font-semibold text-lg md:text-xl">
+                  <span className="text-primary font-black text-2xl">→ </span>{t(lang, 'ugc_bullet1_desktop')}
+                </p>
+                <p className="text-on-surface font-semibold text-lg md:text-xl">
+                  <span className="text-primary font-black text-2xl">→ </span>{t(lang, 'ugc_bullet2_desktop')}
+                </p>
+                <p className="text-on-surface font-semibold text-lg md:text-xl">
+                  <span className="text-primary font-black text-2xl">→ </span>{t(lang, 'ugc_bullet3_desktop')}
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* Mobile Bullets */}
-          <div className="md:hidden bg-surface rounded-2xl p-8 mb-12 text-left">
-            <div className="space-y-4">
-              <p className="text-on-surface font-semibold text-base">
-                <span className="text-primary font-black">→ </span>{t(lang, 'ugc_bullet1_mobile')}
-              </p>
-              <p className="text-on-surface font-semibold text-base">
-                <span className="text-primary font-black">→ </span>{t(lang, 'ugc_bullet2_mobile')}
-              </p>
-              <p className="text-on-surface font-semibold text-base">
-                <span className="text-primary font-black">→ </span>{t(lang, 'ugc_bullet3_mobile')}
-              </p>
+          {/* Mobile Bullets - Centered, Bigger */}
+          <div className="md:hidden mb-12">
+            <div className="bg-surface rounded-3xl p-10 mx-auto">
+              <div className="space-y-5">
+                <p className="text-on-surface font-semibold text-base">
+                  <span className="text-primary font-black text-xl">→ </span>{t(lang, 'ugc_bullet1_mobile')}
+                </p>
+                <p className="text-on-surface font-semibold text-base">
+                  <span className="text-primary font-black text-xl">→ </span>{t(lang, 'ugc_bullet2_mobile')}
+                </p>
+                <p className="text-on-surface font-semibold text-base">
+                  <span className="text-primary font-black text-xl">→ </span>{t(lang, 'ugc_bullet3_mobile')}
+                </p>
+              </div>
             </div>
           </div>
 
