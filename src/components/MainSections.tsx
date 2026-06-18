@@ -202,7 +202,7 @@ export function Hero() {
           <div className="flex flex-col justify-center md:text-left">
             <h1 className="font-display text-5xl md:text-6xl text-on-surface font-black mb-6 leading-none">
               <div style={lang === 'en' ? { fontSize: '3.21rem' } : {}}>{lang === 'es' ? 'Crear tu tienda' : lang === 'pt' ? 'Criar sua loja' : 'Create your'}</div>
-              <div style={lang === 'en' ? { fontSize: '3.21rem' } : {}}>online store</div>
+              <div style={lang === 'en' ? { fontSize: '3.21rem' } : {}}>{lang === 'es' ? 'tienda online' : lang === 'pt' ? 'loja online' : 'online store'}</div>
               <span key={accentIndex} style={{ color: '#047857', display: 'block', width: '100%', whiteSpace: 'nowrap', animation: 'fadeInUp 0.25s ease-out forwards', marginTop: '4px' }}>{accents[lang][accentIndex]}</span>
             </h1>
 

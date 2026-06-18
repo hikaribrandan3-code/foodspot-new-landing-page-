@@ -18,7 +18,7 @@ const translations = {
 
     // Hero
     hero_headline: 'Crea tu',
-    hero_accent: 'tienda online:',
+    hero_accent: 'tienda online',
     hero_cta: 'Empezar gratis',
     hero_trial: '7 días gratis. Sin tarjeta de crédito.',
 
