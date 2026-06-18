@@ -86,8 +86,8 @@ export default function App() {
         <Navbar />
         <main>
           <Hero />
-          <HowItWorks />
           <OnlineStoreDefinition />
+          <HowItWorks />
           <UGCMegaSection />
           <Features />
           <FAQ />
