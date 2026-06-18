@@ -183,6 +183,9 @@ export function UGCMegaSection() {
       {/* ── UGC RECEIPTS + Free Marketing Section ── */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
+          <p className="text-lg md:text-xl text-on-surface-variant font-semibold mb-6">
+            {lang === 'es' ? 'Creamos una nueva forma de promoción digital tu negocio!' : lang === 'pt' ? 'Criamos uma nova forma de promover seu negócio digitalmente!' : 'We created a new way to promote your business digitally!'}
+          </p>
           <div className="mb-12">
             <h2 className="font-display text-5xl md:text-6xl text-on-surface font-black">
               {t(lang, 'ugc_receipts_heading')}
