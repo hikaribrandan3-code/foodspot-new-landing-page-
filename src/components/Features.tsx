@@ -248,12 +248,22 @@ export function UGCMegaSection() {
               <React.Fragment key={i}>
                 <div className="flex flex-col items-center gap-4">
                   {step.isImage ? (
-                    <div className="relative w-64 h-[500px] rounded-[2.5rem] shadow-xl overflow-hidden border-4 border-white bg-gray-200">
-                      <img
-                        src={step.image}
-                        alt={step.title}
-                        className="w-full h-full object-cover"
-                      />
+                    <div className="flex flex-col items-center gap-3">
+                      <a
+                        href="https://foodspotapp.vercel.app/foodspot/camera"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative w-64 h-[500px] rounded-[2.5rem] shadow-xl overflow-hidden border-4 border-white bg-gray-200 block transition-opacity hover:opacity-90 cursor-pointer"
+                      >
+                        <img
+                          src={step.image}
+                          alt={step.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </a>
+                      <p className="text-sm text-primary font-semibold">
+                        {lang === 'es' ? 'Toca la imagen para probar la cámara' : lang === 'pt' ? 'Toque a imagem para testar a câmera' : 'Tap the image to try the camera'}
+                      </p>
                     </div>
                   ) : (
                     <div className="flex flex-col items-center gap-4 max-w-[200px]">
@@ -281,12 +291,22 @@ export function UGCMegaSection() {
               <React.Fragment key={i}>
                 <div className="flex flex-col items-center gap-3">
                   {step.isImage ? (
-                    <div className="relative w-56 h-96 rounded-[2.5rem] shadow-xl overflow-hidden border-4 border-white bg-gray-200">
-                      <img
-                        src={step.image}
-                        alt={step.title}
-                        className="w-full h-full object-cover"
-                      />
+                    <div className="flex flex-col items-center gap-2">
+                      <a
+                        href="https://foodspotapp.vercel.app/foodspot/camera"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="relative w-56 h-96 rounded-[2.5rem] shadow-xl overflow-hidden border-4 border-white bg-gray-200 block transition-opacity hover:opacity-90 cursor-pointer"
+                      >
+                        <img
+                          src={step.image}
+                          alt={step.title}
+                          className="w-full h-full object-cover"
+                        />
+                      </a>
+                      <p className="text-sm text-primary font-semibold">
+                        {lang === 'es' ? 'Toca la imagen para probar la cámara' : lang === 'pt' ? 'Toque a imagem para testar a câmera' : 'Tap the image to try the camera'}
+                      </p>
                     </div>
                   ) : (
                     <div
