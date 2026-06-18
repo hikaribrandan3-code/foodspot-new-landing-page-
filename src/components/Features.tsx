@@ -224,10 +224,16 @@ export function UGCMegaSection() {
       {/* ── Beat 1: The Invention (formerly Beat 2) ── */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-5xl mx-auto text-center">
+          <p className="font-display text-3xl md:text-5xl text-primary font-black mb-6">
+            {t(lang, 'ugc_receipts_term')}
+          </p>
+          <p className="text-xl md:text-2xl text-on-surface-variant font-semibold mb-8 max-w-2xl mx-auto">
+            {t(lang, 'ugc_receipts_def')}
+          </p>
           <span className="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase">
             {t(lang, 'ugc_invented_label')}
           </span>
-          <h2 className="font-display text-4xl md:text-6xl text-on-surface font-black mb-4">
+          <h2 className="font-display text-4xl md:text-5xl text-on-surface font-black mb-6">
             {t(lang, 'ugc_invented_heading')}
           </h2>
           <p className="text-lg md:text-xl text-on-surface-variant max-w-3xl mx-auto mb-14">
@@ -246,11 +252,8 @@ export function UGCMegaSection() {
                           <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
                             <ArrowDown className="w-6 h-6 mx-auto text-primary/50 mb-2" />
                           </div>
-                          <p className="text-on-surface font-display text-4xl font-black mb-2">
+                          <p className="text-on-surface font-display text-2xl md:text-3xl font-black mb-2">
                             {t(lang, 'ugc_try_camera')}
-                          </p>
-                          <p className="text-on-surface-variant text-lg mb-2">
-                            {t(lang, 'ugc_tap_here')}
                           </p>
                           <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
                             <ArrowDown className="w-6 h-6 mx-auto text-primary/50" />
@@ -307,11 +310,8 @@ export function UGCMegaSection() {
                         <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
                           <ArrowDown className="w-5 h-5 mx-auto text-primary/50 mb-2" />
                         </div>
-                        <p className="text-on-surface font-display text-3xl font-black mb-2">
+                        <p className="text-on-surface font-display text-2xl font-black mb-2">
                           {t(lang, 'ugc_try_camera')}
-                        </p>
-                        <p className="text-on-surface-variant text-base mb-2">
-                          {t(lang, 'ugc_tap_here')}
                         </p>
                         <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
                           <ArrowDown className="w-5 h-5 mx-auto text-primary/50" />
