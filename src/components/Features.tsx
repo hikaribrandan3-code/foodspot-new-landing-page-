@@ -169,25 +169,6 @@ export function UGCMegaSection() {
 
   const steps = [
     {
-      bg: 'bg-emerald-500',
-      svg: (
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-14 h-14">
-          <rect x="10" y="6" width="28" height="36" rx="4" fill="white"/>
-          <path d="M10 38 Q14 44 18 38 Q22 32 26 38 Q30 44 34 38 Q38 32 38 38 V48 H10 V38Z" fill="white"/>
-          <rect x="16" y="14" width="16" height="2.5" rx="1.25" fill="#d1fae5"/>
-          <rect x="16" y="20" width="12" height="2.5" rx="1.25" fill="#d1fae5"/>
-          <rect x="16" y="26" width="14" height="2.5" rx="1.25" fill="#d1fae5"/>
-          <circle cx="46" cy="46" r="14" fill="#fbbf24"/>
-          <rect x="39" y="41" width="14" height="10" rx="3" fill="white"/>
-          <circle cx="46" cy="46" r="4" fill="#fbbf24"/>
-          <circle cx="46" cy="46" r="2.5" fill="#f59e0b"/>
-          <rect x="41" y="38.5" width="6" height="3.5" rx="1.5" fill="white"/>
-        </svg>
-      ),
-      title: t(lang, 'ugc_step1_title'),
-      desc: t(lang, 'ugc_step1_desc'),
-    },
-    {
       bg: 'bg-amber-400',
       image: '/camera-ui-snap.jpg',
       isImage: true,
@@ -222,8 +203,10 @@ export function UGCMegaSection() {
           <path d="M3 44 Q5 41 7 41 Q9 41 11 44" stroke="#fb7185" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
         </svg>
       ),
-      title: t(lang, 'ugc_step3_title'),
-      desc: t(lang, 'ugc_step3_desc'),
+      title: t(lang, 'ugc_share_earn'),
+      desc: '',
+      hideDesc: true,
+      textAsTitle: true,
     },
   ];
 
@@ -243,67 +226,87 @@ export function UGCMegaSection() {
           </p>
 
           {/* Desktop: horizontal with arrows */}
-          <div className="hidden md:flex items-start justify-center gap-4">
-            {steps.map((step, i) => (
-              <React.Fragment key={i}>
-                <div className="flex flex-col items-center gap-4">
-                  {step.isImage ? (
-                    <div className="flex flex-col items-center gap-6 w-full">
-                      <div className="text-center">
-                        <p className="text-primary font-display text-2xl md:text-3xl font-black mb-2">
-                          {lang === 'es' ? 'Interactivo: Toca la cámara' : lang === 'pt' ? 'Interativo: Toque a câmera' : 'Interactive: Tap the camera'}
-                        </p>
-                        <p className="text-on-surface-variant text-base md:text-lg">
-                          {lang === 'es' ? 'para ver cómo funciona →' : lang === 'pt' ? 'para ver como funciona →' : 'to see how it works →'}
-                        </p>
+          <div className="hidden md:flex flex-col items-center gap-8">
+            <div className="flex items-start justify-center gap-4">
+              {steps.map((step, i) => (
+                <React.Fragment key={i}>
+                  <div className="flex flex-col items-center gap-4">
+                    {step.isImage ? (
+                      <div className="flex flex-col items-center gap-6 w-full">
+                        <div className="text-center">
+                          <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
+                            <ArrowDown className="w-6 h-6 mx-auto text-primary/50 mb-2" />
+                          </div>
+                          <p className="text-on-surface font-display text-4xl font-black mb-2">
+                            {t(lang, 'ugc_try_camera')}
+                          </p>
+                          <p className="text-on-surface-variant text-lg mb-2">
+                            {t(lang, 'ugc_tap_here')}
+                          </p>
+                          <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
+                            <ArrowDown className="w-6 h-6 mx-auto text-primary/50" />
+                          </div>
+                        </div>
+                        <a
+                          href="https://foodspotapp.vercel.app/foodspot/camera"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="relative w-64 h-[500px] rounded-[2.5rem] shadow-xl overflow-hidden border-4 border-white bg-gray-200 block transition-opacity hover:opacity-90 cursor-pointer"
+                        >
+                          <img
+                            src={step.image}
+                            alt={step.title}
+                            className="w-full h-full object-cover"
+                          />
+                        </a>
                       </div>
-                      <a
-                        href="https://foodspotapp.vercel.app/foodspot/camera"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="relative w-64 h-[500px] rounded-[2.5rem] shadow-xl overflow-hidden border-4 border-white bg-gray-200 block transition-opacity hover:opacity-90 cursor-pointer"
-                      >
-                        <img
-                          src={step.image}
-                          alt={step.title}
-                          className="w-full h-full object-cover"
-                        />
-                      </a>
-                    </div>
-                  ) : (
-                    <div className="flex flex-col items-center gap-4 max-w-[200px]">
-                      <div
-                        className={`w-24 h-24 rounded-3xl ${step.bg} flex items-center justify-center shadow-xl`}
-                        style={{ animation: `float 3s ease-in-out infinite`, animationDelay: `${i * 0.8}s` }}
-                      >
-                        {step.svg}
+                    ) : (
+                      <div className="flex flex-col items-center gap-4 max-w-[200px]">
+                        <div
+                          className={`w-24 h-24 rounded-3xl ${step.bg} flex items-center justify-center shadow-xl`}
+                          style={{ animation: `float 3s ease-in-out infinite`, animationDelay: `${i * 0.8}s` }}
+                        >
+                          {step.svg}
+                        </div>
                       </div>
-                    </div>
+                    )}
+                    {step.textAsTitle ? (
+                      <h3 className="font-display text-2xl md:text-3xl font-black text-on-surface">{step.title}</h3>
+                    ) : (
+                      <>
+                        <h3 className="font-display text-lg font-bold text-on-surface">{step.title}</h3>
+                        {!step.isImage && !step.hideDesc && <p className="text-on-surface-variant text-sm max-w-[250px]">{step.desc}</p>}
+                      </>
+                    )}
+                  </div>
+                  {i < steps.length - 1 && !step.isImage && (
+                    <div className="mt-10 text-4xl text-on-surface-variant/25 font-black flex-shrink-0 select-none">→</div>
                   )}
-                  <h3 className="font-display text-lg font-bold text-on-surface">{step.title}</h3>
-                  {!step.isImage && <p className="text-on-surface-variant text-sm max-w-[250px]">{step.desc}</p>}
-                </div>
-                {i < 2 && (
-                  <div className="mt-10 text-4xl text-on-surface-variant/25 font-black flex-shrink-0 select-none">→</div>
-                )}
-              </React.Fragment>
-            ))}
+                </React.Fragment>
+              ))}
+            </div>
           </div>
 
           {/* Mobile: stacked */}
-          <div className="flex md:hidden flex-col items-center gap-8">
+          <div className="flex md:hidden flex-col items-center gap-6">
             {steps.map((step, i) => (
               <React.Fragment key={i}>
-                <div className="flex flex-col items-center gap-4">
+                <div className="flex flex-col items-center gap-4 w-full">
                   {step.isImage ? (
                     <div className="flex flex-col items-center gap-4 w-full">
                       <div className="text-center">
-                        <p className="text-primary font-display text-xl font-black mb-1">
-                          {lang === 'es' ? 'Interactivo: Toca la cámara' : lang === 'pt' ? 'Interativo: Toque a câmera' : 'Interactive: Tap the camera'}
+                        <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
+                          <ArrowDown className="w-5 h-5 mx-auto text-primary/50 mb-2" />
+                        </div>
+                        <p className="text-on-surface font-display text-3xl font-black mb-2">
+                          {t(lang, 'ugc_try_camera')}
                         </p>
-                        <p className="text-on-surface-variant text-sm">
-                          {lang === 'es' ? 'para ver cómo funciona →' : lang === 'pt' ? 'para ver como funciona →' : 'to see how it works →'}
+                        <p className="text-on-surface-variant text-base mb-2">
+                          {t(lang, 'ugc_tap_here')}
                         </p>
+                        <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
+                          <ArrowDown className="w-5 h-5 mx-auto text-primary/50" />
+                        </div>
                       </div>
                       <a
                         href="https://foodspotapp.vercel.app/foodspot/camera"
@@ -326,10 +329,15 @@ export function UGCMegaSection() {
                       {step.svg}
                     </div>
                   )}
-                  <h3 className="font-display text-lg font-bold text-on-surface">{step.title}</h3>
-                  {!step.isImage && <p className="text-on-surface-variant text-sm max-w-[240px]">{step.desc}</p>}
+                  {step.textAsTitle ? (
+                    <h3 className="font-display text-2xl font-black text-on-surface text-center">{step.title}</h3>
+                  ) : (
+                    <>
+                      <h3 className="font-display text-lg font-bold text-on-surface">{step.title}</h3>
+                      {!step.isImage && !step.hideDesc && <p className="text-on-surface-variant text-sm max-w-[240px]">{step.desc}</p>}
+                    </>
+                  )}
                 </div>
-                {i < 2 && <div className="text-2xl text-on-surface-variant/25 select-none">↓</div>}
               </React.Fragment>
             ))}
           </div>
@@ -339,6 +347,9 @@ export function UGCMegaSection() {
       {/* ── Beat 3: Video + Spec Badges ── */}
       <section className="py-16 px-6 bg-surface">
         <div className="max-w-2xl mx-auto flex flex-col items-center">
+          <h2 className="font-display text-3xl md:text-4xl text-on-surface font-black mb-12 text-center">
+            {t(lang, 'ugc_video_title')}
+          </h2>
           <div className="relative">
             {/* Desktop floating badges */}
             <div className="hidden md:flex absolute -left-48 top-1/2 -translate-y-1/2 flex-col gap-6">
@@ -370,10 +381,10 @@ export function UGCMegaSection() {
           </div>
 
           <a
-            href="#expert-tips"
+            href={lang === 'es' ? '/blog/como-captura-contenido-organico' : lang === 'pt' ? '/blog/como-captura-conteudo-organico' : '/blog/how-to-capture-organic-content'}
             className="mt-8 text-primary font-semibold hover:underline text-base flex items-center gap-1"
           >
-            {t(lang, 'ugc_learn_more')} <span aria-hidden="true">→</span>
+            {t(lang, 'ugc_learn_more_link')} <span aria-hidden="true">→</span>
           </a>
         </div>
       </section>
