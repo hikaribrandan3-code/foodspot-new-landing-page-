@@ -102,7 +102,7 @@ const translations = {
     ugc_tap_here: 'tap here',
     ugc_share_earn: 'SHARE & EARN PTS !',
     ugc_video_title: 'Order Delivered = Magic Starts',
-    ugc_learn_more_link: 'Want to learn how to use it to its full potential?',
+    ugc_learn_more_link: '¿Querés aprender a aprovecharlo al máximo?',
     ugc_step1_title: 'Comprobante se actualiza cuando llega la comida',
     ugc_step1_desc: 'Animación pregunta: ¿Tomar una foto?',
     ugc_step2_title: 'Snap & personaliza',
