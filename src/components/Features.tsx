@@ -189,23 +189,8 @@ export function UGCMegaSection() {
     },
     {
       bg: 'bg-amber-400',
-      svg: (
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-14 h-14">
-          <rect x="18" y="8" width="28" height="48" rx="6" fill="white"/>
-          <rect x="22" y="16" width="20" height="32" rx="3" fill="#fef3c7"/>
-          <circle cx="32" cy="29" r="8" fill="#fb923c" opacity="0.8"/>
-          <circle cx="32" cy="29" r="5" fill="#f97316" opacity="0.6"/>
-          <circle cx="10" cy="14" r="7" fill="#f43f5e"/>
-          <path d="M10 8.5 L11.3 12.2 L15.3 12.2 L12.2 14.3 L13.5 18 L10 15.9 L6.5 18 L7.8 14.3 L4.7 12.2 L8.7 12.2 Z" fill="white"/>
-          <circle cx="54" cy="14" r="7" fill="#a78bfa"/>
-          <path d="M54 19.5 C53 18 47.5 14.5 47.5 11.5 C47.5 9.5 49.2 8 51 8 C52.2 8 53.3 8.7 54 9.5 C54.7 8.7 55.8 8 57 8 C58.8 8 60.5 9.5 60.5 11.5 C60.5 14.5 55 18 54 19.5Z" fill="white"/>
-          <circle cx="56" cy="48" r="6" fill="#10b981"/>
-          <path d="M56 42.5 L57.1 46 L60.5 47 L57.1 48 L56 51.5 L54.9 48 L51.5 47 L54.9 46 Z" fill="white"/>
-          <circle cx="8" cy="46" r="6" fill="#006c49"/>
-          <path d="M8 41 C6 41 4 43 4 45.2 C4 48 8 52 8 52 C8 52 12 48 12 45.2 C12 43 10 41 8 41Z" fill="white"/>
-          <circle cx="8" cy="45" r="1.5" fill="#006c49"/>
-        </svg>
-      ),
+      image: '/camera-ui-snap.jpg',
+      isImage: true,
       title: t(lang, 'ugc_step2_title'),
       desc: t(lang, 'ugc_step2_desc'),
     },
@@ -244,31 +229,7 @@ export function UGCMegaSection() {
 
   return (
     <>
-      {/* ── Beat 1: Owner Truth ── */}
-      <section className="py-12 md:py-16 px-6 bg-primary">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="font-display text-2xl md:text-3xl text-white/60 font-semibold mb-3">
-            {t(lang, 'ugc_owner_line1')}
-          </p>
-          <p className="font-display text-2xl md:text-3xl text-white/90 font-semibold mb-3">
-            {lang === 'es' ? (
-              <>Ninguna <strong className="text-white font-black">app</strong> lo captura.</>
-            ) : lang === 'pt' ? (
-              <>Nenhum <strong className="text-white font-black">app</strong> captura isso.</>
-            ) : (
-              <>No <strong className="text-white font-black">app</strong> captures it.</>
-            )}
-          </p>
-          <p className="font-display text-4xl md:text-5xl text-white font-black mb-8">
-            {t(lang, 'ugc_owner_line3')}
-          </p>
-          <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
-            <ArrowDown className="w-5 h-5 mx-auto text-white/50" />
-          </div>
-        </div>
-      </section>
-
-      {/* ── Beat 2: The Invention ── */}
+      {/* ── Beat 1: The Invention (formerly Beat 2) ── */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-5xl mx-auto text-center">
           <span className="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase">
@@ -286,12 +247,22 @@ export function UGCMegaSection() {
             {steps.map((step, i) => (
               <React.Fragment key={i}>
                 <div className="flex flex-col items-center gap-4 max-w-[200px]">
-                  <div
-                    className={`w-24 h-24 rounded-3xl ${step.bg} flex items-center justify-center shadow-xl`}
-                    style={{ animation: `float 3s ease-in-out infinite`, animationDelay: `${i * 0.8}s` }}
-                  >
-                    {step.svg}
-                  </div>
+                  {step.isImage ? (
+                    <div className="relative w-32 h-48 rounded-3xl shadow-xl overflow-hidden border-4 border-white bg-gray-200">
+                      <img
+                        src={step.image}
+                        alt={step.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div
+                      className={`w-24 h-24 rounded-3xl ${step.bg} flex items-center justify-center shadow-xl`}
+                      style={{ animation: `float 3s ease-in-out infinite`, animationDelay: `${i * 0.8}s` }}
+                    >
+                      {step.svg}
+                    </div>
+                  )}
                   <h3 className="font-display text-lg font-bold text-on-surface">{step.title}</h3>
                   <p className="text-on-surface-variant text-sm">{step.desc}</p>
                 </div>
@@ -307,12 +278,22 @@ export function UGCMegaSection() {
             {steps.map((step, i) => (
               <React.Fragment key={i}>
                 <div className="flex flex-col items-center gap-3">
-                  <div
-                    className={`w-20 h-20 rounded-3xl ${step.bg} flex items-center justify-center shadow-xl`}
-                    style={{ animation: `float 3s ease-in-out infinite`, animationDelay: `${i * 0.8}s` }}
-                  >
-                    {step.svg}
-                  </div>
+                  {step.isImage ? (
+                    <div className="relative w-24 h-36 rounded-3xl shadow-xl overflow-hidden border-4 border-white bg-gray-200">
+                      <img
+                        src={step.image}
+                        alt={step.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div
+                      className={`w-20 h-20 rounded-3xl ${step.bg} flex items-center justify-center shadow-xl`}
+                      style={{ animation: `float 3s ease-in-out infinite`, animationDelay: `${i * 0.8}s` }}
+                    >
+                      {step.svg}
+                    </div>
+                  )}
                   <h3 className="font-display text-lg font-bold text-on-surface">{step.title}</h3>
                   <p className="text-on-surface-variant text-sm max-w-[240px]">{step.desc}</p>
                 </div>
