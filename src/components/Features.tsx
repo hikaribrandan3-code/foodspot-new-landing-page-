@@ -112,11 +112,27 @@ export function Features() {
   );
 }
 
-function SpecBadge({ color, text, sub }: { color: string; text: string; sub: string }) {
+function SpecBadge({ color, glowColor, text, sub }: { color: string; glowColor: string; text: string; sub: string }) {
   return (
-    <div className={`${color} text-white rounded-2xl px-4 py-2.5 shadow-lg text-center min-w-[90px]`}>
-      <p className="font-display font-black text-xl leading-none">{text}</p>
-      <p className="text-xs font-semibold mt-0.5 opacity-90">{sub}</p>
+    <div className="relative">
+      {/* Glow halo */}
+      <div
+        className="absolute inset-0 rounded-2xl blur-xl"
+        style={{ background: glowColor, animation: 'glow-pulse 2.5s ease-in-out infinite' }}
+      />
+      {/* Badge body */}
+      <div className={`relative ${color} text-white rounded-2xl px-4 py-2.5 shadow-lg text-center min-w-[90px] z-10`}>
+        <p className="font-display font-black text-xl leading-none">{text}</p>
+        <p className="text-xs font-semibold mt-0.5 opacity-90">{sub}</p>
+      </div>
+      {/* Sparkle top-right */}
+      <svg className="absolute -top-2 -right-1.5 w-4 h-4 z-20" viewBox="0 0 16 16" fill="#fbbf24">
+        <path d="M8 0 L9.2 6.8 L16 8 L9.2 9.2 L8 16 L6.8 9.2 L0 8 L6.8 6.8 Z"/>
+      </svg>
+      {/* Sparkle bottom-left (smaller) */}
+      <svg className="absolute -bottom-1 -left-1.5 w-2.5 h-2.5 z-20" viewBox="0 0 16 16" fill="#fbbf24" opacity="0.7">
+        <path d="M8 0 L9.2 6.8 L16 8 L9.2 9.2 L8 16 L6.8 9.2 L0 8 L6.8 6.8 Z"/>
+      </svg>
     </div>
   );
 }
@@ -238,7 +254,13 @@ export function UGCMegaSection() {
             {t(lang, 'ugc_owner_line2')}
           </p>
           <p className="font-display text-xl md:text-2xl text-white/60 font-semibold mb-8">
-            {t(lang, 'ugc_owner_line3')}
+            {lang === 'es' ? (
+              <>Siempre pasó. Ninguna <strong className="text-white font-black">app</strong> lo captura. Ninguna plataforma lo usa para vos.</>
+            ) : lang === 'pt' ? (
+              <>Sempre aconteceu. Nenhum <strong className="text-white font-black">app</strong> captura isso. Nenhuma plataforma usa pra você.</>
+            ) : (
+              <>It's always happened. No <strong className="text-white font-black">app</strong> captures it. No platform uses it for you.</>
+            )}
           </p>
           <p className="font-display text-4xl md:text-5xl text-white font-black mb-8">
             {t(lang, 'ugc_owner_punch')}
@@ -267,7 +289,10 @@ export function UGCMegaSection() {
             {steps.map((step, i) => (
               <React.Fragment key={i}>
                 <div className="flex flex-col items-center gap-4 max-w-[200px]">
-                  <div className={`w-24 h-24 rounded-3xl ${step.bg} flex items-center justify-center shadow-xl`}>
+                  <div
+                    className={`w-24 h-24 rounded-3xl ${step.bg} flex items-center justify-center shadow-xl`}
+                    style={{ animation: `float 3s ease-in-out infinite`, animationDelay: `${i * 0.8}s` }}
+                  >
                     {step.svg}
                   </div>
                   <h3 className="font-display text-lg font-bold text-on-surface">{step.title}</h3>
@@ -285,7 +310,10 @@ export function UGCMegaSection() {
             {steps.map((step, i) => (
               <React.Fragment key={i}>
                 <div className="flex flex-col items-center gap-3">
-                  <div className={`w-20 h-20 rounded-3xl ${step.bg} flex items-center justify-center shadow-xl`}>
+                  <div
+                    className={`w-20 h-20 rounded-3xl ${step.bg} flex items-center justify-center shadow-xl`}
+                    style={{ animation: `float 3s ease-in-out infinite`, animationDelay: `${i * 0.8}s` }}
+                  >
                     {step.svg}
                   </div>
                   <h3 className="font-display text-lg font-bold text-on-surface">{step.title}</h3>
@@ -303,12 +331,12 @@ export function UGCMegaSection() {
         <div className="max-w-2xl mx-auto flex flex-col items-center">
           <div className="relative">
             {/* Desktop floating badges */}
-            <div className="hidden md:flex absolute -left-48 top-1/2 -translate-y-1/2 flex-col gap-4">
-              <SpecBadge color="bg-emerald-500" text="4K" sub={resLabel} />
-              <SpecBadge color="bg-amber-400" text="100+" sub="Stickers" />
+            <div className="hidden md:flex absolute -left-48 top-1/2 -translate-y-1/2 flex-col gap-6">
+              <SpecBadge color="bg-emerald-500" glowColor="rgba(16,185,129,0.55)" text="4K" sub={resLabel} />
+              <SpecBadge color="bg-amber-400" glowColor="rgba(251,191,36,0.55)" text="100+" sub="Stickers" />
             </div>
             <div className="hidden md:block absolute -right-44 top-1/2 -translate-y-1/2">
-              <SpecBadge color="bg-rose-500" text="📍" sub="Business Pin" />
+              <SpecBadge color="bg-rose-500" glowColor="rgba(244,63,94,0.55)" text="📍" sub="Business Pin" />
             </div>
 
             <div className="relative w-72 h-[550px]">
@@ -325,10 +353,10 @@ export function UGCMegaSection() {
           </div>
 
           {/* Mobile badges */}
-          <div className="flex md:hidden gap-3 mt-6 flex-wrap justify-center">
-            <SpecBadge color="bg-emerald-500" text="4K" sub={resLabel} />
-            <SpecBadge color="bg-amber-400" text="100+" sub="Stickers" />
-            <SpecBadge color="bg-rose-500" text="📍" sub="Business Pin" />
+          <div className="flex md:hidden gap-4 mt-8 flex-wrap justify-center">
+            <SpecBadge color="bg-emerald-500" glowColor="rgba(16,185,129,0.55)" text="4K" sub={resLabel} />
+            <SpecBadge color="bg-amber-400" glowColor="rgba(251,191,36,0.55)" text="100+" sub="Stickers" />
+            <SpecBadge color="bg-rose-500" glowColor="rgba(244,63,94,0.55)" text="📍" sub="Business Pin" />
           </div>
 
           <a
@@ -368,7 +396,7 @@ export function UGCMegaSection() {
               type="range"
               min={20} max={500} value={visitors}
               onChange={(e) => setVisitors(Number(e.target.value))}
-              className="w-full mt-3 h-2 rounded-full appearance-none cursor-pointer accent-primary"
+              className="w-full mt-3 cursor-pointer accent-primary"
             />
             <div className="flex justify-between text-xs text-on-surface-variant mt-1.5">
               <span>20</span>
