@@ -250,6 +250,7 @@ export function UGCMegaSection() {
                           href="https://foodspotapp.vercel.app/foodspot/camera"
                           target="_blank"
                           rel="noopener noreferrer"
+                          aria-label={lang === 'es' ? 'Probar la cámara' : lang === 'pt' ? 'Experimentar a câmera' : 'Try the camera'}
                           className="relative w-64 h-[500px] rounded-[2.5rem] shadow-xl overflow-hidden border-4 border-white bg-white block transition-opacity hover:opacity-90 cursor-pointer"
                         >
                           <img
@@ -305,6 +306,7 @@ export function UGCMegaSection() {
                         href="https://foodspotapp.vercel.app/foodspot/camera"
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label={lang === 'es' ? 'Probar la cámara' : lang === 'pt' ? 'Experimentar a câmera' : 'Try the camera'}
                         className="relative w-56 h-96 rounded-[2.5rem] shadow-xl overflow-hidden border-4 border-white bg-gray-200 block transition-opacity hover:opacity-90 cursor-pointer"
                       >
                         <img
@@ -380,6 +382,7 @@ export function UGCMegaSection() {
               min={20} max={500} value={visitors}
               onChange={(e) => setVisitors(Number(e.target.value))}
               className="w-full mt-3 cursor-pointer accent-primary"
+              aria-label={lang === 'es' ? 'Clientes por día' : lang === 'pt' ? 'Clientes por dia' : 'Customers per day'}
             />
             <div className="flex justify-between text-xs text-on-surface-variant mt-1.5">
               <span>20</span>

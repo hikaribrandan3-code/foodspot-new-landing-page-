@@ -91,7 +91,7 @@ export function AISection() {
             {/* Input placeholder */}
             <div className="flex justify-start mt-6">
               <div className="bg-white border-2 border-gray-200 rounded-2xl px-4 py-3 w-full md:max-w-md">
-                <p className="text-sm md:text-base text-gray-400">
+                <p className="text-sm md:text-base text-gray-600">
                   {lang === 'es' ? 'Describe tu promo...' :
                    lang === 'pt' ? 'Descreva sua promoção...' :
                    'Describe your promo...'}

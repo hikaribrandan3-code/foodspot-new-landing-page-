@@ -490,9 +490,9 @@ export function OnlineStoreDefinition() {
   return (
     <section className="py-12 px-6 bg-surface">
       <div className="max-w-2xl mx-auto text-center">
-        <h3 className="font-display text-2xl md:text-3xl text-on-surface font-black mb-4">
+        <h2 className="font-display text-2xl md:text-3xl text-on-surface font-black mb-4">
           {lang === 'es' ? '¿Qué es una tienda online?' : lang === 'pt' ? 'O que é uma loja online?' : 'What is an online store?'}
-        </h3>
+        </h2>
         <p className="text-lg text-on-surface-variant leading-relaxed">
           {t(lang, 'ugc_definition')}
         </p>
