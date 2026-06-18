@@ -223,22 +223,26 @@ export function UGCMegaSection() {
 
       {/* ── Beat 1: The Invention (formerly Beat 2) ── */}
       <section className="py-16 px-6 bg-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="font-display text-3xl md:text-5xl text-primary font-black mb-6">
-            {t(lang, 'ugc_receipts_term')}
-          </p>
-          <p className="text-xl md:text-2xl text-on-surface-variant font-semibold mb-8 max-w-2xl mx-auto">
-            {t(lang, 'ugc_receipts_def')}
-          </p>
-          <span className="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase">
-            {t(lang, 'ugc_invented_label')}
-          </span>
-          <h2 className="font-display text-4xl md:text-5xl text-on-surface font-black mb-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="font-display text-4xl md:text-5xl text-on-surface font-black mb-4">
             {t(lang, 'ugc_invented_heading')}
           </h2>
-          <p className="text-lg md:text-xl text-on-surface-variant max-w-3xl mx-auto mb-14">
+          <p className="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-12">
             {t(lang, 'ugc_invented_sub')}
           </p>
+          <div className="bg-surface rounded-2xl p-8 mb-12 text-left">
+            <div className="space-y-4">
+              <p className="text-on-surface font-semibold text-base">
+                <span className="text-primary font-black">→ </span>{t(lang, 'ugc_bullet1')}
+              </p>
+              <p className="text-on-surface font-semibold text-base">
+                <span className="text-primary font-black">→ </span>{t(lang, 'ugc_bullet2')}
+              </p>
+              <p className="text-on-surface font-semibold text-base">
+                <span className="text-primary font-black">→ </span>{t(lang, 'ugc_bullet3')}
+              </p>
+            </div>
+          </div>
 
           {/* Desktop: horizontal with arrows */}
           <div className="hidden md:flex flex-col items-center gap-8">
