@@ -346,19 +346,7 @@ export function UGCMegaSection() {
         </div>
       </section>
 
-      {/* ── Beat 4: The Stat ── */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-2xl mx-auto text-center">
-          <p className="font-display leading-none font-black text-primary" style={{ fontSize: 'clamp(5rem, 18vw, 9rem)' }}>
-            71%
-          </p>
-          <p className="text-xl md:text-2xl text-on-surface-variant font-semibold mt-4 max-w-lg mx-auto">
-            {t(lang, 'ugc_stat_text')}
-          </p>
-        </div>
-      </section>
-
-      {/* ── Beat 5: Calculator ── */}
+      {/* ── Beat 4: Calculator ── */}
       <section className="py-16 px-6 bg-surface">
         <div className="max-w-2xl mx-auto text-center">
           <h3 className="font-display text-3xl md:text-4xl text-on-surface font-black mb-2">
