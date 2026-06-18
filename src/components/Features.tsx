@@ -251,19 +251,16 @@ export function UGCMegaSection() {
             {t(lang, 'ugc_owner_line1')}
           </p>
           <p className="font-display text-2xl md:text-3xl text-white/90 font-semibold mb-3">
-            {t(lang, 'ugc_owner_line2')}
-          </p>
-          <p className="font-display text-xl md:text-2xl text-white/60 font-semibold mb-8">
             {lang === 'es' ? (
-              <>Siempre pasó. Ninguna <strong className="text-white font-black">app</strong> lo captura. Ninguna plataforma lo usa para vos.</>
+              <>Ninguna <strong className="text-white font-black">app</strong> lo captura.</>
             ) : lang === 'pt' ? (
-              <>Sempre aconteceu. Nenhum <strong className="text-white font-black">app</strong> captura isso. Nenhuma plataforma usa pra você.</>
+              <>Nenhum <strong className="text-white font-black">app</strong> captura isso.</>
             ) : (
-              <>It's always happened. No <strong className="text-white font-black">app</strong> captures it. No platform uses it for you.</>
+              <>No <strong className="text-white font-black">app</strong> captures it.</>
             )}
           </p>
           <p className="font-display text-4xl md:text-5xl text-white font-black mb-8">
-            {t(lang, 'ugc_owner_punch')}
+            {t(lang, 'ugc_owner_line3')}
           </p>
           <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
             <ArrowDown className="w-5 h-5 mx-auto text-white/50" />
