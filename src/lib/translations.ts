@@ -88,7 +88,7 @@ const translations = {
     // Beat 2
     ugc_invented_label: 'Inventado por FoodSpotMobile',
     ugc_definition: 'Una tienda digital donde clientes exploran tu comida y negocio, compran & piden sin salir de tu app.',
-    ugc_invented_heading: 'Somos la primera app de comida construida alrededor de una cámara.',
+    ugc_invented_heading: 'Inventamos UGC Receipts — la primera plataforma para dueños de comida construida alrededor de una cámara.',
     ugc_invented_sub: 'La comida llega. Tu comprobante se actualiza. Animation prompts "¿Tomar una foto?" Tu marca ya está metida en el frame.',
     ugc_try_camera: 'TRY THE CAMERA !',
     ugc_tap_here: 'tap here',
@@ -98,7 +98,6 @@ const translations = {
     ugc_step1_title: 'Comprobante se actualiza cuando llega la comida',
     ugc_step1_desc: 'Animación pregunta: ¿Tomar una foto?',
     ugc_step2_title: 'Snap & personaliza',
-    ugc_step2_desc: 'Tu marca ya está en el frame',
     ugc_step3_title: 'Comparten a stories',
     ugc_step3_desc: 'Contenido orgánico de marca, gratis.',
     // Beat 3
@@ -534,7 +533,7 @@ Y lo van a hacer felices.
     // Beat 2
     ugc_invented_label: 'Invented by FoodSpotMobile',
     ugc_definition: 'A digital storefront where customers browse your food & business, shop & order without leaving your app.',
-    ugc_invented_heading: 'We\'re the first food app built around a camera.',
+    ugc_invented_heading: 'We invented UGC Receipts — the first platform for food business owners built around a camera.',
     ugc_invented_sub: 'Food arrives. Your receipt updates. Animation prompts "Take a photo?" Your brand is already baked into the frame.',
     ugc_try_camera: 'TRY THE CAMERA !',
     ugc_tap_here: 'tap here',
@@ -980,7 +979,7 @@ And they're going to do it happily.
     // Beat 2
     ugc_invented_label: 'Inventado pela FoodSpotMobile',
     ugc_definition: 'Uma loja digital onde clientes exploram sua comida e negócio, compram & pedem sem sair do seu app.',
-    ugc_invented_heading: 'Somos o primeiro app de comida construído em torno de uma câmera.',
+    ugc_invented_heading: 'Inventamos UGC Receipts — a primeira plataforma para donos de restaurante construída em torno de uma câmera.',
     ugc_invented_sub: 'A comida chega. Seu comprovante se atualiza. Animação pergunta "Tirar uma foto?" Sua marca já está embutida no frame.',
     ugc_try_camera: 'TESTE A CÂMERA !',
     ugc_tap_here: 'toque aqui',
