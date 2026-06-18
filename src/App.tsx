@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { CookieConsent } from './components/CookieConsent';
-import { Navbar, Hero, SubtitleCards, MiddleCTA, UGCMarketingCTA } from "./components/MainSections";
+import { Navbar, Hero, SubtitleCards, MiddleCTA, UGCMarketingCTA, OnlineStoreDefinition } from "./components/MainSections";
 import { FAQ } from "./components/FAQ";
 import { HowItWorks, Features, UGCMegaSection } from "./components/Features";
 import { BlogSection } from "./components/BlogSection";
@@ -87,6 +87,7 @@ export default function App() {
         <main>
           <Hero />
           <HowItWorks />
+          <OnlineStoreDefinition />
           <UGCMegaSection />
           <Features />
           <FAQ />

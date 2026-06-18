@@ -73,8 +73,8 @@ const translations = {
     step1_desc: 'Subi fotos, precios y categorias. Incluso podes agregar calorias, advertencias de salud y etiquetas personalizadas para casos especiales. Tu tienda lista al instante. 100% NO-CODE',
     step2_title: 'Personaliza tu tienda',
     step2_desc: 'Colores, logos e identidad. Dale vida a tu app con nuestras mascotas animadas.',
-    step3_title: 'Lanza tu tienda y vende',
-    step3_desc: 'Sin hardware. Sin papelería. Sin drama. Conecta Mercado Pago con token + user ID. Cobra al instante. Todo ocurre en el app.',
+    step3_title: '¡Comparte tu app!',
+    step3_desc: 'Comparte tu URL con tus clientes. Sin hardware. Sin papelería. Todo integrado en tu app.',
 
     // Features / AI
     ai_heading: 'Foodspot AI',
@@ -526,8 +526,8 @@ Y lo van a hacer felices.
     step1_desc: 'Upload photos, prices, and categories. Add calories, health warnings, and custom tags for special cases. Your store live instantly. 100% NO-CODE.',
     step2_title: 'Customize your storefront',
     step2_desc: 'Colors, logos, identity. Bring your app to life with our animated mascots.',
-    step3_title: 'Launch your store and sell',
-    step3_desc: 'No hardware. No paperwork. No drama. Connect Mercado Pago with your token + user ID. Get paid instantly. Everything happens in the app.',
+    step3_title: 'Share your app!',
+    step3_desc: 'Share your URL with your customers. No hardware. No paperwork. Everything integrated in your app.',
 
     // Features / AI
     ai_heading: 'Foodspot AI',
@@ -980,8 +980,8 @@ And they're going to do it happily.
     step1_desc: 'Adicione fotos, preços e categorias. Inclua calorias, avisos de saúde e etiquetas personalizadas. Sua loja pronta na hora. 100% SEM CÓDIGO.',
     step2_title: 'Personalize sua loja',
     step2_desc: 'Cores, logos e identidade. Dê vida ao seu app com nossas mascotes animadas.',
-    step3_title: 'Lance sua loja e venda',
-    step3_desc: 'Sem hardware. Sem papelada. Sem drama. Conecte o Mercado Pago com token + user ID. Receba na hora. Tudo acontece no app.',
+    step3_title: 'Compartilhe seu app!',
+    step3_desc: 'Compartilhe sua URL com seus clientes. Sem hardware. Sem papelada. Tudo integrado no seu app.',
 
     // Features / AI
     ai_heading: 'Foodspot AI',
