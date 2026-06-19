@@ -488,15 +488,19 @@ export function Bridge() {
   const { lang } = useLanguage();
 
   return (
-    <section className="py-8 px-6 bg-primary">
-      <div className="max-w-2xl mx-auto text-center">
-        <p className="font-display text-2xl md:text-3xl text-white font-black leading-snug">
-          {lang === 'es'
-            ? 'Construí tu app en un día. Domínalo en una semana. Cada pedido se convierte en marketing.'
-            : lang === 'pt'
-            ? 'Construa seu app em um dia. Domine em uma semana. Cada pedido vira marketing.'
-            : 'Build your app in a day. Get comfortable in a week. Turn every order into marketing.'}
-        </p>
+    <section className="py-16 px-6 bg-white">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="font-display text-3xl md:text-5xl text-on-surface font-semibold leading-tight tracking-tight">
+          {lang === 'es' && (
+            <>Construí tu <span className="font-black">app</span> en un <span className="font-black">día</span>. Domínalo en una <span className="font-black">semana</span>. Cada pedido se convierte en <span className="font-black">marketing</span>.</>
+          )}
+          {lang === 'pt' && (
+            <>Construa seu <span className="font-black">app</span> em um <span className="font-black">dia</span>. Domine em uma <span className="font-black">semana</span>. Cada pedido vira <span className="font-black">marketing</span>.</>
+          )}
+          {lang === 'en' && (
+            <>Build your <span className="font-black">app</span> in a <span className="font-black">day</span>. Master it in a <span className="font-black">week</span>. Turn every order into <span className="font-black">marketing</span>.</>
+          )}
+        </h2>
       </div>
     </section>
   );

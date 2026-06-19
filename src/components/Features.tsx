@@ -272,15 +272,16 @@ export function UGCMegaSection() {
                             className="w-full h-full object-cover"
                           />
                         </a>
-                        <div className="text-center mt-4">
-                          <p className="text-on-surface font-black text-2xl md:text-3xl mb-2">
-                            {lang === 'es' ? 'toca aquí' : lang === 'pt' ? 'toque aqui' : 'tap here'}
-                          </p>
-                          <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
-                            <svg className="w-5 h-5 mx-auto text-on-surface" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                              <path d="M12 19V5M5 12l7-7 7 7" />
-                            </svg>
-                          </div>
+                        <div className="text-center mt-6">
+                          <a
+                            href="https://foodspotapp.vercel.app/foodspot/camera"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 bg-on-surface hover:bg-black text-white px-8 py-4 rounded-full font-bold text-xl md:text-2xl shadow-2xl transition-transform hover:scale-105 active:scale-95"
+                            style={{ animation: 'pulse 2s infinite ease-in-out' }}
+                          >
+                            📸 {lang === 'es' ? 'Probar Cámara' : lang === 'pt' ? 'Testar Câmera' : 'Try Camera'}
+                          </a>
                         </div>
                       </div>
                     ) : (
@@ -338,15 +339,16 @@ export function UGCMegaSection() {
                           className="w-full h-full object-cover"
                         />
                       </a>
-                      <div className="text-center mt-3">
-                        <p className="text-on-surface font-semibold text-sm mb-2">
-                          {lang === 'es' ? 'toca aquí' : lang === 'pt' ? 'toque aqui' : 'tap here'}
-                        </p>
-                        <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
-                          <svg className="w-4 h-4 mx-auto text-on-surface" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <path d="M12 19V5M5 12l7-7 7 7" />
-                          </svg>
-                        </div>
+                      <div className="text-center mt-5 w-full px-4">
+                        <a
+                          href="https://foodspotapp.vercel.app/foodspot/camera"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center gap-2 bg-on-surface hover:bg-black text-white w-full py-4 rounded-full font-bold text-lg shadow-2xl transition-transform active:scale-95"
+                          style={{ animation: 'pulse 2s infinite ease-in-out' }}
+                        >
+                          📸 {lang === 'es' ? 'Probar Cámara' : lang === 'pt' ? 'Testar Câmera' : 'Try Camera'}
+                        </a>
                       </div>
                     </div>
                   ) : (
