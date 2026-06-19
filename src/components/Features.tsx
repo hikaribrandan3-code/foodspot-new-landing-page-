@@ -272,6 +272,16 @@ export function UGCMegaSection() {
                             className="w-full h-full object-cover"
                           />
                         </a>
+                        <div className="text-center mt-4">
+                          <p className="text-on-surface font-semibold text-sm mb-2">
+                            {lang === 'es' ? 'toca aquí' : lang === 'pt' ? 'toque aqui' : 'tap here'}
+                          </p>
+                          <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
+                            <svg className="w-5 h-5 mx-auto text-on-surface" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                              <path d="M12 19V5M5 12l7-7 7 7" />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     ) : (
                       <div className="flex flex-col items-center gap-4 max-w-[200px]">
@@ -328,6 +338,16 @@ export function UGCMegaSection() {
                           className="w-full h-full object-cover"
                         />
                       </a>
+                      <div className="text-center mt-3">
+                        <p className="text-on-surface font-semibold text-sm mb-2">
+                          {lang === 'es' ? 'toca aquí' : lang === 'pt' ? 'toque aqui' : 'tap here'}
+                        </p>
+                        <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
+                          <svg className="w-4 h-4 mx-auto text-on-surface" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M12 19V5M5 12l7-7 7 7" />
+                          </svg>
+                        </div>
+                      </div>
                     </div>
                   ) : (
                     <div
