@@ -72,7 +72,7 @@ const translations = {
     step1_title: 'Crea tu menú en minutos',
     step1_desc: 'Subi fotos, precios y categorias. Incluso podes agregar calorias, advertencias de salud y etiquetas personalizadas para casos especiales. Tu tienda lista al instante. 100% NO-CODE',
     step2_title: 'Personaliza tu tienda',
-    step2_desc: 'Tu logo, tus colores, tu método de pago. Sin código — simplemente funciona.',
+    step2_desc: 'Tu logo, tus colores. Sin código — simplemente funciona.',
     step3_title: '¡Comparte tu app!',
     step3_desc: 'Comparte tu URL con tus clientes. Sin hardware. Sin papelería. Todo integrado en tu app.',
 
@@ -525,7 +525,7 @@ Y lo van a hacer felices.
     step1_title: 'Build your digital menu',
     step1_desc: 'Upload photos, prices, and categories. Add calories, health warnings, and custom tags for special cases. Your store live instantly. 100% NO-CODE.',
     step2_title: 'Customize your storefront',
-    step2_desc: 'Your logo, your colors, your payment method. No coding needed—it just works.',
+    step2_desc: 'Your logo, your colors. No coding needed—it just works.',
     step3_title: 'Share your app!',
     step3_desc: 'Share your URL with your customers. No hardware. No paperwork. Everything integrated in your app.',
 
@@ -979,7 +979,7 @@ And they're going to do it happily.
     step1_title: 'Crie seu cardápio digital',
     step1_desc: 'Adicione fotos, preços e categorias. Inclua calorias, avisos de saúde e etiquetas personalizadas. Sua loja pronta na hora. 100% SEM CÓDIGO.',
     step2_title: 'Personalize sua loja',
-    step2_desc: 'Seu logo, suas cores, seu método de pagamento. Sem código — simplesmente funciona.',
+    step2_desc: 'Seu logo, suas cores. Sem código — simplesmente funciona.',
     step3_title: 'Compartilhe seu app!',
     step3_desc: 'Compartilhe sua URL com seus clientes. Sem hardware. Sem papelada. Tudo integrado no seu app.',
 
