@@ -484,6 +484,24 @@ export function UGCMarketingCTA() {
 }
 
 
+export function Bridge() {
+  const { lang } = useLanguage();
+
+  return (
+    <section className="py-8 px-6 bg-primary">
+      <div className="max-w-2xl mx-auto text-center">
+        <p className="font-display text-2xl md:text-3xl text-white font-black leading-snug">
+          {lang === 'es'
+            ? 'Lanzá tu app en un día. Convertí cada comprobante en marketing.'
+            : lang === 'pt'
+            ? 'Lance seu app em um dia. Transforme cada recibo em marketing.'
+            : 'Launch your app in a day. Turn every receipt into marketing.'}
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export function OnlineStoreDefinition() {
   const { lang } = useLanguage();
 

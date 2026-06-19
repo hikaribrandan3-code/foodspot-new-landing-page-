@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { CookieConsent } from './components/CookieConsent';
-import { Navbar, Hero, SubtitleCards, MiddleCTA, UGCMarketingCTA, OnlineStoreDefinition } from "./components/MainSections";
+import { Navbar, Hero, Bridge, MiddleCTA, UGCMarketingCTA, OnlineStoreDefinition } from "./components/MainSections";
 import { FAQ } from "./components/FAQ";
-import { HowItWorks, Features, UGCMegaSection } from "./components/Features";
+import { HowItWorks, UGCMegaSection } from "./components/Features";
 import { BlogSection } from "./components/BlogSection";
 import { BlogPost } from "./components/BlogPost";
 import { getPostBySlug } from "./lib/blogPosts";
@@ -86,10 +86,10 @@ export default function App() {
         <Navbar />
         <main>
           <Hero />
+          <Bridge />
           <OnlineStoreDefinition />
           <HowItWorks />
           <UGCMegaSection />
-          <Features />
           <FAQ />
           <BlogSection onOpenPost={navigateToBlog} />
           <MiddleCTA />

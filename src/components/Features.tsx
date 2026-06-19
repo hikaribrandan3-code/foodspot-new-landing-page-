@@ -37,7 +37,12 @@ export function HowItWorks() {
     <section id="como-funciona" className="py-16 md:py-20 px-6 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-4">{t(lang, 'how_heading')}</h2>
+          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-2">
+            {lang === 'es' ? 'Cómo lo hacemos' : lang === 'pt' ? 'Como fazemos' : 'How we do it'}
+          </p>
+          <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-4">
+            {lang === 'es' ? '3 pasos, 24 horas' : lang === 'pt' ? '3 passos, 24 horas' : '3 steps, 24 hours'}
+          </h2>
           <p className="text-lg text-on-surface-variant max-w-2xl mx-auto mb-6">
             {t(lang, 'how_sub')}
           </p>
@@ -183,16 +188,24 @@ export function UGCMegaSection() {
       {/* ── UGC RECEIPTS + Free Marketing Section ── */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-lg md:text-xl text-on-surface-variant font-semibold mb-12">
-            {lang === 'es' ? 'FoodSpot Mobile no es solo una plataforma que ayuda a restaurantes, bares y cafés a crear sus propias apps, también creamos UGC RECEIPTS — comprobantes digitales que piden a tus clientes que compartan fotos de su comida en tu app y redes sociales!' : lang === 'pt' ? 'FoodSpot Mobile não é apenas uma plataforma que ajuda restaurantes, bares e cafés a criar seus próprios apps, também criamos UGC RECEIPTS — recibos digitais que pedem aos seus clientes para compartilhar fotos da comida no seu app e redes sociais!' : 'FoodSpot Mobile isn\'t only a platform that helps restaurants, bars, and cafes create their own apps, we also created UGC RECEIPTS — digital receipts that ask your customers to share photos of their food on your app and social media!'}
-          </p>
           <div className="mb-12">
-            <h2 className="font-display text-5xl md:text-6xl text-on-surface font-black">
-              {t(lang, 'ugc_receipts_heading')}
+            <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">
+              {lang === 'es' ? 'Lo que nos hace diferentes' : lang === 'pt' ? 'O que nos diferencia' : 'What makes us different'}
+            </p>
+            <h2 className="font-display text-3xl md:text-5xl text-on-surface font-black mb-4 leading-tight">
+              {lang === 'es'
+                ? 'La mayoría te ayuda a construir. Nosotros te ayudamos a crecer.'
+                : lang === 'pt'
+                ? 'A maioria te ajuda a construir. Nós te ajudamos a crescer.'
+                : 'Most companies help you build. We help you grow.'}
             </h2>
-            <h2 className="font-display text-4xl md:text-5xl text-on-surface font-black mt-2">
-              {t(lang, 'ugc_invented_heading')}
-            </h2>
+            <p className="text-lg md:text-xl text-on-surface-variant font-medium max-w-2xl mx-auto">
+              {lang === 'es'
+                ? 'Inventamos los UGC Receipts — el primer comprobante interactivo que convierte a cada cliente en tu equipo de marketing.'
+                : lang === 'pt'
+                ? 'Inventamos os UGC Receipts — o primeiro recibo interativo que transforma cada cliente em seu time de marketing.'
+                : 'We invented UGC Receipts — the first interactive receipt that turns every customer into your marketing team.'}
+            </p>
           </div>
 
           {/* Desktop Bullets - Centered, Bigger */}
