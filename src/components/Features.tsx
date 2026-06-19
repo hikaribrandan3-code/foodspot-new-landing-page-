@@ -716,6 +716,11 @@ export function UGCMegaSection() {
             </div>
           </div>
 
+          {/* Closing Line — Moved Before Steps */}
+          <p className="mt-8 text-on-surface font-black text-lg md:text-xl max-w-xl leading-snug">
+            {t(lang, 'diff_closing')}
+          </p>
+
           {/* Captions Steps Below the Phone */}
           <div className="mt-8 bg-surface rounded-3xl p-8 max-w-lg w-full border border-outline-variant text-left">
             <ul className="space-y-4">
@@ -733,11 +738,6 @@ export function UGCMegaSection() {
               </li>
             </ul>
           </div>
-
-          {/* Closing Line */}
-          <p className="mt-8 text-on-surface font-black text-lg md:text-xl max-w-xl leading-snug">
-            {t(lang, 'diff_closing')}
-          </p>
 
         </div>
       </section>
