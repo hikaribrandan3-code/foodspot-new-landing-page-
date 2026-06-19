@@ -492,10 +492,10 @@ export function Bridge() {
       <div className="max-w-2xl mx-auto text-center">
         <p className="font-display text-2xl md:text-3xl text-white font-black leading-snug">
           {lang === 'es'
-            ? 'Lanzá tu app en un día. Convertí cada comprobante en marketing.'
+            ? 'Construí tu app en un día. Domínalo en una semana. Cada pedido se convierte en marketing.'
             : lang === 'pt'
-            ? 'Lance seu app em um dia. Transforme cada recibo em marketing.'
-            : 'Launch your app in a day. Turn every receipt into marketing.'}
+            ? 'Construa seu app em um dia. Domine em uma semana. Cada pedido vira marketing.'
+            : 'Build your app in a day. Get comfortable in a week. Turn every order into marketing.'}
         </p>
       </div>
     </section>
