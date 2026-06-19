@@ -273,7 +273,7 @@ export function UGCMegaSection() {
                           />
                         </a>
                         <div className="text-center mt-4">
-                          <p className="text-on-surface font-black text-sm mb-2">
+                          <p className="text-on-surface font-black text-2xl md:text-3xl mb-2">
                             {lang === 'es' ? 'toca aquí' : lang === 'pt' ? 'toque aqui' : 'tap here'}
                           </p>
                           <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
