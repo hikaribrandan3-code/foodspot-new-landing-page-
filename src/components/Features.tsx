@@ -253,7 +253,7 @@ export function UGCMegaSection() {
                       <div className="flex flex-col items-center gap-6 w-full">
                         <div className="text-center">
                           <p className="text-on-surface font-display text-2xl md:text-3xl font-black mb-3">
-                            {t(lang, 'ugc_try_camera')}
+                            {t(lang, 'ugc_camera_title')}
                           </p>
                           <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
                             <ArrowDown className="w-6 h-6 mx-auto text-primary/50" />
@@ -277,10 +277,10 @@ export function UGCMegaSection() {
                             href="https://foodspotapp.vercel.app/foodspot/camera"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 bg-on-surface hover:bg-black text-white px-8 py-4 rounded-full font-bold text-xl md:text-2xl shadow-2xl transition-transform hover:scale-105 active:scale-95"
+                            className="inline-flex items-center justify-center bg-on-surface hover:bg-black text-white px-6 py-2.5 rounded-full font-bold text-sm md:text-base shadow-2xl transition-transform hover:scale-105 active:scale-95"
                             style={{ animation: 'pulse 2s infinite ease-in-out' }}
                           >
-                            📸 {lang === 'es' ? 'Probar Cámara' : lang === 'pt' ? 'Testar Câmera' : 'Try Camera'}
+                            {t(lang, 'ugc_btn_try_camera')}
                           </a>
                         </div>
                       </div>
@@ -320,7 +320,7 @@ export function UGCMegaSection() {
                     <div className="flex flex-col items-center gap-4 w-full">
                       <div className="text-center">
                         <p className="text-on-surface font-display text-2xl font-black mb-3">
-                          {t(lang, 'ugc_try_camera')}
+                          {t(lang, 'ugc_camera_title')}
                         </p>
                         <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
                           <ArrowDown className="w-5 h-5 mx-auto text-primary/50" />
@@ -344,10 +344,10 @@ export function UGCMegaSection() {
                           href="https://foodspotapp.vercel.app/foodspot/camera"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center justify-center gap-2 bg-on-surface hover:bg-black text-white w-full py-4 rounded-full font-bold text-lg shadow-2xl transition-transform active:scale-95"
+                          className="inline-flex items-center justify-center bg-on-surface hover:bg-black text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-2xl transition-transform active:scale-95"
                           style={{ animation: 'pulse 2s infinite ease-in-out' }}
                         >
-                          📸 {lang === 'es' ? 'Probar Cámara' : lang === 'pt' ? 'Testar Câmera' : 'Try Camera'}
+                          {t(lang, 'ugc_btn_try_camera')}
                         </a>
                       </div>
                     </div>
