@@ -201,10 +201,10 @@ export function UGCMegaSection() {
             </h2>
             <p className="text-lg md:text-xl text-on-surface-variant font-medium max-w-2xl mx-auto">
               {lang === 'es'
-                ? 'Inventamos los UGC Receipts — el primer comprobante interactivo que convierte a cada cliente en tu equipo de marketing.'
+                ? 'Inventamos los UGC Receipts. Tus clientes publican en Instagram. Sus seguidores se convierten en tus clientes.'
                 : lang === 'pt'
-                ? 'Inventamos os UGC Receipts — o primeiro recibo interativo que transforma cada cliente em seu time de marketing.'
-                : 'We invented UGC Receipts — the first interactive receipt that turns every customer into your marketing team.'}
+                ? 'Inventamos os UGC Receipts. Seus clientes postam no Instagram. Seus seguidores viram seus clientes.'
+                : 'We invented UGC Receipts. Your customers post to Instagram. Their followers become your customers.'}
             </p>
           </div>
 
@@ -273,7 +273,7 @@ export function UGCMegaSection() {
                           />
                         </a>
                         <div className="text-center mt-4">
-                          <p className="text-on-surface font-semibold text-sm mb-2">
+                          <p className="text-on-surface font-black text-sm mb-2">
                             {lang === 'es' ? 'toca aquí' : lang === 'pt' ? 'toque aqui' : 'tap here'}
                           </p>
                           <div style={{ animation: 'bounce 2s infinite ease-in-out' }}>
