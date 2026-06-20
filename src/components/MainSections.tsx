@@ -250,23 +250,6 @@ export function Hero() {
         </div>
       </div>
     </section>
-
-    <section className="py-16 px-6 bg-white">
-      <div className="max-w-2xl mx-auto text-center space-y-3">
-        <p className="text-xl md:text-2xl text-on-surface font-bold leading-relaxed">
-          You're using 10 apps.
-        </p>
-        <p className="text-xl md:text-2xl text-on-surface font-bold leading-relaxed">
-          No personalization.
-        </p>
-        <p className="text-xl md:text-2xl text-on-surface font-bold leading-relaxed">
-          No way to market easy.
-        </p>
-        <p className="text-xl md:text-2xl text-on-surface font-bold leading-relaxed mt-6">
-          We fixed that.
-        </p>
-      </div>
-    </section>
     </>
   );
 }
@@ -507,28 +490,34 @@ export function Bridge() {
   const { lang } = useLanguage();
 
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-24 px-6 bg-white">
       <div className="max-w-4xl mx-auto text-center">
-        <p className="text-2xl md:text-3xl text-on-surface-variant font-semibold mb-8">
+        <p className="text-2xl md:text-3xl text-on-surface-variant font-semibold mb-12">
           ❌ {lang === 'es' ? 'EL PROBLEMA' : lang === 'pt' ? 'O PROBLEMA' : 'THE PROBLEM'}
         </p>
-        <h2 className="font-display text-5xl md:text-7xl text-on-surface font-black leading-tight tracking-tight space-y-4">
+        <h2 className="font-display text-5xl md:text-7xl text-on-surface font-black leading-tight tracking-tight space-y-6">
           {lang === 'es' && (
             <div className="space-y-6">
               <div>Usas 10 apps.</div>
               <div>Sin personalización.</div>
+              <div>Sin forma fácil de vender.</div>
+              <div style={{ color: '#047857', fontWeight: 'bold' }}>Lo arreglamos.</div>
             </div>
           )}
           {lang === 'pt' && (
             <div className="space-y-6">
               <div>Você usa 10 apps.</div>
               <div>Sem personalização.</div>
+              <div>Sem forma fácil de vender.</div>
+              <div style={{ color: '#047857', fontWeight: 'bold' }}>Nós consertamos.</div>
             </div>
           )}
           {lang === 'en' && (
             <div className="space-y-6">
               <div>You're using 10 apps.</div>
               <div>No personalization.</div>
+              <div>No way to market easy.</div>
+              <div style={{ color: '#047857', fontWeight: 'bold' }}>We fixed that.</div>
             </div>
           )}
         </h2>
