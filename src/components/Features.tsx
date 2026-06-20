@@ -37,10 +37,10 @@ export function HowItWorks() {
     <section id="como-funciona" className="py-16 md:py-20 px-6 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-2">
+          <p className="font-display text-3xl md:text-5xl font-black text-on-surface mb-3">
             {lang === 'es' ? 'Cómo lo hacemos' : lang === 'pt' ? 'Como fazemos' : 'How we do it'}
           </p>
-          <h2 className="font-display text-3xl md:text-4xl text-on-surface mb-4">
+          <h2 className="font-display text-2xl md:text-3xl text-on-surface-variant mb-4">
             {lang === 'es' ? '3 pasos, 24 horas' : lang === 'pt' ? '3 passos, 24 horas' : '3 steps, 24 hours'}
           </h2>
           <p className="text-lg text-on-surface-variant max-w-2xl mx-auto mb-6">
