@@ -36,6 +36,12 @@ export function HowItWorks() {
   return (
     <section id="como-funciona" className="py-16 md:py-20 px-6 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
+        <div className="flex justify-center mb-8">
+          <svg width="3" height="60" viewBox="0 0 3 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="1.5" y1="0" x2="1.5" y2="40" stroke="currentColor" strokeWidth="3" className="text-on-surface" />
+            <path d="M1.5 40L0.5 50L1.5 48L2.5 50L1.5 40Z" fill="currentColor" className="text-on-surface" />
+          </svg>
+        </div>
         <div className="text-center mb-12">
           <p className="font-display text-5xl md:text-7xl font-black text-on-surface mb-3">
             {lang === 'es' ? 'Cómo lo hacemos' : lang === 'pt' ? 'Como fazemos' : 'How we do it'}
