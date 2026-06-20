@@ -507,25 +507,28 @@ export function Bridge() {
   const { lang } = useLanguage();
 
   return (
-    <section className="py-16 px-6 bg-white">
+    <section className="py-20 px-6 bg-white">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="font-display text-3xl md:text-5xl text-on-surface font-semibold leading-tight tracking-tight">
+        <p className="text-2xl md:text-3xl text-on-surface-variant font-semibold mb-8">
+          ❌ {lang === 'es' ? 'EL PROBLEMA' : lang === 'pt' ? 'O PROBLEMA' : 'THE PROBLEM'}
+        </p>
+        <h2 className="font-display text-5xl md:text-7xl text-on-surface font-black leading-tight tracking-tight space-y-4">
           {lang === 'es' && (
-            <div className="space-y-1">
-              <div>Tu tienda online, bajo tu control. En un día. Sin sorpresas. Sin pagar comisiones a nadie. Un pago por mes.</div>
-              <div style={{ color: '#047857', fontWeight: 'bold' }}>Cada comprobante te trae clientes.</div>
+            <div className="space-y-6">
+              <div>Usas 10 apps.</div>
+              <div>Sin personalización.</div>
             </div>
           )}
           {lang === 'pt' && (
-            <div className="space-y-1">
-              <div>Sua loja online, sob seu controle. Em um dia. Sem surpresas. Sem pagar comissões para ninguém. Um pagamento por mês.</div>
-              <div style={{ color: '#047857', fontWeight: 'bold' }}>Cada comprovante traz você clientes.</div>
+            <div className="space-y-6">
+              <div>Você usa 10 apps.</div>
+              <div>Sem personalização.</div>
             </div>
           )}
           {lang === 'en' && (
-            <div className="space-y-1">
-              <div>Your online store, under your control. In one day. No surprises. No paying commissions to anyone. One payment per month.</div>
-              <div style={{ color: '#047857', fontWeight: 'bold' }}>Every receipt brings you customers.</div>
+            <div className="space-y-6">
+              <div>You're using 10 apps.</div>
+              <div>No personalization.</div>
             </div>
           )}
         </h2>
