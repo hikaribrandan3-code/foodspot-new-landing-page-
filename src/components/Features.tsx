@@ -37,7 +37,7 @@ export function HowItWorks() {
     <section id="como-funciona" className="py-16 md:py-20 px-6 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <p className="font-display text-3xl md:text-5xl font-black text-on-surface mb-3">
+          <p className="font-display text-5xl md:text-7xl font-black text-on-surface mb-3">
             {lang === 'es' ? 'Cómo lo hacemos' : lang === 'pt' ? 'Como fazemos' : 'How we do it'}
           </p>
           <h2 className="font-display text-2xl md:text-3xl text-on-surface-variant mb-4">
