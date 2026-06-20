@@ -195,6 +195,7 @@ export function Hero() {
   }, [lang, accents]);
 
   return (
+    <>
     <section className="w-full bg-white px-6 py-8 md:pt-[15px] md:pb-12">
       <div className="max-w-7xl mx-auto">
         <div className="md:grid md:grid-cols-2 md:gap-12 md:items-center flex flex-col items-center text-center md:text-left md:items-center">
@@ -266,6 +267,7 @@ export function Hero() {
         </p>
       </div>
     </section>
+    </>
   );
 }
 
