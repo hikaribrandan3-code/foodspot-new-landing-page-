@@ -250,7 +250,6 @@ export function Hero() {
       </div>
     </section>
 
-    {/* Problem Statement Section */}
     <section className="py-16 px-6 bg-white">
       <div className="max-w-2xl mx-auto text-center space-y-3">
         <p className="text-xl md:text-2xl text-on-surface font-bold leading-relaxed">
