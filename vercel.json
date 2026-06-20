@@ -1,12 +1,12 @@
 {
   "rewrites": [
-    {
-      "source": "/",
-      "destination": "/api/render-html"
-    },
-    {
-      "source": "/blog/:slug",
-      "destination": "/index.html"
-    }
+    { "source": "/en",  "destination": "/api/render-html?lang=en" },
+    { "source": "/en/", "destination": "/api/render-html?lang=en" },
+    { "source": "/es",  "destination": "/api/render-html?lang=es" },
+    { "source": "/es/", "destination": "/api/render-html?lang=es" },
+    { "source": "/pt",  "destination": "/api/render-html?lang=pt" },
+    { "source": "/pt/", "destination": "/api/render-html?lang=pt" },
+    { "source": "/",    "destination": "/api/render-html" },
+    { "source": "/blog/:slug", "destination": "/index.html" }
   ]
 }
