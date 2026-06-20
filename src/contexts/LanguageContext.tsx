@@ -23,21 +23,30 @@ function writeCookie(name: string, value: string, maxAgeDays: number) {
 type DetectionSource = 'url' | 'cookie' | 'localStorage' | 'browser' | 'default';
 
 function detectLang(): { lang: Lang; source: DetectionSource } {
+  // 1. URL path — highest priority (what Google crawls, what the user navigated to)
+  const path = window.location.pathname;
+  if (path.startsWith('/en')) return { lang: 'en', source: 'url' };
+  if (path.startsWith('/pt')) return { lang: 'pt', source: 'url' };
+
+  // 2. Legacy ?lang= query param
   const urlParam = new URLSearchParams(window.location.search).get('lang');
   if (urlParam && VALID_LANGS.includes(urlParam as Lang)) {
     return { lang: urlParam as Lang, source: 'url' };
   }
 
+  // 3. Cookie (set by middleware on first visit or by user switching language)
   const cookie = readCookie('fs_lang');
   if (cookie && VALID_LANGS.includes(cookie as Lang)) {
     return { lang: cookie as Lang, source: 'cookie' };
   }
 
+  // 4. localStorage
   const stored = localStorage.getItem('fs_lang') as Lang | null;
   if (stored && VALID_LANGS.includes(stored)) {
     return { lang: stored, source: 'localStorage' };
   }
 
+  // 5. Browser language
   const browser = navigator.language.slice(0, 2).toLowerCase();
   if (browser === 'pt') return { lang: 'pt', source: 'browser' };
   if (browser === 'en') return { lang: 'en', source: 'browser' };
@@ -46,7 +55,7 @@ function detectLang(): { lang: Lang; source: DetectionSource } {
 }
 
 function syncDocumentMeta(lang: Lang) {
-  // Blog post pages own their own title/meta tags (see BlogPost.tsx) — don't clobber them.
+  // Blog post pages own their own title/meta tags — don't clobber them.
   if (window.location.pathname.startsWith('/blog/')) return;
 
   document.title = t(lang, 'seo_title');
@@ -61,6 +70,14 @@ function syncDocumentMeta(lang: Lang) {
   setMeta('meta[property="og:description"]', 'content', t(lang, 'seo_og_description'));
   setMeta('meta[property="twitter:title"]', 'content', t(lang, 'seo_twitter_title'));
   setMeta('meta[property="twitter:description"]', 'content', t(lang, 'seo_twitter_description'));
+
+  // Keep canonical in sync with the current path
+  const canonicalEl = document.querySelector('link[rel="canonical"]');
+  if (canonicalEl) {
+    const base = 'https://www.foodspotmobile.com';
+    const canonical = lang === 'es' ? base + '/' : `${base}/${lang}/`;
+    canonicalEl.setAttribute('href', canonical);
+  }
 }
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
@@ -69,6 +86,14 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const { lang: detected, source } = detectLang();
     setLangState(detected);
+
+    // When path determines language, sync cookie + localStorage so subsequent
+    // navigation to / stays consistent with what the user was viewing.
+    if (source === 'url' && window.location.pathname !== '/') {
+      writeCookie('fs_lang', detected, 180);
+      localStorage.setItem('fs_lang', detected);
+    }
+
     trackLangDetection(detected, source);
   }, []);
 
@@ -81,9 +106,13 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem('fs_lang', l);
     writeCookie('fs_lang', l, 180);
 
-    const url = new URL(window.location.href);
-    url.searchParams.set('lang', l);
-    window.history.replaceState(null, '', url.toString());
+    // Navigate to path-based URL so the serverless function fires and
+    // Google always gets correct meta tags on each language URL.
+    const targetPath = l === 'es' ? '/' : `/${l}/`;
+    if (window.location.pathname !== targetPath) {
+      window.location.href = targetPath;
+      return;
+    }
 
     setLangState(l);
   };
