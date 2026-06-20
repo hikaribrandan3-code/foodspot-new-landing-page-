@@ -249,6 +249,24 @@ export function Hero() {
         </div>
       </div>
     </section>
+
+    {/* Problem Statement Section */}
+    <section className="py-16 px-6 bg-white">
+      <div className="max-w-2xl mx-auto text-center space-y-3">
+        <p className="text-xl md:text-2xl text-on-surface font-bold leading-relaxed">
+          You're using 10 apps.
+        </p>
+        <p className="text-xl md:text-2xl text-on-surface font-bold leading-relaxed">
+          No personalization.
+        </p>
+        <p className="text-xl md:text-2xl text-on-surface font-bold leading-relaxed">
+          No way to market easy.
+        </p>
+        <p className="text-xl md:text-2xl text-on-surface font-bold leading-relaxed mt-6">
+          We fixed that.
+        </p>
+      </div>
+    </section>
   );
 }
 
