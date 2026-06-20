@@ -490,14 +490,14 @@ export function Bridge() {
   const { lang } = useLanguage();
 
   return (
-    <section className="py-24 px-6 bg-white">
-      <div className="max-w-4xl mx-auto text-center">
-        <p className="text-2xl md:text-3xl text-on-surface-variant font-semibold mb-12">
+    <section className="py-12 px-6 bg-white">
+      <div className="max-w-3xl mx-auto text-center">
+        <p className="text-xl md:text-2xl text-on-surface-variant font-semibold mb-6">
           ❌ {lang === 'es' ? 'EL PROBLEMA' : lang === 'pt' ? 'O PROBLEMA' : 'THE PROBLEM'}
         </p>
-        <h2 className="font-display text-5xl md:text-7xl text-on-surface font-black leading-tight tracking-tight space-y-6">
+        <h2 className="font-display text-3xl md:text-5xl text-on-surface font-black leading-tight tracking-tight space-y-4">
           {lang === 'es' && (
-            <div className="space-y-6">
+            <div className="space-y-4">
               <div>Usas 10 apps.</div>
               <div>Sin personalización.</div>
               <div>Sin forma fácil de vender.</div>
@@ -505,7 +505,7 @@ export function Bridge() {
             </div>
           )}
           {lang === 'pt' && (
-            <div className="space-y-6">
+            <div className="space-y-4">
               <div>Você usa 10 apps.</div>
               <div>Sem personalização.</div>
               <div>Sem forma fácil de vender.</div>
@@ -513,7 +513,7 @@ export function Bridge() {
             </div>
           )}
           {lang === 'en' && (
-            <div className="space-y-6">
+            <div className="space-y-4">
               <div>You're using 10 apps.</div>
               <div>No personalization.</div>
               <div>No way to market easy.</div>

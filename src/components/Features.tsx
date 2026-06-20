@@ -722,18 +722,18 @@ export function UGCMegaSection() {
           </p>
 
           {/* Captions Steps Below the Phone */}
-          <div className="mt-8 bg-surface rounded-3xl p-8 max-w-lg w-full border border-outline-variant text-left">
-            <ul className="space-y-4">
-              <li className="text-on-surface font-semibold text-base md:text-lg flex items-start gap-3">
-                <span className="text-primary font-black text-xl leading-none">→</span>
+          <div className="mt-3 bg-surface rounded-3xl p-10 max-w-2xl w-full border border-outline-variant text-left">
+            <ul className="space-y-6">
+              <li className="text-on-surface font-bold text-lg md:text-2xl flex items-start gap-4">
+                <span style={{ color: '#10B981', fontSize: '28px' }}>📋</span>
                 <span>{t(lang, 'diff_step1')}</span>
               </li>
-              <li className="text-on-surface font-semibold text-base md:text-lg flex items-start gap-3">
-                <span className="text-primary font-black text-xl leading-none">→</span>
+              <li className="text-on-surface font-bold text-lg md:text-2xl flex items-start gap-4">
+                <span style={{ color: '#3B82F6', fontSize: '28px' }}>📸</span>
                 <span>{t(lang, 'diff_step2')}</span>
               </li>
-              <li className="text-on-surface font-semibold text-base md:text-lg flex items-start gap-3">
-                <span className="text-primary font-black text-xl leading-none">→</span>
+              <li className="text-on-surface font-bold text-lg md:text-2xl flex items-start gap-4">
+                <span style={{ color: '#F59E0B', fontSize: '28px' }}>🎯</span>
                 <span>{t(lang, 'diff_step3')}</span>
               </li>
             </ul>
