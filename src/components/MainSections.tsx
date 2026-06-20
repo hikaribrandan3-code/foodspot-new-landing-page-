@@ -206,23 +206,13 @@ export function Hero() {
               <span key={accentIndex} style={{ color: '#047857', display: 'block', width: '100%', whiteSpace: 'nowrap', animation: 'fadeInUp 0.25s ease-out forwards', marginTop: '4px' }}>{accents[lang][accentIndex]}</span>
             </h1>
 
-            <div className="max-w-2xl mx-auto mb-8 space-y-2 text-center md:text-left">
-              {(() => {
-                const fullText = t(lang, 'hero_bridge');
-                const lastPhrase = lang === 'es' ? 'Cada comprobante te trae clientes.' : lang === 'pt' ? 'Cada comprovante traz você clientes.' : 'Every receipt brings you customers.';
-                const beforeLast = fullText.replace(lastPhrase, '').trim();
-                return (
-                  <>
-                    <p className="text-base md:text-lg text-on-surface font-semibold leading-snug" style={{ lineHeight: '1.5' }}>
-                      {beforeLast}
-                    </p>
-                    <p className="text-base md:text-lg font-bold" style={{ color: '#047857', lineHeight: '1.5' }}>
-                      {lastPhrase}
-                    </p>
-                  </>
-                );
-              })()}
-            </div>
+            <p className="text-base md:text-xl text-on-surface-variant mb-8 leading-relaxed font-medium" style={{ fontSize: '16px', lineHeight: '1.6' }}>
+              {lang === 'es'
+                ? 'Tu propia app de marca. Pedidos directos. Y el 100% de cada venta — sin comisiones, nunca.'
+                : lang === 'pt'
+                ? 'Seu próprio app de marca. Pedidos diretos. E 100% de cada venta — sem comissões, nunca.'
+                : 'Your own branded app. Direct orders. And 100% of every sale — no commissions, ever.'}
+            </p>
 
             <div className="flex flex-row md:flex-col gap-2 md:gap-3 items-center justify-center md:justify-start md:items-start">
               <a
@@ -502,13 +492,22 @@ export function Bridge() {
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="font-display text-3xl md:text-5xl text-on-surface font-semibold leading-tight tracking-tight">
           {lang === 'es' && (
-            <>Construí tu <span className="font-black">app</span> en un <span className="font-black">día</span>. Domínalo en una <span className="font-black">semana</span>. Cada pedido se convierte en <span className="font-black">marketing</span>.</>
+            <div className="space-y-1">
+              <div>Tu tienda online, bajo tu control. En un día. Sin sorpresas. Sin pagar comisiones a nadie. Un pago por mes.</div>
+              <div style={{ color: '#047857', fontWeight: 'bold' }}>Cada comprobante te trae clientes.</div>
+            </div>
           )}
           {lang === 'pt' && (
-            <>Construa seu <span className="font-black">app</span> em um <span className="font-black">dia</span>. Domine em uma <span className="font-black">semana</span>. Cada pedido vira <span className="font-black">marketing</span>.</>
+            <div className="space-y-1">
+              <div>Sua loja online, sob seu controle. Em um dia. Sem surpresas. Sem pagar comissões para ninguém. Um pagamento por mês.</div>
+              <div style={{ color: '#047857', fontWeight: 'bold' }}>Cada comprovante traz você clientes.</div>
+            </div>
           )}
           {lang === 'en' && (
-            <>Build your <span className="font-black">app</span> in a <span className="font-black">day</span>. Master it in a <span className="font-black">week</span>. Turn every order into <span className="font-black">marketing</span>.</>
+            <div className="space-y-1">
+              <div>Your online store, under your control. In one day. No surprises. No paying commissions to anyone. One payment per month.</div>
+              <div style={{ color: '#047857', fontWeight: 'bold' }}>Every receipt brings you customers.</div>
+            </div>
           )}
         </h2>
       </div>
