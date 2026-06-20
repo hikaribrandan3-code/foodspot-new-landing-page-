@@ -21,6 +21,7 @@ const translations = {
     hero_accent: 'tienda online',
     hero_cta: 'Empezar gratis',
     hero_trial: '7 días gratis. Sin tarjeta de crédito.',
+    hero_bridge: 'Tu tienda online, bajo tu control. En un día. Sin sorpresas. Sin pagar comisiones a nadie. Un pago por mes. Cada comprobante te trae clientes.',
 
     // HeroSubtitle
     subtitle_heading: '¿Qué es una tienda online?',
@@ -491,6 +492,7 @@ Y lo van a hacer felices.
     hero_accent: 'online store:',
     hero_cta: 'Start for free',
     hero_trial: '7 days free. No credit card needed.',
+    hero_bridge: 'Your online store, under your control. In one day. No surprises. No paying commissions to anyone. One payment per month. Every receipt brings you customers.',
 
     // HeroSubtitle
     subtitle_heading: 'What is an online store?',
@@ -962,6 +964,7 @@ And they're going to do it happily.
     hero_accent: 'loja online:',
     hero_cta: 'Começar grátis',
     hero_trial: '7 dias grátis. Sem cartão de crédito.',
+    hero_bridge: 'Sua loja online, sob seu controle. Em um dia. Sem surpresas. Sem pagar comissões para ninguém. Um pagamento por mês. Cada comprovante traz você clientes.',
 
     // HeroSubtitle
     subtitle_heading: 'O que é uma loja online?',

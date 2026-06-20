@@ -206,13 +206,23 @@ export function Hero() {
               <span key={accentIndex} style={{ color: '#047857', display: 'block', width: '100%', whiteSpace: 'nowrap', animation: 'fadeInUp 0.25s ease-out forwards', marginTop: '4px' }}>{accents[lang][accentIndex]}</span>
             </h1>
 
-            <p className="text-base md:text-xl text-on-surface-variant mb-8 leading-relaxed font-medium" style={{ fontSize: '16px', lineHeight: '1.6' }}>
-              {lang === 'es'
-                ? 'Tu propia app de marca. Pedidos directos. Y el 100% de cada venta — sin comisiones, nunca.'
-                : lang === 'pt'
-                ? 'Seu próprio app de marca. Pedidos diretos. E 100% de cada venta — sem comissões, nunca.'
-                : 'Your own branded app. Direct orders. And 100% of every sale — no commissions, ever.'}
-            </p>
+            <div className="max-w-2xl mx-auto mb-8 space-y-2 text-center md:text-left">
+              {(() => {
+                const fullText = t(lang, 'hero_bridge');
+                const lastPhrase = lang === 'es' ? 'Cada comprobante te trae clientes.' : lang === 'pt' ? 'Cada comprovante traz você clientes.' : 'Every receipt brings you customers.';
+                const beforeLast = fullText.replace(lastPhrase, '').trim();
+                return (
+                  <>
+                    <p className="text-base md:text-lg text-on-surface font-semibold leading-snug" style={{ lineHeight: '1.5' }}>
+                      {beforeLast}
+                    </p>
+                    <p className="text-base md:text-lg font-bold" style={{ color: '#047857', lineHeight: '1.5' }}>
+                      {lastPhrase}
+                    </p>
+                  </>
+                );
+              })()}
+            </div>
 
             <div className="flex flex-row md:flex-col gap-2 md:gap-3 items-center justify-center md:justify-start md:items-start">
               <a
