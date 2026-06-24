@@ -56,9 +56,9 @@ export const BLOG_POSTS: BlogPostMeta[] = [
     excerptKey: 'blog5_excerpt',
     metaKey: 'blog5_meta',
     bodyKey: 'blog5_body',
-    cardImages: ['/blog5-restaurant-software.webp', '/blog5-kitchen-flow.webp'],
-    heroImage: '/blog5-restaurant-software.webp',
-    bodyImages: ['/blog5-restaurant-software.webp', '/blog5-kitchen-flow.webp'],
+    cardImages: ['/blog5-kds.webp', '/blog5-too-many-apps.webp'],
+    heroImage: '/blog5-kds.webp',
+    bodyImages: ['/blog5-kds.webp', '/blog5-too-many-apps.webp'],
   },
 ];
 
