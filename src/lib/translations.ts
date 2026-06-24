@@ -472,7 +472,7 @@ Y lo van a hacer felices.
 **Empezá tu prueba gratis de 7 días** — Construí tu app personalizada con marketing UGC incluido. Sin tarjeta de crédito. Sin contratos a largo plazo.`,
 
     blog4_title: 'Qué Es un Sistema POS Para Restaurantes: La Verdad Que Necesitás Saber',
-    blog4_meta: 'POS no es solo cobrar. Es ver tu dinero, tus clientes, tus ventas. Descubrí por qué cada restaurante de Buenos Aires, CDMX y São Paulo necesita un POS integrado para crecer sin sorpresas.',
+    blog4_meta: 'POS no es solo cobrar. Es ver tu dinero, tus clientes, tus ventas. Descubrí por qué cada restaurante de Buenos Aires, Córdoba Capital y toda Argentina necesita un POS integrado para crecer sin sorpresas.',
     blog4_excerpt: 'La mayoría piensa que POS es solo una caja registradora. Te mostramos qué es realmente y por qué es crítico para tu negocio gastronómico.',
     blog4_body: `## Qué Es Un Sistema POS Para Restaurantes
 
@@ -1560,7 +1560,7 @@ E eles vão fazer isso com prazer.
 **Comece seu teste gratuito de 7 dias** — Construa seu app personalizado com marketing UGC incluído. Sem cartão de crédito. Sem contratos de longo prazo.`,
 
     blog4_title: 'O Que é um Sistema PDV Para Restaurantes: A Verdade Que Você Precisa Saber',
-    blog4_meta: 'PDV não é só uma caixa registradora. É o comando central do seu dinheiro, clientes e crescimento. Descubra por que todo restaurante em São Paulo, Rio e Brasil precisa de um PDV integrado para escalar sem surpresas.',
+    blog4_meta: 'PDV não é só uma caixa registradora. É o comando central do seu dinheiro, clientes e crescimento. Descubra por que todo restaurante em Camboriú, Brasil e toda América Latina precisa de um PDV integrado para escalar sem surpresas.',
     blog4_excerpt: 'A maioria acha que PDV é apenas uma caixa registradora digital. Aqui está o que realmente é e por que é crítico para seu restaurante.',
     blog4_body: `## O Que É Um Sistema PDV Para Restaurantes
 
