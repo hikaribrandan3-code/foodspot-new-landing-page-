@@ -50,6 +50,16 @@ export const BLOG_POSTS: BlogPostMeta[] = [
     heroImage: '/blog4-pos-dashboard.webp',
     bodyImages: ['/blog4-pos-dashboard.webp', '/blog4-pos-rewards.webp'],
   },
+  {
+    slug: 'what-is-restaurant-management-software',
+    titleKey: 'blog5_title',
+    excerptKey: 'blog5_excerpt',
+    metaKey: 'blog5_meta',
+    bodyKey: 'blog5_body',
+    cardImages: ['/blog5-restaurant-software.webp', '/blog5-kitchen-flow.webp'],
+    heroImage: '/blog5-restaurant-software.webp',
+    bodyImages: ['/blog5-restaurant-software.webp', '/blog5-kitchen-flow.webp'],
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPostMeta | undefined {
