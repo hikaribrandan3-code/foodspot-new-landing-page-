@@ -1,9 +1,9 @@
 export interface BlogPostMeta {
   slug: string;
-  titleKey: 'blog1_title' | 'blog2_title' | 'blog3_title';
-  excerptKey: 'blog1_excerpt' | 'blog2_excerpt' | 'blog3_excerpt';
-  metaKey: 'blog1_meta' | 'blog2_meta' | 'blog3_meta';
-  bodyKey: 'blog1_body' | 'blog2_body' | 'blog3_body';
+  titleKey: 'blog1_title' | 'blog2_title' | 'blog3_title' | 'blog4_title' | 'blog5_title';
+  excerptKey: 'blog1_excerpt' | 'blog2_excerpt' | 'blog3_excerpt' | 'blog4_excerpt' | 'blog5_excerpt';
+  metaKey: 'blog1_meta' | 'blog2_meta' | 'blog3_meta' | 'blog4_meta' | 'blog5_meta';
+  bodyKey: 'blog1_body' | 'blog2_body' | 'blog3_body' | 'blog4_body' | 'blog5_body';
   cardImages: [string, string];
   heroImage: string;
   bodyImages: string[];
