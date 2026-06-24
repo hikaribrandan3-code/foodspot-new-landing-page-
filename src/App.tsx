@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { CookieConsent } from './components/CookieConsent';
 import { Navbar, Hero, Bridge, MiddleCTA, UGCMarketingCTA } from "./components/MainSections";
+// Blog 5 updated
 import { FAQ } from "./components/FAQ";
 import { HowItWorks, UGCMegaSection } from "./components/Features";
 import { BlogSection } from "./components/BlogSection";
