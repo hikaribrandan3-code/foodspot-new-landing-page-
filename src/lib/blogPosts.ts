@@ -46,7 +46,7 @@ export const BLOG_POSTS: BlogPostMeta[] = [
     excerptKey: 'blog4_excerpt',
     metaKey: 'blog4_meta',
     bodyKey: 'blog4_body',
-    cardImages: ['/blog4-pos-dashboard.webp', '/blog4-pos-payments.webp'],
+    cardImages: ['/blog4-pos-dashboard.webp', '/blog4-pos-rewards.webp'],
     heroImage: '/blog4-pos-dashboard.webp',
     bodyImages: ['/blog4-pos-dashboard.webp', '/blog4-pos-rewards.webp'],
   },
