@@ -40,6 +40,16 @@ export const BLOG_POSTS: BlogPostMeta[] = [
     heroImage: '/blog3-capture.webp',
     bodyImages: ['/blog3-receipt.webp', '/blog3-social.webp'],
   },
+  {
+    slug: 'what-is-pos-software',
+    titleKey: 'blog4_title',
+    excerptKey: 'blog4_excerpt',
+    metaKey: 'blog4_meta',
+    bodyKey: 'blog4_body',
+    cardImages: ['/blog4-pos-dashboard.webp', '/blog4-pos-payments.webp'],
+    heroImage: '/blog4-pos-dashboard.webp',
+    bodyImages: ['/blog4-pos-dashboard.webp', '/blog4-pos-rewards.webp'],
+  },
 ];
 
 export function getPostBySlug(slug: string): BlogPostMeta | undefined {
