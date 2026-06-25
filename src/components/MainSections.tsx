@@ -539,153 +539,121 @@ export function UGCMarketingCTA() {
 
 export function Bridge() {
   const { lang } = useLanguage();
+  const [displayValue, setDisplayValue] = useState('$23.7B');
 
-  const TrendingUpIcon = () => (
-    <svg viewBox="0 0 100 100" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ filter: 'drop-shadow(0 0 12px rgba(16, 185, 129, 0.4))' }}>
-      <defs>
-        <linearGradient id="trend" x1="0%" y1="100%" x2="100%" y2="0%">
-          <stop offset="0%" style={{stopColor: '#ffffff', stopOpacity: 1}} />
-          <stop offset="100%" style={{stopColor: '#ecfdf5', stopOpacity: 1}} />
-        </linearGradient>
-      </defs>
-      <style>{`
-        @keyframes drawLine {
-          from {
-            stroke-dashoffset: 120;
-            opacity: 0;
-          }
-          to {
-            stroke-dashoffset: 0;
-            opacity: 1;
-          }
-        }
-        @keyframes pulse-dot {
-          0%, 100% {
-            r: 5;
-            opacity: 1;
-          }
-          50% {
-            r: 8;
-            opacity: 0.6;
-          }
-        }
-        .trend-line {
-          stroke-dasharray: 120;
-          animation: drawLine 1.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s forwards;
-          opacity: 0;
-        }
-        .trend-dot {
-          animation: pulse-dot 2s ease-in-out 2.1s infinite;
-        }
-      `}</style>
-      <polyline
-        className="trend-line"
-        points="15,75 35,55 55,40 75,20"
-        stroke="url(#trend)"
-        strokeWidth="4"
-        fill="none"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <circle className="trend-dot" cx="75" cy="20" r="5" fill="url(#trend)" />
-    </svg>
-  );
+  useEffect(() => {
+    // Slot machine animation for the number
+    let frame = 0;
+    const frames = [
+      '$23.7B', '$24.5B', '$25.8B', '$27.2B', '$28.9B', '$30.4B', '$32.1B', '$34.2B', '$36.7B'
+    ];
+
+    const interval = setInterval(() => {
+      if (frame < frames.length) {
+        setDisplayValue(frames[frame]);
+        frame++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 150);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const content = {
     es: {
-      line1: "Pedir desde el teléfono es lo normal ahora.",
-      line2: "El mercado crece 8.1% cada año.",
-      line3: "Pero si no tienes tu propia tienda online, eres invisible.",
-      line4: "Aquí te mostramos cómo hacerlo en 3 pasos.",
-      stat: "$23.7B → $36.7B",
-      period: "para 2030",
-      source: "(Mordor Intelligence, 2025)"
+      line1: "Ordering from your phone is normal now.",
+      line2: "The market grows 8.1% every year.",
+      stat: "$23.7B",
+      arrow: "→",
+      statEnd: "$36.7B",
+      period: "by 2030",
+      source: "(Mordor Intelligence, 2025)",
+      line3: "But if you don't have your own online store, you're",
+      invisible: "invisible",
+      line4: "Here's how to do it in 3 steps."
     },
     pt: {
       line1: "Pedir pelo telefone é o normal agora.",
       line2: "O mercado cresce 8,1% a cada ano.",
-      line3: "Mas se você não tem sua própria loja online, é invisível.",
-      line4: "Aqui te mostramos como fazer em 3 passos.",
-      stat: "$23,7B → $36,7B",
+      stat: "$23,7B",
+      arrow: "→",
+      statEnd: "$36,7B",
       period: "para 2030",
-      source: "(Mordor Intelligence, 2025)"
+      source: "(Mordor Intelligence, 2025)",
+      line3: "Mas se você não tem sua própria loja online, é",
+      invisible: "invisível",
+      line4: "Aqui te mostramos como fazer em 3 passos."
     },
     en: {
       line1: "Ordering from your phone is normal now.",
       line2: "The market grows 8.1% every year.",
-      line3: "But if you don't have your own online store, you're invisible.",
-      line4: "Here's how to do it in 3 steps.",
-      stat: "$23.7B → $36.7B",
+      stat: "$23.7B",
+      arrow: "→",
+      statEnd: "$36.7B",
       period: "by 2030",
-      source: "(Mordor Intelligence, 2025)"
+      source: "(Mordor Intelligence, 2025)",
+      line3: "But if you don't have your own online store, you're",
+      invisible: "invisible",
+      line4: "Here's how to do it in 3 steps."
     }
   };
 
-  const text = content[lang] || content.es;
+  const text = content[lang] || content.en;
 
   return (
-    <section className="py-16 md:py-20 px-6 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-20" style={{
-        backgroundImage: 'radial-gradient(circle at 20% 50%, #10b981, transparent 50%), radial-gradient(circle at 80% 80%, #059669, transparent 50%)'
-      }} />
-
+    <section className="py-12 md:py-16 px-6 bg-white relative">
       <style>{`
         @keyframes fadeInUp {
-          from { opacity: 0; transform: translateY(20px); }
+          from { opacity: 0; transform: translateY(16px); }
           to { opacity: 1; transform: translateY(0); }
         }
-        @keyframes scaleInUp {
-          from {
-            opacity: 0;
-            transform: translateY(24px) scale(0.92);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-          }
-        }
         .bridge-fade {
-          animation: fadeInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+          animation: fadeInUp 0.6s ease-out forwards;
           opacity: 0;
         }
-        .bridge-stat {
-          animation: scaleInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s forwards;
-          opacity: 0;
+        .slot-number {
+          font-variant-numeric: tabular-nums;
+          font-weight: 900;
+          transition: all 0.1s ease-out;
         }
       `}</style>
 
-      <div className="max-w-4xl mx-auto relative z-10">
+      <div className="max-w-2xl mx-auto">
         {/* Headline */}
-        <h2 className="font-display text-4xl md:text-5xl font-black text-white mb-6 md:mb-8 bridge-fade leading-tight" style={{ animationDelay: '0ms' }}>
+        <h2 className="font-display text-3xl md:text-4xl font-black text-black mb-6 bridge-fade leading-tight" style={{ animationDelay: '0ms' }}>
           {text.line1}
         </h2>
 
-        {/* Stat Card - The Hero - More balanced on desktop */}
+        {/* Stat Card - Light bordered style */}
         <div
-          className="bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-2xl p-6 md:p-8 mb-10 md:mb-12 bridge-stat shadow-2xl"
-          style={{
-            animationDelay: '200ms',
-            boxShadow: '0 20px 60px rgba(16, 185, 129, 0.3)'
-          }}
+          className="border-2 border-gray-200 rounded-2xl p-6 md:p-8 mb-8 bridge-fade bg-white"
+          style={{ animationDelay: '150ms' }}
         >
-          <div className="flex items-center justify-between gap-4 md:gap-8">
-            <div className="flex-1 min-w-0">
-              <p className="text-emerald-950 text-xs md:text-sm font-semibold mb-2 uppercase tracking-wide">{text.line2}</p>
-              <p className="text-white text-3xl md:text-4xl font-black mb-1 leading-tight">{text.stat}</p>
-              <p className="text-emerald-100 text-base md:text-lg">{text.period}</p>
-              <p className="text-emerald-900 text-xs mt-2 md:mt-3">{text.source}</p>
-            </div>
-            <div className="hidden md:flex flex-shrink-0 items-center justify-center w-20 h-20">
-              <TrendingUpIcon />
-            </div>
+          <p className="text-gray-600 text-xs md:text-sm font-semibold mb-4 uppercase tracking-widest">{text.line2}</p>
+
+          {/* Animated number ticker */}
+          <div className="flex items-center justify-center gap-3 md:gap-4 mb-3">
+            <span className="slot-number text-3xl md:text-5xl font-black text-black">{displayValue}</span>
+            <span className="text-3xl md:text-5xl font-black text-primary">→</span>
+            <span className="slot-number text-3xl md:text-5xl font-black text-primary">{text.statEnd}</span>
           </div>
+
+          <p className="text-center text-gray-600 text-sm md:text-base mb-3">{text.period}</p>
+          <p className="text-center text-gray-500 text-xs">{text.source}</p>
         </div>
 
         {/* Pain Point - RED for contrast */}
-        <p className="text-white text-xl md:text-2xl font-black mb-4 bridge-fade leading-tight" style={{ animationDelay: '400ms' }}>
-          {text.line3.split('invisible')[0]}
-          <span className="text-red-400">invisible</span>
-          {text.line3.split('invisible')[1] && text.line3.split('invisible')[1]}
+        <p className="text-black text-xl md:text-2xl font-black mb-6 bridge-fade leading-tight text-center md:text-left" style={{ animationDelay: '300ms' }}>
+          {text.line3}
+          {' '}
+          <span className="text-red-500">{text.invisible}</span>
+          {text.line3.includes('invisible') ? '.' : '.'}
+        </p>
+
+        {/* CTA Transition */}
+        <p className="text-primary text-lg font-semibold bridge-fade text-center md:text-left" style={{ animationDelay: '450ms' }}>
+          {text.line4}
         </p>
 
         {/* CTA Transition */}
