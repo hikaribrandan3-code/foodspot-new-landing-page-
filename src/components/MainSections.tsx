@@ -540,16 +540,16 @@ export function UGCMarketingCTA() {
 export function Bridge() {
   const { lang } = useLanguage();
 
-  const TrendingIcon = () => (
-    <svg viewBox="0 0 100 100" width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const TrendingUpIcon = () => (
+    <svg viewBox="0 0 100 100" width="64" height="64" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <linearGradient id="trendGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+        <linearGradient id="trend" x1="0%" y1="100%" x2="100%" y2="0%">
           <stop offset="0%" style={{stopColor: '#10b981', stopOpacity: 1}} />
-          <stop offset="100%" style={{stopColor: '#059669', stopOpacity: 1}} />
+          <stop offset="100%" style={{stopColor: '#34d399', stopOpacity: 1}} />
         </linearGradient>
       </defs>
-      <polyline points="20,70 40,50 60,40 80,20" stroke="url(#trendGrad)" strokeWidth="3" fill="none" strokeLinecap="round" />
-      <circle cx="80" cy="20" r="4" fill="url(#trendGrad)" />
+      <polyline points="15,75 35,55 55,40 75,20" stroke="url(#trend)" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="75" cy="20" r="5" fill="url(#trend)" />
     </svg>
   );
 
@@ -559,7 +559,8 @@ export function Bridge() {
       line2: "El mercado crece 8.1% cada año.",
       line3: "Pero si no tienes tu propia tienda online, eres invisible.",
       line4: "Aquí te mostramos cómo hacerlo en 3 pasos.",
-      stat: "$23.7B → $36.7B para 2030",
+      stat: "$23.7B → $36.7B",
+      period: "para 2030",
       source: "(Mordor Intelligence, 2025)"
     },
     pt: {
@@ -567,7 +568,8 @@ export function Bridge() {
       line2: "O mercado cresce 8,1% a cada ano.",
       line3: "Mas se você não tem sua própria loja online, é invisível.",
       line4: "Aqui te mostramos como fazer em 3 passos.",
-      stat: "$23,7B → $36,7B para 2030",
+      stat: "$23,7B → $36,7B",
+      period: "para 2030",
       source: "(Mordor Intelligence, 2025)"
     },
     en: {
@@ -575,7 +577,8 @@ export function Bridge() {
       line2: "The market grows 8.1% every year.",
       line3: "But if you don't have your own online store, you're invisible.",
       line4: "Here's how to do it in 3 steps.",
-      stat: "$23.7B → $36.7B by 2030",
+      stat: "$23.7B → $36.7B",
+      period: "by 2030",
       source: "(Mordor Intelligence, 2025)"
     }
   };
@@ -583,41 +586,60 @@ export function Bridge() {
   const text = content[lang] || content.es;
 
   return (
-    <section className="py-12 px-6 bg-white">
+    <section className="py-16 md:py-24 px-6 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-20" style={{
+        backgroundImage: 'radial-gradient(circle at 20% 50%, #10b981, transparent 50%), radial-gradient(circle at 80% 80%, #059669, transparent 50%)'
+      }} />
+
       <style>{`
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(10px); }
+        @keyframes fadeInUp {
+          from { opacity: 0; transform: translateY(20px); }
           to { opacity: 1; transform: translateY(0); }
         }
-        .bridge-line {
-          animation: fadeIn 0.6s ease-out forwards;
+        @keyframes slideInLeft {
+          from { opacity: 0; transform: translateX(-20px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+        .bridge-fade {
+          animation: fadeInUp 0.8s ease-out forwards;
+          opacity: 0;
+        }
+        .bridge-stat {
+          animation: slideInLeft 0.8s ease-out 0.2s forwards;
           opacity: 0;
         }
       `}</style>
 
-      <div className="max-w-3xl mx-auto">
-        {/* Line 1 */}
-        <h2 className="font-display text-3xl md:text-4xl text-on-surface font-black mb-6 bridge-line" style={{ animationDelay: '0ms' }}>
+      <div className="max-w-4xl mx-auto relative z-10">
+        {/* Headline */}
+        <h2 className="font-display text-4xl md:text-5xl font-black text-white mb-8 bridge-fade leading-tight" style={{ animationDelay: '0ms' }}>
           {text.line1}
         </h2>
 
-        {/* Stat with Icon */}
-        <div className="flex items-center gap-4 mb-8 bridge-line" style={{ animationDelay: '100ms' }}>
-          <TrendingIcon />
-          <div>
-            <p className="text-lg font-semibold text-on-surface">{text.line2}</p>
-            <p className="text-sm text-on-surface-variant mt-1">{text.stat}</p>
-            <p className="text-xs text-on-surface-variant/60">{text.source}</p>
+        {/* Stat Card - The Hero */}
+        <div className="bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-2xl p-8 md:p-12 mb-12 bridge-stat shadow-2xl" style={{ animationDelay: '200ms', boxShadow: '0 20px 60px rgba(16, 185, 129, 0.3)' }}>
+          <div className="flex items-center justify-between gap-6">
+            <div className="flex-1">
+              <p className="text-emerald-950 text-sm font-semibold mb-2 uppercase tracking-wide">{text.line2}</p>
+              <p className="text-white text-4xl md:text-5xl font-black mb-1">{text.stat}</p>
+              <p className="text-emerald-100 text-lg">{text.period}</p>
+              <p className="text-emerald-900 text-xs mt-3">{text.source}</p>
+            </div>
+            <div className="hidden md:block flex-shrink-0">
+              <TrendingUpIcon />
+            </div>
           </div>
         </div>
 
-        {/* Line 3 */}
-        <p className="text-xl text-on-surface font-semibold mb-6 bridge-line" style={{ animationDelay: '200ms' }}>
-          {text.line3}
+        {/* Pain Point - RED for contrast */}
+        <p className="text-white text-2xl md:text-3xl font-black mb-6 bridge-fade" style={{ animationDelay: '400ms' }}>
+          {text.line3.split('invisible')[0]}
+          <span className="text-red-400">invisible</span>
+          {text.line3.split('invisible')[1] && text.line3.split('invisible')[1]}
         </p>
 
-        {/* Line 4 - Transition */}
-        <p className="text-lg text-on-surface-variant font-medium bridge-line" style={{ animationDelay: '300ms' }}>
+        {/* CTA Transition */}
+        <p className="text-emerald-300 text-lg md:text-xl font-semibold bridge-fade" style={{ animationDelay: '600ms' }}>
           {text.line4}
         </p>
       </div>
