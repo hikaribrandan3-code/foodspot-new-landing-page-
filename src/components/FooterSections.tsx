@@ -77,12 +77,9 @@ export function Pricing() {
           </div>
           <div className="relative z-10 flex flex-col h-full">
             <h3 className="text-2xl font-display font-semibold text-on-surface mb-2">{t(lang, 'plan_free_name')}</h3>
-            <div className="mb-4 flex items-baseline gap-1">
+            <div className="mb-6 flex items-baseline gap-1">
               <span className="text-4xl font-display font-bold text-on-surface">$0</span>
               <span className="text-on-surface font-semibold text-base">{t(lang, 'plan_free_period')}</span>
-            </div>
-            <div className="bg-primary/10 rounded-lg px-3 py-2 mb-6 border border-primary/20">
-              <p className="text-sm font-bold text-primary">{t(lang, 'plan_free_value')}</p>
             </div>
             <p className="text-on-surface text-sm mb-8 min-h-[48px]">{t(lang, 'plan_free_desc')}</p>
             <ul className="space-y-3 mb-8 flex-grow">
@@ -109,14 +106,10 @@ export function Pricing() {
               {t(lang, 'plan_pro_badge')}
             </div>
             <h3 className="text-2xl font-display font-semibold text-on-surface mb-2">{t(lang, 'plan_pro_name')}</h3>
-            <div className="mb-4 flex items-baseline gap-1">
+            <div className="mb-6 flex items-baseline gap-1">
               <span className="text-4xl font-display font-bold text-on-surface">$29.99</span>
               <span className="text-on-surface-variant text-sm">{t(lang, 'plan_pro_period')}</span>
             </div>
-            <div className="bg-primary/10 rounded-lg px-3 py-2 mb-4 border border-primary/20">
-              <p className="text-sm font-bold text-primary">{t(lang, 'plan_pro_value')}</p>
-            </div>
-            <p className="text-on-surface-variant text-xs mb-4">LATAM: $29.99 | USA: $49.99</p>
             <p className="text-on-surface-variant text-sm mb-6 min-h-[48px]">{t(lang, 'plan_pro_desc')}</p>
 
             {/* All Features */}
