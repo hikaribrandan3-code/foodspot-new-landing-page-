@@ -70,12 +70,12 @@ const translations = {
     // HowItWorks
     how_heading: 'Crea tu tienda online en 3 pasos',
     how_sub: 'Tres simples pasos para digitalizar tu restaurante.',
-    step1_title: 'Crea tu menú en minutos',
-    step1_desc: 'Subi fotos, precios y categorias. Incluso podes agregar calorias, advertencias de salud y etiquetas personalizadas para casos especiales. Tu tienda lista al instante. 100% NO-CODE',
-    step2_title: 'Personaliza tu tienda',
-    step2_desc: 'Tu logo, tus colores. Sin código — simplemente funciona.',
-    step3_title: '¡Comparte tu app!',
-    step3_desc: 'Comparte tu URL con tus clientes. Sin hardware. Sin papelería. Todo integrado en tu app.',
+    step1_title: 'Diseña tu menú digital',
+    step1_desc: 'Sin PDFs. Sin catálogos. Una presentación profesional que vende.',
+    step2_title: 'Tus colores, al instante',
+    step2_desc: 'Tu logo. Tus colores. Sin código. Listo.',
+    step3_title: 'Recibe pedidos y pagos',
+    step3_desc: 'Configura tu tienda. Conecta pagos. Vende.',
 
     // Features / AI
     ai_heading: 'Foodspot AI',
@@ -621,12 +621,12 @@ El verdadero costo de no tener un buen POS no es el precio de la herramienta. **
     // HowItWorks
     how_heading: 'Build your online store in 3 steps',
     how_sub: 'Three simple steps to take your restaurant digital.',
-    step1_title: 'Build your digital menu',
-    step1_desc: 'Upload photos, prices, and categories. Add calories, health warnings, and custom tags for special cases. Your store live instantly. 100% NO-CODE.',
-    step2_title: 'Customize your storefront',
-    step2_desc: 'Your logo, your colors. No coding needed—it just works.',
-    step3_title: 'Share your app!',
-    step3_desc: 'Share your URL with your customers. No hardware. No paperwork. Everything integrated in your app.',
+    step1_title: 'Design your digital menu',
+    step1_desc: 'No PDFs. No catalogs. A professional presentation that sells.',
+    step2_title: 'Your colors, instantly',
+    step2_desc: 'Your logo. Your colors. No code. Done.',
+    step3_title: 'Receive orders & payments',
+    step3_desc: 'Set up your store. Connect payments. Sell.',
 
     // Features / AI
     ai_heading: 'Foodspot AI',
@@ -1174,11 +1174,11 @@ The true cost of not having a solid POS isn't the price of the software. **It's 
     how_heading: 'Crie sua loja online em 3 passos',
     how_sub: 'Três passos simples para digitalizar seu restaurante.',
     step1_title: 'Crie seu cardápio digital',
-    step1_desc: 'Adicione fotos, preços e categorias. Inclua calorias, avisos de saúde e etiquetas personalizadas. Sua loja pronta na hora. 100% SEM CÓDIGO.',
-    step2_title: 'Personalize sua loja',
-    step2_desc: 'Seu logo, suas cores. Sem código — simplesmente funciona.',
-    step3_title: 'Compartilhe seu app!',
-    step3_desc: 'Compartilhe sua URL com seus clientes. Sem hardware. Sem papelada. Tudo integrado no seu app.',
+    step1_desc: 'Sem PDFs. Sem catálogos. Uma apresentação profissional que vende.',
+    step2_title: 'Suas cores, na hora',
+    step2_desc: 'Seu logo. Suas cores. Sem código. Pronto.',
+    step3_title: 'Receba pedidos e pagamentos',
+    step3_desc: 'Configure sua loja. Conecte pagamentos. Venda.',
 
     // Features / AI
     ai_heading: 'Foodspot AI',
