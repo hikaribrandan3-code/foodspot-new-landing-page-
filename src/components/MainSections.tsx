@@ -644,16 +644,11 @@ export function Bridge() {
         </div>
 
         {/* Pain Point - RED for contrast */}
-        <p className="text-black text-xl md:text-2xl font-black mb-6 bridge-fade leading-tight text-center md:text-left" style={{ animationDelay: '300ms' }}>
+        <p className="text-black text-xl md:text-2xl font-black bridge-fade leading-tight text-center md:text-left" style={{ animationDelay: '300ms' }}>
           {text.line3}
           {' '}
           <span className="text-red-500">{text.invisible}</span>
           {text.line3.includes('invisible') ? '.' : '.'}
-        </p>
-
-        {/* CTA Transition */}
-        <p className="text-primary text-lg font-semibold bridge-fade text-center md:text-left" style={{ animationDelay: '450ms' }}>
-          {text.line4}
         </p>
       </div>
     </section>

@@ -41,10 +41,10 @@ export function HowItWorks() {
         </div>
         <div className="text-center mb-12">
           <p className="font-display text-5xl md:text-7xl font-black text-on-surface mb-3">
-            {lang === 'es' ? 'Cómo lo hacemos' : lang === 'pt' ? 'Como fazemos' : 'How we do it'}
+            {lang === 'es' ? 'Lanza tu tienda en 3 pasos' : lang === 'pt' ? 'Lance sua loja em 3 passos' : 'Launch your store in 3 steps'}
           </p>
           <h2 className="font-display text-2xl md:text-3xl text-on-surface-variant mb-4">
-            {lang === 'es' ? '3 pasos, 24 horas' : lang === 'pt' ? '3 passos, 24 horas' : '3 steps, 24 hours'}
+            {lang === 'es' ? '24 horas' : lang === 'pt' ? '24 horas' : '24 hours'}
           </h2>
           <p className="text-lg text-on-surface-variant max-w-2xl mx-auto mb-6">
             {t(lang, 'how_sub')}
