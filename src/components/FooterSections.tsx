@@ -30,7 +30,6 @@ export function Comparison() {
 
 export function Pricing() {
   const { lang } = useLanguage();
-  const [expandedFeatures, setExpandedFeatures] = useState(false);
 
   const checkIcon = (
     <div className="w-4 h-4 text-primary mr-3 shrink-0">
@@ -40,49 +39,25 @@ export function Pricing() {
     </div>
   );
 
-  const topFeatures = [
-    t(lang, 'feat_marketing_1'), // UGC organic marketing
-    t(lang, 'feat_orders_1'), // Kitchen KDS + unlimited orders
-    t(lang, 'feat_analytics_1'), // AI/Analytics dashboard
+  const starterFeatures = [
+    'Menu digital + QR',
+    '1 staff + 1 evento/mes',
+    'Camera lite (50-100 órdenes)',
+    'Loyalty básico + 3 juegos',
+    'Pagos ilimitados',
+    'Delivery + Takeout',
   ];
 
-  const featureCategories = [
-    {
-      cat: t(lang, 'cat_orders'),
-      items: [t(lang, 'feat_orders_1'), t(lang, 'feat_orders_2')],
-    },
-    {
-      cat: t(lang, 'cat_delivery'),
-      items: [t(lang, 'feat_delivery_1'), t(lang, 'feat_delivery_2')],
-    },
-    {
-      cat: t(lang, 'cat_payments'),
-      items: [t(lang, 'feat_payments_1'), t(lang, 'feat_payments_2'), t(lang, 'feat_payments_3')],
-    },
-    {
-      cat: t(lang, 'cat_store'),
-      items: [t(lang, 'feat_store_1'), t(lang, 'feat_store_2'), t(lang, 'feat_store_3')],
-    },
-    {
-      cat: t(lang, 'cat_events'),
-      items: [t(lang, 'feat_events_1'), t(lang, 'feat_events_2')],
-    },
-    {
-      cat: t(lang, 'cat_marketing'),
-      items: [t(lang, 'feat_marketing_1'), t(lang, 'feat_marketing_2')],
-    },
-    {
-      cat: t(lang, 'cat_analytics'),
-      items: [t(lang, 'feat_analytics_1')],
-    },
-    {
-      cat: t(lang, 'cat_ai'),
-      items: [t(lang, 'feat_ai_1')],
-    },
-    {
-      cat: t(lang, 'cat_support'),
-      items: [t(lang, 'feat_support_1')],
-    },
+  const proFeatures = [
+    'Todo en Starter, más:',
+    'CRM - Gestión de clientes',
+    'Chatbot IA integrado',
+    'Camera Pro ilimitada',
+    'Reservaciones + Catering',
+    'Todos los juegos (5+)',
+    'Eventos ilimitados',
+    'Analytics completo',
+    'Soporte prioritario',
   ];
 
   return (
@@ -94,7 +69,7 @@ export function Pricing() {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
-        {/* Tier 1 */}
+        {/* Tier 1: Starter */}
         <div className="bg-white border border-gray-200 rounded-2xl p-8 flex flex-col h-full relative overflow-hidden group shadow-sm hover:shadow-md transition-all hover:-translate-y-1 hover:scale-[1.01]">
           <div className="absolute inset-0 pointer-events-none opacity-5 group-hover:opacity-10 transition-opacity">
             <CanvasBackground color="#757575" variant="blobs" />
@@ -105,22 +80,22 @@ export function Pricing() {
               <span className="text-4xl font-display font-bold text-on-surface">$0</span>
               <span className="text-on-surface font-semibold text-base">{t(lang, 'plan_free_period')}</span>
             </div>
-            <p className="text-on-surface font-semibold mb-8 min-h-[48px] text-lg">{t(lang, 'plan_free_desc')}</p>
-            <ul className="space-y-4 mb-8 flex-grow">
-              {[t(lang, 'plan_free_f1'), t(lang, 'plan_free_f2'), t(lang, 'plan_free_f3')].map((item, i) => (
-                <li key={i} className="flex items-center text-base text-on-surface font-semibold">
+            <p className="text-on-surface text-sm mb-8 min-h-[48px]">{t(lang, 'plan_free_desc')}</p>
+            <ul className="space-y-3 mb-8 flex-grow">
+              {starterFeatures.map((item, i) => (
+                <li key={i} className="flex items-center text-sm text-on-surface font-medium">
                   {checkIcon}
                   {item}
                 </li>
               ))}
             </ul>
-            <a href="https://foodspotapp.vercel.app/" onClick={() => trackPricingSelection('free_plan')} className="w-full py-4 rounded-full border-2 border-secondary text-secondary font-semibold hover:bg-secondary/5 transition-colors group-hover:scale-[1.02] active:scale-[0.98] block text-center">
+            <a href="https://foodspotapp.vercel.app/" onClick={() => trackPricingSelection('starter_plan')} className="w-full py-4 rounded-full border-2 border-secondary text-secondary font-semibold hover:bg-secondary/5 transition-colors group-hover:scale-[1.02] active:scale-[0.98] block text-center">
               {t(lang, 'plan_free_btn')}
             </a>
           </div>
         </div>
 
-        {/* Tier 2 */}
+        {/* Tier 2: Pro */}
         <div className="bg-white border-2 border-primary rounded-2xl p-8 flex flex-col h-full relative shadow-xl transform md:-translate-y-4 overflow-hidden group ring-primary/20 hover:ring-8 transition-all hover:scale-[1.03] hover:-translate-y-12">
           <div className="absolute inset-0 pointer-events-none opacity-10 group-hover:opacity-20 transition-opacity">
             <CanvasBackground color="#ff3d00" variant="blobs" />
@@ -131,48 +106,21 @@ export function Pricing() {
             </div>
             <h3 className="text-2xl font-display font-semibold text-on-surface mb-2">{t(lang, 'plan_pro_name')}</h3>
             <div className="mb-6 flex items-baseline gap-1">
-              <span className="text-4xl font-display font-bold text-on-surface">$25</span>
+              <span className="text-4xl font-display font-bold text-on-surface">$29.99</span>
               <span className="text-on-surface-variant text-sm">{t(lang, 'plan_pro_period')}</span>
             </div>
-            <p className="text-on-surface-variant mb-6 min-h-[48px]">{t(lang, 'plan_pro_desc')}</p>
+            <p className="text-on-surface-variant text-xs mb-3">LATAM: $29.99 | USA: $49.99</p>
+            <p className="text-on-surface-variant text-sm mb-6 min-h-[48px]">{t(lang, 'plan_pro_desc')}</p>
 
-            {/* Top 3 Features */}
+            {/* All Features */}
             <ul className="space-y-3 mb-6 flex-grow">
-              {topFeatures.map((feature, i) => (
+              {proFeatures.map((feature, i) => (
                 <li key={i} className="flex items-center text-sm text-on-surface font-medium">
                   {checkIcon}
                   {feature}
                 </li>
               ))}
             </ul>
-
-            {/* Expandable All Features */}
-            {expandedFeatures && (
-              <div className="space-y-4 mb-6 pb-4 border-t border-gray-200 pt-4">
-                {featureCategories.map((group, gi) => (
-                  <div key={gi}>
-                    <p className="text-xs font-bold text-primary uppercase tracking-wider mb-2">{group.cat}</p>
-                    <ul className="space-y-2">
-                      {group.items.map((item, ii) => (
-                        <li key={ii} className="flex items-center text-sm text-on-surface font-medium">
-                          {checkIcon}
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {/* Toggle Button */}
-            <button
-              onClick={() => setExpandedFeatures(!expandedFeatures)}
-              className="w-full py-2 mb-6 flex items-center justify-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors"
-            >
-              {expandedFeatures ? 'Hide all features' : 'View all features'}
-              <ChevronDown className={`w-4 h-4 transition-transform ${expandedFeatures ? 'rotate-180' : ''}`} />
-            </button>
 
             <a href="https://foodspotapp.vercel.app/" onClick={() => trackPricingSelection('pro_plan')} className="w-full py-4 rounded-full bg-primary text-white font-semibold hover:bg-primary/90 transition-all shadow-md active:scale-[0.98] group-hover:scale-[1.02] block text-center">
               {t(lang, 'plan_pro_btn')}
