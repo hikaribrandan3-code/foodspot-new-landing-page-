@@ -540,6 +540,92 @@ export function UGCMarketingCTA() {
 export function Bridge() {
   const { lang } = useLanguage();
 
+  const TrendingIcon = () => (
+    <svg viewBox="0 0 100 100" width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="trendGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" style={{stopColor: '#10b981', stopOpacity: 1}} />
+          <stop offset="100%" style={{stopColor: '#059669', stopOpacity: 1}} />
+        </linearGradient>
+      </defs>
+      <polyline points="20,70 40,50 60,40 80,20" stroke="url(#trendGrad)" strokeWidth="3" fill="none" strokeLinecap="round" />
+      <circle cx="80" cy="20" r="4" fill="url(#trendGrad)" />
+    </svg>
+  );
+
+  const content = {
+    es: {
+      line1: "Pedir desde el teléfono es lo normal ahora.",
+      line2: "El mercado crece 8.1% cada año.",
+      line3: "Pero si no tienes tu propia tienda online, eres invisible.",
+      line4: "Aquí te mostramos cómo hacerlo en 3 pasos.",
+      stat: "$23.7B → $36.7B para 2030",
+      source: "(Mordor Intelligence, 2025)"
+    },
+    pt: {
+      line1: "Pedir pelo telefone é o normal agora.",
+      line2: "O mercado cresce 8,1% a cada ano.",
+      line3: "Mas se você não tem sua própria loja online, é invisível.",
+      line4: "Aqui te mostramos como fazer em 3 passos.",
+      stat: "$23,7B → $36,7B para 2030",
+      source: "(Mordor Intelligence, 2025)"
+    },
+    en: {
+      line1: "Ordering from your phone is normal now.",
+      line2: "The market grows 8.1% every year.",
+      line3: "But if you don't have your own online store, you're invisible.",
+      line4: "Here's how to do it in 3 steps.",
+      stat: "$23.7B → $36.7B by 2030",
+      source: "(Mordor Intelligence, 2025)"
+    }
+  };
+
+  const text = content[lang] || content.es;
+
+  return (
+    <section className="py-12 px-6 bg-white">
+      <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .bridge-line {
+          animation: fadeIn 0.6s ease-out forwards;
+          opacity: 0;
+        }
+      `}</style>
+
+      <div className="max-w-3xl mx-auto">
+        {/* Line 1 */}
+        <h2 className="font-display text-3xl md:text-4xl text-on-surface font-black mb-6 bridge-line" style={{ animationDelay: '0ms' }}>
+          {text.line1}
+        </h2>
+
+        {/* Stat with Icon */}
+        <div className="flex items-center gap-4 mb-8 bridge-line" style={{ animationDelay: '100ms' }}>
+          <TrendingIcon />
+          <div>
+            <p className="text-lg font-semibold text-on-surface">{text.line2}</p>
+            <p className="text-sm text-on-surface-variant mt-1">{text.stat}</p>
+            <p className="text-xs text-on-surface-variant/60">{text.source}</p>
+          </div>
+        </div>
+
+        {/* Line 3 */}
+        <p className="text-xl text-on-surface font-semibold mb-6 bridge-line" style={{ animationDelay: '200ms' }}>
+          {text.line3}
+        </p>
+
+        {/* Line 4 - Transition */}
+        <p className="text-lg text-on-surface-variant font-medium bridge-line" style={{ animationDelay: '300ms' }}>
+          {text.line4}
+        </p>
+      </div>
+    </section>
+  );
+}
+
+
   const iconComponents = {
     0: <StackAppsIcon />,
     1: <PaletteIcon />,
