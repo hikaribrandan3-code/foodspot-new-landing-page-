@@ -562,16 +562,16 @@ export function Bridge() {
 
   const content = {
     es: {
-      line1: "Ordering from your phone is normal now.",
-      line2: "The market grows 8.1% every year.",
+      line1: "Pedir desde el teléfono es lo normal ahora.",
+      line2: "El mercado crece 8.1% cada año.",
       stat: "$23.7B",
       arrow: "→",
       statEnd: "$36.7B",
-      period: "by 2030",
+      period: "para 2030",
       source: "(Mordor Intelligence, 2025)",
-      line3: "But if you don't have your own online store, you're",
+      line3: "Pero si no tienes tu propia tienda online, eres",
       invisible: "invisible",
-      line4: "Here's how to do it in 3 steps."
+      line4: "Aquí te mostramos cómo hacerlo en 3 pasos."
     },
     pt: {
       line1: "Pedir pelo telefone é o normal agora.",
@@ -653,11 +653,6 @@ export function Bridge() {
 
         {/* CTA Transition */}
         <p className="text-primary text-lg font-semibold bridge-fade text-center md:text-left" style={{ animationDelay: '450ms' }}>
-          {text.line4}
-        </p>
-
-        {/* CTA Transition */}
-        <p className="text-emerald-300 text-lg md:text-xl font-semibold bridge-fade" style={{ animationDelay: '600ms' }}>
           {text.line4}
         </p>
       </div>
