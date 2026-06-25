@@ -541,15 +541,53 @@ export function Bridge() {
   const { lang } = useLanguage();
 
   const TrendingUpIcon = () => (
-    <svg viewBox="0 0 100 100" width="64" height="64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 100 100" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ filter: 'drop-shadow(0 0 12px rgba(16, 185, 129, 0.4))' }}>
       <defs>
         <linearGradient id="trend" x1="0%" y1="100%" x2="100%" y2="0%">
-          <stop offset="0%" style={{stopColor: '#10b981', stopOpacity: 1}} />
-          <stop offset="100%" style={{stopColor: '#34d399', stopOpacity: 1}} />
+          <stop offset="0%" style={{stopColor: '#ffffff', stopOpacity: 1}} />
+          <stop offset="100%" style={{stopColor: '#ecfdf5', stopOpacity: 1}} />
         </linearGradient>
       </defs>
-      <polyline points="15,75 35,55 55,40 75,20" stroke="url(#trend)" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="75" cy="20" r="5" fill="url(#trend)" />
+      <style>{`
+        @keyframes drawLine {
+          from {
+            stroke-dashoffset: 120;
+            opacity: 0;
+          }
+          to {
+            stroke-dashoffset: 0;
+            opacity: 1;
+          }
+        }
+        @keyframes pulse-dot {
+          0%, 100% {
+            r: 5;
+            opacity: 1;
+          }
+          50% {
+            r: 8;
+            opacity: 0.6;
+          }
+        }
+        .trend-line {
+          stroke-dasharray: 120;
+          animation: drawLine 1.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s forwards;
+          opacity: 0;
+        }
+        .trend-dot {
+          animation: pulse-dot 2s ease-in-out 2.1s infinite;
+        }
+      `}</style>
+      <polyline
+        className="trend-line"
+        points="15,75 35,55 55,40 75,20"
+        stroke="url(#trend)"
+        strokeWidth="4"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle className="trend-dot" cx="75" cy="20" r="5" fill="url(#trend)" />
     </svg>
   );
 
@@ -586,7 +624,7 @@ export function Bridge() {
   const text = content[lang] || content.es;
 
   return (
-    <section className="py-16 md:py-24 px-6 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+    <section className="py-16 md:py-20 px-6 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
       <div className="absolute inset-0 opacity-20" style={{
         backgroundImage: 'radial-gradient(circle at 20% 50%, #10b981, transparent 50%), radial-gradient(circle at 80% 80%, #059669, transparent 50%)'
       }} />
@@ -596,43 +634,55 @@ export function Bridge() {
           from { opacity: 0; transform: translateY(20px); }
           to { opacity: 1; transform: translateY(0); }
         }
-        @keyframes slideInLeft {
-          from { opacity: 0; transform: translateX(-20px); }
-          to { opacity: 1; transform: translateX(0); }
+        @keyframes scaleInUp {
+          from {
+            opacity: 0;
+            transform: translateY(24px) scale(0.92);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
         }
         .bridge-fade {
-          animation: fadeInUp 0.8s ease-out forwards;
+          animation: fadeInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
           opacity: 0;
         }
         .bridge-stat {
-          animation: slideInLeft 0.8s ease-out 0.2s forwards;
+          animation: scaleInUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s forwards;
           opacity: 0;
         }
       `}</style>
 
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Headline */}
-        <h2 className="font-display text-4xl md:text-5xl font-black text-white mb-8 bridge-fade leading-tight" style={{ animationDelay: '0ms' }}>
+        <h2 className="font-display text-4xl md:text-5xl font-black text-white mb-6 md:mb-8 bridge-fade leading-tight" style={{ animationDelay: '0ms' }}>
           {text.line1}
         </h2>
 
-        {/* Stat Card - The Hero */}
-        <div className="bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-2xl p-8 md:p-12 mb-12 bridge-stat shadow-2xl" style={{ animationDelay: '200ms', boxShadow: '0 20px 60px rgba(16, 185, 129, 0.3)' }}>
-          <div className="flex items-center justify-between gap-6">
-            <div className="flex-1">
-              <p className="text-emerald-950 text-sm font-semibold mb-2 uppercase tracking-wide">{text.line2}</p>
-              <p className="text-white text-4xl md:text-5xl font-black mb-1">{text.stat}</p>
-              <p className="text-emerald-100 text-lg">{text.period}</p>
-              <p className="text-emerald-900 text-xs mt-3">{text.source}</p>
+        {/* Stat Card - The Hero - More balanced on desktop */}
+        <div
+          className="bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-2xl p-6 md:p-8 mb-10 md:mb-12 bridge-stat shadow-2xl"
+          style={{
+            animationDelay: '200ms',
+            boxShadow: '0 20px 60px rgba(16, 185, 129, 0.3)'
+          }}
+        >
+          <div className="flex items-center justify-between gap-4 md:gap-8">
+            <div className="flex-1 min-w-0">
+              <p className="text-emerald-950 text-xs md:text-sm font-semibold mb-2 uppercase tracking-wide">{text.line2}</p>
+              <p className="text-white text-3xl md:text-4xl font-black mb-1 leading-tight">{text.stat}</p>
+              <p className="text-emerald-100 text-base md:text-lg">{text.period}</p>
+              <p className="text-emerald-900 text-xs mt-2 md:mt-3">{text.source}</p>
             </div>
-            <div className="hidden md:block flex-shrink-0">
+            <div className="hidden md:flex flex-shrink-0 items-center justify-center w-20 h-20">
               <TrendingUpIcon />
             </div>
           </div>
         </div>
 
         {/* Pain Point - RED for contrast */}
-        <p className="text-white text-2xl md:text-3xl font-black mb-6 bridge-fade" style={{ animationDelay: '400ms' }}>
+        <p className="text-white text-xl md:text-2xl font-black mb-4 bridge-fade leading-tight" style={{ animationDelay: '400ms' }}>
           {text.line3.split('invisible')[0]}
           <span className="text-red-400">invisible</span>
           {text.line3.split('invisible')[1] && text.line3.split('invisible')[1]}
