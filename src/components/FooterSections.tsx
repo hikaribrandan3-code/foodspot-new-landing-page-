@@ -41,11 +41,12 @@ export function Pricing() {
 
   const starterFeatures = [
     'Menu digital + QR',
-    '1 staff + 1 evento/mes',
-    'Camera lite (50-100 órdenes)',
-    'Loyalty básico + 3 juegos',
-    'Pagos ilimitados',
-    'Delivery + Takeout',
+    'Sistema de pedidos (Takeout + Delivery)',
+    'Camera lite (100 órdenes)',
+    'Loyalty básico',
+    '3 juegos incluidos',
+    'Pagos sin límite',
+    'Social media links',
   ];
 
   const proFeatures = [
