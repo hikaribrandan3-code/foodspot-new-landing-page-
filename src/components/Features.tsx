@@ -36,10 +36,10 @@ export function HowItWorks() {
   return (
     <section id="como-funciona" className="py-16 md:py-20 px-6 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="flex justify-center mb-8" style={{ animation: 'bounce 2s infinite ease-in-out' }}>
+        <div className="flex justify-center mb-5 md:mb-8" style={{ animation: 'bounce 2s infinite ease-in-out' }}>
           <ArrowDown className="w-8 h-8 text-on-surface" />
         </div>
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-12">
           <p className="font-display text-5xl md:text-7xl font-black text-on-surface mb-3">
             {lang === 'es' ? 'Lanza tu tienda en 3 pasos' : lang === 'pt' ? 'Lance sua loja em 3 passos' : 'Launch your store in 3 steps'}
           </p>

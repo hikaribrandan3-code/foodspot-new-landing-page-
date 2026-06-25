@@ -627,7 +627,7 @@ export function Bridge() {
 
         {/* Stat Card - Light bordered style */}
         <div
-          className="border-2 border-gray-200 rounded-2xl p-6 md:p-8 mb-8 bridge-fade bg-white"
+          className="border-2 border-gray-200 rounded-2xl p-6 md:p-8 mb-5 md:mb-8 bridge-fade bg-white"
           style={{ animationDelay: '150ms' }}
         >
           <p className="text-gray-600 text-xs md:text-sm font-semibold mb-4 uppercase tracking-widest">{text.line2}</p>
@@ -644,7 +644,7 @@ export function Bridge() {
         </div>
 
         {/* Pain Point - RED for contrast */}
-        <p className="text-black text-xl md:text-2xl font-black bridge-fade leading-tight text-center md:text-left" style={{ animationDelay: '300ms' }}>
+        <p className="text-black text-xl md:text-2xl font-black bridge-fade leading-tight text-center md:text-left mt-2 md:mt-0" style={{ animationDelay: '300ms' }}>
           {text.line3}
           {' '}
           <span className="text-red-500">{text.invisible}</span>
