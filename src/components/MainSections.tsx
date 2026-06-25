@@ -489,42 +489,114 @@ export function UGCMarketingCTA() {
 export function Bridge() {
   const { lang } = useLanguage();
 
+  const problems = lang === 'es'
+    ? [
+        { text: 'Usas 10 apps.', icon: '📚', delay: 0 },
+        { text: 'Sin personalización.', icon: '🎨', delay: 100 },
+        { text: 'Sin forma fácil de vender.', icon: '🛍️', delay: 200 },
+      ]
+    : lang === 'pt'
+    ? [
+        { text: 'Você usa 10 apps.', icon: '📚', delay: 0 },
+        { text: 'Sem personalización.', icon: '🎨', delay: 100 },
+        { text: 'Sem forma fácil de vender.', icon: '🛍️', delay: 200 },
+      ]
+    : [
+        { text: 'You\'re using 10 apps.', icon: '📚', delay: 0 },
+        { text: 'No personalization.', icon: '🎨', delay: 100 },
+        { text: 'No way to market easy.', icon: '🛍️', delay: 200 },
+      ];
+
+  const solution = lang === 'es'
+    ? 'Lo arreglamos.'
+    : lang === 'pt'
+    ? 'Nós consertamos.'
+    : 'We fixed that.';
+
   return (
     <section className="py-12 px-6 bg-white">
+      <style>{`
+        @keyframes slideUpFade {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes iconSpin {
+          from {
+            transform: scale(0.8) rotate(-10deg);
+          }
+          to {
+            transform: scale(1) rotate(0deg);
+          }
+        }
+
+        @keyframes iconPulse {
+          0%, 100% {
+            transform: scale(1);
+          }
+          50% {
+            transform: scale(1.1);
+          }
+        }
+
+        .problem-item {
+          animation: slideUpFade 0.6s ease-out forwards;
+          opacity: 0;
+        }
+
+        .problem-icon {
+          animation: iconSpin 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+          display: inline-block;
+          font-size: 2.5rem;
+          margin-right: 0.75rem;
+          margin-bottom: 0.25rem;
+        }
+
+        .problem-item:hover .problem-icon {
+          animation: iconPulse 0.6s ease-in-out infinite;
+        }
+
+        .solution-item {
+          animation: slideUpFade 0.6s ease-out 0.3s forwards;
+          opacity: 0;
+        }
+      `}</style>
+
       <div className="max-w-3xl mx-auto text-center">
-        <p className="text-xl md:text-2xl text-on-surface-variant font-semibold mb-6">
+        <p className="text-xl md:text-2xl text-on-surface-variant font-semibold mb-8">
           ❌ {lang === 'es' ? 'EL PROBLEMA' : lang === 'pt' ? 'O PROBLEMA' : 'THE PROBLEM'}
         </p>
         <h2 className="font-display text-3xl md:text-5xl text-on-surface font-black leading-tight tracking-tight space-y-4">
-          {lang === 'es' && (
-            <div className="space-y-4">
-              <div>Usas 10 apps.</div>
-              <div>Sin personalización.</div>
-              <div>Sin forma fácil de vender.</div>
-              <div style={{ color: '#047857', fontWeight: 'bold' }}>Lo arreglamos.</div>
+          <div className="space-y-4">
+            {problems.map((problem, idx) => (
+              <div
+                key={idx}
+                className="problem-item flex items-center justify-center flex-wrap"
+                style={{ animationDelay: `${problem.delay}ms` }}
+              >
+                <span className="problem-icon">{problem.icon}</span>
+                <span>{problem.text}</span>
+              </div>
+            ))}
+            <div
+              className="solution-item"
+              style={{ color: '#047857', fontWeight: 'bold' }}
+            >
+              {solution}
             </div>
-          )}
-          {lang === 'pt' && (
-            <div className="space-y-4">
-              <div>Você usa 10 apps.</div>
-              <div>Sem personalização.</div>
-              <div>Sem forma fácil de vender.</div>
-              <div style={{ color: '#047857', fontWeight: 'bold' }}>Nós consertamos.</div>
-            </div>
-          )}
-          {lang === 'en' && (
-            <div className="space-y-4">
-              <div>You're using 10 apps.</div>
-              <div>No personalization.</div>
-              <div>No way to market easy.</div>
-              <div style={{ color: '#047857', fontWeight: 'bold' }}>We fixed that.</div>
-            </div>
-          )}
+          </div>
         </h2>
       </div>
     </section>
   );
 }
+
 
 export function OnlineStoreDefinition() {
   const { lang } = useLanguage();
