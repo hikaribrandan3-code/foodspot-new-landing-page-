@@ -3,6 +3,57 @@ import { ArrowRight, Rocket, ArrowDown, Menu, X, ListChecks, Tag, Star, Mail, Do
 import { CanvasBackground } from './CanvasBackground';
 import { trackCtaClick, trackNavigation } from '../services/ga4Events';
 import { useLanguage } from '../contexts/LanguageContext';
+
+// SVG Icons
+const StackAppsIcon = () => (
+  <svg viewBox="0 0 100 100" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style={{stopColor: '#10b981', stopOpacity: 1}} />
+        <stop offset="100%" style={{stopColor: '#059669', stopOpacity: 1}} />
+      </linearGradient>
+    </defs>
+    <rect x="15" y="55" width="55" height="30" rx="4" fill="url(#grad1)" opacity="0.5" />
+    <rect x="20" y="40" width="55" height="30" rx="4" fill="url(#grad1)" opacity="0.7" />
+    <rect x="25" y="25" width="55" height="30" rx="4" fill="url(#grad1)" />
+    <rect x="30" y="30" width="20" height="20" rx="2" fill="rgba(255,255,255,0.2)" />
+  </svg>
+);
+
+const PaletteIcon = () => (
+  <svg viewBox="0 0 100 100" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style={{stopColor: '#8b5cf6', stopOpacity: 1}} />
+        <stop offset="100%" style={{stopColor: '#6d28d9', stopOpacity: 1}} />
+      </linearGradient>
+    </defs>
+    <ellipse cx="50" cy="50" rx="35" ry="30" fill="url(#grad2)" opacity="0.2" stroke="url(#grad2)" strokeWidth="2" />
+    <circle cx="30" cy="40" r="5" fill="#ef4444" />
+    <circle cx="50" cy="30" r="5" fill="#f59e0b" />
+    <circle cx="70" cy="40" r="5" fill="#10b981" />
+    <circle cx="75" cy="60" r="5" fill="#3b82f6" />
+    <circle cx="50" cy="70" r="5" fill="#ec4899" />
+    <circle cx="25" cy="65" r="6" fill="rgba(0,0,0,0.1)" stroke="url(#grad2)" strokeWidth="2" />
+  </svg>
+);
+
+const StorefrontIcon = () => (
+  <svg viewBox="0 0 100 100" width="56" height="56" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style={{stopColor: '#f59e0b', stopOpacity: 1}} />
+        <stop offset="100%" style={{stopColor: '#d97706', stopOpacity: 1}} />
+      </linearGradient>
+    </defs>
+    <rect x="25" y="35" width="50" height="50" rx="4" fill="url(#grad3)" opacity="0.3" stroke="url(#grad3)" strokeWidth="2" />
+    <polygon points="25,35 50,15 75,35" fill="url(#grad3)" opacity="0.7" />
+    <rect x="40" y="55" width="20" height="30" rx="2" fill="rgba(0,0,0,0.1)" stroke="url(#grad3)" strokeWidth="2" />
+    <circle cx="58" cy="70" r="2" fill="url(#grad3)" />
+    <rect x="30" y="45" width="12" height="12" rx="2" fill="rgba(255,255,255,0.4)" />
+    <rect x="58" y="45" width="12" height="12" rx="2" fill="rgba(255,255,255,0.4)" />
+  </svg>
+);
 import { t } from '../lib/translations';
 import { LanguageSwitcher } from './LanguageSwitcher';
 
@@ -489,17 +540,23 @@ export function UGCMarketingCTA() {
 export function Bridge() {
   const { lang } = useLanguage();
 
+  const iconComponents = {
+    0: <StackAppsIcon />,
+    1: <PaletteIcon />,
+    2: <StorefrontIcon />,
+  };
+
   const problems = lang === 'es'
     ? [
-        { text: 'Usas 10 apps.', icon: '📚', delay: 0 },
-        { text: 'Sin personalización.', icon: '🎨', delay: 100 },
-        { text: 'Sin forma fácil de vender.', icon: '🛍️', delay: 200 },
+        { text: 'Usas 10 apps.', idx: 0, delay: 0 },
+        { text: 'Sin personalización.', idx: 1, delay: 100 },
+        { text: 'Sin forma fácil de vender.', idx: 2, delay: 200 },
       ]
     : lang === 'pt'
     ? [
-        { text: 'Você usa 10 apps.', icon: '📚', delay: 0 },
-        { text: 'Sem personalización.', icon: '🎨', delay: 100 },
-        { text: 'Sem forma fácil de vender.', icon: '🛍️', delay: 200 },
+        { text: 'Você usa 10 apps.', idx: 0, delay: 0 },
+        { text: 'Sem personalización.', idx: 1, delay: 100 },
+        { text: 'Sem forma fácil de vender.', idx: 2, delay: 200 },
       ]
     : [
         { text: 'You\'re using 10 apps.', icon: '📚', delay: 0 },
@@ -580,7 +637,7 @@ export function Bridge() {
                 className="problem-item flex items-center justify-center flex-wrap"
                 style={{ animationDelay: `${problem.delay}ms` }}
               >
-                <span className="problem-icon">{problem.icon}</span>
+                <span className="problem-icon">{iconComponents[problem.idx]}</span>
                 <span>{problem.text}</span>
               </div>
             ))}
