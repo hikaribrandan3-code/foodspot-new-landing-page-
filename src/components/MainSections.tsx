@@ -539,26 +539,6 @@ export function UGCMarketingCTA() {
 
 export function Bridge() {
   const { lang } = useLanguage();
-  const [displayValue, setDisplayValue] = useState('$23.7B');
-
-  useEffect(() => {
-    // Stock ticker animation: count from 23.7 to 40
-    let currentValue = 23.7;
-    const targetValue = 40;
-    const increment = (targetValue - currentValue) / 20; // 20 steps
-
-    const interval = setInterval(() => {
-      currentValue += increment;
-      if (currentValue >= targetValue) {
-        setDisplayValue('$40B');
-        clearInterval(interval);
-      } else {
-        setDisplayValue(`$${currentValue.toFixed(1)}B`);
-      }
-    }, 100);
-
-    return () => clearInterval(interval);
-  }, []);
 
   const content = {
     es: {
@@ -566,7 +546,7 @@ export function Bridge() {
       line2: "El mercado crece 8.1% cada año.",
       stat: "$23.7B",
       arrow: "→",
-      statEnd: "$40B",
+      statEnd: "$50B",
       period: "para 2030",
       source: "(Mordor Intelligence, 2025)",
       line3: "Pero si no tienes tu propia tienda online, eres",
@@ -590,7 +570,7 @@ export function Bridge() {
       line2: "The market grows 8.1% every year.",
       stat: "$23.7B",
       arrow: "→",
-      statEnd: "$40B",
+      statEnd: "$50B",
       period: "by 2030",
       source: "(Mordor Intelligence, 2025)",
       line3: "But if you don't have your own online store, you're",
@@ -632,13 +612,13 @@ export function Bridge() {
         >
           <p className="text-gray-600 text-xs md:text-sm font-semibold mb-4 uppercase tracking-widest">{text.line2}</p>
 
-          {/* Stock ticker animation */}
+          {/* Market growth projection */}
           <div className="flex items-center justify-center gap-2 md:gap-4 mb-1 md:mb-1 flex-wrap">
-            <span className="slot-number text-3xl md:text-6xl font-black text-black">{displayValue}</span>
+            <span className="slot-number text-3xl md:text-6xl font-black text-black">$23.7B</span>
             <svg className="w-16 h-16 md:w-20 md:h-20 text-primary flex-shrink-0 rotate-180" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6 8L2 8L2 6L8 5.24536e-07L14 6L14 8L10 8L10 16L6 16L6 8Z" fill="currentColor"/>
             </svg>
-            <span className="slot-number text-3xl md:text-6xl font-black text-primary">{text.statEnd}</span>
+            <span className="slot-number text-3xl md:text-6xl font-black text-primary">$50B</span>
           </div>
 
           <p className="text-center text-gray-600 text-sm md:text-base mb-2 md:mb-3">{text.period}</p>
@@ -646,10 +626,10 @@ export function Bridge() {
         </div>
 
         {/* Pain Point - RED for contrast */}
-        <p className="text-black text-lg md:text-2xl font-black bridge-fade leading-snug text-center md:text-left m-0" style={{ animationDelay: '300ms' }}>
+        <p className="text-black text-lg md:text-2xl font-black bridge-fade leading-snug text-center m-0" style={{ animationDelay: '300ms' }}>
           {text.line3}
           {' '}
-          <span className="text-red-600 font-black">{text.invisible}</span>
+          <span className="text-red-600 text-lg md:text-3xl font-black">{text.invisible}</span>
           {'.'}
         </p>
       </div>
