@@ -627,7 +627,7 @@ export function Bridge() {
 
         {/* Stat Card - Light bordered style */}
         <div
-          className="border-2 border-gray-200 rounded-2xl p-5 md:p-8 mb-3 md:mb-4 bridge-fade bg-white"
+          className="border-2 border-gray-200 rounded-2xl p-5 md:p-8 mb-1 md:mb-2 bridge-fade bg-white"
           style={{ animationDelay: '150ms' }}
         >
           <p className="text-gray-600 text-xs md:text-sm font-semibold mb-4 uppercase tracking-widest">{text.line2}</p>
@@ -635,7 +635,7 @@ export function Bridge() {
           {/* Stock ticker animation */}
           <div className="flex items-center justify-center gap-2 md:gap-4 mb-4 md:mb-4 flex-wrap">
             <span className="slot-number text-3xl md:text-6xl font-black text-black">{displayValue}</span>
-            <svg className="w-10 h-10 md:w-14 md:h-14 text-primary flex-shrink-0 rotate-180" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-16 h-16 md:w-20 md:h-20 text-primary flex-shrink-0 rotate-180" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6 8L2 8L2 6L8 5.24536e-07L14 6L14 8L10 8L10 16L6 16L6 8Z" fill="currentColor"/>
             </svg>
             <span className="slot-number text-3xl md:text-6xl font-black text-primary">{text.statEnd}</span>
