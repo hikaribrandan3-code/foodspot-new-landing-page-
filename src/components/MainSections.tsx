@@ -539,26 +539,6 @@ export function UGCMarketingCTA() {
 
 export function Bridge() {
   const { lang } = useLanguage();
-  const [displayValue, setDisplayValue] = useState('$23.7B');
-
-  useEffect(() => {
-    // Slot machine animation for the number
-    let frame = 0;
-    const frames = [
-      '$23.7B', '$24.5B', '$25.8B', '$27.2B', '$28.9B', '$30.4B', '$32.1B', '$34.2B', '$36.7B'
-    ];
-
-    const interval = setInterval(() => {
-      if (frame < frames.length) {
-        setDisplayValue(frames[frame]);
-        frame++;
-      } else {
-        clearInterval(interval);
-      }
-    }, 150);
-
-    return () => clearInterval(interval);
-  }, []);
 
   const content = {
     es: {
@@ -566,7 +546,7 @@ export function Bridge() {
       line2: "El mercado crece 8.1% cada año.",
       stat: "$23.7B",
       arrow: "→",
-      statEnd: "$36.7B",
+      statEnd: "$40B",
       period: "para 2030",
       source: "(Mordor Intelligence, 2025)",
       line3: "Pero si no tienes tu propia tienda online, eres",
@@ -590,7 +570,7 @@ export function Bridge() {
       line2: "The market grows 8.1% every year.",
       stat: "$23.7B",
       arrow: "→",
-      statEnd: "$36.7B",
+      statEnd: "$40B",
       period: "by 2030",
       source: "(Mordor Intelligence, 2025)",
       line3: "But if you don't have your own online store, you're",
@@ -602,7 +582,7 @@ export function Bridge() {
   const text = content[lang] || content.en;
 
   return (
-    <section className="py-12 md:py-16 px-6 bg-white relative">
+    <section id="bridge-section" className="py-8 md:py-16 px-6 bg-white relative">
       <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(16px); }
@@ -621,34 +601,36 @@ export function Bridge() {
 
       <div className="max-w-2xl mx-auto">
         {/* Headline */}
-        <h2 className="font-display text-3xl md:text-4xl font-black text-black mb-6 bridge-fade leading-tight" style={{ animationDelay: '0ms' }}>
+        <h2 className="font-display text-3xl md:text-4xl font-black text-black mb-5 md:mb-6 bridge-fade leading-tight" style={{ animationDelay: '0ms' }}>
           {text.line1}
         </h2>
 
         {/* Stat Card - Light bordered style */}
         <div
-          className="border-2 border-gray-200 rounded-2xl p-6 md:p-8 mb-5 md:mb-8 bridge-fade bg-white"
+          className="border-2 border-gray-200 rounded-2xl p-5 md:p-8 mb-6 md:mb-8 bridge-fade bg-white"
           style={{ animationDelay: '150ms' }}
         >
           <p className="text-gray-600 text-xs md:text-sm font-semibold mb-4 uppercase tracking-widest">{text.line2}</p>
 
-          {/* Animated number ticker */}
-          <div className="flex items-center justify-center gap-3 md:gap-4 mb-3">
-            <span className="slot-number text-3xl md:text-5xl font-black text-black">{displayValue}</span>
-            <span className="text-3xl md:text-5xl font-black text-primary">→</span>
-            <span className="slot-number text-3xl md:text-5xl font-black text-primary">{text.statEnd}</span>
+          {/* Animated number ticker - Tighter spacing on mobile */}
+          <div className="flex items-center justify-center gap-1.5 md:gap-3 mb-4 md:mb-3 flex-wrap">
+            <span className="slot-number text-2xl md:text-5xl font-black text-black">$23.7B</span>
+            <svg className="w-6 h-6 md:w-8 md:h-8 text-primary flex-shrink-0 rotate-180" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 8L2 8L2 6L8 5.24536e-07L14 6L14 8L10 8L10 16L6 16L6 8Z" fill="currentColor"/>
+            </svg>
+            <span className="slot-number text-2xl md:text-5xl font-black text-primary">{text.statEnd}</span>
           </div>
 
-          <p className="text-center text-gray-600 text-sm md:text-base mb-3">{text.period}</p>
+          <p className="text-center text-gray-600 text-sm md:text-base mb-2 md:mb-3">{text.period}</p>
           <p className="text-center text-gray-500 text-xs">{text.source}</p>
         </div>
 
         {/* Pain Point - RED for contrast */}
-        <p className="text-black text-xl md:text-2xl font-black bridge-fade leading-tight text-center md:text-left mt-2 md:mt-0" style={{ animationDelay: '300ms' }}>
+        <p className="text-black text-lg md:text-2xl font-black bridge-fade leading-snug text-center md:text-left" style={{ animationDelay: '300ms' }}>
           {text.line3}
           {' '}
-          <span className="text-red-500">{text.invisible}</span>
-          {text.line3.includes('invisible') ? '.' : '.'}
+          <span className="text-red-600 text-xl md:text-3xl font-black">{text.invisible}</span>
+          {'.'}
         </p>
       </div>
     </section>
