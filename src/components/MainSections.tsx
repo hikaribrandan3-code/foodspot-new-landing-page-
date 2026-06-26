@@ -539,6 +539,26 @@ export function UGCMarketingCTA() {
 
 export function Bridge() {
   const { lang } = useLanguage();
+  const [displayValue, setDisplayValue] = useState('$23.7B');
+
+  useEffect(() => {
+    // Stock ticker animation: count from 23.7 to 40
+    let currentValue = 23.7;
+    const targetValue = 40;
+    const increment = (targetValue - currentValue) / 20; // 20 steps
+
+    const interval = setInterval(() => {
+      currentValue += increment;
+      if (currentValue >= targetValue) {
+        setDisplayValue('$40B');
+        clearInterval(interval);
+      } else {
+        setDisplayValue(`$${currentValue.toFixed(1)}B`);
+      }
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const content = {
     es: {
@@ -607,18 +627,18 @@ export function Bridge() {
 
         {/* Stat Card - Light bordered style */}
         <div
-          className="border-2 border-gray-200 rounded-2xl p-5 md:p-8 mb-6 md:mb-8 bridge-fade bg-white"
+          className="border-2 border-gray-200 rounded-2xl p-5 md:p-8 mb-3 md:mb-4 bridge-fade bg-white"
           style={{ animationDelay: '150ms' }}
         >
           <p className="text-gray-600 text-xs md:text-sm font-semibold mb-4 uppercase tracking-widest">{text.line2}</p>
 
-          {/* Animated number ticker - Tighter spacing on mobile */}
-          <div className="flex items-center justify-center gap-1.5 md:gap-3 mb-4 md:mb-3 flex-wrap">
-            <span className="slot-number text-2xl md:text-5xl font-black text-black">$23.7B</span>
-            <svg className="w-6 h-6 md:w-8 md:h-8 text-primary flex-shrink-0 rotate-180" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* Stock ticker animation */}
+          <div className="flex items-center justify-center gap-2 md:gap-4 mb-4 md:mb-4 flex-wrap">
+            <span className="slot-number text-3xl md:text-6xl font-black text-black">{displayValue}</span>
+            <svg className="w-10 h-10 md:w-14 md:h-14 text-primary flex-shrink-0 rotate-180" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6 8L2 8L2 6L8 5.24536e-07L14 6L14 8L10 8L10 16L6 16L6 8Z" fill="currentColor"/>
             </svg>
-            <span className="slot-number text-2xl md:text-5xl font-black text-primary">{text.statEnd}</span>
+            <span className="slot-number text-3xl md:text-6xl font-black text-primary">{text.statEnd}</span>
           </div>
 
           <p className="text-center text-gray-600 text-sm md:text-base mb-2 md:mb-3">{text.period}</p>
@@ -629,7 +649,7 @@ export function Bridge() {
         <p className="text-black text-lg md:text-2xl font-black bridge-fade leading-snug text-center md:text-left" style={{ animationDelay: '300ms' }}>
           {text.line3}
           {' '}
-          <span className="text-red-600 text-xl md:text-3xl font-black">{text.invisible}</span>
+          <span className="text-red-600 text-2xl md:text-4xl font-black">{text.invisible}</span>
           {'.'}
         </p>
       </div>
