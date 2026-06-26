@@ -551,19 +551,29 @@ export function Bridge() {
       source: "(Mordor Intelligence, 2025)",
       line3: "Pero si no tienes tu propia tienda online, eres",
       invisible: "invisible",
-      line4: "Aquí te mostramos cómo hacerlo en 3 pasos."
+      line4: "Aquí te mostramos cómo hacerlo en 3 pasos.",
+      title: "Perspectivas de Mercado en Expansión",
+      market2025: "Mercado Móvil Total (2025)",
+      projection2030: "Proyección (2030)",
+      cagr: "Tasa de Crecimiento Anual Compuesta (CAGR)",
+      forecast: "Forecast de Crecimiento"
     },
     pt: {
       line1: "Pedir pelo telefone é o normal agora.",
       line2: "O mercado cresce 8,1% a cada ano.",
       stat: "$23,7B",
       arrow: "→",
-      statEnd: "$36,7B",
+      statEnd: "$50B",
       period: "para 2030",
       source: "(Mordor Intelligence, 2025)",
       line3: "Mas se você não tem sua própria loja online, é",
       invisible: "invisível",
-      line4: "Aqui te mostramos como fazer em 3 passos."
+      line4: "Aqui te mostramos como fazer em 3 passos.",
+      title: "Perspectivas de Mercado em Expansão",
+      market2025: "Mercado Móvel Total (2025)",
+      projection2030: "Projeção (2030)",
+      cagr: "Taxa de Crescimento Anual Composto (CAGR)",
+      forecast: "Previsão de Crescimento"
     },
     en: {
       line1: "Ordering from your phone is normal now.",
@@ -575,7 +585,12 @@ export function Bridge() {
       source: "(Mordor Intelligence, 2025)",
       line3: "But if you don't have your own online store, you're",
       invisible: "invisible",
-      line4: "Here's how to do it in 3 steps."
+      line4: "Here's how to do it in 3 steps.",
+      title: "Market Expansion Perspectives",
+      market2025: "Mobile Market Total (2025)",
+      projection2030: "Projection (2030)",
+      cagr: "Compound Annual Growth Rate (CAGR)",
+      forecast: "Growth Forecast"
     }
   };
 
@@ -672,7 +687,7 @@ export function Bridge() {
       <div className="max-w-7xl mx-auto">
         {/* Headline */}
         <h2 className="font-display text-4xl md:text-5xl font-black text-black mb-6 md:mb-6 bridge-fade leading-tight text-center" style={{ animationDelay: '0ms' }}>
-          Perspectivas de Mercado en Expansión
+          {text.title}
         </h2>
 
         {/* Market Stats Card with Charts */}
@@ -683,17 +698,17 @@ export function Bridge() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {/* Left: Market Size Chart */}
             <div className="flex flex-col justify-center chart-left">
-              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-2 uppercase tracking-widest chart-label">Mercado Móvil Total (2025)</p>
+              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-2 uppercase tracking-widest chart-label">{text.market2025}</p>
               <p className="text-2xl md:text-4xl font-black text-black mb-1 chart-number">$23.7B</p>
 
               <div className="flex items-center gap-2 my-3 arrow-icon">
                 <svg className="w-6 h-6 text-primary flex-shrink-0 rotate-180" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6 8L2 8L2 6L8 5.24536e-07L14 6L14 8L10 8L10 16L6 16L6 8Z" fill="currentColor"/>
                 </svg>
-                <p className="text-gray-600 text-xs md:text-sm font-semibold">Forecast de Crecimiento</p>
+                <p className="text-gray-600 text-xs md:text-sm font-semibold">{text.forecast}</p>
               </div>
 
-              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-1 uppercase tracking-widest chart-label">Proyección (2030)</p>
+              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-1 uppercase tracking-widest chart-label">{text.projection2030}</p>
               <p className="text-2xl md:text-4xl font-black text-primary mb-3 chart-number">$50B</p>
 
               {/* Mini Bar Chart */}
@@ -714,7 +729,7 @@ export function Bridge() {
 
             {/* Right: Growth Rate */}
             <div className="flex flex-col justify-center chart-right">
-              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-2 uppercase tracking-widest chart-label">Tasa de Crecimiento Anual Compuesta (CAGR)</p>
+              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-2 uppercase tracking-widest chart-label">{text.cagr}</p>
               <p className="text-3xl md:text-4xl font-black text-primary mb-3 chart-number">+8.1%</p>
 
               {/* Trend Line Chart */}
