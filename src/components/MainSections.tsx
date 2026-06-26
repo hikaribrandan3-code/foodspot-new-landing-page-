@@ -589,43 +589,78 @@ export function Bridge() {
           to { opacity: 1; transform: translateY(0); }
         }
         @keyframes slideInLeft {
-          from { opacity: 0; transform: translateX(-20px); }
+          from { opacity: 0; transform: translateX(-30px); }
           to { opacity: 1; transform: translateX(0); }
         }
         @keyframes slideInRight {
-          from { opacity: 0; transform: translateX(20px); }
+          from { opacity: 0; transform: translateX(30px); }
           to { opacity: 1; transform: translateX(0); }
         }
         @keyframes growBar {
-          from { height: 0; opacity: 0; }
-          to { height: 100%; opacity: 1; }
+          from { height: 0; opacity: 0; transform: scaleY(0); }
+          to { height: 100%; opacity: 1; transform: scaleY(1); }
         }
         @keyframes drawLine {
-          from { stroke-dasharray: 500; stroke-dashoffset: 500; }
-          to { stroke-dasharray: 500; stroke-dashoffset: 0; }
+          from { stroke-dasharray: 500; stroke-dashoffset: 500; opacity: 0; }
+          to { stroke-dasharray: 500; stroke-dashoffset: 0; opacity: 1; }
+        }
+        @keyframes pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.7; }
+        }
+        @keyframes slideDown {
+          from { opacity: 0; transform: translateY(-10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes countUp {
+          from { opacity: 0; }
+          to { opacity: 1; }
         }
         .bridge-fade {
           animation: fadeInUp 0.6s ease-out forwards;
           opacity: 0;
         }
         .chart-left {
-          animation: slideInLeft 0.7s ease-out forwards;
+          animation: slideInLeft 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
           opacity: 0;
         }
         .chart-right {
-          animation: slideInRight 0.7s ease-out forwards;
+          animation: slideInRight 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+          opacity: 0;
+          animation-delay: 0.1s;
+        }
+        .chart-label {
+          animation: slideDown 0.6s ease-out forwards;
           opacity: 0;
         }
+        .chart-label:nth-child(1) { animation-delay: 0.2s; }
+        .chart-label:nth-child(2) { animation-delay: 0.4s; }
+        .chart-number {
+          animation: countUp 0.8s ease-out forwards;
+          opacity: 0;
+        }
+        .chart-number:nth-of-type(1) { animation-delay: 0.3s; }
+        .chart-number:nth-of-type(2) { animation-delay: 0.6s; }
         .chart-bar {
-          animation: growBar 0.8s ease-out forwards;
+          animation: growBar 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
           opacity: 0;
+          transform-origin: bottom;
         }
-        .chart-bar:nth-child(1) { animation-delay: 0.2s; }
-        .chart-bar:nth-child(2) { animation-delay: 0.4s; }
-        .chart-bar:nth-child(3) { animation-delay: 0.6s; }
-        .chart-bar:nth-child(4) { animation-delay: 0.8s; }
+        .chart-bar:nth-child(1) { animation-delay: 0.5s; }
+        .chart-bar:nth-child(2) { animation-delay: 0.65s; }
+        .chart-bar:nth-child(3) { animation-delay: 0.8s; }
+        .chart-bar:nth-child(4) { animation-delay: 0.95s; }
+        .chart-bar:hover {
+          animation: pulse 0.6s ease-in-out infinite;
+        }
         .chart-line {
-          animation: drawLine 1.2s ease-out forwards;
+          animation: drawLine 1.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+          animation-delay: 0.5s;
+        }
+        .arrow-icon {
+          animation: slideDown 0.6s ease-out forwards;
+          opacity: 0;
+          animation-delay: 0.4s;
         }
         .slot-number {
           font-variant-numeric: tabular-nums;
@@ -647,19 +682,19 @@ export function Bridge() {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {/* Left: Market Size Chart */}
-            <div className="flex flex-col justify-center">
-              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-2 uppercase tracking-widest">Mercado Móvil Total (2025)</p>
-              <p className="text-2xl md:text-4xl font-black text-black mb-1">$23.7B</p>
+            <div className="flex flex-col justify-center chart-left">
+              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-2 uppercase tracking-widest chart-label">Mercado Móvil Total (2025)</p>
+              <p className="text-2xl md:text-4xl font-black text-black mb-1 chart-number">$23.7B</p>
 
-              <div className="flex items-center gap-2 my-3">
+              <div className="flex items-center gap-2 my-3 arrow-icon">
                 <svg className="w-6 h-6 text-primary flex-shrink-0 rotate-180" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6 8L2 8L2 6L8 5.24536e-07L14 6L14 8L10 8L10 16L6 16L6 8Z" fill="currentColor"/>
                 </svg>
                 <p className="text-gray-600 text-xs md:text-sm font-semibold">Forecast de Crecimiento</p>
               </div>
 
-              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-1 uppercase tracking-widest">Proyección (2030)</p>
-              <p className="text-2xl md:text-4xl font-black text-primary mb-3">$50B</p>
+              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-1 uppercase tracking-widest chart-label">Proyección (2030)</p>
+              <p className="text-2xl md:text-4xl font-black text-primary mb-3 chart-number">$50B</p>
 
               {/* Mini Bar Chart */}
               <div className="flex items-end gap-1 h-12 mb-1">
@@ -678,12 +713,12 @@ export function Bridge() {
             </div>
 
             {/* Right: Growth Rate */}
-            <div className="flex flex-col justify-center">
-              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-2 uppercase tracking-widest">Tasa de Crecimiento Anual Compuesta (CAGR)</p>
-              <p className="text-3xl md:text-4xl font-black text-primary mb-3">+8.1%</p>
+            <div className="flex flex-col justify-center chart-right">
+              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-2 uppercase tracking-widest chart-label">Tasa de Crecimiento Anual Compuesta (CAGR)</p>
+              <p className="text-3xl md:text-4xl font-black text-primary mb-3 chart-number">+8.1%</p>
 
               {/* Trend Line Chart */}
-              <svg className="w-full h-20" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid meet">
+              <svg className="w-full h-20 chart-line" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid meet">
                 {/* Grid lines */}
                 <line x1="0" y1="75" x2="200" y2="75" stroke="#e5e7eb" strokeWidth="1" />
                 <line x1="0" y1="50" x2="200" y2="50" stroke="#e5e7eb" strokeWidth="1" />
