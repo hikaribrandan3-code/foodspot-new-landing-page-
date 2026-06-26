@@ -20,7 +20,7 @@ export default defineConfig(({mode}) => {
       rollupOptions: {
         output: {
           manualChunks: {
-            // Split heavy libraries into separate chunks
+            'vendor-react': ['react', 'react-dom'],
             'vendor-icons': ['lucide-react'],
           },
         },
