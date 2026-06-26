@@ -616,8 +616,13 @@ export function Bridge() {
           to { height: 100%; opacity: 1; transform: scaleY(1); }
         }
         @keyframes drawLine {
-          from { stroke-dasharray: 500; stroke-dashoffset: 500; opacity: 0; }
-          to { stroke-dasharray: 500; stroke-dashoffset: 0; opacity: 1; }
+          0% { stroke-dasharray: 500; stroke-dashoffset: 500; opacity: 0; transform: translateY(60px); }
+          50% { opacity: 0.5; }
+          100% { stroke-dasharray: 500; stroke-dashoffset: 0; opacity: 1; transform: translateY(0); }
+        }
+        @keyframes countNumber {
+          from { opacity: 0; transform: scale(0.3) translateY(20px); }
+          to { opacity: 1; transform: scale(1) translateY(0); }
         }
         @keyframes pulse {
           0%, 100% { opacity: 1; }
@@ -651,7 +656,7 @@ export function Bridge() {
         .chart-label:nth-child(1) { animation-delay: 0.5s; }
         .chart-label:nth-child(2) { animation-delay: 1.2s; }
         .chart-number {
-          animation: countUp 5s ease-out infinite;
+          animation: countNumber 5s ease-out infinite;
           opacity: 1;
         }
         .chart-number:nth-of-type(1) { animation-delay: 0.8s; }
@@ -730,7 +735,7 @@ export function Bridge() {
             {/* Right: Growth Rate */}
             <div className="flex flex-col justify-center chart-right">
               <p className="text-gray-500 text-xs md:text-sm font-semibold mb-2 uppercase tracking-widest chart-label">{text.cagr}</p>
-              <p className="text-3xl md:text-4xl font-black text-primary mb-3 chart-number">+8.1%</p>
+              <p className="text-3xl md:text-4xl font-black text-primary mb-3 chart-number" style={{ animation: 'countNumber 5s ease-out infinite', animationDelay: '1.6s' }}>+8.1%</p>
 
               {/* Trend Line Chart */}
               <svg className="w-full h-20 chart-line" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid meet">
