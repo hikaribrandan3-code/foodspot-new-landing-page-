@@ -629,7 +629,7 @@ export function Bridge() {
         <p className="text-black text-lg md:text-2xl font-black bridge-fade leading-snug text-center m-0" style={{ animationDelay: '300ms' }}>
           {text.line3}
           {' '}
-          <span className="text-red-600 text-lg md:text-3xl font-black">{text.invisible}</span>
+          <span className="text-red-600 text-xl md:text-3xl font-black">{text.invisible}</span>
           {'.'}
         </p>
       </div>
