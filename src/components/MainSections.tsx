@@ -646,7 +646,7 @@ export function Bridge() {
         </div>
 
         {/* Pain Point - RED for contrast */}
-        <p className="text-black text-lg md:text-2xl font-black bridge-fade leading-snug text-center md:text-left" style={{ animationDelay: '300ms' }}>
+        <p className="text-black text-lg md:text-2xl font-black bridge-fade leading-snug text-center md:text-left m-0" style={{ animationDelay: '300ms' }}>
           {text.line3}
           {' '}
           <span className="text-red-600 text-2xl md:text-4xl font-black">{text.invisible}</span>
