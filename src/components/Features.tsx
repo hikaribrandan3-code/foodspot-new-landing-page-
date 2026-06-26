@@ -40,7 +40,7 @@ export function HowItWorks() {
           <ArrowDown className="w-8 h-8 text-on-surface" />
         </div>
         <div className="text-center mb-8 md:mb-12">
-          <p className="font-display text-5xl md:text-6xl font-black text-on-surface mb-2 md:mb-4" style={{ fontSize: '0.95em' }}>
+          <p className="font-display text-4xl md:text-6xl font-black text-on-surface mb-2 md:mb-4">
             {lang === 'es' ? 'Lanza tu tienda en 24 horas' : lang === 'pt' ? 'Lance sua loja em 24 horas' : 'Launch your store in 24 hours'}
           </p>
           <p className="font-display text-lg md:text-xl text-on-surface-variant">
