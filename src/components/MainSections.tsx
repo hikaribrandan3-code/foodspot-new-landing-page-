@@ -636,41 +636,41 @@ export function Bridge() {
           opacity: 0;
         }
         .chart-left {
-          animation: slideInLeft 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+          animation: slideInLeft 5s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
           opacity: 1;
         }
         .chart-right {
-          animation: slideInRight 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+          animation: slideInRight 5s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
           opacity: 1;
-          animation-delay: 0.2s;
+          animation-delay: 0.3s;
         }
         .chart-label {
-          animation: slideDown 1.2s ease-out infinite;
+          animation: slideDown 5s ease-out infinite;
           opacity: 1;
         }
-        .chart-label:nth-child(1) { animation-delay: 0.3s; }
-        .chart-label:nth-child(2) { animation-delay: 0.7s; }
+        .chart-label:nth-child(1) { animation-delay: 0.5s; }
+        .chart-label:nth-child(2) { animation-delay: 1.2s; }
         .chart-number {
-          animation: countUp 1.2s ease-out infinite;
+          animation: countUp 5s ease-out infinite;
           opacity: 1;
         }
-        .chart-number:nth-of-type(1) { animation-delay: 0.5s; }
-        .chart-number:nth-of-type(2) { animation-delay: 1s; }
+        .chart-number:nth-of-type(1) { animation-delay: 0.8s; }
+        .chart-number:nth-of-type(2) { animation-delay: 1.6s; }
         .chart-bar {
-          animation: growBar 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+          animation: growBar 5s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
           opacity: 1;
           transform-origin: bottom;
         }
-        .chart-bar:nth-child(1) { animation-delay: 0.8s; }
-        .chart-bar:nth-child(2) { animation-delay: 1.1s; }
-        .chart-bar:nth-child(3) { animation-delay: 1.4s; }
-        .chart-bar:nth-child(4) { animation-delay: 1.7s; }
+        .chart-bar:nth-child(1) { animation-delay: 1.3s; }
+        .chart-bar:nth-child(2) { animation-delay: 1.8s; }
+        .chart-bar:nth-child(3) { animation-delay: 2.3s; }
+        .chart-bar:nth-child(4) { animation-delay: 2.8s; }
         .chart-bar:hover {
           animation: pulse 0.6s ease-in-out infinite;
         }
         .chart-line {
-          animation: drawLine 2s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
-          animation-delay: 0.8s;
+          animation: drawLine 5s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+          animation-delay: 1.5s;
         }
         .arrow-icon {
           animation: slideDown 0.6s ease-out forwards;
