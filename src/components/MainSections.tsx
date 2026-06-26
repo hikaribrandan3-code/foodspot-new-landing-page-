@@ -601,28 +601,83 @@ export function Bridge() {
 
       <div className="max-w-7xl mx-auto">
         {/* Headline */}
-        <h2 className="font-display text-4xl md:text-5xl font-black text-black mb-6 md:mb-6 bridge-fade leading-tight" style={{ animationDelay: '0ms' }}>
-          {text.line1}
+        <h2 className="font-display text-4xl md:text-5xl font-black text-black mb-6 md:mb-6 bridge-fade leading-tight text-center" style={{ animationDelay: '0ms' }}>
+          Perspectivas de Mercado en Expansión
         </h2>
 
-        {/* Stat Card - Light bordered style */}
+        {/* Market Stats Card with Charts */}
         <div
-          className="border-2 border-gray-200 rounded-2xl p-5 md:p-8 mb-1 md:mb-2 bridge-fade bg-white"
+          className="border-2 border-gray-200 rounded-2xl p-6 md:p-8 mb-1 md:mb-2 bridge-fade bg-white"
           style={{ animationDelay: '150ms' }}
         >
-          <p className="text-gray-600 text-xs md:text-sm font-semibold mb-4 uppercase tracking-widest">{text.line2}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Left: Market Size Chart */}
+            <div className="flex flex-col justify-center">
+              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-4 uppercase tracking-widest">Mercado Móvil Total (2025)</p>
+              <p className="text-3xl md:text-5xl font-black text-black mb-2">$23.7B</p>
 
-          {/* Market growth projection */}
-          <div className="flex items-center justify-center gap-2 md:gap-4 mb-1 md:mb-1 flex-wrap">
-            <span className="slot-number text-3xl md:text-6xl font-black text-black">$23.7B</span>
-            <svg className="w-16 h-16 md:w-20 md:h-20 text-primary flex-shrink-0 rotate-180" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 8L2 8L2 6L8 5.24536e-07L14 6L14 8L10 8L10 16L6 16L6 8Z" fill="currentColor"/>
-            </svg>
-            <span className="slot-number text-3xl md:text-6xl font-black text-primary">$50B</span>
+              <div className="flex items-center gap-3 my-6">
+                <svg className="w-8 h-8 text-primary flex-shrink-0 rotate-180" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 8L2 8L2 6L8 5.24536e-07L14 6L14 8L10 8L10 16L6 16L6 8Z" fill="currentColor"/>
+                </svg>
+                <p className="text-gray-600 text-sm font-semibold">Forecast de Crecimiento</p>
+              </div>
+
+              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-2 uppercase tracking-widest">Proyección (2030)</p>
+              <p className="text-3xl md:text-5xl font-black text-primary mb-6">$50B</p>
+
+              {/* Mini Bar Chart */}
+              <div className="flex items-end gap-2 h-20 mb-2">
+                <div className="flex-1 bg-gray-200 rounded-t" style={{ height: '30%' }}></div>
+                <div className="flex-1 bg-gray-300 rounded-t" style={{ height: '45%' }}></div>
+                <div className="flex-1 bg-gray-400 rounded-t" style={{ height: '60%' }}></div>
+                <div className="flex-1 bg-primary rounded-t" style={{ height: '100%' }}></div>
+              </div>
+              <div className="flex justify-between text-xs text-gray-500">
+                <span>2024</span>
+                <span>2025</span>
+                <span>2030</span>
+              </div>
+
+              <p className="text-gray-500 text-xs mt-6">{text.source}</p>
+            </div>
+
+            {/* Right: Growth Rate */}
+            <div className="flex flex-col justify-center">
+              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-4 uppercase tracking-widest">Tasa de Crecimiento Anual Compuesta (CAGR)</p>
+              <p className="text-4xl md:text-5xl font-black text-primary mb-6">+8.1%</p>
+
+              {/* Trend Line Chart */}
+              <svg className="w-full h-32" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid meet">
+                {/* Grid lines */}
+                <line x1="0" y1="75" x2="200" y2="75" stroke="#e5e7eb" strokeWidth="1" />
+                <line x1="0" y1="50" x2="200" y2="50" stroke="#e5e7eb" strokeWidth="1" />
+                <line x1="0" y1="25" x2="200" y2="25" stroke="#e5e7eb" strokeWidth="1" />
+
+                {/* Gradient fill under line */}
+                <defs>
+                  <linearGradient id="trendGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style={{stopColor: '#10b981', stopOpacity: 0.2}} />
+                    <stop offset="100%" style={{stopColor: '#10b981', stopOpacity: 0.01}} />
+                  </linearGradient>
+                </defs>
+                <polygon
+                  points="10,80 30,70 50,58 70,45 90,32 110,22 130,14 150,10 170,7 190,5 190,100 10,100"
+                  fill="url(#trendGradient)"
+                />
+
+                {/* Trend line - upward curve */}
+                <polyline
+                  points="10,80 30,70 50,58 70,45 90,32 110,22 130,14 150,10 170,7 190,5"
+                  fill="none"
+                  stroke="#10b981"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
           </div>
-
-          <p className="text-center text-gray-600 text-sm md:text-base mb-2 md:mb-3">{text.period}</p>
-          <p className="text-center text-gray-500 text-xs">{text.source}</p>
         </div>
 
         {/* Pain Point - RED for contrast */}
