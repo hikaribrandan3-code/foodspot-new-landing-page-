@@ -616,13 +616,12 @@ export function Bridge() {
           to { height: 100%; opacity: 1; transform: scaleY(1); }
         }
         @keyframes drawLine {
-          0% { stroke-dasharray: 500; stroke-dashoffset: 500; opacity: 0; transform: translateY(60px); }
-          50% { opacity: 0.5; }
-          100% { stroke-dasharray: 500; stroke-dashoffset: 0; opacity: 1; transform: translateY(0); }
+          from { stroke-dasharray: 500; stroke-dashoffset: 500; opacity: 0; }
+          to { stroke-dasharray: 500; stroke-dashoffset: 0; opacity: 1; }
         }
-        @keyframes countNumber {
-          from { opacity: 0; transform: scale(0.3) translateY(20px); }
-          to { opacity: 1; transform: scale(1) translateY(0); }
+        @keyframes countUp {
+          from { opacity: 0; }
+          to { opacity: 1; }
         }
         @keyframes pulse {
           0%, 100% { opacity: 1; }
@@ -641,41 +640,41 @@ export function Bridge() {
           opacity: 0;
         }
         .chart-left {
-          animation: slideInLeft 5s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+          animation: slideInLeft 2s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
           opacity: 1;
         }
         .chart-right {
-          animation: slideInRight 5s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+          animation: slideInRight 1.5s ease-out infinite;
           opacity: 1;
-          animation-delay: 0.3s;
+          animation-delay: 3s;
         }
         .chart-label {
-          animation: slideDown 5s ease-out infinite;
+          animation: slideDown 2s ease-out infinite;
           opacity: 1;
         }
-        .chart-label:nth-child(1) { animation-delay: 0.5s; }
-        .chart-label:nth-child(2) { animation-delay: 1.2s; }
+        .chart-label:nth-child(1) { animation-delay: 0.2s; }
+        .chart-label:nth-child(2) { animation-delay: 0.6s; }
         .chart-number {
-          animation: countNumber 5s ease-out infinite;
+          animation: countUp 1.5s ease-out infinite;
           opacity: 1;
         }
-        .chart-number:nth-of-type(1) { animation-delay: 0.8s; }
-        .chart-number:nth-of-type(2) { animation-delay: 1.6s; }
+        .chart-number:nth-of-type(1) { animation-delay: 0.4s; }
+        .chart-number:nth-of-type(2) { animation-delay: 3.2s; }
         .chart-bar {
-          animation: growBar 5s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
+          animation: growBar 1.8s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
           opacity: 1;
           transform-origin: bottom;
         }
-        .chart-bar:nth-child(1) { animation-delay: 1.3s; }
-        .chart-bar:nth-child(2) { animation-delay: 1.8s; }
-        .chart-bar:nth-child(3) { animation-delay: 2.3s; }
-        .chart-bar:nth-child(4) { animation-delay: 2.8s; }
+        .chart-bar:nth-child(1) { animation-delay: 0.5s; }
+        .chart-bar:nth-child(2) { animation-delay: 0.8s; }
+        .chart-bar:nth-child(3) { animation-delay: 1.1s; }
+        .chart-bar:nth-child(4) { animation-delay: 1.4s; }
         .chart-bar:hover {
           animation: pulse 0.6s ease-in-out infinite;
         }
         .chart-line {
-          animation: drawLine 5s cubic-bezier(0.34, 1.56, 0.64, 1) infinite;
-          animation-delay: 1.5s;
+          animation: drawLine 1s ease-out infinite;
+          animation-delay: 3.2s;
         }
         .arrow-icon {
           animation: slideDown 0.6s ease-out forwards;
@@ -735,7 +734,7 @@ export function Bridge() {
             {/* Right: Growth Rate */}
             <div className="flex flex-col justify-center chart-right">
               <p className="text-gray-500 text-xs md:text-sm font-semibold mb-2 uppercase tracking-widest chart-label">{text.cagr}</p>
-              <p className="text-3xl md:text-4xl font-black text-primary mb-3 chart-number" style={{ animation: 'countNumber 5s ease-out infinite', animationDelay: '1.6s' }}>+8.1%</p>
+              <p className="text-3xl md:text-4xl font-black text-primary mb-3 chart-number">+8.1%</p>
 
               {/* Trend Line Chart */}
               <svg className="w-full h-20 chart-line" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid meet">
