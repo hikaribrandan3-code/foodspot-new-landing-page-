@@ -588,9 +588,44 @@ export function Bridge() {
           from { opacity: 0; transform: translateY(16px); }
           to { opacity: 1; transform: translateY(0); }
         }
+        @keyframes slideInLeft {
+          from { opacity: 0; transform: translateX(-20px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+          from { opacity: 0; transform: translateX(20px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes growBar {
+          from { height: 0; opacity: 0; }
+          to { height: 100%; opacity: 1; }
+        }
+        @keyframes drawLine {
+          from { stroke-dasharray: 500; stroke-dashoffset: 500; }
+          to { stroke-dasharray: 500; stroke-dashoffset: 0; }
+        }
         .bridge-fade {
           animation: fadeInUp 0.6s ease-out forwards;
           opacity: 0;
+        }
+        .chart-left {
+          animation: slideInLeft 0.7s ease-out forwards;
+          opacity: 0;
+        }
+        .chart-right {
+          animation: slideInRight 0.7s ease-out forwards;
+          opacity: 0;
+        }
+        .chart-bar {
+          animation: growBar 0.8s ease-out forwards;
+          opacity: 0;
+        }
+        .chart-bar:nth-child(1) { animation-delay: 0.2s; }
+        .chart-bar:nth-child(2) { animation-delay: 0.4s; }
+        .chart-bar:nth-child(3) { animation-delay: 0.6s; }
+        .chart-bar:nth-child(4) { animation-delay: 0.8s; }
+        .chart-line {
+          animation: drawLine 1.2s ease-out forwards;
         }
         .slot-number {
           font-variant-numeric: tabular-nums;
@@ -607,48 +642,48 @@ export function Bridge() {
 
         {/* Market Stats Card with Charts */}
         <div
-          className="border-2 border-gray-200 rounded-2xl p-6 md:p-8 mb-1 md:mb-2 bridge-fade bg-white"
+          className="border-2 border-gray-200 rounded-2xl p-4 md:p-6 mb-1 md:mb-2 bridge-fade bg-white"
           style={{ animationDelay: '150ms' }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {/* Left: Market Size Chart */}
             <div className="flex flex-col justify-center">
-              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-4 uppercase tracking-widest">Mercado Móvil Total (2025)</p>
-              <p className="text-3xl md:text-5xl font-black text-black mb-2">$23.7B</p>
+              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-2 uppercase tracking-widest">Mercado Móvil Total (2025)</p>
+              <p className="text-2xl md:text-4xl font-black text-black mb-1">$23.7B</p>
 
-              <div className="flex items-center gap-3 my-6">
-                <svg className="w-8 h-8 text-primary flex-shrink-0 rotate-180" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div className="flex items-center gap-2 my-3">
+                <svg className="w-6 h-6 text-primary flex-shrink-0 rotate-180" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6 8L2 8L2 6L8 5.24536e-07L14 6L14 8L10 8L10 16L6 16L6 8Z" fill="currentColor"/>
                 </svg>
-                <p className="text-gray-600 text-sm font-semibold">Forecast de Crecimiento</p>
+                <p className="text-gray-600 text-xs md:text-sm font-semibold">Forecast de Crecimiento</p>
               </div>
 
-              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-2 uppercase tracking-widest">Proyección (2030)</p>
-              <p className="text-3xl md:text-5xl font-black text-primary mb-6">$50B</p>
+              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-1 uppercase tracking-widest">Proyección (2030)</p>
+              <p className="text-2xl md:text-4xl font-black text-primary mb-3">$50B</p>
 
               {/* Mini Bar Chart */}
-              <div className="flex items-end gap-2 h-20 mb-2">
-                <div className="flex-1 bg-gray-200 rounded-t" style={{ height: '30%' }}></div>
-                <div className="flex-1 bg-gray-300 rounded-t" style={{ height: '45%' }}></div>
-                <div className="flex-1 bg-gray-400 rounded-t" style={{ height: '60%' }}></div>
-                <div className="flex-1 bg-primary rounded-t" style={{ height: '100%' }}></div>
+              <div className="flex items-end gap-1 h-12 mb-1">
+                <div className="flex-1 bg-gray-200 rounded-t chart-bar" style={{ height: '30%' }}></div>
+                <div className="flex-1 bg-gray-300 rounded-t chart-bar" style={{ height: '45%' }}></div>
+                <div className="flex-1 bg-gray-400 rounded-t chart-bar" style={{ height: '60%' }}></div>
+                <div className="flex-1 bg-primary rounded-t chart-bar" style={{ height: '100%' }}></div>
               </div>
-              <div className="flex justify-between text-xs text-gray-500">
+              <div className="flex justify-between text-xs text-gray-500 mb-2">
                 <span>2024</span>
                 <span>2025</span>
                 <span>2030</span>
               </div>
 
-              <p className="text-gray-500 text-xs mt-6">{text.source}</p>
+              <p className="text-gray-500 text-xs mt-2">{text.source}</p>
             </div>
 
             {/* Right: Growth Rate */}
             <div className="flex flex-col justify-center">
-              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-4 uppercase tracking-widest">Tasa de Crecimiento Anual Compuesta (CAGR)</p>
-              <p className="text-4xl md:text-5xl font-black text-primary mb-6">+8.1%</p>
+              <p className="text-gray-500 text-xs md:text-sm font-semibold mb-2 uppercase tracking-widest">Tasa de Crecimiento Anual Compuesta (CAGR)</p>
+              <p className="text-3xl md:text-4xl font-black text-primary mb-3">+8.1%</p>
 
               {/* Trend Line Chart */}
-              <svg className="w-full h-32" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid meet">
+              <svg className="w-full h-20" viewBox="0 0 200 100" preserveAspectRatio="xMidYMid meet">
                 {/* Grid lines */}
                 <line x1="0" y1="75" x2="200" y2="75" stroke="#e5e7eb" strokeWidth="1" />
                 <line x1="0" y1="50" x2="200" y2="50" stroke="#e5e7eb" strokeWidth="1" />
@@ -681,10 +716,10 @@ export function Bridge() {
         </div>
 
         {/* Pain Point - RED for contrast */}
-        <p className="text-black text-lg md:text-2xl font-black bridge-fade leading-snug text-center m-0" style={{ animationDelay: '300ms' }}>
+        <p className="text-black font-black bridge-fade leading-snug text-center m-0" style={{ animationDelay: '300ms', fontSize: 'clamp(1.55rem, 5vw, 2.7rem)' }}>
           {text.line3}
           {' '}
-          <span className="text-red-600 text-xl md:text-3xl font-black">{text.invisible}</span>
+          <span className="text-red-600 font-black" style={{ fontSize: '1.08em' }}>{text.invisible}</span>
           {'.'}
         </p>
       </div>
