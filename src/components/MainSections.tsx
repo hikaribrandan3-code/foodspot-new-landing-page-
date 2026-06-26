@@ -602,7 +602,7 @@ export function Bridge() {
   const text = content[lang] || content.en;
 
   return (
-    <section id="bridge-section" className="py-8 md:py-16 px-6 bg-white relative">
+    <section id="bridge-section" className="w-full bg-white px-6 py-8 md:pt-[15px] md:pb-12 relative">
       <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(16px); }
@@ -619,9 +619,9 @@ export function Bridge() {
         }
       `}</style>
 
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         {/* Headline */}
-        <h2 className="font-display text-3xl md:text-4xl font-black text-black mb-5 md:mb-6 bridge-fade leading-tight" style={{ animationDelay: '0ms' }}>
+        <h2 className="font-display text-4xl md:text-5xl font-black text-black mb-6 md:mb-6 bridge-fade leading-tight" style={{ animationDelay: '0ms' }}>
           {text.line1}
         </h2>
 
@@ -649,7 +649,7 @@ export function Bridge() {
         <p className="text-black text-lg md:text-2xl font-black bridge-fade leading-snug text-center md:text-left m-0" style={{ animationDelay: '300ms' }}>
           {text.line3}
           {' '}
-          <span className="text-red-600 text-2xl md:text-4xl font-black">{text.invisible}</span>
+          <span className="text-red-600 font-black">{text.invisible}</span>
           {'.'}
         </p>
       </div>
