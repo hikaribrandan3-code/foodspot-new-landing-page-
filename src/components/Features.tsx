@@ -34,7 +34,7 @@ export function HowItWorks() {
   ];
 
   return (
-    <section id="como-funciona" className="py-16 md:py-20 px-6 bg-white overflow-hidden">
+    <section id="como-funciona" className="pt-2 md:pt-4 pb-16 md:pb-20 px-6 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-center mb-5 md:mb-8" style={{ animation: 'bounce 2s infinite ease-in-out' }}>
           <ArrowDown className="w-8 h-8 text-on-surface" />

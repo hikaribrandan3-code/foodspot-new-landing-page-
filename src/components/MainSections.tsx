@@ -602,7 +602,7 @@ export function Bridge() {
   const text = content[lang] || content.en;
 
   return (
-    <section id="bridge-section" className="w-full bg-white px-6 py-8 md:pt-[15px] md:pb-12 relative">
+    <section id="bridge-section" className="w-full bg-white px-6 py-8 md:pt-[15px] md:pb-4 relative">
       <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(16px); }
