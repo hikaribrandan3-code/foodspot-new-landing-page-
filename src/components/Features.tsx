@@ -40,15 +40,9 @@ export function HowItWorks() {
           <ArrowDown className="w-8 h-8 text-on-surface" />
         </div>
         <div className="text-center mb-8 md:mb-12">
-          <p className="font-display text-5xl md:text-6xl font-black text-on-surface mb-2 md:mb-4">
-            {lang === 'es' ? 'Lanza tu tienda en 24 horas' : lang === 'pt' ? 'Lance sua loja em 24 horas' : 'Launch your store in 24 hours'}
+          <p className="font-display text-sm md:text-base font-bold text-primary uppercase tracking-widest">
+            {lang === 'es' ? 'Cómo funciona' : lang === 'pt' ? 'Como funciona' : 'How it works'}
           </p>
-          <p className="font-display text-lg md:text-xl text-on-surface-variant">
-            {lang === 'es' ? 'Tres pasos simples para digitalizar tu negocio' : lang === 'pt' ? 'Três passos simples para digitalizar seu negócio' : 'Three simple steps to take your business digital'}
-          </p>
-          <div className="flex justify-center" style={{ animation: 'bounce 2s infinite ease-in-out' }}>
-            <ArrowDown className="w-8 h-8 text-primary/50" />
-          </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
           {steps.map((step, idx) => (
