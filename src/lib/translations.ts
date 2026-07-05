@@ -70,12 +70,12 @@ const translations = {
     // HowItWorks
     how_heading: 'Crea tu tienda online en 3 pasos',
     how_sub: 'Tres simples pasos para digitalizar tu restaurante.',
-    step1_title: 'Piden a través de tu app',
-    step1_desc: 'Tu app de marca para take away, en el local y tu propio delivery. Sin comisiones de terceros.',
-    step2_title: 'El comprobante dice "¿Sacás la foto? ✨"',
-    step2_desc: 'Aparece tu personaje de comida. Un toque abre la cámara nativa de tu marca. Sacan la foto de su plato.',
-    step3_title: 'Publicado. Puntos ganados. Llega un cliente nuevo.',
-    step3_desc: 'Ganan puntos de fidelidad para la próxima. Sus amigos lo ven. Vos pagaste $0.',
+    step1_title: 'Diseña tu menú digital',
+    step1_desc: 'Sin PDFs. Sin catálogos. Una presentación profesional que vende.',
+    step2_title: 'Tus colores, al instante',
+    step2_desc: 'Tu logo. Tus colores. Sin código. Listo.',
+    step3_title: 'Recibe pedidos y pagos',
+    step3_desc: 'Configura tu tienda. Conecta pagos. Vende.',
 
     // Features / AI
     ai_heading: 'Foodspot AI',
@@ -621,12 +621,12 @@ El verdadero costo de no tener un buen POS no es el precio de la herramienta. **
     // HowItWorks
     how_heading: 'Build your online store in 3 steps',
     how_sub: 'Three simple steps to take your restaurant digital.',
-    step1_title: 'They order through your app',
-    step1_desc: 'Your branded app for takeout, dine-in, and your own delivery. No third-party fees.',
-    step2_title: 'Receipt says "Snap it? ✨"',
-    step2_desc: 'Your food character pops up. One tap opens the built-in branded camera. They snap their meal.',
-    step3_title: 'Posted. Points earned. New customer walks in.',
-    step3_desc: 'They get loyalty points for next time. Their friends see it. You paid $0.',
+    step1_title: 'Design your digital menu',
+    step1_desc: 'No PDFs. No catalogs. A professional presentation that sells.',
+    step2_title: 'Your colors, instantly',
+    step2_desc: 'Your logo. Your colors. No code. Done.',
+    step3_title: 'Receive orders & payments',
+    step3_desc: 'Set up your store. Connect payments. Sell.',
 
     // Features / AI
     ai_heading: 'Foodspot AI',
@@ -1173,12 +1173,12 @@ The true cost of not having a solid POS isn't the price of the software. **It's 
     // HowItWorks
     how_heading: 'Crie sua loja online em 3 passos',
     how_sub: 'Três passos simples para digitalizar seu restaurante.',
-    step1_title: 'Pedem através do seu app',
-    step1_desc: 'Seu app de marca para retirada, no salão e seu próprio delivery. Sem comissões de terceiros.',
-    step2_title: 'O comprovante diz "Bateu a foto? ✨"',
-    step2_desc: 'Seu personagem de comida aparece. Um toque abre a câmera nativa da sua marca. Eles fotografam o prato.',
-    step3_title: 'Postado. Pontos ganhos. Chega um cliente novo.',
-    step3_desc: 'Eles ganham pontos de fidelidade para a próxima. Os amigos veem. Você pagou $0.',
+    step1_title: 'Crie seu cardápio digital',
+    step1_desc: 'Sem PDFs. Sem catálogos. Uma apresentação profissional que vende.',
+    step2_title: 'Suas cores, na hora',
+    step2_desc: 'Seu logo. Suas cores. Sem código. Pronto.',
+    step3_title: 'Receba pedidos e pagamentos',
+    step3_desc: 'Configure sua loja. Conecte pagamentos. Venda.',
 
     // Features / AI
     ai_heading: 'Foodspot AI',

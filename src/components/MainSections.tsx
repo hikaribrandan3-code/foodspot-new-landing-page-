@@ -233,27 +233,9 @@ export function Hero() {
   const [accentIndex, setAccentIndex] = useState(0);
 
   const accents = {
-    es: [
-      'Tu propia app de marca',
-      'Pedidos directos — sin comisiones de terceros',
-      "El comprobante dice \"¿Sacás la foto? ✨\"",
-      'Tus clientes se convierten en tu publicidad',
-      'Cero comisión. POS completo. Cámara integrada.'
-    ],
-    en: [
-      'Your own branded app',
-      'Direct orders — no third-party fees',
-      'Receipt says "Snap it? ✨"',
-      'Your customers become your ads',
-      'Zero commission. Full POS. Built-in camera.'
-    ],
-    pt: [
-      'Seu próprio app de marca',
-      'Pedidos diretos — sem comissões de terceiros',
-      'O comprovante diz "Bateu a foto? ✨"',
-      'Seus clientes viram seu anúncio',
-      'Comissão zero. PDV completo. Câmera integrada.'
-    ]
+    es: ['Shopify for food', '0% comisión', 'organic content', 'sin código'],
+    en: ['Shopify for food', '0% commission', 'organic content', 'no code'],
+    pt: ['Shopify for food', '0% comissão', 'organic content', 'sem código']
   };
 
   useEffect(() => {
@@ -270,23 +252,18 @@ export function Hero() {
         <div className="md:grid md:grid-cols-2 md:gap-12 md:items-center flex flex-col items-center text-center md:text-left md:items-center">
           {/* Left: Text content */}
           <div className="flex flex-col justify-center md:text-left">
-            <h1 className="font-display text-4xl md:text-5xl text-on-surface font-black mb-4 leading-tight">
-              <div>{lang === 'es' ? 'La app de tu restaurante.' : lang === 'pt' ? 'O app do seu restaurante.' : "Your restaurant's app."}</div>
-              <div>{lang === 'es' ? 'Donde cada plato vende el próximo.' : lang === 'pt' ? 'Onde cada prato vende o próximo.' : 'Where every meal sells the next one.'}</div>
+            <h1 className="font-display text-5xl md:text-6xl text-on-surface font-black mb-6 leading-none">
+              <div style={lang === 'en' ? { fontSize: '3.21rem' } : {}}>{lang === 'es' ? 'Crear tu' : lang === 'pt' ? 'Criar sua' : 'Create your'}</div>
+              <div style={lang === 'en' ? { fontSize: '3.21rem' } : {}}>{lang === 'es' ? 'tienda online' : lang === 'pt' ? 'loja online' : 'online store'}</div>
+              <span key={accentIndex} style={{ color: '#047857', display: 'block', width: '100%', whiteSpace: 'nowrap', animation: 'fadeInUp 0.25s ease-out forwards', marginTop: '4px' }}>{accents[lang][accentIndex]}</span>
             </h1>
-
-            <div className="min-h-[2.75rem] md:min-h-[2.25rem] mb-4 flex items-center justify-center md:justify-start">
-              <p key={accentIndex} className="text-lg md:text-xl font-bold leading-snug" style={{ color: '#047857', animation: 'fadeInUp 0.25s ease-out forwards' }}>
-                {accents[lang][accentIndex]}
-              </p>
-            </div>
 
             <p className="text-base md:text-xl text-on-surface-variant mb-8 leading-relaxed font-medium" style={{ fontSize: '16px', lineHeight: '1.6' }}>
               {lang === 'es'
-                ? 'Cero comisión. POS completo con cámara integrada que hace marketing por vos.'
+                ? 'Tu propia app de marca. Pedidos directos. Y el 100% de cada venta — sin comisiones, nunca.'
                 : lang === 'pt'
-                ? 'Comissão zero. PDV completo com câmera integrada que faz marketing por você.'
-                : 'Zero commission. Full POS with a built-in camera that markets for you.'}
+                ? 'Seu próprio app de marca. Pedidos diretos. E 100% de cada venta — sem comissões, nunca.'
+                : 'Your own branded app. Direct orders. And 100% of every sale — no commissions, ever.'}
             </p>
 
             <div className="flex flex-row md:flex-col gap-2 md:gap-3 items-center justify-center md:justify-start md:items-start">
@@ -300,7 +277,7 @@ export function Hero() {
               </a>
 
               <a
-                href="#como-funciona"
+                href="#beneficios"
                 className="border-2 border-[#047857] text-[#047857] px-6 py-2 rounded-full font-semibold text-sm hover:bg-emerald-50 transition-all inline-flex items-center justify-center"
               >
                 {lang === 'es' ? 'Cómo funciona' : lang === 'pt' ? 'Como funciona' : 'See how it works'}
