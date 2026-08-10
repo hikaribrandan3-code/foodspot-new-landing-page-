@@ -1,20 +1,11 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# FoodSpot Mobile — Storefront
 
-# Run and deploy your AI Studio app
+Static storefront for foodspotmobile.com.
 
-This contains everything you need to run your app locally.
+- Dark hero: "Reduce Comisiones. Recibe Pedidos Directos." with burger + Smash Burgers QR tent
+- Benefits: 0% Comisión, Pedidos Directos, Más Clientes
+- Latest Food Tech Reviews blog cards (tap to read full articles)
+- Green "Probar ahora" CTAs → https://getqrcamera.com
+- Bottom nav with QR camera mode — locked to Smash Burgers branding
 
-View your app in AI Studio: https://ai.studio/apps/5d60d88a-32d2-4521-a4a8-16234d3f2802
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+No build step. Serve the folder statically (Vercel, any static host).

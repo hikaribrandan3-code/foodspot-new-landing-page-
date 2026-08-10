@@ -1,231 +1,193 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="description" content="Plataforma de pedidos online sin comisiones. POS completo, análisis con IA, herramientas de marketing. Crea tu propia tienda online y quédate con el 100% de tus ventas.">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>FoodSpot Mobile — Reduce Comisiones. Recibe Pedidos Directos.</title>
+<meta name="description" content="Una cámara QR para tu restaurante. Sin apps. Sin comisión. Pedidos directos desde el celular de tus clientes.">
+<meta name="theme-color" content="#0b0f0d">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-    <!-- Preload LCP hero image with high priority -->
-    <link rel="preload" as="image" href="/hero.webp" fetchpriority="high">
+<!-- ══════════ HEADER ══════════ -->
+<header class="site-header">
+  <a class="brand" href="#top">
+    <span class="brand-pin" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z" fill="rgba(34,197,94,.15)"/>
+        <path d="M9.5 7v6M9.5 7c0 1 .7 1.5 1.2 1.5M9.5 7c0 1-.7 1.5-1.2 1.5M14.5 7c-.8 1-1.2 2.2-1.2 3.5h1.2V13"/>
+      </svg>
+    </span>
+    <span class="brand-text">FoodSpot<br><em>Mobile</em></span>
+  </a>
+  <button class="menu-btn" aria-label="Menú">
+    <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+  </button>
+</header>
 
-    <!-- DNS prefetch for 3rd party scripts -->
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="dns-prefetch" href="https://connect.facebook.net">
+<main id="top">
 
-    <!-- Preconnect for fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- ══════════ HERO ══════════ -->
+  <section class="hero">
+    <div class="hero-copy">
+      <h1>Reduce<br>Comisiones.<br><span class="accent">Recibe<br>Pedidos<br>Directos.</span></h1>
+      <span class="hero-rule" aria-hidden="true"></span>
+      <p class="hero-sub">Una cámara QR para tu restaurante. Sin apps. Sin comisión.</p>
+      <a class="cta" href="https://getqrcamera.com" target="_blank" rel="noopener">
+        Prueba gratis 14 días
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <p class="hero-note">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        Sin tarjeta • Cancela cuando quieras
+      </p>
+    </div>
 
-    <!-- Preload correct WOFF2 font files (v20 Inter, v15 Outfit — confirmed from Google Fonts API) -->
-    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="https://fonts.gstatic.com/s/outfit/v15/QGYvz_MVcBeNP4NJuktqUYLkn8BJ.woff2" crossorigin>
+    <div class="hero-visual">
+      <img class="hero-burger" src="assets/hero-burger.jpg" alt="Smash burger con queso derretido y panceta" loading="eager">
+      <div class="qr-tent">
+        <p class="qr-tent-top">Escanea y pide<br>directo desde<br>tu celular</p>
+        <img src="assets/smash-qr.png" alt="QR Smash Burgers" class="qr-tent-img">
+        <p class="qr-tent-bottom">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l2.5 2.5"/></svg>
+          Pedidos directos<br><strong>Sin comisiones</strong>
+        </p>
+      </div>
+    </div>
 
-    <!-- Load font CSS non-blocking -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet"></noscript>
+    <!-- ══════════ BENEFITS ══════════ -->
+    <div class="benefits">
+      <div class="benefit">
+        <span class="benefit-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+        </span>
+        <div><strong>0% Comisión</strong><small>Aumentá tus ganancias</small></div>
+      </div>
+      <div class="benefit">
+        <span class="benefit-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+        </span>
+        <div><strong>Pedidos Directos</strong><small>Vos tenés el control total</small></div>
+      </div>
+      <div class="benefit">
+        <span class="benefit-icon">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-8M9 21V5M15 21v-12M21 21V9"/></svg>
+        </span>
+        <div><strong>Más Clientes</strong><small>Mejor experiencia, más lealtad</small></div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Critical CSS: system font renders instantly before Google fonts arrive -->
-    <style>
-      body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-      h1, h2, h3, h4, h5, h6, .font-display { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 700; }
-    </style>
+  <!-- ══════════ BLOG ══════════ -->
+  <section class="blog" id="blog">
+    <div class="blog-head">
+      <h2>Latest Food Tech Reviews</h2>
+      <a href="#blog" class="ver-todos">Ver todos
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div id="blog-cards" class="blog-cards"><!-- cards rendered by app.js --></div>
 
-    <title>FoodSpot: Pedidos Online, POS y Marketing para Restaurantes | Con IA</title>
+    <div class="owner-cta">
+      <span class="owner-cta-icon">
+        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9 5 4h14l2 5M3 9h18v11H3zM9 20v-6h6v6"/></svg>
+      </span>
+      <div class="owner-cta-text">
+        <strong>¿Eres dueño de un restaurante?</strong>
+        <small>Prueba GetQRCamera gratis 14 días</small>
+      </div>
+      <a class="cta cta-small" href="https://getqrcamera.com" target="_blank" rel="noopener">
+        Probar ahora
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      </a>
+    </div>
+  </section>
+</main>
 
-    <!-- Open Graph tags for social sharing -->
-    <meta property="og:title" content="FoodSpot Mobile — Pedidos Online y Tienda Digital para Restaurantes">
-    <meta property="og:description" content="Tienda online sin comisiones para restaurantes. Menú digital, pedidos, pagos y marketing con contenido de usuarios — todo en una plataforma.">
-    <meta property="og:image" content="https://www.foodspotmobile.com/hero.webp">
-    <meta property="og:url" content="https://www.foodspotmobile.com">
-    <meta property="og:type" content="website">
+<!-- ══════════ BOTTOM NAV ══════════ -->
+<nav class="bottom-nav">
+  <a href="#top" class="bn-item active">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 3l9 8M5 10v10h14V10"/></svg>
+    <span>Home</span>
+  </a>
+  <a href="#blog" class="bn-item">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4zM8 9h8M8 13h8M8 17h5"/></svg>
+    <span>Blog</span>
+  </a>
+  <button class="bn-qr" id="open-camera" aria-label="Abrir cámara QR">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h6v6H3zM15 3h6v6h-6zM3 15h6v6H3zM15 15h3v3h-3zM21 15v6M15 21h3"/></svg>
+    <span>QR</span>
+  </button>
+  <a href="https://getqrcamera.com" target="_blank" rel="noopener" class="bn-item">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5z"/></svg>
+    <span>Recursos</span>
+  </a>
+  <a href="https://getqrcamera.com" target="_blank" rel="noopener" class="bn-item">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg>
+    <span>About</span>
+  </a>
+</nav>
 
-    <!-- Twitter Card tags -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="FoodSpot Mobile — Sistema de Pedidos Online para Restaurantes">
-    <meta property="twitter:description" content="Tienda online sin comisiones con promociones impulsadas por IA y marketing de contenido generado por usuarios.">
-    <meta property="twitter:image" content="https://www.foodspotmobile.com/hero.webp">
+<!-- ══════════ ARTICLE OVERLAY ══════════ -->
+<div class="article-overlay" id="article-overlay" hidden>
+  <div class="article-sheet">
+    <button class="article-back" id="article-back">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+      Volver
+    </button>
+    <article id="article-body"></article>
+    <a class="cta" href="https://getqrcamera.com" target="_blank" rel="noopener">Probar ahora</a>
+  </div>
+</div>
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.foodspotmobile.com">
+<!-- ══════════ CAMERA MODE — locked to Smash Burgers ══════════ -->
+<div class="camera-overlay" id="camera-overlay" hidden>
+  <video id="cam-video" autoplay playsinline muted></video>
 
-    <!-- Language alternates -->
-    <link rel="alternate" hreflang="es" href="https://www.foodspotmobile.com/">
-    <link rel="alternate" hreflang="en" href="https://www.foodspotmobile.com/en/">
-    <link rel="alternate" hreflang="pt-BR" href="https://www.foodspotmobile.com/pt/">
-    <link rel="alternate" hreflang="x-default" href="https://www.foodspotmobile.com/">
-    <!-- Schema: SoftwareApplication -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "FoodSpot Mobile",
-      "description": "Commission-free restaurant online ordering system and e-commerce platform for restaurants in LATAM",
-      "url": "https://www.foodspotmobile.com",
-      "applicationCategory": ["BusinessApplication", "Ecommerce"],
-      "operatingSystem": "Web, iOS, Android",
-      "areaServed": ["AR", "BR", "MX", "CL", "CO", "PE"],
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "Starter",
-          "price": "0",
-          "priceCurrency": "USD",
-          "description": "Free forever. Digital menu, ordering, payments, customer loyalty. No commission. No credit card required."
-        },
-        {
-          "@type": "Offer",
-          "name": "Pro",
-          "price": "29.99",
-          "priceCurrency": "USD",
-          "description": "For restaurants scaling to multiple locations. Manage teams, stores, and customers — all in one system."
-        }
-      ],
-      "featureList": [
-        "Commission-free online store",
-        "Digital menu builder",
-        "Integrated payments (Mercado Pago)",
-        "Inventory management",
-        "Customer relationship management",
-        "AI-powered promotions",
-        "UGC marketing tools",
-        "Multi-location management",
-        "Kitchen Display System (KDS)",
-        "Loyalty rewards program"
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "150"
-      }
-    }
-    </script>
+  <div class="cam-top">
+    <button class="cam-close" id="cam-close" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <div class="brand-pill" id="brand-pill">
+      <span class="brand-pill-dot"></span>Smash Burgers
+    </div>
+  </div>
 
-    <!-- Schema: Organization -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "FoodSpot Mobile",
-      "url": "https://www.foodspotmobile.com",
-      "logo": "https://www.foodspotmobile.com/favicon.svg",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+54-351-212-2600",
-        "contactType": "customer support",
-        "availableLanguage": ["Spanish", "English", "Portuguese"]
-      },
-      "sameAs": [
-        "https://instagram.com/foodspotmobile",
-        "https://tiktok.com/@foodspotmobile"
-      ],
-      "areaServed": ["AR", "BR", "MX", "CL", "CO", "PE"]
-    }
-    </script>
+  <div class="cam-frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 
-    <!-- Schema: FAQPage — targets AI Overview for "free restaurant app" queries -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is the free plan really free forever?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. FoodSpot's Starter plan is free forever — no trial period, no expiration, no credit card required. You can run your restaurant on it indefinitely."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿El plan gratuito es realmente gratis para siempre?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sí. El plan Starter de FoodSpot es gratuito para siempre — sin período de prueba, sin vencimiento, sin tarjeta de crédito. Podés usarlo indefinidamente para tu restaurante."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "O plano gratuito é realmente gratuito para sempre?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim. O plano Starter do FoodSpot é gratuito para sempre — sem período de teste, sem expiração, sem cartão de crédito. Você pode usá-lo indefinidamente para seu restaurante."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What's included in the free plan?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The free Starter plan includes: digital menu builder, online ordering system, payment processing (0% commission), customer loyalty program, and basic analytics. Everything you need to launch and run your restaurant online."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you take a cut of orders?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. FoodSpot charges 0% commission on all orders — on both the free Starter plan and the Pro plan. Every sale goes directly to you."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿FoodSpot cobra comisión por pedidos?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. FoodSpot cobra 0% de comisión en todos los pedidos — tanto en el plan Starter gratuito como en el plan Pro. Cada venta va directamente a vos."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Who is the Pro plan for?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The Pro plan ($29.99/month) is for restaurants scaling to multiple locations. It includes team management, multi-store operations, advanced analytics, AI-powered recommendations, and priority support."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does setup take?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Most restaurants launch their online store within 24 hours. The setup process has 3 steps: build your digital menu, customize your brand colors, and connect payments. No code required."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cuánto tiempo lleva la configuración?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "La mayoría de los restaurantes lanzan su tienda online en 24 horas. El proceso tiene 3 pasos: diseñar tu menú digital, personalizar los colores de tu marca y conectar los pagos. Sin código."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does FoodSpot work without hardware?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. FoodSpot is 100% web-based — no hardware required. Your customers order from their phones, and you manage everything from your device. No POS terminal needed to get started."
-          }
-        }
-      ]
-    }
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <div class="cam-bottom">
+    <span class="cam-hint">Apuntá y capturá tu plato</span>
+    <button class="shutter" id="shutter" aria-label="Capturar foto"><span></span></button>
+  </div>
 
-    <!--
-      TRACKING SCRIPTS — Loaded via cookie consent (see CookieConsent.tsx).
-      These are injected dynamically ONLY after the user accepts cookies.
-      This fixes:
-        - Best Practices: Facebook 3rd-party cookies penalty
-        - Best Practices: Deprecated AttributionReporting API penalty
-        - Performance: Scripts no longer block main thread on initial load
+  <div class="cam-error" id="cam-error" hidden>
+    <p>No pudimos acceder a la cámara.<br>Revisá los permisos del navegador.</p>
+    <button class="cta cta-small" id="cam-retry">Reintentar</button>
+  </div>
+</div>
 
-      Build: 2026-06-14 - Force fresh deploy
-    -->
-  </body>
+<!-- ══════════ PHOTO RESULT (editor) ══════════ -->
+<div class="editor-overlay" id="editor-overlay" hidden>
+  <div class="brand-pill editor-pill"><span class="brand-pill-dot"></span>Smash Burgers</div>
+  <img id="editor-photo" alt="Tu foto Smash Burgers">
+  <div class="editor-actions">
+    <button class="editor-btn" id="editor-retake">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5"/></svg>
+      Retomar
+    </button>
+    <button class="editor-btn primary" id="editor-share">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 8l5-5 5 5M5 15v5h14v-5"/></svg>
+      Compartir
+    </button>
+    <button class="editor-btn" id="editor-download">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+      Guardar
+    </button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
 </html>
