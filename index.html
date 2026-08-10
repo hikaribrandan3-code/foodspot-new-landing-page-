@@ -3,17 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>FoodSpot Mobile — Reduce Comisiones. Recibe Pedidos Directos.</title>
-<meta name="description" content="Una cámara QR para tu restaurante. Sin apps. Sin comisión. Pedidos directos desde el celular de tus clientes.">
+
+<title>FoodSpot Mobile — Cámara QR para restaurantes | Pedidos directos, 0% comisión</title>
+<meta name="description" content="FoodSpot Mobile funciona con GetQRCamera: una cámara QR para tu restaurante. Tus clientes escanean, piden y pagan directo desde el celular. Sin apps. Sin comisión.">
+<link rel="canonical" href="https://foodspotmobile.com/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+
 <meta name="theme-color" content="#0b0f0d">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+<!-- Social preview: links shared on WhatsApp / IG / FB rendered blank before this -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FoodSpot Mobile">
+<meta property="og:locale" content="es_AR">
+<meta property="og:url" content="https://foodspotmobile.com/">
+<meta property="og:title" content="Reduce comisiones. Recibe pedidos directos.">
+<meta property="og:description" content="Una cámara QR para tu restaurante. Tus clientes escanean, piden y pagan directo desde el celular. Sin apps. Sin comisión.">
+<meta property="og:image" content="https://foodspotmobile.com/assets/hero-burger.jpg">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1451">
+<meta property="og:image:alt" content="Smash burger con queso derretido y panceta">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Reduce comisiones. Recibe pedidos directos.">
+<meta name="twitter:description" content="Una cámara QR para tu restaurante. Sin apps. Sin comisión.">
+<meta name="twitter:image" content="https://foodspotmobile.com/assets/hero-burger.jpg">
+
+<!-- LCP preload. The media queries must mirror the <picture> below exactly,
+     or the browser preloads a file it then never uses. -->
+<link rel="preload" as="image" href="assets/hero-burger-640.webp" type="image/webp" media="(max-width:640px)">
+<link rel="preload" as="image" href="assets/hero-burger.webp" type="image/webp" media="(min-width:640.02px)">
 <link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://foodspotmobile.com/#org",
+      "name": "FoodSpot Mobile",
+      "url": "https://foodspotmobile.com/",
+      "logo": "https://foodspotmobile.com/assets/favicon.svg",
+      "sameAs": ["https://getqrcamera.com"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://foodspotmobile.com/#website",
+      "url": "https://foodspotmobile.com/",
+      "name": "FoodSpot Mobile",
+      "inLanguage": "es",
+      "publisher": { "@id": "https://foodspotmobile.com/#org" }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "GetQRCamera",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://getqrcamera.com",
+      "description": "Cámara QR de marca para restaurantes: los clientes escanean, piden y pagan directo desde el celular, sin descargar ninguna app.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Probalo gratis, sin tarjeta de crédito"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
 <!-- ══════════ HEADER ══════════ -->
 <header class="site-header">
-  <a class="brand" href="#top">
+  <a class="brand" href="/">
     <span class="brand-pin" aria-hidden="true">
       <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z" fill="rgba(34,197,94,.15)"/>
@@ -22,40 +87,98 @@
     </span>
     <span class="brand-text">FoodSpot<br><em>Mobile</em></span>
   </a>
-  <button class="menu-btn" aria-label="Menú">
+
+  <!-- desktop nav — hidden on mobile, where the drawer takes over -->
+  <nav class="desktop-nav" aria-label="Principal">
+    <a href="#top">Home</a>
+    <a href="#blog">Blog</a>
+    <a href="#about">About</a>
+    <a href="#recursos">Recursos</a>
+    <a class="cta cta-nav" href="https://getqrcamera.com" target="_blank" rel="noopener">Probalo gratis</a>
+  </nav>
+
+  <button class="menu-btn" id="menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer">
     <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
   </button>
 </header>
 
-<main id="top">
+<!-- ══════════ MOBILE DRAWER ══════════ -->
+<div class="drawer-scrim" id="drawer-scrim" hidden></div>
+<aside class="drawer" id="drawer" hidden aria-label="Menú">
+  <div class="drawer-head">
+    <span class="drawer-title">Menú</span>
+    <button class="drawer-close" id="drawer-close" aria-label="Cerrar menú">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <nav class="drawer-nav">
+    <a href="#top" data-drawer-link>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 3l9 8M5 10v10h14V10"/></svg>
+      Home
+    </a>
+    <a href="#blog" data-drawer-link>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4zM8 9h8M8 13h8M8 17h5"/></svg>
+      Blog
+    </a>
+    <a href="#about" data-drawer-link>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+      About
+    </a>
+    <a href="#recursos" data-drawer-link>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5z"/></svg>
+      Recursos
+    </a>
+  </nav>
+  <a class="cta drawer-cta" href="https://getqrcamera.com" target="_blank" rel="noopener">
+    Probalo gratis
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+  <p class="drawer-note">FoodSpot Mobile funciona con <strong>GetQRCamera</strong></p>
+</aside>
+
+<main id="main">
 
   <!-- ══════════ HERO ══════════ -->
-  <section class="hero">
+  <section class="hero" id="top">
     <div class="hero-stage">
-      <img class="hero-bg" src="assets/hero-burger.jpg" alt="Smash burger con queso derretido y panceta" loading="eager">
+      <picture>
+        <source srcset="assets/hero-burger-640.webp" media="(max-width:640px)" type="image/webp">
+        <source srcset="assets/hero-burger.webp" type="image/webp">
+        <img class="hero-bg" src="assets/hero-burger.jpg" alt="Smash burger con queso derretido y panceta" fetchpriority="high" width="1024" height="1451">
+      </picture>
       <div class="hero-shade" aria-hidden="true"></div>
 
-      <div class="hero-copy">
-        <h1>Reduce<br>Comisiones.<br><span class="accent">Recibe<br>Pedidos<br>Directos.</span></h1>
-        <span class="hero-rule" aria-hidden="true"></span>
-        <p class="hero-sub">Una cámara QR para tu restaurante. Sin apps. Sin comisión.</p>
-        <a class="cta" href="https://getqrcamera.com" target="_blank" rel="noopener">
-          Prueba gratis 14 días
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <p class="hero-note">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          Sin tarjeta • Cancela cuando quieras
-        </p>
-      </div>
+      <!-- two-zone grid: copy left, QR card right — no absolute overlay -->
+      <div class="hero-inner">
+        <h1 class="hero-title">Reduce<br>Comisiones.<br><span class="accent">Recibe<br>Pedidos<br>Directos.</span></h1>
 
-      <div class="qr-tent">
-        <p class="qr-tent-top">Escanea y pide<br>directo desde<br>tu celular</p>
-        <img src="assets/smash-qr.png" alt="QR Smash Burgers" class="qr-tent-img">
-        <p class="qr-tent-bottom">
-          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l2.5 2.5"/></svg>
-          Pedidos directos<br><strong>Sin comisiones</strong>
-        </p>
+        <div class="hero-lede">
+          <span class="hero-rule" aria-hidden="true"></span>
+          <p class="hero-sub">Una cámara QR para tu restaurante. Sin apps. Sin comisión.</p>
+          <a class="cta" href="https://getqrcamera.com" target="_blank" rel="noopener">
+            Probalo gratis
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <p class="hero-note">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            Sin tarjeta • Cancela cuando quieras
+          </p>
+        </div>
+
+        <div class="hero-qr">
+          <div class="qr-tent">
+            <p class="qr-tent-top">Escanea y pide<br>directo desde<br>tu celular</p>
+            <img src="assets/smash-qr.png" alt="Código QR de ejemplo del restaurante Smash Burgers" class="qr-tent-img" width="86" height="86" loading="lazy">
+            <p class="qr-tent-bottom">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l2.5 2.5"/></svg>
+              Pedidos directos<br><strong>Sin comisiones</strong>
+            </p>
+          </div>
+          <button class="qr-try" id="qr-try">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h6v6H3zM15 3h6v6h-6zM3 15h6v6H3zM15 15h3v3h-3zM21 15v6M15 21h3"/></svg>
+            Probá la cámara
+          </button>
+        </div>
       </div>
 
       <!-- ══════════ BENEFITS ══════════ -->
@@ -82,34 +205,99 @@
     </div>
   </section>
 
-  <!-- ══════════ BLOG ══════════ -->
-  <section class="blog" id="blog">
-    <div class="blog-head">
-      <h2>Latest Food Tech Reviews</h2>
-      <a href="#blog" class="ver-todos">Ver todos
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
-      </a>
-    </div>
-    <div id="blog-cards" class="blog-cards"><!-- cards rendered by app.js --></div>
+  <!-- ══════════ ABOUT ══════════ -->
+  <section class="about" id="about">
+    <div class="section-wrap">
+      <span class="eyebrow">Sobre nosotros</span>
+      <h2>FoodSpot Mobile funciona con GetQRCamera</h2>
+      <p class="about-lead">
+        FoodSpot Mobile es la vidriera. <strong>GetQRCamera</strong> es el motor: la cámara QR de marca
+        que tus clientes abren sin descargar nada, y con la que piden, pagan y comparten fotos de tu comida.
+      </p>
 
-    <div class="owner-cta">
-      <span class="owner-cta-icon">
-        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9 5 4h14l2 5M3 9h18v11H3zM9 20v-6h6v6"/></svg>
-      </span>
-      <div class="owner-cta-text">
-        <strong>¿Eres dueño de un restaurante?</strong>
-        <small>Prueba GetQRCamera gratis 14 días</small>
+      <div class="about-steps">
+        <div class="about-step">
+          <span class="step-num">1</span>
+          <h3>Ponés tu QR en la mesa</h3>
+          <p>Un cartelito con tu marca. Nada de hardware, nada de instalación.</p>
+        </div>
+        <div class="about-step">
+          <span class="step-num">2</span>
+          <h3>El cliente escanea</h3>
+          <p>Se abre tu cámara de marca en el navegador. Sin descargas, sin fricción.</p>
+        </div>
+        <div class="about-step">
+          <span class="step-num">3</span>
+          <h3>Pide, paga y comparte</h3>
+          <p>El pedido entra directo a tu cocina. La foto sale a redes con tu nombre.</p>
+        </div>
       </div>
-      <a class="cta cta-small" href="https://getqrcamera.com" target="_blank" rel="noopener">
-        Probar ahora
-        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+
+      <div class="about-facts">
+        <div class="fact"><strong>0%</strong><small>de comisión sobre tus pedidos</small></div>
+        <div class="fact"><strong>0</strong><small>apps que descargar tus clientes</small></div>
+        <div class="fact fact-text"><strong>Sin tarjeta</strong><small>para probarlo, cancelá cuando quieras</small></div>
+      </div>
+
+      <a class="cta" href="https://getqrcamera.com" target="_blank" rel="noopener">
+        Conocé GetQRCamera
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
       </a>
     </div>
   </section>
+
+  <!-- ══════════ BLOG ══════════ -->
+  <section class="blog" id="blog">
+    <div class="section-wrap">
+      <div class="blog-head">
+        <h2>Latest Food Tech Reviews</h2>
+        <a href="#blog" class="ver-todos">Ver todos
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div id="blog-cards" class="blog-cards"><!-- cards rendered by app.js --></div>
+
+      <div class="owner-cta" id="recursos">
+        <span class="owner-cta-icon">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9 5 4h14l2 5M3 9h18v11H3zM9 20v-6h6v6"/></svg>
+        </span>
+        <div class="owner-cta-text">
+          <strong>¿Eres dueño de un restaurante?</strong>
+          <small>Probá GetQRCamera gratis, sin tarjeta</small>
+        </div>
+        <a class="cta cta-small" href="https://getqrcamera.com" target="_blank" rel="noopener">
+          Probar ahora
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER (desktop-relevant; bottom nav covers mobile) ══════════ -->
+  <footer class="site-footer">
+    <div class="section-wrap footer-grid">
+      <div>
+        <span class="brand-text footer-brand">FoodSpot<br><em>Mobile</em></span>
+        <p class="footer-tag">Una cámara QR para tu restaurante.<br>Sin apps. Sin comisión.</p>
+      </div>
+      <nav aria-label="Pie de página">
+        <h4>Navegación</h4>
+        <a href="#top">Home</a>
+        <a href="#blog">Blog</a>
+        <a href="#about">About</a>
+      </nav>
+      <nav aria-label="Producto">
+        <h4>Producto</h4>
+        <a href="https://getqrcamera.com" target="_blank" rel="noopener">GetQRCamera</a>
+        <a href="https://getqrcamera.com" target="_blank" rel="noopener">Probalo gratis</a>
+      </nav>
+    </div>
+    <p class="footer-legal">© <span id="year">2026</span> FoodSpot Mobile · Funciona con GetQRCamera</p>
+  </footer>
 </main>
 
-<!-- ══════════ BOTTOM NAV ══════════ -->
-<nav class="bottom-nav">
+<!-- ══════════ BOTTOM NAV (mobile only) ══════════ -->
+<nav class="bottom-nav" aria-label="Navegación rápida">
   <a href="#top" class="bn-item active">
     <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 3l9 8M5 10v10h14V10"/></svg>
     <span>Home</span>
@@ -122,11 +310,11 @@
     <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h6v6H3zM15 3h6v6h-6zM3 15h6v6H3zM15 15h3v3h-3zM21 15v6M15 21h3"/></svg>
     <span>QR</span>
   </button>
-  <a href="https://getqrcamera.com" target="_blank" rel="noopener" class="bn-item">
+  <a href="#recursos" class="bn-item">
     <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5z"/></svg>
     <span>Recursos</span>
   </a>
-  <a href="https://getqrcamera.com" target="_blank" rel="noopener" class="bn-item">
+  <a href="#about" class="bn-item">
     <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg>
     <span>About</span>
   </a>
@@ -190,6 +378,7 @@
   </div>
 </div>
 
+<script src="posts.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
