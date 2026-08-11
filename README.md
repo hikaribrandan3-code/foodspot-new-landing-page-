@@ -1,18 +1,53 @@
-# FoodSpot Mobile — Storefront
+# FoodSpot Mobile — landing page
 
-Static storefront for foodspotmobile.com. Funnels traffic to **getqrcamera.com**.
+Static site for **foodspotmobile.com**. Sells one thing: a **QR menu for
+restaurants at $9.99/mes**, where the orders arrive as a WhatsApp message.
 
 ## What's here
 
-- **Hero** — "Reduce Comisiones. Recibe Pedidos Directos." Two-zone layout:
-  copy left, Smash Burgers QR tent card top-right (in normal flow, not an
-  absolute overlay), benefits strip pinned to the bottom of the photo.
-- **About** — explains that FoodSpot Mobile is the storefront and GetQRCamera
-  is the engine, with the 3-step scan → order → share flow.
+- **Hero** — "Tu carta en un QR. Los pedidos van a tu WhatsApp." Copy left, the
+  QR tent card top-right (a real link to the demo), price badge, two CTAs,
+  benefits strip pinned to the bottom of the photo.
+- **Cómo funciona** — the three steps: escanea → arma el pedido → llega a WhatsApp.
+- **La cuenta** — the commission math. A delivery app takes ~25% forever; this
+  is $9.99 flat. This section is the sales argument, not a feature list.
+- **Precio** — one card, $9.99/mes, ten lines of what's included, and a CTA.
+- **Preguntas** — six FAQs, mirrored into `FAQPage` JSON-LD for search.
 - **Blog** — "Latest Food Tech Reviews", 4 articles.
-- **Camera mode** — live QR camera locked to the Smash Burgers brand.
+- **`/demo/`** — the actual menu, running. See below.
 - **Mobile drawer** (hamburger) + **bottom nav**; on desktop these are replaced
   by a top nav and a footer.
+
+## `/demo/` — the live menu
+
+`demo/` is a copy of the [qrmenu](https://github.com/hikaribrandan3-code/qrmenu)
+app, configured as a fictional restaurant (Smash Burgers). Every "ver la demo"
+link on the page points there, so a prospect can tap through the real thing
+instead of looking at screenshots.
+
+It runs with **`demo: true`** in `demo/menu.js`. In that mode the order button
+does not open WhatsApp — it shows the owner the exact message their kitchen
+would receive. That is both a better pitch and the reason the demo can't fire
+messages at a real phone number.
+
+When the menu app changes, re-copy it:
+
+```bash
+cp ../qrmenu/{index.html,styles.css,app.js} demo/
+```
+
+`demo/menu.js` is intentionally *not* overwritten — it holds the demo
+restaurant and its `demo: true` flag.
+
+## One thing still to set
+
+The **Precio** CTA points at `getqrcamera.com/contact` as a placeholder. Swap
+it for the real sales WhatsApp — there's a `TODO` comment on the line in
+`index.html`:
+
+```html
+<a class="cta price-cta" href="https://wa.me/<codigo+numero>?text=Hola!%20Quiero%20el%20men%C3%BA%20QR">
+```
 
 ## Layout
 
@@ -21,7 +56,7 @@ Mobile-first, one breakpoint that matters:
 | Width | Layout |
 | --- | --- |
 | `< 640px` | phone: single column, bottom nav + hamburger drawer |
-| `≥ 640px` | tablet: 2-up blog grid, 3-up about steps |
+| `≥ 640px` | tablet: 2-up blog grid, 3-up steps, 2-up price list and math columns |
 | `≥ 980px` | desktop: top nav, two-column hero, 4-up blog grid, footer |
 
 ## Blog: edit + rebuild

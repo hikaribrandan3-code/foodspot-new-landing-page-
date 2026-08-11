@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-<title>FoodSpot Mobile — Cámara QR para restaurantes | Pedidos directos, 0% comisión</title>
-<meta name="description" content="FoodSpot Mobile funciona con GetQRCamera: una cámara QR para tu restaurante. Tus clientes escanean, piden y pagan directo desde el celular. Sin apps. Sin comisión.">
+<title>Menú QR para restaurantes — $9.99/mes | Pedidos directos a tu WhatsApp</title>
+<meta name="description" content="Tu carta en un código QR. El cliente escanea, elige y el pedido te llega listo a WhatsApp. Sin apps, sin comisiones, sin POS. $9.99 por mes.">
 <link rel="canonical" href="https://foodspotmobile.com/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 
@@ -17,15 +17,15 @@
 <meta property="og:site_name" content="FoodSpot Mobile">
 <meta property="og:locale" content="es_AR">
 <meta property="og:url" content="https://foodspotmobile.com/">
-<meta property="og:title" content="Reduce comisiones. Recibe pedidos directos.">
-<meta property="og:description" content="Una cámara QR para tu restaurante. Tus clientes escanean, piden y pagan directo desde el celular. Sin apps. Sin comisión.">
+<meta property="og:title" content="Tu carta en un QR. Los pedidos llegan a tu WhatsApp.">
+<meta property="og:description" content="El cliente escanea, elige y te manda el pedido listo. Sin apps, sin comisiones. $9.99 por mes.">
 <meta property="og:image" content="https://foodspotmobile.com/assets/hero-burger.jpg">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="1451">
 <meta property="og:image:alt" content="Smash burger con queso derretido y panceta">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Reduce comisiones. Recibe pedidos directos.">
-<meta name="twitter:description" content="Una cámara QR para tu restaurante. Sin apps. Sin comisión.">
+<meta name="twitter:title" content="Tu carta en un QR. Los pedidos llegan a tu WhatsApp.">
+<meta name="twitter:description" content="Sin apps, sin comisiones. $9.99 por mes.">
 <meta name="twitter:image" content="https://foodspotmobile.com/assets/hero-burger.jpg">
 
 <!-- LCP preload. The media queries must mirror the <picture> below exactly,
@@ -56,17 +56,42 @@
     },
     {
       "@type": "SoftwareApplication",
-      "name": "GetQRCamera",
+      "name": "FoodSpot Mobile — Menú QR",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
-      "url": "https://getqrcamera.com",
-      "description": "Cámara QR de marca para restaurantes: los clientes escanean, piden y pagan directo desde el celular, sin descargar ninguna app.",
+      "url": "https://foodspotmobile.com/",
+      "description": "Menú digital en código QR para restaurantes. El cliente escanea, arma su pedido y lo envía por WhatsApp. Sin aplicaciones que descargar y sin comisión por pedido.",
       "offers": {
         "@type": "Offer",
-        "price": "0",
+        "price": "9.99",
         "priceCurrency": "USD",
-        "description": "Probalo gratis, sin tarjeta de crédito"
+        "description": "Por mes, por local. Pedidos ilimitados, 0% de comisión."
       }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cobran comisión por pedido?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Pagás $9.99 por mes y nada más. Los pedidos van directo a tu WhatsApp, así que no pasamos por el medio ni tocamos tu plata." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El cliente tiene que descargar una app?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Escanea el QR con la cámara del teléfono y el menú se abre en el navegador. No hay nada que instalar ni cuenta que crear." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Se puede pagar desde el menú?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No, y es a propósito. El pedido llega a tu WhatsApp y vos cobrás como ya cobrás: efectivo, transferencia, tarjeta en el local o link de pago. Nosotros no manejamos tu dinero." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo cambiar precios o sacar un plato que se terminó?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí, cuando quieras y sin límite. Un plato agotado se marca y aparece en gris; al día siguiente lo volvés a activar." }
+        }
+      ]
     }
   ]
 }
@@ -91,10 +116,10 @@
   <!-- desktop nav — hidden on mobile, where the drawer takes over -->
   <nav class="desktop-nav" aria-label="Principal">
     <a href="#top">Home</a>
+    <a href="#como">Cómo funciona</a>
+    <a href="#precio">Precio</a>
     <a href="#blog">Blog</a>
-    <a href="#about">About</a>
-    <a href="#recursos">Recursos</a>
-    <a class="cta cta-nav" href="https://getqrcamera.com" target="_blank" rel="noopener">Probalo gratis</a>
+    <a class="cta cta-nav" href="/demo/">Ver la demo</a>
   </nav>
 
   <button class="menu-btn" id="menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer">
@@ -116,6 +141,14 @@
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 3l9 8M5 10v10h14V10"/></svg>
       Home
     </a>
+    <a href="#como" data-drawer-link>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h6v6H3zM15 3h6v6h-6zM3 15h6v6H3zM15 15h3v3h-3zM21 15v6M15 21h3"/></svg>
+      Cómo funciona
+    </a>
+    <a href="#precio" data-drawer-link>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      Precio
+    </a>
     <a href="#blog" data-drawer-link>
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4zM8 9h8M8 13h8M8 17h5"/></svg>
       Blog
@@ -124,16 +157,12 @@
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
       About
     </a>
-    <a href="#recursos" data-drawer-link>
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5z"/></svg>
-      Recursos
-    </a>
   </nav>
-  <a class="cta drawer-cta" href="https://getqrcamera.com" target="_blank" rel="noopener">
-    Probalo gratis
+  <a class="cta drawer-cta" href="/demo/">
+    Ver la demo
     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
   </a>
-  <p class="drawer-note">FoodSpot Mobile funciona con <strong>GetQRCamera</strong></p>
+  <p class="drawer-note">Menú QR para restaurantes · <strong>$9.99/mes</strong></p>
 </aside>
 
 <main id="main">
@@ -150,34 +179,43 @@
 
       <!-- two-zone grid: copy left, QR card right — no absolute overlay -->
       <div class="hero-inner">
-        <h1 class="hero-title">Reduce<br>Comisiones.<br><span class="accent">Recibe<br>Pedidos<br>Directos.</span></h1>
+        <h1 class="hero-title">Tu carta<br>en un QR.<br><span class="accent">Los pedidos<br>van a tu<br>WhatsApp.</span></h1>
 
         <div class="hero-lede">
           <span class="hero-rule" aria-hidden="true"></span>
-          <p class="hero-sub">Una cámara QR para tu restaurante. Sin apps. Sin comisión.</p>
-          <a class="cta" href="https://getqrcamera.com" target="_blank" rel="noopener">
-            Probalo gratis
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
+          <p class="hero-sub">El cliente escanea, elige y te manda el pedido listo. Sin apps, sin comisiones, sin POS.</p>
+
+          <span class="price-badge">
+            <b>$9.99</b><span>USD / mes</span>
+          </span>
+
+          <div class="hero-actions">
+            <a class="cta" href="/demo/">
+              Ver la demo
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="cta cta-ghost" href="#precio">Quiero el mío</a>
+          </div>
+
           <p class="hero-note">
             <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            Sin tarjeta • Cancela cuando quieras
+            0% de comisión • Pedidos ilimitados • Cancelás cuando quieras
           </p>
         </div>
 
         <div class="hero-qr">
-          <div class="qr-tent">
-            <p class="qr-tent-top">Escanea y pide<br>directo desde<br>tu celular</p>
+          <a class="qr-tent" href="/demo/" aria-label="Abrir el menú de demostración">
+            <p class="qr-tent-top">Escaneá y pedí<br>directo desde<br>tu celular</p>
             <img src="assets/smash-qr.png" alt="Código QR de ejemplo del restaurante Smash Burgers" class="qr-tent-img" width="86" height="86" loading="lazy">
             <p class="qr-tent-bottom">
               <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l2.5 2.5"/></svg>
               Pedidos directos<br><strong>Sin comisiones</strong>
             </p>
-          </div>
-          <button class="qr-try" id="qr-try">
+          </a>
+          <a class="qr-try" href="/demo/">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h6v6H3zM15 3h6v6h-6zM3 15h6v6H3zM15 15h3v3h-3zM21 15v6M15 21h3"/></svg>
-            Probá la cámara
-          </button>
+            Probá el menú
+          </a>
         </div>
       </div>
 
@@ -187,62 +225,177 @@
           <span class="benefit-icon">
             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
           </span>
-          <div><strong>0% Comisión</strong><small>Aumentá tus ganancias</small></div>
+          <div><strong>0% Comisión</strong><small>Cobrás vos, todo tuyo</small></div>
         </div>
         <div class="benefit">
           <span class="benefit-icon">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.5 8.5 0 1 1 21 11.5z"/></svg>
           </span>
-          <div><strong>Pedidos Directos</strong><small>Vos tenés el control total</small></div>
+          <div><strong>A tu WhatsApp</strong><small>Donde ya trabajás</small></div>
         </div>
         <div class="benefit">
           <span class="benefit-icon">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-8M9 21V5M15 21v-12M21 21V9"/></svg>
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M11 18.5h2"/></svg>
           </span>
-          <div><strong>Más Clientes</strong><small>Mejor experiencia, más lealtad</small></div>
+          <div><strong>Sin apps</strong><small>Escanea y listo</small></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══════════ ABOUT ══════════ -->
-  <section class="about" id="about">
+  <!-- ══════════ CÓMO FUNCIONA ══════════ -->
+  <section class="about" id="como">
     <div class="section-wrap">
-      <span class="eyebrow">Sobre nosotros</span>
-      <h2>FoodSpot Mobile funciona con GetQRCamera</h2>
+      <span class="eyebrow">Cómo funciona</span>
+      <h2>Tres pasos. Ninguno los hacés vos.</h2>
       <p class="about-lead">
-        FoodSpot Mobile es la vidriera. <strong>GetQRCamera</strong> es el motor: la cámara QR de marca
-        que tus clientes abren sin descargar nada, y con la que piden, pagan y comparten fotos de tu comida.
+        Pegás el QR en la mesa, en la vidriera o en el mostrador. El resto pasa solo,
+        y termina en <strong>un mensaje de WhatsApp</strong> con el pedido ya escrito.
       </p>
 
       <div class="about-steps">
         <div class="about-step">
           <span class="step-num">1</span>
-          <h3>Ponés tu QR en la mesa</h3>
-          <p>Un cartelito con tu marca. Nada de hardware, nada de instalación.</p>
+          <h3>Escanea el QR</h3>
+          <p>Con la cámara del teléfono. Tu carta se abre en el navegador — no hay nada que descargar ni cuenta que crear.</p>
         </div>
         <div class="about-step">
           <span class="step-num">2</span>
-          <h3>El cliente escanea</h3>
-          <p>Se abre tu cámara de marca en el navegador. Sin descargas, sin fricción.</p>
+          <h3>Arma el pedido</h3>
+          <p>Toca un plato, ve la foto y la descripción, elige cantidad. Retiro, delivery o en mesa: lo que vos habilites.</p>
         </div>
         <div class="about-step">
           <span class="step-num">3</span>
-          <h3>Pide, paga y comparte</h3>
-          <p>El pedido entra directo a tu cocina. La foto sale a redes con tu nombre.</p>
+          <h3>Te llega a WhatsApp</h3>
+          <p>El pedido entero llega escrito y ordenado a tu número. Vos confirmás en el chat, como ya lo hacés hoy.</p>
         </div>
       </div>
 
       <div class="about-facts">
         <div class="fact"><strong>0%</strong><small>de comisión sobre tus pedidos</small></div>
         <div class="fact"><strong>0</strong><small>apps que descargar tus clientes</small></div>
-        <div class="fact fact-text"><strong>Sin tarjeta</strong><small>para probarlo, cancelá cuando quieras</small></div>
+        <div class="fact fact-text"><strong>$9.99</strong><small>por mes, todo incluido</small></div>
       </div>
 
-      <a class="cta" href="https://getqrcamera.com" target="_blank" rel="noopener">
-        Conocé GetQRCamera
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+      <a class="cta" href="/demo/">
+        Probá el menú de demostración
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
+    </div>
+  </section>
+
+  <!-- ══════════ LA CUENTA ══════════ -->
+  <section class="math-sec">
+    <div class="section-wrap">
+      <span class="eyebrow">La cuenta</span>
+      <h2>Hacé el número una vez.</h2>
+      <p class="math-lead">
+        Una app de delivery se lleva entre el 20% y el 30% de cada pedido. Nosotros no nos llevamos nada:
+        los pedidos van directo a tu WhatsApp y vos cobrás como ya cobrás.
+      </p>
+
+      <div class="math-grid">
+        <div class="math-col">
+          <span class="math-tag">App de delivery</span>
+          <p class="math-num bad">-25%</p>
+          <p class="math-sub">de cada pedido, para siempre</p>
+          <p class="math-eg">200 pedidos de $10.000 → <b>te quedás sin $500.000</b></p>
+        </div>
+        <div class="math-col win">
+          <span class="math-tag">FoodSpot Mobile</span>
+          <p class="math-num good">$9.99</p>
+          <p class="math-sub">por mes, pase lo que pase</p>
+          <p class="math-eg">Los mismos 200 pedidos → <b>5 centavos por pedido</b></p>
+        </div>
+      </div>
+
+      <p class="math-foot">Y si un mes no vendés nada, seguís pagando $9.99. No un porcentaje de lo que no ganaste.</p>
+    </div>
+  </section>
+
+  <!-- ══════════ PRECIO ══════════ -->
+  <section class="price-sec" id="precio">
+    <div class="section-wrap">
+      <span class="eyebrow">Precio</span>
+      <h2>Un precio. Sin letra chica.</h2>
+
+      <div class="price-card">
+        <div class="price-head">
+          <span class="price-name">Menú QR</span>
+          <p class="price-tag"><b>$9.99</b> <span>USD / mes</span></p>
+          <p class="price-note">Por local. Cancelás cuando quieras.</p>
+        </div>
+        <ul class="price-list">
+          <li>Tu carta completa, con fotos, precios y descripciones</li>
+          <li>Platos y categorías ilimitados</li>
+          <li>Pedidos ilimitados, <b>0% de comisión</b></li>
+          <li>Los pedidos llegan escritos a tu WhatsApp</li>
+          <li>Retiro, delivery y pedido en mesa</li>
+          <li>Tu logo, tu foto de portada y tu color</li>
+          <li>Marcá un plato como agotado en un toque</li>
+          <li>Tu QR listo para imprimir</li>
+          <li>Se puede incrustar en tu propia web</li>
+          <li>Lo configuramos nosotros — vos nos pasás la carta</li>
+        </ul>
+        <!-- TODO: swap this for the real sales WhatsApp once you give me the
+             number — https://wa.me/<codigo+numero>?text=Hola!%20Quiero%20el%20men%C3%BA%20QR
+             Until then it points at the existing contact form rather than at a
+             placeholder number that belongs to a stranger. -->
+        <a class="cta price-cta" href="https://getqrcamera.com/contact" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.6 0a6.6 6.6 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2.1-.2 0-.4 0-.5L9.5 8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3A2.9 2.9 0 0 0 6.8 10a5 5 0 0 0 1.1 2.7 11.5 11.5 0 0 0 4.4 3.9c1.6.6 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3z"/></svg>
+          Escribinos y lo armamos
+        </a>
+        <p class="price-fine">Nos pasás tu carta y tu número, y te lo dejamos funcionando. No hay nada que instalar.</p>
+      </div>
+
+      <div class="addon">
+        <span class="addon-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h3l1.6-2h6.8L17 7h3v13H4z"/><circle cx="12" cy="13" r="3.6"/></svg>
+        </span>
+        <div class="addon-text">
+          <strong>¿Querés que además haga contenido?</strong>
+          <small>El mismo QR puede abrir una cámara con tu marca: el cliente saca la foto de su plato y sale a redes con tu nombre. Eso es <b>GetQRCamera</b>, aparte.</small>
+        </div>
+        <a class="cta cta-small" href="https://getqrcamera.com" target="_blank" rel="noopener">
+          Ver
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FAQ ══════════ -->
+  <section class="faq-sec" id="faq">
+    <div class="section-wrap">
+      <span class="eyebrow">Preguntas</span>
+      <h2>Lo que todos preguntan.</h2>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>¿Cobran comisión por pedido?</summary>
+          <p>No. Pagás $9.99 por mes y nada más. Los pedidos van directo a tu WhatsApp, así que no pasamos por el medio ni tocamos tu plata.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿El cliente tiene que descargar una app?</summary>
+          <p>No. Escanea el QR con la cámara del teléfono y el menú se abre en el navegador. No hay nada que instalar ni cuenta que crear.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Se puede pagar desde el menú?</summary>
+          <p>No, y es a propósito. El pedido llega a tu WhatsApp y vos cobrás como ya cobrás: efectivo, transferencia, tarjeta en el local o un link de pago. Nosotros no manejamos tu dinero, así que no hay nada que reclamarnos ni plata trabada.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Puedo cambiar precios o sacar un plato que se terminó?</summary>
+          <p>Sí, cuando quieras y sin límite. Un plato agotado se marca y aparece en gris en la carta; al día siguiente lo volvés a activar.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Sirve para delivery o solo para el salón?</summary>
+          <p>Las dos cosas. Habilitás retiro, delivery, pedido en mesa, o la combinación que uses. Si activás delivery, el cliente carga su dirección y viene en el mismo mensaje.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Puedo ponerlo en mi propia página web?</summary>
+          <p>Sí. Te damos una línea de código para pegar en tu sitio y el menú queda embebido ahí, funcionando igual.</p>
+        </details>
+      </div>
     </div>
   </section>
 
@@ -257,17 +410,17 @@
       </div>
       <div id="blog-cards" class="blog-cards"><!-- cards rendered by app.js --></div>
 
-      <div class="owner-cta" id="recursos">
+      <div class="owner-cta" id="about">
         <span class="owner-cta-icon">
           <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9 5 4h14l2 5M3 9h18v11H3zM9 20v-6h6v6"/></svg>
         </span>
         <div class="owner-cta-text">
-          <strong>¿Eres dueño de un restaurante?</strong>
-          <small>Probá GetQRCamera gratis, sin tarjeta</small>
+          <strong>¿Tenés un restaurante?</strong>
+          <small>Tu carta en un QR por $9.99 al mes</small>
         </div>
-        <a class="cta cta-small" href="https://getqrcamera.com" target="_blank" rel="noopener">
-          Probar ahora
-          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+        <a class="cta cta-small" href="#precio">
+          Empezar
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
     </div>
@@ -278,21 +431,24 @@
     <div class="section-wrap footer-grid">
       <div>
         <span class="brand-text footer-brand">FoodSpot<br><em>Mobile</em></span>
-        <p class="footer-tag">Una cámara QR para tu restaurante.<br>Sin apps. Sin comisión.</p>
+        <p class="footer-tag">Tu carta en un QR.<br>Los pedidos van a tu WhatsApp.</p>
       </div>
       <nav aria-label="Pie de página">
         <h4>Navegación</h4>
         <a href="#top">Home</a>
+        <a href="#como">Cómo funciona</a>
+        <a href="#precio">Precio</a>
+        <a href="#faq">Preguntas</a>
         <a href="#blog">Blog</a>
-        <a href="#about">About</a>
       </nav>
       <nav aria-label="Producto">
         <h4>Producto</h4>
+        <a href="/demo/">Menú de demostración</a>
+        <a href="#precio">Precio — $9.99/mes</a>
         <a href="https://getqrcamera.com" target="_blank" rel="noopener">GetQRCamera</a>
-        <a href="https://getqrcamera.com" target="_blank" rel="noopener">Probalo gratis</a>
       </nav>
     </div>
-    <p class="footer-legal">© <span id="year">2026</span> FoodSpot Mobile · Funciona con GetQRCamera</p>
+    <p class="footer-legal">© <span id="year">2026</span> FoodSpot Mobile · Menú QR para restaurantes</p>
   </footer>
 </main>
 
@@ -302,21 +458,21 @@
     <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 3l9 8M5 10v10h14V10"/></svg>
     <span>Home</span>
   </a>
+  <a href="#como" class="bn-item">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h11"/></svg>
+    <span>Cómo</span>
+  </a>
+  <a href="/demo/" class="bn-qr" aria-label="Abrir el menú de demostración">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h6v6H3zM15 3h6v6h-6zM3 15h6v6H3zM15 15h3v3h-3zM21 15v6M15 21h3"/></svg>
+    <span>Demo</span>
+  </a>
+  <a href="#precio" class="bn-item">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+    <span>Precio</span>
+  </a>
   <a href="#blog" class="bn-item">
     <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4zM8 9h8M8 13h8M8 17h5"/></svg>
     <span>Blog</span>
-  </a>
-  <button class="bn-qr" id="open-camera" aria-label="Abrir cámara QR">
-    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h6v6H3zM15 3h6v6h-6zM3 15h6v6H3zM15 15h3v3h-3zM21 15v6M15 21h3"/></svg>
-    <span>QR</span>
-  </button>
-  <a href="#recursos" class="bn-item">
-    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5z"/></svg>
-    <span>Recursos</span>
-  </a>
-  <a href="#about" class="bn-item">
-    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5"/></svg>
-    <span>About</span>
   </a>
 </nav>
 
@@ -328,53 +484,7 @@
       Volver
     </button>
     <article id="article-body"></article>
-    <a class="cta" href="https://getqrcamera.com" target="_blank" rel="noopener">Probar ahora</a>
-  </div>
-</div>
-
-<!-- ══════════ CAMERA MODE — locked to Smash Burgers ══════════ -->
-<div class="camera-overlay" id="camera-overlay" hidden>
-  <video id="cam-video" autoplay playsinline muted></video>
-
-  <div class="cam-top">
-    <button class="cam-close" id="cam-close" aria-label="Cerrar">
-      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
-    </button>
-    <div class="brand-pill" id="brand-pill">
-      <span class="brand-pill-dot"></span>Smash Burgers
-    </div>
-  </div>
-
-  <div class="cam-frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-
-  <div class="cam-bottom">
-    <span class="cam-hint">Apuntá y capturá tu plato</span>
-    <button class="shutter" id="shutter" aria-label="Capturar foto"><span></span></button>
-  </div>
-
-  <div class="cam-error" id="cam-error" hidden>
-    <p>No pudimos acceder a la cámara.<br>Revisá los permisos del navegador.</p>
-    <button class="cta cta-small" id="cam-retry">Reintentar</button>
-  </div>
-</div>
-
-<!-- ══════════ PHOTO RESULT (editor) ══════════ -->
-<div class="editor-overlay" id="editor-overlay" hidden>
-  <div class="brand-pill editor-pill"><span class="brand-pill-dot"></span>Smash Burgers</div>
-  <img id="editor-photo" alt="Tu foto Smash Burgers">
-  <div class="editor-actions">
-    <button class="editor-btn" id="editor-retake">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5"/></svg>
-      Retomar
-    </button>
-    <button class="editor-btn primary" id="editor-share">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 8l5-5 5 5M5 15v5h14v-5"/></svg>
-      Compartir
-    </button>
-    <button class="editor-btn" id="editor-download">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
-      Guardar
-    </button>
+    <a class="cta" href="/demo/">Ver la demo</a>
   </div>
 </div>
 

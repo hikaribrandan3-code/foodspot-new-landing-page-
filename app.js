@@ -1,14 +1,14 @@
 /* ── FoodSpot Mobile storefront logic ──────────────────────────
-   Drawer + blog cards + article overlay + Smash Burgers camera.
+   Drawer + blog cards + article overlay.
 
    Post content lives in posts.js (loaded first). Each post also
    exists as a prerendered page at /blog/<slug> — the cards are
    real anchors to those URLs, so crawlers get static HTML while
    clicks stay in-page via the overlay + History API.
 
-   Camera mode is a trimmed port of the Qragency CameraLayer:
-   live getUserMedia → canvas capture → branded export. Locked
-   to the Smash Burgers brand pill — no tenant switching.      */
+   The QR menu itself is a separate app served at /demo — every
+   "ver la demo" link points there, so there is no menu logic in
+   this file.                                                   */
 
 /* ── Mobile drawer ── */
 (function drawer() {
@@ -132,130 +132,6 @@ document.getElementById('article-back').addEventListener('click', () => closeArt
 window.addEventListener('popstate', (e) => {
   if (e.state && typeof e.state.post === 'number') openArticle(e.state.post, false);
   else closeArticle(true);
-});
-
-/* ── Camera mode — locked to Smash Burgers ── */
-const BRAND = 'Smash Burgers'; // hard lock: no tenant config, no switching
-
-const camOverlay = document.getElementById('camera-overlay');
-const editorOverlay = document.getElementById('editor-overlay');
-const video = document.getElementById('cam-video');
-const camError = document.getElementById('cam-error');
-const editorPhoto = document.getElementById('editor-photo');
-let stream = null;
-let photoUrl = null;   // ObjectURL lifecycle managed to prevent RAM leaks
-let photoBlob = null;
-
-/* Port of Qragency's useCameraThemeColor: force black while camera is mounted */
-const themeMeta = document.querySelector('meta[name="theme-color"]');
-const prevTheme = themeMeta.getAttribute('content');
-
-async function startCamera() {
-  camError.hidden = true;
-  try {
-    if (stream) stream.getTracks().forEach(t => t.stop());
-    stream = await navigator.mediaDevices.getUserMedia({
-      video: { facingMode: 'environment' }, audio: false
-    });
-    video.srcObject = stream;
-    await video.play();
-  } catch (err) {
-    camError.hidden = false;
-  }
-}
-function stopCamera() {
-  if (stream) { stream.getTracks().forEach(t => t.stop()); stream = null; }
-  video.srcObject = null;
-}
-
-function openCamera() {
-  camOverlay.hidden = false;
-  themeMeta.setAttribute('content', '#000000');
-  document.body.style.overflow = 'hidden';
-  startCamera();
-}
-function closeCamera() {
-  stopCamera();
-  camOverlay.hidden = true;
-  themeMeta.setAttribute('content', prevTheme);
-  document.body.style.overflow = '';
-}
-
-document.getElementById('open-camera').addEventListener('click', openCamera);
-document.getElementById('qr-try').addEventListener('click', openCamera);
-document.getElementById('cam-close').addEventListener('click', closeCamera);
-document.getElementById('cam-retry').addEventListener('click', startCamera);
-
-/* Capture: draw live video frame straight to canvas at track resolution
-   (no ImageCapture.grabFrame — freezes on iOS Safari). */
-function capture() {
-  if (!stream || !video.videoWidth) return;
-  const canvas = document.createElement('canvas');
-  canvas.width = video.videoWidth;
-  canvas.height = video.videoHeight;
-  const ctx = canvas.getContext('2d');
-  ctx.drawImage(video, 0, 0);
-
-  /* Bake the Smash Burgers brand bar into the exported photo */
-  const barH = Math.round(canvas.height * 0.09);
-  const grad = ctx.createLinearGradient(0, canvas.height - barH * 2, 0, canvas.height);
-  grad.addColorStop(0, 'rgba(0,0,0,0)');
-  grad.addColorStop(1, 'rgba(0,0,0,.72)');
-  ctx.fillStyle = grad;
-  ctx.fillRect(0, canvas.height - barH * 2, canvas.width, barH * 2);
-  ctx.fillStyle = '#fff';
-  ctx.font = `800 ${Math.round(barH * 0.42)}px -apple-system, Segoe UI, Roboto, sans-serif`;
-  ctx.textBaseline = 'middle';
-  const label = BRAND;
-  const pillPad = Math.round(barH * 0.3);
-  const textW = ctx.measureText(label).width;
-  const pillW = textW + pillPad * 2 + Math.round(barH * 0.36);
-  const pillH = Math.round(barH * 0.72);
-  const px = Math.round(canvas.width * 0.05), py = canvas.height - barH;
-  ctx.fillStyle = 'rgba(255,193,7,.60)'; // burger pin style
-  ctx.beginPath();
-  ctx.roundRect(px, py + (barH - pillH) / 2, pillW, pillH, pillH / 2);
-  ctx.fill();
-  ctx.fillStyle = '#fff';
-  ctx.beginPath();
-  ctx.arc(px + pillPad + Math.round(barH * 0.09), py + barH / 2, Math.round(barH * 0.07), 0, Math.PI * 2);
-  ctx.fill();
-  ctx.fillText(label, px + pillPad + Math.round(barH * 0.24), py + barH / 2 + 1);
-
-  canvas.toBlob((blob) => {
-    if (!blob) return;
-    if (photoUrl) URL.revokeObjectURL(photoUrl);
-    photoBlob = blob;
-    photoUrl = URL.createObjectURL(blob);
-    editorPhoto.src = photoUrl;
-    stopCamera();
-    camOverlay.hidden = true;
-    editorOverlay.hidden = false;
-  }, 'image/jpeg', 0.92);
-}
-document.getElementById('shutter').addEventListener('click', capture);
-
-/* Editor actions */
-document.getElementById('editor-retake').addEventListener('click', () => {
-  editorOverlay.hidden = true;
-  camOverlay.hidden = false;
-  startCamera();
-});
-document.getElementById('editor-download').addEventListener('click', () => {
-  if (!photoBlob) return;
-  const a = document.createElement('a');
-  a.href = photoUrl;
-  a.download = 'smash-burgers.jpg';
-  a.click();
-});
-document.getElementById('editor-share').addEventListener('click', async () => {
-  if (!photoBlob) return;
-  const file = new File([photoBlob], 'smash-burgers.jpg', { type: 'image/jpeg' });
-  if (navigator.canShare && navigator.canShare({ files: [file] })) {
-    try { await navigator.share({ files: [file], title: BRAND }); } catch (_) {}
-  } else {
-    document.getElementById('editor-download').click(); // fallback: save locally
-  }
 });
 
 /* ── Misc ── */
